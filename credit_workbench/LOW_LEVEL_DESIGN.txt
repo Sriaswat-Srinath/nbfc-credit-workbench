@@ -800,8 +800,10 @@ CSS COLLISIONS, both found on review and both the same mistake - a global
 CHARSET    The published artifact gets a charset from the Artifact wrapper,
            but a locally served file does not, so every non-ASCII character
            inside <script> is written as a \\uXXXX escape. Raw UTF-8 there
-           renders as mojibake under python -m http.server. The standalone
-           dashboards in ../risk_engine instead carry <meta charset="utf-8">.
+           renders as mojibake under python -m http.server - the separator
+           in "16 issuers \u00b7 filings to ..." was the first casualty. A
+           standalone page not published as an artifact needs an explicit
+           <meta charset="utf-8"> instead.
 
 
 ================================================================================

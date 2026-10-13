@@ -10,7 +10,6 @@ risk_engine/bhavcopy/
 # --------------------------------------------------- large derived data
 # the derived panels the analysis runs on - modest, and the repo is far more
 # useful with them present
-risk_engine/dashboard_standalone.html
 
 # the heavy US regulator extracts stay out: 190 MB, and fdic_fetch.py
 # rebuilds them from the FDIC API

@@ -1,24 +1,21 @@
-# ---------------------------------------------------------------- caches
-# Everything fetched from NSE or FDIC is reproducible with the ingest
-# scripts and is far too large to version. `python3 ingest.py` and
-# `python3 attachments.py` rebuild it.
+# ---------------------------------------------------------------- cache
+# Every NSE fetch is reproducible: `python3 ingest.py` rebuilds the XBRL,
+# announcements and results index, and `python3 attachments.py` the 2,448
+# announcement PDFs. 902 MB, so it is not versioned.
 credit_workbench/cache/
-risk_engine/alm/
-risk_engine/fdic/
-risk_engine/bhavcopy/
 
-# --------------------------------------------------- large derived data
-# the derived panels the analysis runs on - modest, and the repo is far more
-# useful with them present
+# ------------------------------------------- not part of the workbench
+# The earlier research - the distress index, the Merton model, the FDIC
+# validation and the ALM study - was removed in d99c6fd. These paths are
+# kept ignored so a working copy that still holds them does not re-add
+# them by accident.
+risk_engine/
 
-# the heavy US regulator extracts stay out: 190 MB, and fdic_fetch.py
-# rebuilds them from the FDIC API
-*.csv.gz
-risk_engine/fdic_panel.csv
-
-# the source dataset this project was given, not ours to redistribute
+# the supplied financials dataset, third-party and not ours to redistribute.
+# credit_workbench/data/panel.csv is the extract the workbench actually uses.
 Detailed-Financials-Data-Of-4456-NSE-And-BSE-Company-*/
 List-Of-All-Companies.csv
+*.csv.gz
 
 # ------------------------------------------------------------- the usual
 __pycache__/

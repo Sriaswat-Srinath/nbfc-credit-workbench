@@ -1,0 +1,93 @@
+============================================================================================================================================
+Edelweiss Financial Services  (EDELWEISS)
+2018-10-01 to 2018-12-31   [quarter]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2019-01-31
+  filer states units   Crores  (the instance itself carries absolute rupees; converted below)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_41718_77430_24012019074451_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             2,775.68  RevenueFromOperations
+  Other income                                                           15.01  OtherIncome
+* Total income                                                        2,790.69  Income
+  Segment revenue                                                     2,790.88  SegmentRevenue
+  Inter segment revenue                                                   0.00  InterSegmentRevenue
+  Segment revenue from operations                                     2,790.88  SegmentRevenueFromOperations
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              436.67  EmployeeBenefitExpense
+  Finance costs                                                       1,212.81  FinanceCosts
+  Depreciation and amortisation                                          32.83  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                        650.57  OtherExpenses
+* Total expenses                                                      2,332.88  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                               457.81  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                     457.81  ProfitBeforeTax
+
+TAX
+  Current tax                                                           192.56  CurrentTax
+  Deferred tax                                                            7.09  DeferredTax
+* Total tax expense                                                     199.65  TaxExpense
+  Net movement in regulatory deferral account balances rel...             0.00  NetMovementInRegulatoryDeferralAccountBalancesRelatedToProfitOrLossAndTheRelatedDeferredTaxMovement
+  Segment profit loss before tax and finance costs                      458.00  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                             458.00  SegmentProfitBeforeTax
+
+RESULT
+  Profit after tax from continuing operations                           258.16  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.19  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                                 258.35  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                 75.30  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                            333.65  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent             270.21  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...            63.44  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                           88.71  PaidUpValueOfEquityShareCapital
+  Face value per share                                                    1.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                        2.55  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                      2.50  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                               2.55  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                             2.50  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+OTHER
+  Profit or loss attributable to owners of parent                       226.11  ProfitOrLossAttributableToOwnersOfParent
+  Profit or loss attributable to non controlling interests               32.24  ProfitOrLossAttributableToNonControllingInterests
+  Segment assets                                                     66,307.30  SegmentAssets
+  Un allocable assets                                                     0.00  UnAllocableAssets
+  Net segment assets                                                 66,307.30  NetSegmentAssets
+  Segment liabilities                                                57,522.27  SegmentLiabilities
+  Un allocable liabilities                                                0.00  UnAllocableLiabilities
+  Net segment liabilities                                            57,522.27  NetSegmentLiabilities
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

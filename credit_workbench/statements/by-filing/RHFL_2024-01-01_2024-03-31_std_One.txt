@@ -1,0 +1,145 @@
+============================================================================================================================================
+Reliance Home Finance  (RHFL)
+2024-01-01 to 2024-03-31   [quarter]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Audited
+  approved by board    2024-05-30
+  disseminated by NSE  2024-05-31
+  filer states units   Lakhs  (the instance itself carries absolute rupees; converted below)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_108654_1151232_31052024071419.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                                 0.18  RevenueFromOperations
+  Other income                                                            0.00  OtherIncome
+* Total income                                                            0.18  Income
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                                1.10  EmployeeBenefitExpense
+  Finance costs                                                           1.45  FinanceCosts
+  Depreciation and amortisation                                           0.00  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                          4.38  OtherExpenses
+* Total expenses                                                          6.93  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                                -6.75  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                      -6.75  ProfitBeforeTax
+
+TAX
+  Current tax                                                             0.00  CurrentTax
+  Deferred tax                                                            0.00  DeferredTax
+* Total tax expense                                                       0.00  TaxExpense
+  Net movement in regulatory deferral account balances rel...             0.00  NetMovementInRegulatoryDeferralAccountBalancesRelatedToProfitOrLossAndTheRelatedDeferredTaxMovement
+  Deferred tax assets net                                                 0.00  DeferredTaxAssetsNet
+  Current tax assets                                                     15.56  CurrentTaxAssets
+  Regulatory deferral account debit balances and related d...             0.00  RegulatoryDeferralAccountDebitBalancesAndRelatedDeferredTaxAssets
+  Deferred tax liabilities net                                            0.07  DeferredTaxLiabilitiesNet
+  Current tax liabilities                                                 0.00  CurrentTaxLiabilities
+  Regulatory deferral account credit balances and related ...             0.00  RegulatoryDeferralAccountCreditBalancesAndRelatedDeferredTaxLiability
+  Income tax relating to itmes that will not be reclassifi...             0.00  IncomeTaxRelatingToItmesThatWillNotBeReclassifiedToProfitOrLoss
+  Income tax relating to itmes that will be reclassified t...             0.00  IncomeTaxRelatingToItmesThatWillBeReclassifiedToProfitOrLoss
+
+RESULT
+  Profit after tax from continuing operations                            -6.75  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                                  -6.75  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                  0.01  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                             -6.74  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent               0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...             0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          485.06  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                       -0.14  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     -0.14  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              -0.14  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            -0.14  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Equity share capital                                                  485.06  EquityShareCapital
+
+DEBT-LISTED DISCLOSURES
+  Debt / equity ratio                                                    -0.01  DebtEquityRatio  [ratio]
+
+CASH FLOW
+  Cash and cash equivalents                                               0.46  CashAndCashEquivalents
+  Bank balance other than cash and cash equivalents                      11.69  BankBalanceOtherThanCashAndCashEquivalents
+
+OTHER
+  Debt service coverage ratio                                             0.00  DebtServiceCoverageRatio  [ratio]
+  Interest service coverage ratio                                         0.00  InterestServiceCoverageRatio  [ratio]
+  Property plant and equipment                                            0.00  PropertyPlantAndEquipment
+  Capital work in progress                                                0.00  CapitalWorkInProgress
+  Investment property                                                     0.00  InvestmentProperty
+  Goodwill                                                                0.00  Goodwill
+  Other intangible assets                                                 0.00  OtherIntangibleAssets
+  Intangible assets under development                                     0.00  IntangibleAssetsUnderDevelopment
+  Biological assets other than bearer plants                              0.00  BiologicalAssetsOtherThanBearerPlants
+  Investments accounted for using equity method                           0.00  InvestmentsAccountedForUsingEquityMethod
+  Noncurrent investments                                                  0.00  NoncurrentInvestments
+  Trade receivables noncurrent                                            0.00  TradeReceivablesNoncurrent
+  Loans noncurrent                                                        0.00  LoansNoncurrent
+  Other noncurrent financial assets                                       0.00  OtherNoncurrentFinancialAssets
+  Noncurrent financial assets                                             0.00  NoncurrentFinancialAssets
+  Other noncurrent assets                                                 0.00  OtherNoncurrentAssets
+  Noncurrent assets                                                       0.00  NoncurrentAssets
+  Inventories                                                             0.00  Inventories
+  Current investments                                                     0.00  CurrentInvestments
+  Trade receivables current                                               0.00  TradeReceivablesCurrent
+  Loans current                                                           0.00  LoansCurrent
+  Other current financial assets                                          0.33  OtherCurrentFinancialAssets
+  Current financial assets                                               12.48  CurrentFinancialAssets
+  Other current assets                                                    1.78  OtherCurrentAssets
+  Current assets                                                         29.82  CurrentAssets
+  Noncurrent assets classified as held for sale                           0.00  NoncurrentAssetsClassifiedAsHeldForSale
+  Assets                                                                 29.82  Assets
+  Other equity                                                         -562.24  OtherEquity
+  Equity attributable to owners of parent                               -77.18  EquityAttributableToOwnersOfParent
+  Equity                                                                -77.18  Equity
+  Borrowings noncurrent                                                   0.00  BorrowingsNoncurrent
+  Trade payables noncurrent                                              91.83  TradePayablesNoncurrent
+  Other noncurrent financial liabilities                                 15.10  OtherNoncurrentFinancialLiabilities
+  Noncurrent financial liabilities                                      106.93  NoncurrentFinancialLiabilities
+  Provisions noncurrent                                                   0.00  ProvisionsNoncurrent
+  Deferred government grants noncurrent                                   0.00  DeferredGovernmentGrantsNoncurrent
+  Other noncurrent liabilities                                            0.01  OtherNoncurrentLiabilities
+  Noncurrent liabilities                                                107.01  NoncurrentLiabilities
+  Borrowings current                                                      0.00  BorrowingsCurrent
+  Trade payables current                                                  0.00  TradePayablesCurrent
+  Current financial liabilities                                           0.00  CurrentFinancialLiabilities
+  Provisions current                                                      0.00  ProvisionsCurrent
+  Deferred government grants current                                      0.00  DeferredGovernmentGrantsCurrent
+  Current liabilities                                                     0.00  CurrentLiabilities
+  Liabilities directly associated with assets in disposal ...             0.00  LiabilitiesDirectlyAssociatedWithAssetsInDisposalGroupClassifiedAsHeldForSale
+  Liabilities                                                           107.01  Liabilities
+  Equity and liabilities                                                 29.82  EquityAndLiabilities
+  Amount of item that will not be reclassified to profit a...             0.01  AmountOfItemThatWillNotBeReclassifiedToProfitAndLoss
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

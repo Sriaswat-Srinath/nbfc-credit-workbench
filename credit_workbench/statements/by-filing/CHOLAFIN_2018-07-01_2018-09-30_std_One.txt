@@ -1,0 +1,91 @@
+============================================================================================================================================
+Cholamandalam Investment & Finance  (CHOLAFIN)
+2018-07-01 to 2018-09-30   [quarter]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2018-11-12
+  filer states units   Lakhs  (the instance itself carries absolute rupees; converted below)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_39811_56482_31102018033146_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             1,675.73  RevenueFromOperations
+  Other income                                                            0.10  OtherIncome
+* Total income                                                        1,675.83  Income
+  Segment revenue                                                     1,675.73  SegmentRevenue
+  Inter segment revenue                                                   0.00  InterSegmentRevenue
+  Segment revenue from operations                                     1,675.73  SegmentRevenueFromOperations
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              134.25  EmployeeBenefitExpense
+  Finance costs                                                         863.87  FinanceCosts
+  Depreciation and amortisation                                          12.76  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                        205.43  OtherExpenses
+* Total expenses                                                      1,216.31  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                               459.52  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                     459.52  ProfitBeforeTax
+
+TAX
+  Current tax                                                           171.89  CurrentTax
+  Deferred tax                                                          -17.04  DeferredTax
+* Total tax expense                                                     154.85  TaxExpense
+  Net movement in regulatory deferral account balances rel...             0.00  NetMovementInRegulatoryDeferralAccountBalancesRelatedToProfitOrLossAndTheRelatedDeferredTaxMovement
+  Segment profit loss before tax and finance costs                      459.52  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                             459.52  SegmentProfitBeforeTax
+
+RESULT
+  Profit after tax from continuing operations                           304.67  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                                 304.67  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                  2.70  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                            307.37  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent             307.37  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...             0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          156.42  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                       19.49  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     19.46  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              19.49  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            19.46  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+OTHER
+  Segment assets                                                     49,059.53  SegmentAssets
+  Un allocable assets                                                 4,531.14  UnAllocableAssets
+  Net segment assets                                                 53,590.67  NetSegmentAssets
+  Segment liabilities                                                47,910.28  SegmentLiabilities
+  Un allocable liabilities                                                0.00  UnAllocableLiabilities
+  Net segment liabilities                                            47,910.28  NetSegmentLiabilities
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

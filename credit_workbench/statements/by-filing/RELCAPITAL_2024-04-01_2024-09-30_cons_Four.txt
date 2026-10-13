@@ -1,0 +1,183 @@
+============================================================================================================================================
+Reliance Capital  (RELCAPITAL)
+2024-04-01 to 2024-09-30   [half year]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2024-11-15
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_116499_1314005_15112024122407.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                            13,859.97  RevenueFromOperations
+  Other income                                                           25.84  OtherIncome
+* Total income                                                       13,885.81  Income
+  Segment revenue                                                    13,898.39  SegmentRevenue
+  Inter segment revenue                                                  12.58  InterSegmentRevenue
+  Segment revenue from operations                                    13,885.81  SegmentRevenueFromOperations
+  Other unallocable expenditure net off un allocable income               0.00  OtherUnallocableExpenditureNetOffUnAllocableIncome
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              802.41  EmployeeBenefitExpense
+  Finance costs                                                          26.20  FinanceCosts
+  Depreciation and amortisation                                          59.84  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                     11,207.27  OtherExpenses
+* Total expenses                                                     13,176.23  Expenses
+  Segment finance costs                                                   0.00  SegmentFinanceCosts
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                               709.58  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                     709.58  ProfitBeforeTax
+
+TAX
+  Current tax                                                           131.21  CurrentTax
+  Deferred tax                                                            2.08  DeferredTax
+* Total tax expense                                                     133.29  TaxExpense
+  Segment profit loss before tax and finance costs                      713.82  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                             713.82  SegmentProfitBeforeTax
+  Income tax relating to itmes that will not be reclassifi...             0.00  IncomeTaxRelatingToItmesThatWillNotBeReclassifiedToProfitOrLoss
+  Income tax relating to itmes that will be reclassified t...             0.00  IncomeTaxRelatingToItmesThatWillBeReclassifiedToProfitOrLoss
+
+RESULT
+  Profit after tax from continuing operations                           576.29  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        4.25  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                                 580.54  ProfitLossForPeriod
+  Other adjustments to reconcile profit loss                              0.00  OtherAdjustmentsToReconcileProfitLoss
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                318.01  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                            898.55  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent             244.79  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...            73.21  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          253.24  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                       23.12  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     23.12  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              23.12  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            23.12  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+CASH FLOW
+  Adjustments for finance costs                                          26.20  AdjustmentsForFinanceCosts
+  Adjustments for decrease increase in inventories                        0.00  AdjustmentsForDecreaseIncreaseInInventories
+  Adjustments for decrease increase in trade receivables c...             0.00  AdjustmentsForDecreaseIncreaseInTradeReceivablesCurrent
+  Adjustments for decrease increase in trade receivables n...             0.00  AdjustmentsForDecreaseIncreaseInTradeReceivablesNoncurrent
+  Adjustments for decrease increase in other current assets               0.00  AdjustmentsForDecreaseIncreaseInOtherCurrentAssets
+  Adjustments for decrease increase in other noncurrent as...             0.00  AdjustmentsForDecreaseIncreaseInOtherNoncurrentAssets
+  Adjustments for other financial assets noncurrent                       0.00  AdjustmentsForOtherFinancialAssetsNoncurrent
+  Adjustments for other financial assets current                     -1,716.14  AdjustmentsForOtherFinancialAssetsCurrent
+  Adjustments for other bank balances                                     0.00  AdjustmentsForOtherBankBalances
+  Adjustments for increase decrease in trade payables curr...             0.00  AdjustmentsForIncreaseDecreaseInTradePayablesCurrent
+  Adjustments for increase decrease in trade payables nonc...             0.00  AdjustmentsForIncreaseDecreaseInTradePayablesNoncurrent
+  Adjustments for increase decrease in other current liabi...             0.00  AdjustmentsForIncreaseDecreaseInOtherCurrentLiabilities
+  Adjustments for increase decrease in other noncurrent li...             0.00  AdjustmentsForIncreaseDecreaseInOtherNoncurrentLiabilities
+  Adjustments for depreciation and amortisation expense                  59.84  AdjustmentsForDepreciationAndAmortisationExpense
+  Adjustments for impairment loss reversal of impairment l...            -1.54  AdjustmentsForImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLoss
+  Adjustments for provisions current                                      0.00  AdjustmentsForProvisionsCurrent
+  Adjustments for provisions noncurrent                                   0.00  AdjustmentsForProvisionsNoncurrent
+  Adjustments for other financial liabilities current                 6,785.10  AdjustmentsForOtherFinancialLiabilitiesCurrent
+  Adjustments for other financial liabilities noncurrent                  0.00  AdjustmentsForOtherFinancialLiabilitiesNoncurrent
+  Adjustments for unrealised foreign exchange losses gains                0.00  AdjustmentsForUnrealisedForeignExchangeLossesGains
+  Adjustments for dividend income                                        78.33  AdjustmentsForDividendIncome
+  Adjustments for interest income                                     1,804.91  AdjustmentsForInterestIncome
+  Adjustments for sharebased payments                                     0.00  AdjustmentsForSharebasedPayments
+  Adjustments for fair value gains losses                            -1,605.29  AdjustmentsForFairValueGainsLosses
+  Adjustments for undistributed profits of associates                     0.00  AdjustmentsForUndistributedProfitsOfAssociates
+  Other adjustments for which cash effects are investing o...             0.00  OtherAdjustmentsForWhichCashEffectsAreInvestingOrFinancingCashFlow
+  Other adjustments for noncash items                                     0.00  OtherAdjustmentsForNoncashItems
+  Adjustments for reconcile profit loss                               1,664.93  AdjustmentsForReconcileProfitLoss
+  Cash flows from used in operations                                  2,374.51  CashFlowsFromUsedInOperations
+  Dividends received classified as operating activities                   0.00  DividendsReceivedClassifiedAsOperatingActivities
+  Interest paid classified as operating activities                       36.60  InterestPaidClassifiedAsOperatingActivities
+  Interest received classified as operating activities                    8.72  InterestReceivedClassifiedAsOperatingActivities
+  Income taxes paid refund classified as operating activit...           124.48  IncomeTaxesPaidRefundClassifiedAsOperatingActivities
+  Other inflows outflows of cash classified as operating a...             0.00  OtherInflowsOutflowsOfCashClassifiedAsOperatingActivities
+  Cash flows from used in operating activities                        2,222.15  CashFlowsFromUsedInOperatingActivities
+  Cash flows from losing control of subsidiaries or other ...             0.00  CashFlowsFromLosingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities
+  Cash flows used in obtaining control of subsidiaries or ...             0.00  CashFlowsUsedInObtainingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities
+  Other cash receipts from sales of equity or debt instrum...             0.00  OtherCashReceiptsFromSalesOfEquityOrDebtInstrumentsOfOtherEntitiesClassifiedAsInvestingActivities
+  Other cash payments to acquire equity or debt instrument...         2,347.13  OtherCashPaymentsToAcquireEquityOrDebtInstrumentsOfOtherEntitiesClassifiedAsInvestingActivities
+  Other cash receipts from sales of interests in joint ven...             0.00  OtherCashReceiptsFromSalesOfInterestsInJointVenturesClassifiedAsInvestingActivities
+  Other cash payments to acquire interests in joint ventur...             0.00  OtherCashPaymentsToAcquireInterestsInJointVenturesClassifiedAsInvestingActivities
+  Proceeds from sales of property plant and equipment clas...             7.47  ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities
+  Purchase of property plant and equipment classified as i...            53.42  PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities
+  Proceeds from sales of investment property classified as...             0.00  ProceedsFromSalesOfInvestmentPropertyClassifiedAsInvestingActivities
+  Purchase of investment property classified as investing ...             0.00  PurchaseOfInvestmentPropertyClassifiedAsInvestingActivities
+  Proceeds from sales of intangible assets under development              0.00  ProceedsFromSalesOfIntangibleAssetsUnderDevelopment
+  Proceeds from sales of goodwill classified as investing ...             0.00  ProceedsFromSalesOfGoodwillClassifiedAsInvestingActivities
+  Purchase of goodwill classified as investing activities                 0.00  PurchaseOfGoodwillClassifiedAsInvestingActivities
+  Proceeds from sales of intangible assets classified as i...             0.00  ProceedsFromSalesOfIntangibleAssetsClassifiedAsInvestingActivities
+  Purchase of intangible assets classified as investing ac...             0.00  PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities
+  Proceeds from biological assets other than bearer plants...             0.00  ProceedsFromBiologicalAssetsOtherThanBearerPlantsClassifiedAsInvestingActivities
+  Purchase of biological assets other than bearer plants c...             0.00  PurchaseOfBiologicalAssetsOtherThanBearerPlantsClassifiedAsInvestingActivities
+  Proceeds from sales of other long term assets classified...             0.00  ProceedsFromSalesOfOtherLongTermAssetsClassifiedAsInvestingActivities
+  Purchase of other long term assets classified as investi...             0.00  PurchaseOfOtherLongTermAssetsClassifiedAsInvestingActivities
+  Cash advances and loans made to other parties classified...             0.00  CashAdvancesAndLoansMadeToOtherPartiesClassifiedAsInvestingActivities
+  Cash receipts from repayment of advances and loans made ...             0.00  CashReceiptsFromRepaymentOfAdvancesAndLoansMadeToOtherPartiesClassifiedAsInvestingActivities
+  Cash payments for future contracts forward contracts opt...             0.00  CashPaymentsForFutureContractsForwardContractsOptionContractsAndSwapContractsClassifiedAsInvestingActivities
+  Cash receipts from future contracts forward contracts op...             0.00  CashReceiptsFromFutureContractsForwardContractsOptionContractsAndSwapContractsClassifiedAsInvestingActivities
+  Dividends received classified as investing activities                  78.34  DividendsReceivedClassifiedAsInvestingActivities
+  Interest received classified as investing activities                    0.00  InterestReceivedClassifiedAsInvestingActivities
+  Income taxes paid refund classified as investing activit...             0.00  IncomeTaxesPaidRefundClassifiedAsInvestingActivities
+  Other inflows outflows of cash classified as investing a...            -0.04  OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities
+  Proceeds from government grants classified as investing ...             0.00  ProceedsFromGovernmentGrantsClassifiedAsInvestingActivities
+  Cash flows from used in investing activities                       -2,314.78  CashFlowsFromUsedInInvestingActivities
+  Proceeds from changes in ownership interests in subsidia...             0.00  ProceedsFromChangesInOwnershipInterestsInSubsidiaries
+  Proceeds from issuing shares classified as financing act...             0.00  ProceedsFromIssuingSharesClassifiedAsFinancingActivities
+  Proceeds from issuing other equity instruments                          0.00  ProceedsFromIssuingOtherEquityInstruments
+  Payments to acquire or redeem entitys shares                            0.00  PaymentsToAcquireOrRedeemEntitysShares
+  Proceeds from exercise of stock options                                 0.00  ProceedsFromExerciseOfStockOptions
+  Proceeds from issuing debentures notes bonds etc                        0.00  ProceedsFromIssuingDebenturesNotesBondsEtc
+  Proceeds from borrowings classified as financing activit...             0.00  ProceedsFromBorrowingsClassifiedAsFinancingActivities
+  Repayments of borrowings classified as financing activit...            -1.21  RepaymentsOfBorrowingsClassifiedAsFinancingActivities
+  Payments of finance lease liabilities classified as fina...             0.00  PaymentsOfFinanceLeaseLiabilitiesClassifiedAsFinancingActivities
+  Payments of lease liabilities classified as financing ac...             0.00  PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivities
+  Dividends paid classified as financing activities                       0.00  DividendsPaidClassifiedAsFinancingActivities
+  Interest paid classified as financing activities                        0.00  InterestPaidClassifiedAsFinancingActivities
+  Income taxes paid refund classified as financing activit...             0.00  IncomeTaxesPaidRefundClassifiedAsFinancingActivities
+  Other inflows outflows of cash classified as financing a...             0.00  OtherInflowsOutflowsOfCashClassifiedAsFinancingActivities
+  Cash flows from used in financing activities                            1.21  CashFlowsFromUsedInFinancingActivities
+  Increase decrease in cash and cash equivalents before ef...           -91.42  IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges
+  Effect of exchange rate changes on cash and cash equival...             0.00  EffectOfExchangeRateChangesOnCashAndCashEquivalents
+  Increase decrease in cash and cash equivalents                        -91.42  IncreaseDecreaseInCashAndCashEquivalents
+  Cash and cash equivalents cash flow statement                         696.85  CashAndCashEquivalentsCashFlowStatement
+
+OTHER
+  Profit or loss attributable to owners of parent                       439.21  ProfitOrLossAttributableToOwnersOfParent
+  Profit or loss attributable to non controlling interests              141.30  ProfitOrLossAttributableToNonControllingInterests
+  Share of profit and loss from partnership firm or associ...             0.00  ShareOfProfitAndLossFromPartnershipFirmOrAssociationOfPersonsOrLimitedLiabilityPartnerships
+  Cash receipts from share of profits of partnership firm ...             0.00  CashReceiptsFromShareOfProfitsOfPartnershipFirmOrAssociationOfPersonsOrLimitedLiabilityPartnerships
+  Cash payment for investment in partnership firm or assoc...             0.00  CashPaymentForInvestmentInPartnershipFirmOrAssociationOfPersonsOrLimitedLiabilityPartnerships
+  Purchase of intangible assets under development                         0.00  PurchaseOfIntangibleAssetsUnderDevelopment
+  Payments from changes in ownership interests in subsidia...             0.00  PaymentsFromChangesInOwnershipInterestsInSubsidiaries
+  Payments of other equity instruments                                    0.00  PaymentsOfOtherEquityInstruments
+  Amount of item that will not be reclassified to profit a...            -1.83  AmountOfItemThatWillNotBeReclassifiedToProfitAndLoss
+  Amount of item that will be reclassified to profit and l...           319.84  AmountOfItemThatWillBeReclassifiedToProfitAndLoss
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

@@ -1,0 +1,109 @@
+============================================================================================================================================
+Sammaan Capital (formerly Indiabulls Housing)  (SAMMAANCAP)
+2024-07-01 to 2024-09-30   [quarter]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Un-Audited
+  approved by board    2024-11-14
+  disseminated by NSE  2024-11-15
+  filer states units   Crores  (the instance itself carries absolute rupees; converted below)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_116695_1314867_15112024033904.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             2,422.49  RevenueFromOperations
+  Other income                                                            2.68  OtherIncome
+* Total income                                                        2,425.17  Income
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              203.73  EmployeeBenefitExpense
+  Finance costs                                                       1,238.46  FinanceCosts
+  Depreciation and amortisation                                          19.78  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                        134.81  OtherExpenses
+* Total expenses                                                      6,110.12  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                            -3,684.95  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                  -3,684.95  ProfitBeforeTax
+
+TAX
+  Current tax                                                            -7.16  CurrentTax
+  Deferred tax                                                         -917.07  DeferredTax
+* Total tax expense                                                    -924.23  TaxExpense
+  Deferred tax assets net                                               943.42  DeferredTaxAssetsNet
+  Deferred tax liabilities net                                            0.06  DeferredTaxLiabilitiesNet
+  Current tax liabilities                                                 1.62  CurrentTaxLiabilities
+  Income tax relating to itmes that will not be reclassifi...            26.27  IncomeTaxRelatingToItmesThatWillNotBeReclassifiedToProfitOrLoss
+  Income tax relating to itmes that will be reclassified t...            37.90  IncomeTaxRelatingToItmesThatWillBeReclassifiedToProfitOrLoss
+
+RESULT
+  Profit after tax from continuing operations                        -2,760.72  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                              -2,760.72  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                201.21  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                         -2,559.51  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent          -2,559.51  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...             0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          144.79  PaidUpValueOfEquityShareCapital
+  Face value per share                                                    2.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                      -44.23  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                    -44.12  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                             -44.23  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                           -44.12  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Equity share capital                                                  144.79  EquityShareCapital
+
+CASH FLOW
+  Cash and cash equivalents                                           4,650.62  CashAndCashEquivalents
+  Bank balance other than cash and cash equivalents                   1,460.67  BankBalanceOtherThanCashAndCashEquivalents
+
+OTHER
+  Profit or loss attributable to owners of parent                    -2,760.72  ProfitOrLossAttributableToOwnersOfParent
+  Profit or loss attributable to non controlling interests                0.00  ProfitOrLossAttributableToNonControllingInterests
+  Non controlling interest                                                0.00  NonControllingInterest
+  Property plant and equipment                                           97.47  PropertyPlantAndEquipment
+  Capital work in progress                                                0.00  CapitalWorkInProgress
+  Investment property                                                     0.00  InvestmentProperty
+  Goodwill                                                                0.00  Goodwill
+  Other intangible assets                                                29.44  OtherIntangibleAssets
+  Intangible assets under development                                     0.00  IntangibleAssetsUnderDevelopment
+  Biological assets other than bearer plants                              0.00  BiologicalAssetsOtherThanBearerPlants
+  Inventories                                                             0.00  Inventories
+  Assets                                                             70,585.39  Assets
+  Other equity                                                       19,834.47  OtherEquity
+  Equity attributable to owners of parent                            19,979.26  EquityAttributableToOwnersOfParent
+  Equity                                                             19,979.26  Equity
+  Liabilities                                                        50,606.13  Liabilities
+  Equity and liabilities                                             70,585.39  EquityAndLiabilities
+  Amount of item that will not be reclassified to profit a...           114.77  AmountOfItemThatWillNotBeReclassifiedToProfitAndLoss
+  Amount of item that will be reclassified to profit and l...           150.61  AmountOfItemThatWillBeReclassifiedToProfitAndLoss
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

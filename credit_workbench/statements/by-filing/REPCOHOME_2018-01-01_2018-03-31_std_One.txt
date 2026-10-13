@@ -1,0 +1,75 @@
+============================================================================================================================================
+Repco Home Finance  (REPCOHOME)
+2018-01-01 to 2018-03-31   [quarter]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Audited
+  disseminated by NSE  2018-05-29
+  period taken from    results index (the instance declares no context for this column)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/NONINDAS_35552_10854_24052018103711_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                               283.25  RevenueFromOperations
+  Other income                                                            0.08  OtherIncome
+* Total revenue                                                         283.33  Revenue
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                               11.96  EmployeeBenefitExpense
+  Finance costs                                                         160.99  FinanceCosts
+  Depreciation and amortisation                                           0.78  DepreciationAndAmortisationExpense
+  Other expenses                                                         22.97  OtherExpenses
+* Total expenses                                                        196.70  Expenses
+
+PROFIT BEFORE TAX
+  Profit before exceptional and extraordinary items and tax              86.63  ProfitBeforeExceptionalAndExtraordinaryItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItems
+  Profit before extraordinary items and tax                              86.63  ProfitBeforeExtraordinaryItemsAndTax
+  Extraordinary items                                                     0.00  ExtraordinaryItems
+* Profit before tax                                                      86.63  ProfitBeforeTax
+
+TAX
+  Current tax                                                            24.94  CurrentTax
+  Deferred tax                                                            5.07  DeferredTax
+* Total tax expense                                                      30.01  TaxExpense
+
+RESULT
+  Profit after tax from continuing operations                            56.62  ProfitLossForThePeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuingOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuingOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuingOperationAfterTax
+  Profit for the period before minority interest                         56.62  ProfitLossForPeriodBeforeMinorityInterest
+* Profit for the period                                                  56.62  ProfitLossForThePeriod
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                           62.56  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  Earnings per share, basic                                               9.05  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                             9.05  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+DEBT-LISTED DISCLOSURES
+  Debt / equity ratio                                                     0.07  DebtEquityRatio  [ratio]
+
+OTHER
+  Paid up value of debt capital                                       1,337.00  PaidUpValueOfDebtCapital
+  Face value of debt securities                                   1,000,000.00  FaceValueOfDebtSecurities  [per_share]
+  Debt service coverage ratio                                             0.00  DebtServiceCoverageRatio  [ratio]
+  Interest service coverage ratio                                         0.01  InterestServiceCoverageRatio  [ratio]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total revenue = revenue from operations + other income
+  [holds      ] total tax = current tax + deferred tax
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

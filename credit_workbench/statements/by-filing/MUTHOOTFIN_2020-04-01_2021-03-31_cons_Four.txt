@@ -1,0 +1,95 @@
+============================================================================================================================================
+Muthoot Finance  (MUTHOOTFIN)
+2020-04-01 to 2021-03-31   [full year]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Audited
+  disseminated by NSE  2021-06-03
+  source               https://nsearchives.nseindia.com/corporate/xbrl/NBFC_INDAS_70890_455328_03062021111940_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+  Interest income                                                    11,231.58  InterestEarned
+  Dividend income                                                         0.01  DividendIncome
+  Rental income                                                           0.00  RentalIncome
+  Fees and commission income                                              0.00  FeesAndCommissionIncome
+  Net gain on fair value changes                                        164.84  NetGainOnFairValueChanges
+  Net gain on derecognition of financial instruments                     23.72  NetGainOnDerecognitionOfFinancialInstrumentsUnderAmortisedCostCategory
+  Sale of products                                                        0.00  RevenueFromSaleOfProduct
+  Sale of services                                                       12.03  RevenueFromSaleOfServices
+  Other operating revenue                                                98.61  OtherRevenueFromOperations
+* Revenue from operations                                            11,530.79  RevenueFromOperations
+  Other income                                                           35.63  OtherIncome
+* Total income                                                       11,566.42  Income
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                            1,189.27  EmployeeBenefitExpense
+  Finance costs                                                       4,099.93  FinanceCosts
+  Depreciation and amortisation                                          67.36  DepreciationDepletionAndAmortisationExpense
+  Fees and commission expense                                             0.00  FeesAndCommissionExpense
+  Net loss on fair value changes                                          0.00  NetLossOnFairValueChanges
+  Net loss on derecognition of financial instruments                      0.00  NetLossOnDerecognitionOfFinancialInstrumentsUnderAmortisedCostCategory
+  Impairment on financial instruments                                   255.22  ImpairmentOnFinancialInstruments
+  Other expenses                                                        823.16  OtherExpenses
+* Total expenses                                                      6,434.94  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                             5,131.48  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                   5,131.48  ProfitBeforeTax
+
+TAX
+  Current tax                                                         1,335.11  CurrentTax
+  Deferred tax                                                          -22.50  DeferredTax
+* Total tax expense                                                   1,312.61  TaxExpense
+
+RESULT
+  Profit after tax from continuing operations                         3,818.87  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                               3,818.87  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                -62.14  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                          3,756.73  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent           3,743.62  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...            13.11  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+  Other comprehensive income                                            -62.14  OtherComprehensiveIncome
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          401.20  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  Reserve excluding revaluation reserves                             15,173.83  ReserveExcludingRevaluationReserves
+  EPS basic, continuing operations                                       94.84  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     94.76  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              94.84  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            94.76  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+OTHER
+  Profit or loss attributable to owners of parent                     3,804.40  ProfitOrLossAttributableToOwnersOfParent
+  Profit or loss attributable to non controlling interests               14.47  ProfitOrLossAttributableToNonControllingInterests
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

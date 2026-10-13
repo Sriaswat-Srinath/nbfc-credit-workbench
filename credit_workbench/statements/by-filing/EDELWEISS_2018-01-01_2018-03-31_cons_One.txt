@@ -1,0 +1,81 @@
+============================================================================================================================================
+Edelweiss Financial Services  (EDELWEISS)
+2018-01-01 to 2018-03-31   [quarter]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2018-08-06
+  period taken from    results index (the instance declares no context for this column)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/NONINDAS_34820_32038_06082018123011_WEB_2.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             2,608.73  RevenueFromOperations
+  Other income                                                           12.54  OtherIncome
+* Total revenue                                                       2,621.27  Revenue
+  Segment revenue                                                     2,623.43  SegmentRevenue
+  Inter segment revenue                                                   0.00  InterSegmentRevenue
+  Segment revenue from operations                                     2,623.43  SegmentRevenueFromOperations
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              402.12  EmployeeBenefitExpense
+  Finance costs                                                         951.21  FinanceCosts
+  Depreciation and amortisation                                          33.43  DepreciationAndAmortisationExpense
+  Other expenses                                                        870.79  OtherExpenses
+* Total expenses                                                      2,257.55  Expenses
+
+PROFIT BEFORE TAX
+  Profit before exceptional and extraordinary items and tax             363.72  ProfitBeforeExceptionalAndExtraordinaryItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItems
+  Profit before extraordinary items and tax                             363.72  ProfitBeforeExtraordinaryItemsAndTax
+  Extraordinary items                                                     0.00  ExtraordinaryItems
+* Profit before tax                                                     363.72  ProfitBeforeTax
+
+TAX
+  Current tax                                                           158.89  CurrentTax
+  Deferred tax                                                          -14.40  DeferredTax
+* Total tax expense                                                     144.49  TaxExpense
+  Segment profit loss before tax and finance costs                      365.88  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                             365.88  SegmentProfitBeforeTax
+
+RESULT
+  Profit after tax from continuing operations                           219.23  ProfitLossForThePeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuingOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuingOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuingOperationAfterTax
+  Profit for the period before minority interest                        219.23  ProfitLossForPeriodBeforeMinorityInterest
+  Share of profit loss of associates                                      2.16  ShareOfProfitLossOfAssociates
+  Profit loss of minority interest                                      -26.83  ProfitLossOfMinorityInterest
+* Profit for the period                                                 248.22  ProfitLossForThePeriod
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                           91.55  PaidUpValueOfEquityShareCapital
+  Face value per share                                                    1.00  FaceValueOfEquityShareCapital  [per_share]
+  Earnings per share, basic                                               2.69  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                             2.61  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+OTHER
+  Segment assets                                                     63,513.54  SegmentAssets
+  Un allocable assets                                                   657.62  UnAllocableAssets
+  Net segment assets                                                 64,171.16  NetSegmentAssets
+  Segment liabilities                                                55,751.10  SegmentLiabilities
+  Un allocable liabilities                                                0.00  UnAllocableLiabilities
+  Net segment liabilities                                            55,751.10  NetSegmentLiabilities
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total revenue = revenue from operations + other income
+  [holds      ] total tax = current tax + deferred tax
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

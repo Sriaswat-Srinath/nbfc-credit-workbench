@@ -1,0 +1,139 @@
+============================================================================================================================================
+Reliance Home Finance  (RHFL)
+2023-01-01 to 2023-03-31   [quarter]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Audited
+  approved by board    2023-05-27
+  disseminated by NSE  2023-05-27
+  filer states units   Crores  (the instance itself carries absolute rupees; converted below)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/NBFC_INDAS_93205_855613_27052023094030.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+  Interest income                                                        74.59  InterestEarned
+  Dividend income                                                         0.00  DividendIncome
+  Rental income                                                           0.00  RentalIncome
+  Fees and commission income                                              0.91  FeesAndCommissionIncome
+  Net gain on fair value changes                                          0.00  NetGainOnFairValueChanges
+  Net gain on derecognition of financial instruments                      0.00  NetGainOnDerecognitionOfFinancialInstrumentsUnderAmortisedCostCategory
+  Sale of products                                                        0.00  RevenueFromSaleOfProduct
+  Sale of services                                                        0.00  RevenueFromSaleOfServices
+  Other operating revenue                                                 0.00  OtherRevenueFromOperations
+* Revenue from operations                                                75.50  RevenueFromOperations
+  Other income                                                            3.10  OtherIncome
+* Total income                                                           78.60  Income
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                                1.74  EmployeeBenefitExpense
+  Finance costs                                                        -759.27  FinanceCosts
+  Depreciation and amortisation                                           0.48  DepreciationDepletionAndAmortisationExpense
+  Fees and commission expense                                             0.00  FeesAndCommissionExpense
+  Net loss on fair value changes                                          0.00  NetLossOnFairValueChanges
+  Net loss on derecognition of financial instruments                      0.00  NetLossOnDerecognitionOfFinancialInstrumentsUnderAmortisedCostCategory
+  Impairment on financial instruments                                -9,112.67  ImpairmentOnFinancialInstruments
+  Other expenses                                                         51.31  OtherExpenses
+* Total expenses                                                     -9,818.40  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                             9,897.01  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                    -277.24  ExceptionalItemsBeforeTax
+* Profit before tax                                                   9,619.77  ProfitBeforeTax
+
+TAX
+  Current tax                                                             0.00  CurrentTax
+  Deferred tax                                                        3,647.46  DeferredTax
+* Total tax expense                                                   3,647.46  TaxExpense
+  Current tax assets net                                                 17.31  CurrentTaxAssetsNet
+  Deferred tax assets net                                                 0.00  DeferredTaxAssetsNet
+  Income tax relating to itmes that will not be reclassifi...            -0.04  IncomeTaxRelatingToItmesThatWillNotBeReclassifiedToProfitOrLoss
+
+RESULT
+  Profit after tax from continuing operations                         5,972.31  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                               5,972.31  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                 -0.09  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                          5,972.22  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent               0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...             0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+  Other comprehensive income                                             -0.09  OtherComprehensiveIncome
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          485.06  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                      123.14  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                    123.14  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                             123.14  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                           123.14  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Equity share capital                                                  485.06  EquityShareCapital
+
+CASH FLOW
+  Cash and cash equivalents                                              17.54  CashAndCashEquivalents
+  Bank balance other than cash and cash equivalents                       0.00  BankBalanceOtherThanCashAndCashEquivalents
+
+OTHER
+  Derivative financial instruments financial assets                       0.00  DerivativeFinancialInstrumentsFinancialAssets
+  Trade receivables                                                       0.00  TradeReceivables
+  Other receivables                                                       0.00  OtherReceivables
+  Loans                                                                   0.00  Loans
+  Investments                                                             0.00  Investments
+  Other financial assets                                                  0.00  OtherFinancialAssets
+  Finanical assets                                                       17.54  FinanicalAssets
+  Inventories                                                             0.00  Inventories
+  Investment property                                                     0.00  InvestmentProperty
+  Biological assets other than bearer plants                              0.00  BiologicalAssetsOtherThanBearerPlants
+  Property plant and equipment                                            0.00  PropertyPlantAndEquipment
+  Capital work in progress                                                0.00  CapitalWorkInProgress
+  Intangible assets under development                                     0.00  IntangibleAssetsUnderDevelopment
+  Goodwill                                                                0.00  Goodwill
+  Other intangible assets                                                 0.00  OtherIntangibleAssets
+  Other non financial assets                                              0.00  OtherNonFinancialAssets
+  Non financial assets                                                   17.31  NonFinancialAssets
+  Assets                                                                 34.85  Assets
+  Other equity                                                         -558.89  OtherEquity
+  Equity                                                                -73.83  Equity
+  Derivative financial instruments financial liabilities                  0.00  DerivativeFinancialInstrumentsFinancialLiabilities
+  Payables                                                                0.00  Payables
+  Total outstanding dues of micro enterprise and small ent...             0.00  TotalOutstandingDuesOfMicroEnterpriseAndSmallEnterprise
+  Total outstanding dues of creditors other than micro ent...             0.00  TotalOutstandingDuesOfCreditorsOtherThanMicroEnterpriseAndSmallEnterprise
+  Total outstanding dues of micro enterprise and small ent...             0.00  TotalOutstandingDuesOfMicroEnterpriseAndSmallEnterpriseOtherPayables
+  Total outstanding dues of creditors other than micro ent...             0.00  TotalOutstandingDuesOfCreditorsOtherThanMicroEnterpriseAndSmallEnterpriseOtherPayables
+  Debt securities                                                         0.95  DebtSecurities
+  Borrowings                                                              0.00  Borrowings
+  Deposits                                                                0.00  Deposits
+  Subordinated liabilities                                               86.04  SubordinatedLiabilities
+  Other financial liabilities                                            19.45  OtherFinancialLiabilities
+  Financial liabilities                                                 106.44  FinancialLiabilities
+  Provisions                                                              0.00  Provisions
+  Other non financial liabilities                                         2.25  OtherNonFinancialLiabilities
+  Non financial liabilities                                               2.25  NonFinancialLiabilities
+  Equity and liabilities                                                 34.85  EquityAndLiabilities
+  Amount of item that will not be reclassified to profit a...            -0.13  AmountOfItemThatWillNotBeReclassifiedToProfitAndLoss
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

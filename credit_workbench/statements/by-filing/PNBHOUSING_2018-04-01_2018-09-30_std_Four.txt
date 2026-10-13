@@ -1,0 +1,85 @@
+============================================================================================================================================
+PNB Housing Finance  (PNBHOUSING)
+2018-04-01 to 2018-09-30   [half year]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2018-12-21
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_41459_63190_19122018054443_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             3,346.24  RevenueFromOperations
+  Other income                                                            0.20  OtherIncome
+* Total income                                                        3,346.44  Income
+  Segment revenue                                                         0.00  SegmentRevenue
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                               96.46  EmployeeBenefitExpense
+  Finance costs                                                       2,328.64  FinanceCosts
+  Depreciation and amortisation                                          14.61  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                        256.08  OtherExpenses
+* Total expenses                                                      2,695.79  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                               650.65  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                     650.65  ProfitBeforeTax
+
+TAX
+  Current tax                                                           215.98  CurrentTax
+  Deferred tax                                                           -8.64  DeferredTax
+* Total tax expense                                                     207.34  TaxExpense
+  Net movement in regulatory deferral account balances rel...             0.00  NetMovementInRegulatoryDeferralAccountBalancesRelatedToProfitOrLossAndTheRelatedDeferredTaxMovement
+
+RESULT
+  Profit after tax from continuing operations                           443.31  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                                 443.31  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                  1.74  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                            445.05  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent             445.05  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...             0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          167.46  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                       26.50  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     26.31  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              26.50  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            26.31  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+DEBT-LISTED DISCLOSURES
+  Debt / equity ratio                                                     9.00  DebtEquityRatio  [ratio]
+
+OTHER
+  Debt service coverage ratio                                             2.30  DebtServiceCoverageRatio  [ratio]
+  Interest service coverage ratio                                         1.28  InterestServiceCoverageRatio  [ratio]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

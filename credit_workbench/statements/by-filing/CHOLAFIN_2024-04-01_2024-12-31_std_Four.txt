@@ -1,0 +1,89 @@
+============================================================================================================================================
+Cholamandalam Investment & Finance  (CHOLAFIN)
+2024-04-01 to 2024-12-31   [nine months]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2025-02-01
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_118410_1368204_01022025120653.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                            18,720.52  RevenueFromOperations
+  Other income                                                          213.55  OtherIncome
+* Total income                                                       18,934.07  Income
+  Segment revenue                                                    18,934.07  SegmentRevenue
+  Segment revenue from operations                                    18,934.07  SegmentRevenueFromOperations
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                            2,358.75  EmployeeBenefitExpense
+  Finance costs                                                       9,122.56  FinanceCosts
+  Depreciation and amortisation                                         178.69  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                      1,374.45  OtherExpenses
+* Total expenses                                                     14,903.42  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                             4,030.65  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                   4,030.65  ProfitBeforeTax
+
+TAX
+  Current tax                                                         1,210.14  CurrentTax
+  Deferred tax                                                         -171.30  DeferredTax
+* Total tax expense                                                   1,038.84  TaxExpense
+  Segment profit loss before tax and finance costs                    4,030.65  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                           4,030.65  SegmentProfitBeforeTax
+  Income tax relating to itmes that will not be reclassifi...            -2.47  IncomeTaxRelatingToItmesThatWillNotBeReclassifiedToProfitOrLoss
+  Income tax relating to itmes that will be reclassified t...             5.14  IncomeTaxRelatingToItmesThatWillBeReclassifiedToProfitOrLoss
+
+RESULT
+  Profit after tax from continuing operations                         2,991.81  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                               2,991.81  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                  7.86  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                          2,999.67  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent           2,999.67  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...             0.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          168.23  PaidUpValueOfEquityShareCapital
+  Face value per share                                                    2.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                       35.60  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     35.51  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              35.60  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            35.51  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+DEBT-LISTED DISCLOSURES
+  Debt / equity ratio                                                     0.07  DebtEquityRatio  [ratio]
+
+OTHER
+  Amount of item that will not be reclassified to profit a...            -9.82  AmountOfItemThatWillNotBeReclassifiedToProfitAndLoss
+  Amount of item that will be reclassified to profit and l...            20.35  AmountOfItemThatWillBeReclassifiedToProfitAndLoss
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

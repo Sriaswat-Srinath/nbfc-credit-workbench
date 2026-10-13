@@ -1,0 +1,66 @@
+============================================================================================================================================
+Bajaj Finance  (BAJFINANCE)
+2018-01-01 to 2018-03-31   [quarter]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Audited
+  disseminated by NSE  2018-06-21
+  period taken from    results index (the instance declares no context for this column)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/NONINDAS_35272_9888_17052018060424_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             3,534.76  RevenueFromOperations
+  Other income                                                           22.47  OtherIncome
+* Total revenue                                                       3,557.23  Revenue
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              387.54  EmployeeBenefitExpense
+  Finance costs                                                       1,192.13  FinanceCosts
+  Depreciation and amortisation                                          29.25  DepreciationAndAmortisationExpense
+  Other expenses                                                        849.11  OtherExpenses
+* Total expenses                                                      2,458.03  Expenses
+
+PROFIT BEFORE TAX
+  Profit before exceptional and extraordinary items and tax           1,099.20  ProfitBeforeExceptionalAndExtraordinaryItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItems
+  Profit before extraordinary items and tax                           1,099.20  ProfitBeforeExtraordinaryItemsAndTax
+  Extraordinary items                                                     0.00  ExtraordinaryItems
+* Profit before tax                                                   1,099.20  ProfitBeforeTax
+
+TAX
+  Current tax                                                           315.00  CurrentTax
+  Deferred tax                                                           63.25  DeferredTax
+* Total tax expense                                                     378.25  TaxExpense
+
+RESULT
+  Profit after tax from continuing operations                           720.95  ProfitLossForThePeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuingOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuingOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuingOperationAfterTax
+  Profit for the period before minority interest                        720.95  ProfitLossForPeriodBeforeMinorityInterest
+* Profit for the period                                                 720.95  ProfitLossForThePeriod
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          115.03  PaidUpValueOfEquityShareCapital
+  Face value per share                                                    2.00  FaceValueOfEquityShareCapital  [per_share]
+  Earnings per share, basic                                              12.54  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            12.42  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total revenue = revenue from operations + other income
+  [holds      ] total tax = current tax + deferred tax
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

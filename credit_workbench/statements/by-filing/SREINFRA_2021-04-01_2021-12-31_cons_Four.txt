@@ -1,0 +1,85 @@
+============================================================================================================================================
+SREI Infrastructure Finance  (SREINFRA)
+2021-04-01 to 2021-12-31   [nine months]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2022-02-14
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_83060_610732_14022022105103_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             2,360.22  RevenueFromOperations
+  Other income                                                           -3.99  OtherIncome
+* Total income                                                        2,356.23  Income
+  Segment revenue                                                     2,361.70  SegmentRevenue
+  Inter segment revenue                                                   1.48  InterSegmentRevenue
+  Segment revenue from operations                                     2,360.22  SegmentRevenueFromOperations
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                               95.53  EmployeeBenefitExpense
+  Finance costs                                                       2,065.09  FinanceCosts
+  Depreciation and amortisation                                         438.58  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                        254.79  OtherExpenses
+* Total expenses                                                      5,142.86  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                            -2,786.63  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                  -2,786.63  ProfitBeforeTax
+
+TAX
+  Current tax                                                             2.55  CurrentTax
+  Deferred tax                                                           80.31  DeferredTax
+* Total tax expense                                                      82.86  TaxExpense
+  Segment profit loss before tax and finance costs                   -2,786.63  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                          -2,786.63  SegmentProfitBeforeTax
+
+RESULT
+  Profit after tax from continuing operations                        -2,869.49  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        0.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                              -2,869.49  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                248.94  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                         -2,620.55  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent             248.31  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...             0.63  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          503.09  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                      -57.04  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                    -57.04  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                             -57.04  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                           -57.04  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+OTHER
+  Profit or loss attributable to owners of parent                    -2,871.38  ProfitOrLossAttributableToOwnersOfParent
+  Profit or loss attributable to non controlling interests                1.89  ProfitOrLossAttributableToNonControllingInterests
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

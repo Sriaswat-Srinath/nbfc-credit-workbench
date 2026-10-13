@@ -1,0 +1,81 @@
+============================================================================================================================================
+Sammaan Capital (formerly Indiabulls Housing)  (SAMMAANCAP)
+2018-04-01 to 2018-09-30   [half year]
+============================================================================================================================================
+  basis                Non-Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2018-10-17
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_39324_51108_16102018010425_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             7,214.05  RevenueFromOperations
+  Other income                                                          457.20  OtherIncome
+* Total income                                                        7,671.25  Income
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              376.94  EmployeeBenefitExpense
+  Finance costs                                                       4,578.98  FinanceCosts
+  Depreciation and amortisation                                          16.59  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                        157.81  OtherExpenses
+* Total expenses                                                      5,130.32  Expenses
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                             2,540.93  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                   2,540.93  ProfitBeforeTax
+
+TAX
+  Current tax                                                           686.30  CurrentTax
+  Deferred tax                                                          -46.58  DeferredTax
+* Total tax expense                                                     639.72  TaxExpense
+  Net movement in regulatory deferral account balances rel...             0.00  NetMovementInRegulatoryDeferralAccountBalancesRelatedToProfitOrLossAndTheRelatedDeferredTaxMovement
+
+RESULT
+  Profit after tax from continuing operations                         1,901.21  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+* Profit for the period                                               1,901.21  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                132.58  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                          2,033.79  ComprehensiveIncomeForThePeriod
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                           85.34  PaidUpValueOfEquityShareCapital
+  Face value per share                                                    2.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                       44.57  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     44.14  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              44.57  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            44.14  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+DEBT-LISTED DISCLOSURES
+  Debt / equity ratio                                                     0.07  DebtEquityRatio  [ratio]
+
+OTHER
+  Debt service coverage ratio                                             0.02  DebtServiceCoverageRatio  [ratio]
+  Interest service coverage ratio                                         0.02  InterestServiceCoverageRatio  [ratio]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

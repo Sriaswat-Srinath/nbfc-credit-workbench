@@ -1,0 +1,112 @@
+============================================================================================================================================
+Reliance Capital  (RELCAPITAL)
+2021-04-01 to 2021-06-30   [quarter]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Un-Audited
+  disseminated by NSE  2021-08-06
+  filer states units   Crores  (the instance itself carries absolute rupees; converted below)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/NBFC_INDAS_74274_500763_06082021052419_WEB.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+  Interest income                                                       706.00  InterestEarned
+  Dividend income                                                        23.00  DividendIncome
+  Rental income                                                           0.00  RentalIncome
+  Fees and commission income                                            154.00  FeesAndCommissionIncome
+  Net gain on fair value changes                                        587.00  NetGainOnFairValueChanges
+  Net gain on derecognition of financial instruments                      0.00  NetGainOnDerecognitionOfFinancialInstrumentsUnderAmortisedCostCategory
+  Sale of products                                                        0.00  RevenueFromSaleOfProduct
+  Sale of services                                                        0.00  RevenueFromSaleOfServices
+  Other operating revenue                                             2,971.00  OtherRevenueFromOperations
+* Revenue from operations                                             4,441.00  RevenueFromOperations
+  Other income                                                            7.00  OtherIncome
+* Total income                                                        4,448.00  Income
+  Segment revenue                                                     4,469.00  SegmentRevenue
+  Inter segment revenue                                                  21.00  InterSegmentRevenue
+  Segment revenue from operations                                     4,448.00  SegmentRevenueFromOperations
+  Other unallocable expenditure net off un allocable income               0.00  OtherUnallocableExpenditureNetOffUnAllocableIncome
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              377.00  EmployeeBenefitExpense
+  Finance costs                                                         671.00  FinanceCosts
+  Depreciation and amortisation                                          27.00  DepreciationDepletionAndAmortisationExpense
+  Fees and commission expense                                           161.00  FeesAndCommissionExpense
+  Net loss on fair value changes                                          0.00  NetLossOnFairValueChanges
+  Net loss on derecognition of financial instruments                      0.00  NetLossOnDerecognitionOfFinancialInstrumentsUnderAmortisedCostCategory
+  Impairment on financial instruments                                   467.00  ImpairmentOnFinancialInstruments
+  Other expenses                                                      3,558.00  OtherExpenses
+* Total expenses                                                      5,261.00  Expenses
+  Segment finance costs                                                   0.00  SegmentFinanceCosts
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                              -813.00  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                    -813.00  ProfitBeforeTax
+
+TAX
+  Current tax                                                            24.00  CurrentTax
+  Deferred tax                                                           34.00  DeferredTax
+* Total tax expense                                                      58.00  TaxExpense
+  Segment profit loss before tax and finance costs                     -948.00  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                            -948.00  SegmentProfitBeforeTax
+
+RESULT
+  Profit after tax from continuing operations                          -871.00  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                     -135.00  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                              -1,006.00  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                -15.00  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                         -1,021.00  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent            -996.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...           -25.00  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+  Other comprehensive income                                            -15.00  OtherComprehensiveIncome
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          253.00  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                      -40.10  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                    -40.10  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                             -40.10  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                           -40.10  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+OTHER
+  Profit or loss attributable to owners of parent                      -981.00  ProfitOrLossAttributableToOwnersOfParent
+  Profit or loss attributable to non controlling interests              -25.00  ProfitOrLossAttributableToNonControllingInterests
+  Finanical assets                                                        0.00  FinanicalAssets
+  Non financial assets                                                    0.00  NonFinancialAssets
+  Financial liabilities                                                   0.00  FinancialLiabilities
+  Non financial liabilities                                               0.00  NonFinancialLiabilities
+  Segment assets                                                     65,627.00  SegmentAssets
+  Un allocable assets                                                     0.00  UnAllocableAssets
+  Net segment assets                                                 65,627.00  NetSegmentAssets
+  Segment liabilities                                                77,438.00  SegmentLiabilities
+  Un allocable liabilities                                                0.00  UnAllocableLiabilities
+  Net segment liabilities                                            77,438.00  NetSegmentLiabilities
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

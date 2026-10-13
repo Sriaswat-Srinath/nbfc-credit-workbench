@@ -1,0 +1,120 @@
+============================================================================================================================================
+Reliance Capital  (RELCAPITAL)
+2024-07-01 to 2024-09-30   [quarter]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Un-Audited
+  approved by board    2024-11-14
+  disseminated by NSE  2024-11-15
+  filer states units   Lakhs  (the instance itself carries absolute rupees; converted below)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/INDAS_116499_1314005_15112024122407.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             7,342.91  RevenueFromOperations
+  Other income                                                           12.08  OtherIncome
+* Total income                                                        7,354.99  Income
+  Segment revenue                                                     7,358.16  SegmentRevenue
+  Inter segment revenue                                                   3.17  InterSegmentRevenue
+  Segment revenue from operations                                     7,354.99  SegmentRevenueFromOperations
+  Other unallocable expenditure net off un allocable income               0.00  OtherUnallocableExpenditureNetOffUnAllocableIncome
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              378.24  EmployeeBenefitExpense
+  Finance costs                                                          13.48  FinanceCosts
+  Depreciation and amortisation                                          30.19  DepreciationDepletionAndAmortisationExpense
+  Other expenses                                                      6,025.09  OtherExpenses
+* Total expenses                                                      6,967.13  Expenses
+  Segment finance costs                                                   0.00  SegmentFinanceCosts
+
+PROFIT BEFORE TAX
+* Profit before exceptional items and tax                               387.86  ProfitBeforeExceptionalItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItemsBeforeTax
+* Profit before tax                                                     387.86  ProfitBeforeTax
+
+TAX
+  Current tax                                                           101.50  CurrentTax
+  Deferred tax                                                          -17.83  DeferredTax
+* Total tax expense                                                      83.67  TaxExpense
+  Deferred tax assets net                                               115.63  DeferredTaxAssetsNet
+  Deferred tax liabilities net                                            0.00  DeferredTaxLiabilitiesNet
+  Current tax liabilities                                                 0.00  CurrentTaxLiabilities
+  Segment profit loss before tax and finance costs                      392.59  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                             392.59  SegmentProfitBeforeTax
+  Income tax relating to itmes that will not be reclassifi...             0.00  IncomeTaxRelatingToItmesThatWillNotBeReclassifiedToProfitOrLoss
+  Income tax relating to itmes that will be reclassified t...             0.00  IncomeTaxRelatingToItmesThatWillBeReclassifiedToProfitOrLoss
+
+RESULT
+  Profit after tax from continuing operations                           304.19  ProfitLossForPeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuedOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuedOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuedOperationsAfterTax
+  Share of profit of associates and joint ventures                        4.74  ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+* Profit for the period                                                 308.93  ProfitLossForPeriod
+
+COMPREHENSIVE INCOME
+  Other comprehensive income, net of tax                                237.80  OtherComprehensiveIncomeNetOfTaxes
+* Total comprehensive income                                            546.73  ComprehensiveIncomeForThePeriod
+  Comprehensive income attributable to owners of the parent             190.35  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParent
+  Comprehensive income attributable to non-controlling int...            47.44  ComprehensiveIncomeForThePeriodAttributableToOwnersOfParentNonControllingInterests
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          253.24  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  EPS basic, continuing operations                                       12.30  BasicEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS diluted, continuing operations                                     12.30  DilutedEarningsLossPerShareFromContinuingOperations  [per_share]
+  EPS basic, discontinued operations                                      0.00  BasicEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  EPS diluted, discontinued operations                                    0.00  DilutedEarningsLossPerShareFromDiscontinuedOperations  [per_share]
+  Earnings per share, basic                                              12.30  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            12.30  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Equity share capital                                                  253.24  EquityShareCapital
+
+CASH FLOW
+  Cash and cash equivalents                                             696.87  CashAndCashEquivalents
+  Bank balance other than cash and cash equivalents                     135.25  BankBalanceOtherThanCashAndCashEquivalents
+
+OTHER
+  Profit or loss attributable to owners of parent                       227.82  ProfitOrLossAttributableToOwnersOfParent
+  Profit or loss attributable to non controlling interests               81.08  ProfitOrLossAttributableToNonControllingInterests
+  Non controlling interest                                            1,411.28  NonControllingInterest
+  Property plant and equipment                                          176.03  PropertyPlantAndEquipment
+  Capital work in progress                                                4.72  CapitalWorkInProgress
+  Investment property                                                    72.52  InvestmentProperty
+  Goodwill                                                            4,951.46  Goodwill
+  Other intangible assets                                                94.35  OtherIntangibleAssets
+  Intangible assets under development                                    24.90  IntangibleAssetsUnderDevelopment
+  Biological assets other than bearer plants                              0.00  BiologicalAssetsOtherThanBearerPlants
+  Inventories                                                           120.66  Inventories
+  Assets                                                             82,352.15  Assets
+  Other equity                                                      -10,756.91  OtherEquity
+  Equity attributable to owners of parent                           -10,503.67  EquityAttributableToOwnersOfParent
+  Equity                                                             -9,092.39  Equity
+  Liabilities                                                        91,444.54  Liabilities
+  Equity and liabilities                                             82,352.15  EquityAndLiabilities
+  Segment assets                                                     82,352.15  SegmentAssets
+  Un allocable assets                                                     0.00  UnAllocableAssets
+  Net segment assets                                                 82,352.15  NetSegmentAssets
+  Segment liabilities                                                91,444.54  SegmentLiabilities
+  Amount of item that will not be reclassified to profit a...            -2.06  AmountOfItemThatWillNotBeReclassifiedToProfitAndLoss
+  Amount of item that will be reclassified to profit and l...           239.86  AmountOfItemThatWillBeReclassifiedToProfitAndLoss
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total income = revenue from operations + other income
+  [holds      ] profit before exceptional items = total income - total expenses
+  [holds      ] total tax = current tax + deferred tax
+  [holds      ] profit from continuing operations = profit before tax - tax
+  [holds      ] total comprehensive income = profit + other comprehensive income
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

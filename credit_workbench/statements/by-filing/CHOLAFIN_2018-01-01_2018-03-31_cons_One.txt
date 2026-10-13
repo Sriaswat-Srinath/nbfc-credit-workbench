@@ -1,0 +1,83 @@
+============================================================================================================================================
+Cholamandalam Investment & Finance  (CHOLAFIN)
+2018-01-01 to 2018-03-31   [quarter]
+============================================================================================================================================
+  basis                Consolidated
+  audited              Audited
+  disseminated by NSE  2018-08-10
+  period taken from    results index (the instance declares no context for this column)
+  source               https://nsearchives.nseindia.com/corporate/xbrl/NONINDAS_34645_17150_05072018122224_WEB_2.xml
+
+LINE ITEM                                                             Rs CRORE  XBRL TAG
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INCOME
+* Revenue from operations                                             1,536.75  RevenueFromOperations
+  Other income                                                            0.25  OtherIncome
+* Total revenue                                                       1,537.00  Revenue
+  Segment revenue                                                     1,538.23  SegmentRevenue
+  Inter segment revenue                                                   1.48  InterSegmentRevenue
+  Segment revenue from operations                                     1,536.75  SegmentRevenueFromOperations
+  Other unallocable expenditure net off un allocable income              -0.26  OtherUnallocableExpenditureNetOffUnAllocableIncome
+
+EXPENSES
+  Cost of materials consumed                                              0.00  CostOfMaterialsConsumed
+  Purchases of stock in trade                                             0.00  PurchasesOfStockInTrade
+  Changes in inventories                                                  0.00  ChangesInInventoriesOfFinishedGoodsWorkInProgressAndStockInTrade
+  Employee benefit expense                                              158.82  EmployeeBenefitExpense
+  Finance costs                                                         619.22  FinanceCosts
+  Depreciation and amortisation                                          15.25  DepreciationAndAmortisationExpense
+  Other expenses                                                        307.63  OtherExpenses
+* Total expenses                                                      1,100.92  Expenses
+
+PROFIT BEFORE TAX
+  Profit before exceptional and extraordinary items and tax             436.08  ProfitBeforeExceptionalAndExtraordinaryItemsAndTax
+  Exceptional items                                                       0.00  ExceptionalItems
+  Profit before extraordinary items and tax                             436.08  ProfitBeforeExtraordinaryItemsAndTax
+  Extraordinary items                                                     0.00  ExtraordinaryItems
+* Profit before tax                                                     436.08  ProfitBeforeTax
+
+TAX
+  Current tax                                                           124.50  CurrentTax
+  Deferred tax                                                           22.49  DeferredTax
+* Total tax expense                                                     146.99  TaxExpense
+  Segment profit loss before tax and finance costs                      435.82  SegmentProfitLossBeforeTaxAndFinanceCosts
+  Segment profit before tax                                             436.08  SegmentProfitBeforeTax
+
+RESULT
+  Profit after tax from continuing operations                           289.09  ProfitLossForThePeriodFromContinuingOperations
+  Profit from discontinued operations, before tax                         0.00  ProfitLossFromDiscontinuingOperationsBeforeTax
+  Tax on discontinued operations                                          0.00  TaxExpenseOfDiscontinuingOperations
+  Profit from discontinued operations, after tax                          0.00  ProfitLossFromDiscontinuingOperationAfterTax
+  Profit for the period before minority interest                        289.09  ProfitLossForPeriodBeforeMinorityInterest
+  Share of profit loss of associates                                      0.00  ShareOfProfitLossOfAssociates
+  Profit loss of minority interest                                       -0.54  ProfitLossOfMinorityInterest
+* Profit for the period                                                 289.63  ProfitLossForThePeriod
+
+CAPITAL AND PER SHARE
+  Paid-up equity share capital                                          156.40  PaidUpValueOfEquityShareCapital
+  Face value per share                                                   10.00  FaceValueOfEquityShareCapital  [per_share]
+  Earnings per share, basic                                              18.53  BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+  Earnings per share, diluted                                            18.51  DilutedEarningsLossPerShareFromContinuingAndDiscontinuedOperations  [per_share]
+
+OTHER
+  Debenture redemption reserve                                            0.00  DebentureRedemptionReserve
+  Segment assets                                                     39,568.37  SegmentAssets
+  Un allocable assets                                                   522.13  UnAllocableAssets
+  Net segment assets                                                 40,090.50  NetSegmentAssets
+  Segment liabilities                                                34,403.86  SegmentLiabilities
+  Un allocable liabilities                                                0.38  UnAllocableLiabilities
+  Net segment liabilities                                            34,404.24  NetSegmentLiabilities
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* marks a subtotal.  Figures in Rs crore except lines marked
+  [per_share] or [ratio], which are printed exactly as filed.
+
+DOES THE STATEMENT ADD UP
+  [holds      ] total revenue = revenue from operations + other income
+  [holds      ] total tax = current tax + deferred tax
+
+  Only relationships that hold by definition of a profit and loss account
+  are tested. Decomposition - a total against the lines beneath it - is NOT
+  checked: the three XBRL taxonomies in use name those lines differently and
+  the rule failed on healthy filings, so it was removed rather than shipped.

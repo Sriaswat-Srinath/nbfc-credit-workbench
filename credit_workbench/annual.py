@@ -24,7 +24,12 @@ import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "cache")
-PANEL = os.path.join(os.path.dirname(HERE), "risk_engine", "panel.csv")
+# The annual balance sheet is the one input that does not come from NSE. It
+# derives from a supplied financials dataset, and it lives inside this package
+# so the workbench is self-contained - the earlier path reached out into a
+# sibling directory, which meant the Capital & leverage tab silently lost its
+# data if credit_workbench was moved on its own.
+PANEL = os.path.join(HERE, "data", "panel.csv")
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/120.0 Safari/537.36")
 API = "https://www.nseindia.com/api/annual-reports?index=equities&symbol={}"

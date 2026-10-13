@@ -4,7 +4,7 @@ An evidence-first monitoring tool for Indian non-bank lenders (NBFCs and
 housing finance companies), built on NSE primary filings.
 
 It is **not** a default-prediction model. That framing was tested and
-abandoned — see `risk_engine/ALM_WEEK2_FINDINGS.txt` for the negative result
+abandoned — see `credit_workbench/ALM_FINDINGS.txt` for the negative result
 that led here. The workbench helps a credit analyst discover, verify and
 investigate emerging risk, and leaves the judgement to them.
 
@@ -49,8 +49,25 @@ python3 -m http.server 8777 --directory credit_workbench
 `file://` will not work — the data loads as a sibling script.
 
 To rebuild from source, see `credit_workbench/USING_THE_WORKBENCH.txt` §9.
-The NSE cache is not in this repository (443 MB); `ingest.py` and
+The NSE cache is not in this repository (902 MB); `ingest.py` and
 `attachments.py` rebuild it.
+
+## Sources
+
+Five NSE endpoints and one local file. Nothing else feeds the workbench.
+
+| Source | Supplies |
+|---|---|
+| NSE `corporate-announcements` | the disclosure timeline, rating actions, clarification requests |
+| NSE XBRL instances | quarterly P&L, reporting basis, audit flags, the filed statements |
+| NSE `corporates-financial-results` | the filing index — dissemination timestamps and flags |
+| NSE announcement attachments | payment-disclosure classification, read from the PDFs |
+| NSE `annual-reports` | publication timestamps for the annual layer |
+| `credit_workbench/data/panel.csv` | the annual balance sheet |
+
+`panel.csv` is the only input not from NSE. It derives from a supplied
+financials dataset, which is why DHFL has no Capital & leverage view and gross
+NPA exists for only 6 of 15 issuers.
 
 ## Documentation
 
@@ -60,8 +77,8 @@ The NSE cache is not in this repository (443 MB); `ingest.py` and
 | `credit_workbench/ARCHITECTURE.txt` | what it is, the workflow, and the design constraints |
 | `credit_workbench/LOW_LEVEL_DESIGN.txt` | implementation detail, every detector and threshold |
 | `credit_workbench/PRODUCT.txt` | what is built, what is not, alert rates, and the limits |
-| `risk_engine/ALM_WEEK2_FINDINGS.txt` | the pre-registered negative result |
-| `risk_engine/OUTCOME_DEFINITION.txt` | the pre-registration it was tested against |
+| `credit_workbench/ALM_FINDINGS.txt` | the pre-registered negative result that led here |
+| `credit_workbench/OUTCOME_DEFINITION.txt` | the pre-registration it was tested against |
 
 ## Honest limits
 

@@ -1,0 +1,227 @@
+================================================================================
+NBFC CREDIT WORKBENCH - WHAT IS BUILT, WHAT IS NOT, AND HOW TO TEST IT
+================================================================================
+Date: 2026-10-13
+Status: Working prototype over 16 issuers. Not validated with users.
+
+Run it:   python3 -m http.server 8777 --directory credit_workbench
+          then open http://localhost:8777/workbench.html
+Rebuild:  python3 ingest.py && python3 build.py
+
+
+--------------------------------------------------------------------------------
+1. THE PROPOSITION, STATED SO IT CAN BE FALSIFIED
+--------------------------------------------------------------------------------
+"Reduce the time a credit analyst spends discovering, verifying and
+investigating emerging risk in Indian NBFCs."
+
+Not "predict defaults". The research that preceded this tool established why
+that framing was abandoned:
+  - A nine-component weighted distress index did NOT beat plain equity/assets
+    on held-out US bank data.
+  - A US model caught 86% of bank failures by count and 4% by assets; it
+    missed Silicon Valley Bank entirely, whose last call report was healthy on
+    every measure.
+  - An ALM maturity-gap screen scored AUC 0.400 and 0.500 against matched
+    Indian cohorts - at or below chance - and the firm that reported the
+    HEALTHIEST one-year liquidity position in its peer group was already in
+    default on recalled debentures.
+
+So this tool has no composite score, by design. It ranks evidence and leaves
+the judgement to a person.
+
+
+--------------------------------------------------------------------------------
+2. THE TWO THINGS THAT ARE ACTUALLY DIFFERENTIATED
+--------------------------------------------------------------------------------
+Everything else here is table stakes that Informist, The Company Check and
+ICRA Analytics already sell. These two are not, and both came out of the
+research rather than out of a feature list.
+
+(A) PUBLICATION-DATE DISCIPLINE, AND A REPLAY BUILT ON IT
+    Every figure and every finding is stamped with the moment it reached the
+    exchange, never the fiscal period it describes. The as-of control then
+    regenerates the entire file as it read on any past date.
+
+    This is not a nicety. Checking those timestamps deleted three of five
+    cases from the earlier study: DHFL's FY2019 annual report was published
+    5 September 2019, three months AFTER its 4 June default. A conventional
+    screen that joins on fiscal year would have "predicted" the default using
+    a document published after it.
+
+    The commercial use is process testing: an analyst can ask "what did our
+    file on this issuer actually say on 31 May 2019?" instead of reading
+    today's file and concluding the failure was obvious.
+
+(B) CONTRADICTION DETECTION BY ARITHMETIC ON FILED DATA
+    Year-to-date figures must equal the sum of their quarters. Where they do
+    not, a quarter was restated after it was first published. The tool does
+    that arithmetic across filings and shows both sides with their filing
+    dates.
+
+    Worked example in the data: Shriram Finance's nine-month total income for
+    FY2023 was filed as Rs 22,542 crore while the three quarters inside it, as
+    originally filed, sum to Rs 18,310 crore. The tool flags it AND names the
+    likely innocent cause - the Shriram City Union merger restating
+    comparatives. That is the intended behaviour: find the contradiction,
+    offer the counterexplanation, send a human to check.
+
+
+--------------------------------------------------------------------------------
+3. THE FIVE FUNCTIONS, HONESTLY GRADED
+--------------------------------------------------------------------------------
+1. ISSUER PROFILE                                   PARTIAL
+   Built: quarterly P&L history, annual balance sheet, related listed
+   entities, lender type, group.
+   Missing: rating history. NSE's corporate-credit-rating endpoint returns
+   empty for every issuer tested. Rating ACTIONS appear in the announcement
+   stream as free text, but there is no structured rating level or history.
+   This is the largest gap and it matters, because the honest commercial
+   question is whether this beats reading the rating agency's commentary.
+
+2. DISCLOSURE TIMELINE                              BUILT
+   2004 onwards, categorised by NSE, with dissemination timestamps and links
+   to the original PDF. 1,276 announcements for DHFL alone - and it is fully
+   available for delisted issuers, which was not obvious before testing.
+
+3. EVIDENCE-LINKED FINANCIAL ANALYSIS               BUILT
+   Quarterly: total income, PBT, PAT, impairment, from tagged XBRL - no PDF
+   parsing. Annual: equity/assets, leverage, borrowings/assets, ROA, gross
+   NPA. Every figure shows its source file, its basis, and its timestamp.
+   Standalone and consolidated are never mixed.
+
+4. CHANGE AND INCONSISTENCY DETECTION               BUILT - the strongest part
+   Nine detectors: missed filing deadline, year-to-date reconciliation break,
+   inconsistent reporting scale, consolidated reporting withdrawn, non-clean
+   audit opinion, capital erosion, swing into loss, year-on-year credit-cost
+   jump, and promoted announcements (rating actions and exchange
+   clarification requests matching distress language).
+   Each distinguishes genuine contradiction from legitimate accounting
+   difference by carrying an explicit counterexplanation.
+
+5. ANALYST INVESTIGATION BRIEF                      BUILT
+   What changed, why it may matter, the evidence, the counterevidence, and
+   the questions a human has to answer. It does not conclude.
+
+
+--------------------------------------------------------------------------------
+4. THE SIGNAL THAT SURPRISED ME, AND IS WORTH LEADING THE DEMO WITH
+--------------------------------------------------------------------------------
+The strongest discriminator in the data is not a ratio. It is whether the
+issuer filed on time.
+
+  DHFL   audited FY2019 results due 30 May 2019, filed 23 July 2019.
+         114 days after period end. The first default fell inside that gap,
+         on 4 June.
+  RHFL   audited FY2019 results filed 136 days after period end against the
+         issuer's own trailing norm of about 50 days, and 18 days before its
+         1 September 2019 default.
+
+A missed deadline is one of the few signals that does not depend on the
+reported figures being true, which is exactly the weakness that defeated
+every model in the research phase.
+
+Set the as-of control to 31 May 2019 and the rail ranks Reliance Home
+Finance, Reliance Capital and DHFL first, second and third. All three failed
+within thirty months. Nothing in the detection logic reads the outcome
+labels, and the outcome banner is withheld until the as-of date passes the
+event.
+
+This is a demonstration, not evidence. Three cases, chosen with hindsight,
+in a universe of sixteen.
+
+
+--------------------------------------------------------------------------------
+5. ALERT RATES - THE NUMBER TO JUDGE THE TOOL BY
+--------------------------------------------------------------------------------
+Substantive findings over the full coverage period, today's date:
+
+  Reliance Capital      37     SREI Infrastructure   30
+  Reliance Home Fin     25     Edelweiss             19
+  DHFL                  17     Repco Home Finance    14
+  Sammaan (Indiabulls)  12     LIC Housing           10
+  IIFL Finance          11     Muthoot               12
+  PNB Housing           10     Manappuram             7
+  Shriram Finance       10     Can Fin Homes          5
+  Cholamandalam          5     Bajaj Finance          2
+
+Bajaj Finance over six years produces two findings. Reliance Capital produces
+thirty-seven. The separation is real but it is NOT a prediction: Repco Home
+Finance, a conservative lender that never got into trouble, sits at fourteen.
+Read the count as "how much is here to look at", never as risk.
+
+Getting here took three rounds of tightening. The first build emitted 133
+findings for DHFL, including one per routine rating announcement, and three
+false restatements caused by rounding noise on figures under Rs 1 crore. The
+thresholds that fixed it are visible constants at the top of detect.py, not
+hidden in a model, so an analyst can disagree with them.
+
+
+--------------------------------------------------------------------------------
+6. KNOWN LIMITS - SAY THESE BEFORE A PROSPECT FINDS THEM
+--------------------------------------------------------------------------------
+- Structured quarterly results exist only from about 2019, when XBRL became
+  mandatory. DHFL has 14 readable filings against 73 result filings listed.
+  Earlier periods need the PDF.
+- No rating data, as above.
+- No unlisted entity. IL&FS Financial Services, which actually defaulted on
+  the commercial paper, was never listed and files nothing. The research
+  phase also found IL&FS Transportation files no maturity ladder at all
+  because it is not a registered NBFC. The riskiest entity in a group is
+  often the one that discloses least.
+- Some NSE XBRL instances are mis-scaled, and the tagged rounding field does
+  not predict which. The tool detects and EXCLUDES them rather than guessing
+  a multiplier, and reports the exclusion.
+- Everything here derives from what the issuer chose to disclose. Reliance
+  Capital reported the best one-year liquidity cover in its peer group while
+  Rs 5,103 crore of its debentures had already been recalled.
+- Sixteen issuers. India has over 9,000 registered NBFCs.
+
+
+--------------------------------------------------------------------------------
+7. WHAT TO ASK FIVE ANALYSTS - AND WHAT A REAL SIGNAL LOOKS LIKE
+--------------------------------------------------------------------------------
+Open with their last investigation, not with the demo:
+
+  1. Walk me through the last issuer you investigated because something
+     looked wrong. What made you look?
+  2. Which sources did you open, in what order, and how long did it take?
+  3. What was hardest to reconcile?
+  4. Was there anything you found out later than you would have liked?
+  5. What do you use now, and what does your firm pay for it?
+
+Then show the tool and ask:
+  6. Does a missed filing deadline already reach you? How?
+  7. If a year-to-date figure did not reconcile with the quarters, would you
+     want to know, or is that noise?
+  8. Would you trust a brief you did not assemble yourself? What would have
+     to be true for you to?
+
+A real signal is NOT enthusiasm. It is an analyst who gives you a live
+non-confidential workflow, uses the prototype on an issuer you did not
+choose, and comes back unprompted. Record whether they can name a budget and
+who signs.
+
+Measure: research time with and without; whether every material claim could
+be verified against source; findings that mattered versus findings ignored;
+how often it failed for want of data; repeat use; willingness to pay.
+
+
+--------------------------------------------------------------------------------
+8. MY HONEST READ ON THE COMMERCIAL QUESTION
+--------------------------------------------------------------------------------
+The timeline and the issuer profile are commodity - three vendors already
+sell them, better resourced. The defensible part is narrow: point-in-time
+reconstruction and arithmetic contradiction detection, both of which exist
+because the research phase was forced to confront what publication lag and
+reporting discretion do to a model.
+
+That narrowness is the risk and the opportunity. It is probably not a
+standalone product. It is plausibly a feature someone who already sells
+monitoring would want, or a tool for model validation and process review
+inside a lender or a regulator, where "what was knowable on this date" is the
+actual question being asked.
+
+Find that out from the five interviews before building anything further. Do
+not expand the universe past sixteen issuers until someone has used it twice.
+================================================================================

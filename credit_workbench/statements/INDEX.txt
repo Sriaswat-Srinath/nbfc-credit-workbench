@@ -1,0 +1,1169 @@
+EVERY MACHINE-READABLE FILING IN THE CACHE
+Generated 2026-10-13.  1164 statement columns from 1147 filings.
+
+ISSUER       FROM        TO          SPAN         BASIS  AUDITED    FILED       LINES  FILE
+----------------------------------------------------------------------------------------------------------------------------------
+SREINFRA     2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-09     92  by-filing/SREINFRA_2023-07-01_2023-09-30_std_One.txt
+SREINFRA     2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-09    141  by-filing/SREINFRA_2023-04-01_2023-09-30_std_Four.txt
+SREINFRA     2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-29     55  by-filing/SREINFRA_2023-04-01_2023-06-30_std_One.txt
+SREINFRA     2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-07-29     70  by-filing/SREINFRA_2023-04-01_2023-06-30_cons_One.txt
+SREINFRA     2023-01-01  2023-03-31  quarter      std    Audited    2023-05-17     93  by-filing/SREINFRA_2023-01-01_2023-03-31_std_One.txt
+SREINFRA     2022-04-01  2023-03-31  full year    std    Audited    2023-05-17    141  by-filing/SREINFRA_2022-04-01_2023-03-31_std_Four.txt
+SREINFRA     2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-17    110  by-filing/SREINFRA_2023-01-01_2023-03-31_cons_One.txt
+SREINFRA     2022-04-01  2023-03-31  full year    cons   Audited    2023-05-17    153  by-filing/SREINFRA_2022-04-01_2023-03-31_cons_Four.txt
+SREINFRA     2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-08     55  by-filing/SREINFRA_2022-10-01_2022-12-31_std_One.txt
+SREINFRA     2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-08     51  by-filing/SREINFRA_2022-04-01_2022-12-31_std_Four.txt
+SREINFRA     2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-08     72  by-filing/SREINFRA_2022-10-01_2022-12-31_cons_One.txt
+SREINFRA     2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-08     62  by-filing/SREINFRA_2022-04-01_2022-12-31_cons_Four.txt
+SREINFRA     2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-12     93  by-filing/SREINFRA_2022-07-01_2022-09-30_std_One.txt
+SREINFRA     2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-12    140  by-filing/SREINFRA_2022-04-01_2022-09-30_std_Four.txt
+SREINFRA     2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-12    110  by-filing/SREINFRA_2022-07-01_2022-09-30_cons_One.txt
+SREINFRA     2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-12    151  by-filing/SREINFRA_2022-04-01_2022-09-30_cons_Four.txt
+SREINFRA     2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-08-13     66  by-filing/SREINFRA_2022-04-01_2022-06-30_cons_One.txt
+SREINFRA     2022-01-01  2022-03-31  quarter      std    Audited    2022-05-30     71  by-filing/SREINFRA_2022-01-01_2022-03-31_std_One.txt
+SREINFRA     2021-04-01  2022-03-31  full year    std    Audited    2022-05-30    138  by-filing/SREINFRA_2021-04-01_2022-03-31_std_Four.txt
+SREINFRA     2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-30     85  by-filing/SREINFRA_2022-01-01_2022-03-31_cons_One.txt
+SREINFRA     2021-04-01  2022-03-31  full year    cons   Audited    2022-05-30    146  by-filing/SREINFRA_2021-04-01_2022-03-31_cons_Four.txt
+SREINFRA     2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-14     48  by-filing/SREINFRA_2021-10-01_2021-12-31_cons_One.txt
+SREINFRA     2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-14     42  by-filing/SREINFRA_2021-04-01_2021-12-31_cons_Four.txt
+SREINFRA     2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-14     52  by-filing/SREINFRA_2021-10-01_2021-12-31_std_One.txt
+SREINFRA     2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-14     48  by-filing/SREINFRA_2021-04-01_2021-12-31_std_Four.txt
+SREINFRA     2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-12-29     65  by-filing/SREINFRA_2021-07-01_2021-09-30_std_One.txt
+SREINFRA     2021-04-01  2021-09-30  half year    std    Un-Audited 2021-12-29    138  by-filing/SREINFRA_2021-04-01_2021-09-30_std_Four.txt
+SREINFRA     2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-12-29     81  by-filing/SREINFRA_2021-07-01_2021-09-30_cons_One.txt
+SREINFRA     2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-12-29    146  by-filing/SREINFRA_2021-04-01_2021-09-30_cons_Four.txt
+SREINFRA     2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-14     53  by-filing/SREINFRA_2021-04-01_2021-06-30_std_One.txt
+SREINFRA     2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-14     68  by-filing/SREINFRA_2021-04-01_2021-06-30_cons_One.txt
+SREINFRA     2021-01-01  2021-03-31  quarter      std    Audited    2021-07-01    164  by-filing/SREINFRA_2021-01-01_2021-03-31_std_One.txt
+SREINFRA     2020-04-01  2021-03-31  full year    std    Audited    2021-07-01     50  by-filing/SREINFRA_2020-04-01_2021-03-31_std_Four.txt
+SREINFRA     2021-01-01  2021-03-31  quarter      cons   Audited    2021-07-01    178  by-filing/SREINFRA_2021-01-01_2021-03-31_cons_One.txt
+SREINFRA     2020-04-01  2021-03-31  full year    cons   Audited    2021-07-01     59  by-filing/SREINFRA_2020-04-01_2021-03-31_cons_Four.txt
+SREINFRA     2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-02-13     35  by-filing/SREINFRA_2020-10-01_2020-12-31_std_One.txt
+SREINFRA     2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-02-13     35  by-filing/SREINFRA_2020-04-01_2020-12-31_std_Four.txt
+SREINFRA     2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-02-13     68  by-filing/SREINFRA_2020-10-01_2020-12-31_cons_One.txt
+SREINFRA     2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-02-13     58  by-filing/SREINFRA_2020-04-01_2020-12-31_cons_Four.txt
+SREINFRA     2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-20    163  by-filing/SREINFRA_2020-07-01_2020-09-30_std_One.txt
+SREINFRA     2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-20     49  by-filing/SREINFRA_2020-04-01_2020-09-30_std_Four.txt
+SREINFRA     2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-20    179  by-filing/SREINFRA_2020-07-01_2020-09-30_cons_One.txt
+SREINFRA     2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-20     58  by-filing/SREINFRA_2020-04-01_2020-09-30_cons_Four.txt
+SREINFRA     2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-30     52  by-filing/SREINFRA_2020-04-01_2020-06-30_std_One.txt
+SREINFRA     2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-30     68  by-filing/SREINFRA_2020-04-01_2020-06-30_cons_One.txt
+SREINFRA     2020-01-01  2020-03-31  quarter      std    Audited    2020-08-07     74  by-filing/SREINFRA_2020-01-01_2020-03-31_std_One.txt
+SREINFRA     2019-04-01  2020-03-31  full year    std    Audited    2020-08-07     50  by-filing/SREINFRA_2019-04-01_2020-03-31_std_Four.txt
+SREINFRA     2020-01-01  2020-03-31  quarter      cons   Audited    2020-08-07     88  by-filing/SREINFRA_2020-01-01_2020-03-31_cons_One.txt
+SREINFRA     2019-04-01  2020-03-31  full year    cons   Audited    2020-08-07     59  by-filing/SREINFRA_2019-04-01_2020-03-31_cons_Four.txt
+SREINFRA     2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-24     53  by-filing/SREINFRA_2019-10-01_2019-12-31_std_One.txt
+SREINFRA     2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-24     49  by-filing/SREINFRA_2019-04-01_2019-12-31_std_Four.txt
+SREINFRA     2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-24     66  by-filing/SREINFRA_2019-10-01_2019-12-31_cons_One.txt
+SREINFRA     2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-24     56  by-filing/SREINFRA_2019-04-01_2019-12-31_cons_Four.txt
+SREINFRA     2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-11     38  by-filing/SREINFRA_2018-10-01_2018-12-31_std_One.txt
+SREINFRA     2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-11     37  by-filing/SREINFRA_2018-04-01_2018-12-31_std_Four.txt
+SREINFRA     2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-02-11     45  by-filing/SREINFRA_2018-10-01_2018-12-31_cons_One.txt
+SREINFRA     2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-02-11     43  by-filing/SREINFRA_2018-04-01_2018-12-31_cons_Four.txt
+SREINFRA     2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-11-22     38  by-filing/SREINFRA_2018-07-01_2018-09-30_std_One.txt
+SREINFRA     2018-04-01  2018-09-30  half year    std    Un-Audited 2018-11-22     37  by-filing/SREINFRA_2018-04-01_2018-09-30_std_Four.txt
+SREINFRA     2018-07-01  2018-09-30  quarter      cons   Un-Audited 2018-11-22     49  by-filing/SREINFRA_2018-07-01_2018-09-30_cons_One.txt
+SREINFRA     2018-04-01  2018-09-30  half year    cons   Un-Audited 2018-11-22     43  by-filing/SREINFRA_2018-04-01_2018-09-30_cons_Four.txt
+SREINFRA     2018-04-01  2018-06-30  quarter      std    Un-Audited 2018-09-07     36  by-filing/SREINFRA_2018-04-01_2018-06-30_std_One.txt
+SREINFRA     2018-04-01  2018-06-30  quarter      cons   Un-Audited 2018-09-07     39  by-filing/SREINFRA_2018-04-01_2018-06-30_cons_One.txt
+SHRIRAMFIN   2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-01-24     60  by-filing/SHRIRAMFIN_2024-10-01_2024-12-31_std_One.txt
+SHRIRAMFIN   2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-01-24     56  by-filing/SHRIRAMFIN_2024-04-01_2024-12-31_std_Four.txt
+SHRIRAMFIN   2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-01-24     62  by-filing/SHRIRAMFIN_2024-10-01_2024-12-31_cons_One.txt
+SHRIRAMFIN   2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-01-24     58  by-filing/SHRIRAMFIN_2024-04-01_2024-12-31_cons_Four.txt
+SHRIRAMFIN   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-25     98  by-filing/SHRIRAMFIN_2024-07-01_2024-09-30_std_One.txt
+SHRIRAMFIN   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-25    146  by-filing/SHRIRAMFIN_2024-04-01_2024-09-30_std_Four.txt
+SHRIRAMFIN   2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-10-25    100  by-filing/SHRIRAMFIN_2024-07-01_2024-09-30_cons_One.txt
+SHRIRAMFIN   2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-10-25    148  by-filing/SHRIRAMFIN_2024-04-01_2024-09-30_cons_Four.txt
+SHRIRAMFIN   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-07-26     42  by-filing/SHRIRAMFIN_2024-04-01_2024-06-30_std_One.txt
+SHRIRAMFIN   2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-07-26     44  by-filing/SHRIRAMFIN_2024-04-01_2024-06-30_cons_One.txt
+SHRIRAMFIN   2024-01-01  2024-03-31  quarter      std    Audited    2024-04-26     93  by-filing/SHRIRAMFIN_2024-01-01_2024-03-31_std_One.txt
+SHRIRAMFIN   2023-04-01  2024-03-31  full year    std    Audited    2024-04-26    147  by-filing/SHRIRAMFIN_2023-04-01_2024-03-31_std_Four.txt
+SHRIRAMFIN   2024-01-01  2024-03-31  quarter      cons   Audited    2024-04-26     99  by-filing/SHRIRAMFIN_2024-01-01_2024-03-31_cons_One.txt
+SHRIRAMFIN   2023-04-01  2024-03-31  full year    cons   Audited    2024-04-26    148  by-filing/SHRIRAMFIN_2023-04-01_2024-03-31_cons_Four.txt
+SHRIRAMFIN   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-01-25     42  by-filing/SHRIRAMFIN_2023-10-01_2023-12-31_std_One.txt
+SHRIRAMFIN   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-01-25     42  by-filing/SHRIRAMFIN_2023-04-01_2023-12-31_std_Four.txt
+SHRIRAMFIN   2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-01-25     44  by-filing/SHRIRAMFIN_2023-10-01_2023-12-31_cons_One.txt
+SHRIRAMFIN   2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-01-25     44  by-filing/SHRIRAMFIN_2023-04-01_2023-12-31_cons_Four.txt
+SHRIRAMFIN   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-10-26     97  by-filing/SHRIRAMFIN_2023-07-01_2023-09-30_std_One.txt
+SHRIRAMFIN   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-10-26    146  by-filing/SHRIRAMFIN_2023-04-01_2023-09-30_std_Four.txt
+SHRIRAMFIN   2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-10-26    100  by-filing/SHRIRAMFIN_2023-07-01_2023-09-30_cons_One.txt
+SHRIRAMFIN   2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-10-26    148  by-filing/SHRIRAMFIN_2023-04-01_2023-09-30_cons_Four.txt
+SHRIRAMFIN   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-27     42  by-filing/SHRIRAMFIN_2023-04-01_2023-06-30_std_One.txt
+SHRIRAMFIN   2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-07-27     44  by-filing/SHRIRAMFIN_2023-04-01_2023-06-30_cons_One.txt
+SHRIRAMFIN   2023-01-01  2023-03-31  quarter      std    Audited    2023-04-28     98  by-filing/SHRIRAMFIN_2023-01-01_2023-03-31_std_One.txt
+SHRIRAMFIN   2022-04-01  2023-03-31  full year    std    Audited    2023-04-28    146  by-filing/SHRIRAMFIN_2022-04-01_2023-03-31_std_Four.txt
+SHRIRAMFIN   2023-01-01  2023-03-31  quarter      cons   Audited    2023-04-28    100  by-filing/SHRIRAMFIN_2023-01-01_2023-03-31_cons_One.txt
+SHRIRAMFIN   2022-04-01  2023-03-31  full year    cons   Audited    2023-04-28    148  by-filing/SHRIRAMFIN_2022-04-01_2023-03-31_cons_Four.txt
+SHRIRAMFIN   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-01-31     54  by-filing/SHRIRAMFIN_2022-10-01_2022-12-31_std_One.txt
+SHRIRAMFIN   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-01-31     50  by-filing/SHRIRAMFIN_2022-04-01_2022-12-31_std_Four.txt
+SHRIRAMFIN   2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-01-31     56  by-filing/SHRIRAMFIN_2022-10-01_2022-12-31_cons_One.txt
+SHRIRAMFIN   2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-01-31     52  by-filing/SHRIRAMFIN_2022-04-01_2022-12-31_cons_Four.txt
+SHRIRAMFIN   2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-10-20    101  by-filing/SHRIRAMFIN_2022-07-01_2022-09-30_cons_One.txt
+SHRIRAMFIN   2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-10-20    148  by-filing/SHRIRAMFIN_2022-04-01_2022-09-30_cons_Four.txt
+SHRIRAMFIN   2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-07-28     56  by-filing/SHRIRAMFIN_2022-04-01_2022-06-30_std_One.txt
+SHRIRAMFIN   2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-07-28     56  by-filing/SHRIRAMFIN_2022-04-01_2022-06-30_cons_One.txt
+SHRIRAMFIN   2022-01-01  2022-03-31  quarter      std    Audited    2022-04-28     36  by-filing/SHRIRAMFIN_2022-01-01_2022-03-31_std_One.txt
+SHRIRAMFIN   2021-04-01  2022-03-31  full year    std    Audited    2022-04-28    126  by-filing/SHRIRAMFIN_2021-04-01_2022-03-31_std_Four.txt
+SHRIRAMFIN   2022-01-01  2022-03-31  quarter      cons   Audited    2022-04-28     73  by-filing/SHRIRAMFIN_2022-01-01_2022-03-31_cons_One.txt
+SHRIRAMFIN   2021-04-01  2022-03-31  full year    cons   Audited    2022-04-28    140  by-filing/SHRIRAMFIN_2021-04-01_2022-03-31_cons_Four.txt
+SHRIRAMFIN   2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-01-24     38  by-filing/SHRIRAMFIN_2021-10-01_2021-12-31_cons_One.txt
+SHRIRAMFIN   2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-01-24     38  by-filing/SHRIRAMFIN_2021-04-01_2021-12-31_cons_Four.txt
+SHRIRAMFIN   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-01-24     54  by-filing/SHRIRAMFIN_2021-10-01_2021-12-31_std_One.txt
+SHRIRAMFIN   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-01-24     50  by-filing/SHRIRAMFIN_2021-04-01_2021-12-31_std_Four.txt
+SHRIRAMFIN   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-02     74  by-filing/SHRIRAMFIN_2021-07-01_2021-09-30_std_One.txt
+SHRIRAMFIN   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-02    140  by-filing/SHRIRAMFIN_2021-04-01_2021-09-30_std_Four.txt
+SHRIRAMFIN   2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-11-02     76  by-filing/SHRIRAMFIN_2021-07-01_2021-09-30_cons_One.txt
+SHRIRAMFIN   2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-11-02    142  by-filing/SHRIRAMFIN_2021-04-01_2021-09-30_cons_Four.txt
+SHRIRAMFIN   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-30     35  by-filing/SHRIRAMFIN_2021-04-01_2021-06-30_std_One.txt
+SHRIRAMFIN   2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-07-30     37  by-filing/SHRIRAMFIN_2021-04-01_2021-06-30_cons_One.txt
+SHRIRAMFIN   2021-01-01  2021-03-31  quarter      std    Audited    2021-04-30    163  by-filing/SHRIRAMFIN_2021-01-01_2021-03-31_std_One.txt
+SHRIRAMFIN   2020-04-01  2021-03-31  full year    std    Audited    2021-04-30     49  by-filing/SHRIRAMFIN_2020-04-01_2021-03-31_std_Four.txt
+SHRIRAMFIN   2021-01-01  2021-03-31  quarter      cons   Audited    2021-04-30    165  by-filing/SHRIRAMFIN_2021-01-01_2021-03-31_cons_One.txt
+SHRIRAMFIN   2020-04-01  2021-03-31  full year    cons   Audited    2021-04-30     51  by-filing/SHRIRAMFIN_2020-04-01_2021-03-31_cons_Four.txt
+SHRIRAMFIN   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-29     53  by-filing/SHRIRAMFIN_2020-10-01_2020-12-31_std_One.txt
+SHRIRAMFIN   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-29     49  by-filing/SHRIRAMFIN_2020-04-01_2020-12-31_std_Four.txt
+SHRIRAMFIN   2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-01-29     53  by-filing/SHRIRAMFIN_2020-10-01_2020-12-31_cons_One.txt
+SHRIRAMFIN   2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-01-29     49  by-filing/SHRIRAMFIN_2020-04-01_2020-12-31_cons_Four.txt
+SHRIRAMFIN   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-10-30    125  by-filing/SHRIRAMFIN_2020-07-01_2020-09-30_std_One.txt
+SHRIRAMFIN   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-10-30     35  by-filing/SHRIRAMFIN_2020-04-01_2020-09-30_std_Four.txt
+SHRIRAMFIN   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-10-30    127  by-filing/SHRIRAMFIN_2020-07-01_2020-09-30_cons_One.txt
+SHRIRAMFIN   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-10-30     37  by-filing/SHRIRAMFIN_2020-04-01_2020-09-30_cons_Four.txt
+SHRIRAMFIN   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-18     53  by-filing/SHRIRAMFIN_2020-04-01_2020-06-30_std_One.txt
+SHRIRAMFIN   2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-18     55  by-filing/SHRIRAMFIN_2020-04-01_2020-06-30_cons_One.txt
+SHRIRAMFIN   2020-01-01  2020-03-31  quarter      std    Audited    2020-06-11     73  by-filing/SHRIRAMFIN_2020-01-01_2020-03-31_std_One.txt
+SHRIRAMFIN   2019-04-01  2020-03-31  full year    std    Audited    2020-06-11     49  by-filing/SHRIRAMFIN_2019-04-01_2020-03-31_std_Four.txt
+SHRIRAMFIN   2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-16     75  by-filing/SHRIRAMFIN_2020-01-01_2020-03-31_cons_One.txt
+SHRIRAMFIN   2019-04-01  2020-03-31  full year    cons   Audited    2020-07-16     51  by-filing/SHRIRAMFIN_2019-04-01_2020-03-31_cons_Four.txt
+SHRIRAMFIN   2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-04     37  by-filing/SHRIRAMFIN_2019-10-01_2019-12-31_cons_One.txt
+SHRIRAMFIN   2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-04     37  by-filing/SHRIRAMFIN_2019-04-01_2019-12-31_cons_Four.txt
+SHRIRAMFIN   2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-05     53  by-filing/SHRIRAMFIN_2019-10-01_2019-12-31_std_One.txt
+SHRIRAMFIN   2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-05     49  by-filing/SHRIRAMFIN_2019-04-01_2019-12-31_std_Four.txt
+SHRIRAMFIN   2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-05     55  by-filing/SHRIRAMFIN_2019-10-01_2019-12-31_cons_One.txt
+SHRIRAMFIN   2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-05     51  by-filing/SHRIRAMFIN_2019-04-01_2019-12-31_cons_Four.txt
+SHRIRAMFIN   2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-10-29     38  by-filing/SHRIRAMFIN_2018-07-01_2018-09-30_std_One.txt
+SHRIRAMFIN   2018-04-01  2018-09-30  half year    std    Un-Audited 2018-10-29     37  by-filing/SHRIRAMFIN_2018-04-01_2018-09-30_std_Four.txt
+SAMMAANCAP   2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-12     58  by-filing/SAMMAANCAP_2024-10-01_2024-12-31_std_One.txt
+SAMMAANCAP   2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-12     54  by-filing/SAMMAANCAP_2024-04-01_2024-12-31_std_Four.txt
+SAMMAANCAP   2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-02-12     59  by-filing/SAMMAANCAP_2024-10-01_2024-12-31_cons_One.txt
+SAMMAANCAP   2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-02-12     55  by-filing/SAMMAANCAP_2024-04-01_2024-12-31_cons_Four.txt
+SAMMAANCAP   2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-11-15     62  by-filing/SAMMAANCAP_2024-07-01_2024-09-30_cons_One.txt
+SAMMAANCAP   2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-11-15    131  by-filing/SAMMAANCAP_2024-04-01_2024-09-30_cons_Four.txt
+SAMMAANCAP   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-11-15     96  by-filing/SAMMAANCAP_2024-07-01_2024-09-30_std_One.txt
+SAMMAANCAP   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-11-15    144  by-filing/SAMMAANCAP_2024-04-01_2024-09-30_std_Four.txt
+SAMMAANCAP   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-14     58  by-filing/SAMMAANCAP_2024-04-01_2024-06-30_std_One.txt
+SAMMAANCAP   2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-14     59  by-filing/SAMMAANCAP_2024-04-01_2024-06-30_cons_One.txt
+SAMMAANCAP   2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-25     97  by-filing/SAMMAANCAP_2024-01-01_2024-03-31_cons_One.txt
+SAMMAANCAP   2023-04-01  2024-03-31  full year    cons   Audited    2024-05-25    145  by-filing/SAMMAANCAP_2023-04-01_2024-03-31_cons_Four.txt
+SAMMAANCAP   2024-01-01  2024-03-31  quarter      std    Audited    2024-05-25     95  by-filing/SAMMAANCAP_2024-01-01_2024-03-31_std_One.txt
+SAMMAANCAP   2023-04-01  2024-03-31  full year    std    Audited    2024-05-25    144  by-filing/SAMMAANCAP_2023-04-01_2024-03-31_std_Four.txt
+SAMMAANCAP   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-15     56  by-filing/SAMMAANCAP_2023-10-01_2023-12-31_std_One.txt
+SAMMAANCAP   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-15     52  by-filing/SAMMAANCAP_2023-04-01_2023-12-31_std_Four.txt
+SAMMAANCAP   2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-02-15     58  by-filing/SAMMAANCAP_2023-10-01_2023-12-31_cons_One.txt
+SAMMAANCAP   2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-02-15     54  by-filing/SAMMAANCAP_2023-04-01_2023-12-31_cons_Four.txt
+SAMMAANCAP   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-14     60  by-filing/SAMMAANCAP_2023-07-01_2023-09-30_std_One.txt
+SAMMAANCAP   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-14    130  by-filing/SAMMAANCAP_2023-04-01_2023-09-30_std_Four.txt
+SAMMAANCAP   2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-14     62  by-filing/SAMMAANCAP_2023-07-01_2023-09-30_cons_One.txt
+SAMMAANCAP   2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-14    131  by-filing/SAMMAANCAP_2023-04-01_2023-09-30_cons_Four.txt
+SAMMAANCAP   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-08-14     58  by-filing/SAMMAANCAP_2023-04-01_2023-06-30_std_One.txt
+SAMMAANCAP   2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-08-14     59  by-filing/SAMMAANCAP_2023-04-01_2023-06-30_cons_One.txt
+SAMMAANCAP   2023-01-01  2023-03-31  quarter      std    Audited    2023-05-23     95  by-filing/SAMMAANCAP_2023-01-01_2023-03-31_std_One.txt
+SAMMAANCAP   2022-04-01  2023-03-31  full year    std    Audited    2023-05-23    143  by-filing/SAMMAANCAP_2022-04-01_2023-03-31_std_Four.txt
+SAMMAANCAP   2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-23     97  by-filing/SAMMAANCAP_2023-01-01_2023-03-31_cons_One.txt
+SAMMAANCAP   2022-04-01  2023-03-31  full year    cons   Audited    2023-05-23    145  by-filing/SAMMAANCAP_2022-04-01_2023-03-31_cons_Four.txt
+SAMMAANCAP   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-15     57  by-filing/SAMMAANCAP_2022-10-01_2022-12-31_std_One.txt
+SAMMAANCAP   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-15     53  by-filing/SAMMAANCAP_2022-04-01_2022-12-31_std_Four.txt
+SAMMAANCAP   2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-15     59  by-filing/SAMMAANCAP_2022-10-01_2022-12-31_cons_One.txt
+SAMMAANCAP   2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-15     55  by-filing/SAMMAANCAP_2022-04-01_2022-12-31_cons_Four.txt
+SAMMAANCAP   2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-15     94  by-filing/SAMMAANCAP_2022-07-01_2022-09-30_std_One.txt
+SAMMAANCAP   2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-15    142  by-filing/SAMMAANCAP_2022-04-01_2022-09-30_std_Four.txt
+SAMMAANCAP   2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-15     97  by-filing/SAMMAANCAP_2022-07-01_2022-09-30_cons_One.txt
+SAMMAANCAP   2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-15    144  by-filing/SAMMAANCAP_2022-04-01_2022-09-30_cons_Four.txt
+SAMMAANCAP   2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-08-10     54  by-filing/SAMMAANCAP_2022-04-01_2022-06-30_std_One.txt
+SAMMAANCAP   2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-08-10     55  by-filing/SAMMAANCAP_2022-04-01_2022-06-30_cons_One.txt
+SAMMAANCAP   2022-01-01  2022-03-31  quarter      std    Audited    2022-05-21     69  by-filing/SAMMAANCAP_2022-01-01_2022-03-31_std_One.txt
+SAMMAANCAP   2021-04-01  2022-03-31  full year    std    Audited    2022-05-21    139  by-filing/SAMMAANCAP_2021-04-01_2022-03-31_std_Four.txt
+SAMMAANCAP   2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-21     72  by-filing/SAMMAANCAP_2022-01-01_2022-03-31_cons_One.txt
+SAMMAANCAP   2021-04-01  2022-03-31  full year    cons   Audited    2022-05-21    141  by-filing/SAMMAANCAP_2021-04-01_2022-03-31_cons_Four.txt
+SAMMAANCAP   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-10     52  by-filing/SAMMAANCAP_2021-10-01_2021-12-31_std_One.txt
+SAMMAANCAP   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-10     48  by-filing/SAMMAANCAP_2021-04-01_2021-12-31_std_Four.txt
+SAMMAANCAP   2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-10     54  by-filing/SAMMAANCAP_2021-10-01_2021-12-31_cons_One.txt
+SAMMAANCAP   2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-10     50  by-filing/SAMMAANCAP_2021-04-01_2021-12-31_cons_Four.txt
+SAMMAANCAP   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-12     72  by-filing/SAMMAANCAP_2021-07-01_2021-09-30_std_One.txt
+SAMMAANCAP   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-12    138  by-filing/SAMMAANCAP_2021-04-01_2021-09-30_std_Four.txt
+SAMMAANCAP   2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-11-12     74  by-filing/SAMMAANCAP_2021-07-01_2021-09-30_cons_One.txt
+SAMMAANCAP   2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-11-12    140  by-filing/SAMMAANCAP_2021-04-01_2021-09-30_cons_Four.txt
+SAMMAANCAP   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-06     52  by-filing/SAMMAANCAP_2021-04-01_2021-06-30_std_One.txt
+SAMMAANCAP   2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-06     54  by-filing/SAMMAANCAP_2021-04-01_2021-06-30_cons_One.txt
+SAMMAANCAP   2021-01-01  2021-03-31  quarter      std    Audited    2021-05-20    165  by-filing/SAMMAANCAP_2021-01-01_2021-03-31_std_One.txt
+SAMMAANCAP   2020-04-01  2021-03-31  full year    std    Audited    2021-05-20     52  by-filing/SAMMAANCAP_2020-04-01_2021-03-31_std_Four.txt
+SAMMAANCAP   2021-01-01  2021-03-31  quarter      cons   Audited    2021-05-20    164  by-filing/SAMMAANCAP_2021-01-01_2021-03-31_cons_One.txt
+SAMMAANCAP   2020-04-01  2021-03-31  full year    cons   Audited    2021-05-20     50  by-filing/SAMMAANCAP_2020-04-01_2021-03-31_cons_Four.txt
+SAMMAANCAP   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-02-13     52  by-filing/SAMMAANCAP_2020-10-01_2020-12-31_std_One.txt
+SAMMAANCAP   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-02-13     48  by-filing/SAMMAANCAP_2020-04-01_2020-12-31_std_Four.txt
+SAMMAANCAP   2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-02-13     54  by-filing/SAMMAANCAP_2020-10-01_2020-12-31_cons_One.txt
+SAMMAANCAP   2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-02-13     50  by-filing/SAMMAANCAP_2020-04-01_2020-12-31_cons_Four.txt
+SAMMAANCAP   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-12    127  by-filing/SAMMAANCAP_2020-07-01_2020-09-30_cons_One.txt
+SAMMAANCAP   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-12     37  by-filing/SAMMAANCAP_2020-04-01_2020-09-30_cons_Four.txt
+SAMMAANCAP   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-12-04    166  by-filing/SAMMAANCAP_2020-07-01_2020-09-30_std_One.txt
+SAMMAANCAP   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-12-04     51  by-filing/SAMMAANCAP_2020-04-01_2020-09-30_std_Four.txt
+SAMMAANCAP   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-12-04    164  by-filing/SAMMAANCAP_2020-07-01_2020-09-30_cons_One.txt
+SAMMAANCAP   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-12-04     50  by-filing/SAMMAANCAP_2020-04-01_2020-09-30_cons_Four.txt
+SAMMAANCAP   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-10-01     52  by-filing/SAMMAANCAP_2020-04-01_2020-06-30_std_One.txt
+SAMMAANCAP   2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-10-01     54  by-filing/SAMMAANCAP_2020-04-01_2020-06-30_cons_One.txt
+SAMMAANCAP   2020-01-01  2020-03-31  quarter      std    Audited    2020-07-16     75  by-filing/SAMMAANCAP_2020-01-01_2020-03-31_std_One.txt
+SAMMAANCAP   2019-04-01  2020-03-31  full year    std    Audited    2020-07-16     52  by-filing/SAMMAANCAP_2019-04-01_2020-03-31_std_Four.txt
+SAMMAANCAP   2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-16     74  by-filing/SAMMAANCAP_2020-01-01_2020-03-31_cons_One.txt
+SAMMAANCAP   2019-04-01  2020-03-31  full year    cons   Audited    2020-07-16     51  by-filing/SAMMAANCAP_2019-04-01_2020-03-31_cons_Four.txt
+SAMMAANCAP   2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-01     37  by-filing/SAMMAANCAP_2018-10-01_2018-12-31_std_One.txt
+SAMMAANCAP   2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-01     37  by-filing/SAMMAANCAP_2018-04-01_2018-12-31_std_Four.txt
+SAMMAANCAP   2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-02-01     38  by-filing/SAMMAANCAP_2018-10-01_2018-12-31_cons_One.txt
+SAMMAANCAP   2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-02-01     38  by-filing/SAMMAANCAP_2018-04-01_2018-12-31_cons_Four.txt
+SAMMAANCAP   2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-10-17     33  by-filing/SAMMAANCAP_2018-07-01_2018-09-30_std_One.txt
+SAMMAANCAP   2018-04-01  2018-09-30  half year    std    Un-Audited 2018-10-17     36  by-filing/SAMMAANCAP_2018-04-01_2018-09-30_std_Four.txt
+SAMMAANCAP   2018-07-01  2018-09-30  quarter      cons   Un-Audited 2018-10-17     38  by-filing/SAMMAANCAP_2018-07-01_2018-09-30_cons_One.txt
+SAMMAANCAP   2018-04-01  2018-09-30  half year    cons   Un-Audited 2018-10-17     38  by-filing/SAMMAANCAP_2018-04-01_2018-09-30_cons_Four.txt
+RHFL         2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-11     36  by-filing/RHFL_2024-10-01_2024-12-31_std_One.txt
+RHFL         2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-11     36  by-filing/RHFL_2024-04-01_2024-12-31_std_Four.txt
+RHFL         2024-07-01  2024-09-30  quarter      std    Audited    2025-01-13     92  by-filing/RHFL_2024-07-01_2024-09-30_std_One.txt
+RHFL         2024-04-01  2024-09-30  half year    std    Audited    2025-01-13    126  by-filing/RHFL_2024-04-01_2024-09-30_std_Four.txt
+RHFL         2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-13     41  by-filing/RHFL_2024-04-01_2024-06-30_std_One.txt
+RHFL         2024-01-01  2024-03-31  quarter      std    Audited    2024-05-31     96  by-filing/RHFL_2024-01-01_2024-03-31_std_One.txt
+RHFL         2023-04-01  2024-03-31  full year    std    Audited    2024-05-31    133  by-filing/RHFL_2023-04-01_2024-03-31_std_Four.txt
+RHFL         2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-01-10     56  by-filing/RHFL_2023-10-01_2023-12-31_std_One.txt
+RHFL         2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-01-10     52  by-filing/RHFL_2023-04-01_2023-12-31_std_Four.txt
+RHFL         2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-02     77  by-filing/RHFL_2023-07-01_2023-09-30_std_One.txt
+RHFL         2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-02    140  by-filing/RHFL_2023-04-01_2023-09-30_std_Four.txt
+RHFL         2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-28     55  by-filing/RHFL_2023-04-01_2023-06-30_std_One.txt
+RHFL         2023-01-01  2023-03-31  quarter      std    Audited    2023-05-27     92  by-filing/RHFL_2023-01-01_2023-03-31_std_One.txt
+RHFL         2022-04-01  2023-03-31  full year    std    Audited    2023-05-27    141  by-filing/RHFL_2022-04-01_2023-03-31_std_Four.txt
+RHFL         2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-02     53  by-filing/RHFL_2022-10-01_2022-12-31_std_One.txt
+RHFL         2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-02     49  by-filing/RHFL_2022-04-01_2022-12-31_std_Four.txt
+RHFL         2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-03     92  by-filing/RHFL_2022-07-01_2022-09-30_std_One.txt
+RHFL         2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-03    140  by-filing/RHFL_2022-04-01_2022-09-30_std_Four.txt
+RHFL         2022-01-01  2022-03-31  quarter      std    Audited    2022-05-06     74  by-filing/RHFL_2022-01-01_2022-03-31_std_One.txt
+RHFL         2021-04-01  2022-03-31  full year    std    Audited    2022-05-06    139  by-filing/RHFL_2021-04-01_2022-03-31_std_Four.txt
+RHFL         2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-01-24     53  by-filing/RHFL_2021-10-01_2021-12-31_std_One.txt
+RHFL         2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-01-24     49  by-filing/RHFL_2021-04-01_2021-12-31_std_Four.txt
+RHFL         2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-11     73  by-filing/RHFL_2021-07-01_2021-09-30_std_One.txt
+RHFL         2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-11    139  by-filing/RHFL_2021-04-01_2021-09-30_std_Four.txt
+RHFL         2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-31     53  by-filing/RHFL_2021-04-01_2021-06-30_std_One.txt
+RHFL         2021-01-01  2021-03-31  quarter      std    Audited    2021-05-08    162  by-filing/RHFL_2021-01-01_2021-03-31_std_One.txt
+RHFL         2020-04-01  2021-03-31  full year    std    Audited    2021-05-08     49  by-filing/RHFL_2020-04-01_2021-03-31_std_Four.txt
+RHFL         2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-22     53  by-filing/RHFL_2020-10-01_2020-12-31_std_One.txt
+RHFL         2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-22     49  by-filing/RHFL_2020-04-01_2020-12-31_std_Four.txt
+RHFL         2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-09    156  by-filing/RHFL_2020-07-01_2020-09-30_std_One.txt
+RHFL         2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-09     49  by-filing/RHFL_2020-04-01_2020-09-30_std_Four.txt
+RHFL         2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-11-04     53  by-filing/RHFL_2020-04-01_2020-06-30_std_One.txt
+RHFL         2020-01-01  2020-03-31  quarter      std    Un-Audited 2020-05-13     74  by-filing/RHFL_2020-01-01_2020-03-31_std_One.txt
+RHFL         2019-04-01  2020-03-31  full year    std    Un-Audited 2020-05-13     49  by-filing/RHFL_2019-04-01_2020-03-31_std_Four.txt
+RHFL         2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-03-16     53  by-filing/RHFL_2019-10-01_2019-12-31_std_One.txt
+RHFL         2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-03-16     49  by-filing/RHFL_2019-04-01_2019-12-31_std_Four.txt
+RHFL         2019-04-01  2019-06-30  quarter      std    Un-Audited 2019-08-14     36  by-filing/RHFL_2019-04-01_2019-06-30_std_One.txt
+RHFL         2019-01-01  2019-03-31  quarter      std    Audited    2019-08-14     38  by-filing/RHFL_2019-01-01_2019-03-31_std_One.txt
+RHFL         2018-04-01  2019-03-31  full year    std    Audited    2019-08-14     38  by-filing/RHFL_2018-04-01_2019-03-31_std_Four.txt
+RHFL         2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-19     38  by-filing/RHFL_2018-10-01_2018-12-31_std_One.txt
+RHFL         2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-19     37  by-filing/RHFL_2018-04-01_2018-12-31_std_Four.txt
+RHFL         2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-11-22     38  by-filing/RHFL_2018-07-01_2018-09-30_std_One.txt
+RHFL         2018-04-01  2018-09-30  half year    std    Un-Audited 2018-11-22     37  by-filing/RHFL_2018-04-01_2018-09-30_std_Four.txt
+RHFL         2018-04-01  2018-06-30  quarter      std    Un-Audited 2018-09-12     36  by-filing/RHFL_2018-04-01_2018-06-30_std_One.txt
+REPCOHOME    2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-12     59  by-filing/REPCOHOME_2024-10-01_2024-12-31_std_One.txt
+REPCOHOME    2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-12     55  by-filing/REPCOHOME_2024-04-01_2024-12-31_std_Four.txt
+REPCOHOME    2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-02-12     65  by-filing/REPCOHOME_2024-10-01_2024-12-31_cons_One.txt
+REPCOHOME    2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-02-12     59  by-filing/REPCOHOME_2024-04-01_2024-12-31_cons_Four.txt
+REPCOHOME    2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-11-12     79  by-filing/REPCOHOME_2024-07-01_2024-09-30_std_One.txt
+REPCOHOME    2024-04-01  2024-09-30  half year    std    Un-Audited 2024-11-12    145  by-filing/REPCOHOME_2024-04-01_2024-09-30_std_Four.txt
+REPCOHOME    2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-11-12     86  by-filing/REPCOHOME_2024-07-01_2024-09-30_cons_One.txt
+REPCOHOME    2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-11-12    150  by-filing/REPCOHOME_2024-04-01_2024-09-30_cons_Four.txt
+REPCOHOME    2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-01     59  by-filing/REPCOHOME_2024-04-01_2024-06-30_std_One.txt
+REPCOHOME    2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-01     69  by-filing/REPCOHOME_2024-04-01_2024-06-30_cons_One.txt
+REPCOHOME    2024-01-01  2024-03-31  quarter      std    Audited    2024-05-14     79  by-filing/REPCOHOME_2024-01-01_2024-03-31_std_One.txt
+REPCOHOME    2023-04-01  2024-03-31  full year    std    Audited    2024-05-14    145  by-filing/REPCOHOME_2023-04-01_2024-03-31_std_Four.txt
+REPCOHOME    2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-14     87  by-filing/REPCOHOME_2024-01-01_2024-03-31_cons_One.txt
+REPCOHOME    2023-04-01  2024-03-31  full year    cons   Audited    2024-05-14    151  by-filing/REPCOHOME_2023-04-01_2024-03-31_cons_Four.txt
+REPCOHOME    2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-12     58  by-filing/REPCOHOME_2023-10-01_2023-12-31_std_One.txt
+REPCOHOME    2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-12     54  by-filing/REPCOHOME_2023-04-01_2023-12-31_std_Four.txt
+REPCOHOME    2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-02-12     64  by-filing/REPCOHOME_2023-10-01_2023-12-31_cons_One.txt
+REPCOHOME    2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-02-12     58  by-filing/REPCOHOME_2023-04-01_2023-12-31_cons_Four.txt
+REPCOHOME    2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-06     79  by-filing/REPCOHOME_2023-07-01_2023-09-30_std_One.txt
+REPCOHOME    2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-06    144  by-filing/REPCOHOME_2023-04-01_2023-09-30_std_Four.txt
+REPCOHOME    2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-06     85  by-filing/REPCOHOME_2023-07-01_2023-09-30_cons_One.txt
+REPCOHOME    2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-06    148  by-filing/REPCOHOME_2023-04-01_2023-09-30_cons_Four.txt
+REPCOHOME    2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-08-04     59  by-filing/REPCOHOME_2023-04-01_2023-06-30_std_One.txt
+REPCOHOME    2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-08-04     69  by-filing/REPCOHOME_2023-04-01_2023-06-30_cons_One.txt
+REPCOHOME    2023-01-01  2023-03-31  quarter      std    Audited    2023-05-26     79  by-filing/REPCOHOME_2023-01-01_2023-03-31_std_One.txt
+REPCOHOME    2022-04-01  2023-03-31  full year    std    Audited    2023-05-26    144  by-filing/REPCOHOME_2022-04-01_2023-03-31_std_Four.txt
+REPCOHOME    2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-26     85  by-filing/REPCOHOME_2023-01-01_2023-03-31_cons_One.txt
+REPCOHOME    2022-04-01  2023-03-31  full year    cons   Audited    2023-05-26    148  by-filing/REPCOHOME_2022-04-01_2023-03-31_cons_Four.txt
+REPCOHOME    2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-13     58  by-filing/REPCOHOME_2022-10-01_2022-12-31_std_One.txt
+REPCOHOME    2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-13     54  by-filing/REPCOHOME_2022-04-01_2022-12-31_std_Four.txt
+REPCOHOME    2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-13     64  by-filing/REPCOHOME_2022-10-01_2022-12-31_cons_One.txt
+REPCOHOME    2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-13     58  by-filing/REPCOHOME_2022-04-01_2022-12-31_cons_Four.txt
+REPCOHOME    2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-11     77  by-filing/REPCOHOME_2022-07-01_2022-09-30_std_One.txt
+REPCOHOME    2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-11    144  by-filing/REPCOHOME_2022-04-01_2022-09-30_std_Four.txt
+REPCOHOME    2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-11     85  by-filing/REPCOHOME_2022-07-01_2022-09-30_cons_One.txt
+REPCOHOME    2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-11    148  by-filing/REPCOHOME_2022-04-01_2022-09-30_cons_Four.txt
+REPCOHOME    2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-08-12     55  by-filing/REPCOHOME_2022-04-01_2022-06-30_std_One.txt
+REPCOHOME    2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-08-12     63  by-filing/REPCOHOME_2022-04-01_2022-06-30_cons_One.txt
+REPCOHOME    2022-01-01  2022-03-31  quarter      std    Audited    2022-05-23     67  by-filing/REPCOHOME_2022-01-01_2022-03-31_std_One.txt
+REPCOHOME    2021-04-01  2022-03-31  full year    std    Audited    2022-05-23    143  by-filing/REPCOHOME_2021-04-01_2022-03-31_std_Four.txt
+REPCOHOME    2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-23     73  by-filing/REPCOHOME_2022-01-01_2022-03-31_cons_One.txt
+REPCOHOME    2021-04-01  2022-03-31  full year    cons   Audited    2022-05-23    147  by-filing/REPCOHOME_2021-04-01_2022-03-31_cons_Four.txt
+REPCOHOME    2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-14     56  by-filing/REPCOHOME_2021-10-01_2021-12-31_std_One.txt
+REPCOHOME    2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-14     53  by-filing/REPCOHOME_2021-04-01_2021-12-31_std_Four.txt
+REPCOHOME    2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-14     64  by-filing/REPCOHOME_2021-10-01_2021-12-31_cons_One.txt
+REPCOHOME    2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-14     59  by-filing/REPCOHOME_2021-04-01_2021-12-31_cons_Four.txt
+REPCOHOME    2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-13     65  by-filing/REPCOHOME_2021-07-01_2021-09-30_std_One.txt
+REPCOHOME    2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-13    143  by-filing/REPCOHOME_2021-04-01_2021-09-30_std_Four.txt
+REPCOHOME    2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-11-13     73  by-filing/REPCOHOME_2021-07-01_2021-09-30_cons_One.txt
+REPCOHOME    2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-11-13    149  by-filing/REPCOHOME_2021-04-01_2021-09-30_cons_Four.txt
+REPCOHOME    2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-13     56  by-filing/REPCOHOME_2021-04-01_2021-06-30_std_One.txt
+REPCOHOME    2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-13     64  by-filing/REPCOHOME_2021-04-01_2021-06-30_cons_One.txt
+REPCOHOME    2021-01-01  2021-03-31  quarter      std    Audited    2021-06-26    153  by-filing/REPCOHOME_2021-01-01_2021-03-31_std_One.txt
+REPCOHOME    2020-04-01  2021-03-31  full year    std    Audited    2021-06-26     53  by-filing/REPCOHOME_2020-04-01_2021-03-31_std_Four.txt
+REPCOHOME    2021-01-01  2021-03-31  quarter      cons   Audited    2021-06-26    159  by-filing/REPCOHOME_2021-01-01_2021-03-31_cons_One.txt
+REPCOHOME    2020-04-01  2021-03-31  full year    cons   Audited    2021-06-26     57  by-filing/REPCOHOME_2020-04-01_2021-03-31_cons_Four.txt
+REPCOHOME    2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-02-11     56  by-filing/REPCOHOME_2020-10-01_2020-12-31_std_One.txt
+REPCOHOME    2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-02-11     52  by-filing/REPCOHOME_2020-04-01_2020-12-31_std_Four.txt
+REPCOHOME    2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-02-11     64  by-filing/REPCOHOME_2020-10-01_2020-12-31_cons_One.txt
+REPCOHOME    2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-02-11     58  by-filing/REPCOHOME_2020-04-01_2020-12-31_cons_Four.txt
+REPCOHOME    2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-21    154  by-filing/REPCOHOME_2020-07-01_2020-09-30_std_One.txt
+REPCOHOME    2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-21     52  by-filing/REPCOHOME_2020-04-01_2020-09-30_std_Four.txt
+REPCOHOME    2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-21    160  by-filing/REPCOHOME_2020-07-01_2020-09-30_cons_One.txt
+REPCOHOME    2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-21     56  by-filing/REPCOHOME_2020-04-01_2020-09-30_cons_Four.txt
+REPCOHOME    2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-30     56  by-filing/REPCOHOME_2020-04-01_2020-06-30_std_One.txt
+REPCOHOME    2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-30     64  by-filing/REPCOHOME_2020-04-01_2020-06-30_cons_One.txt
+REPCOHOME    2020-01-01  2020-03-31  quarter      std    Audited    2020-07-23     39  by-filing/REPCOHOME_2020-01-01_2020-03-31_std_One.txt
+REPCOHOME    2019-04-01  2020-03-31  full year    std    Audited    2020-07-23     40  by-filing/REPCOHOME_2019-04-01_2020-03-31_std_Four.txt
+REPCOHOME    2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-23     47  by-filing/REPCOHOME_2020-01-01_2020-03-31_cons_One.txt
+REPCOHOME    2019-04-01  2020-03-31  full year    cons   Audited    2020-07-23     46  by-filing/REPCOHOME_2019-04-01_2020-03-31_cons_Four.txt
+REPCOHOME    2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-07     39  by-filing/REPCOHOME_2019-10-01_2019-12-31_std_One.txt
+REPCOHOME    2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-07     39  by-filing/REPCOHOME_2019-04-01_2019-12-31_std_Four.txt
+REPCOHOME    2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-07     47  by-filing/REPCOHOME_2019-10-01_2019-12-31_cons_One.txt
+REPCOHOME    2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-07     45  by-filing/REPCOHOME_2019-04-01_2019-12-31_cons_Four.txt
+REPCOHOME    2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-11     39  by-filing/REPCOHOME_2019-10-01_2019-12-31_std_One.txt
+REPCOHOME    2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-11     39  by-filing/REPCOHOME_2019-04-01_2019-12-31_std_Four.txt
+REPCOHOME    2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-11     47  by-filing/REPCOHOME_2019-10-01_2019-12-31_cons_One.txt
+REPCOHOME    2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-11     45  by-filing/REPCOHOME_2019-04-01_2019-12-31_cons_Four.txt
+REPCOHOME    2019-07-01  2019-09-30  quarter      std    Un-Audited 2019-11-12     38  by-filing/REPCOHOME_2019-07-01_2019-09-30_std_One.txt
+REPCOHOME    2019-04-01  2019-09-30  half year    std    Un-Audited 2019-11-12     38  by-filing/REPCOHOME_2019-04-01_2019-09-30_std_Four.txt
+REPCOHOME    2019-07-01  2019-09-30  quarter      cons   Un-Audited 2019-11-12     46  by-filing/REPCOHOME_2019-07-01_2019-09-30_cons_One.txt
+REPCOHOME    2019-04-01  2019-09-30  half year    cons   Un-Audited 2019-11-12     44  by-filing/REPCOHOME_2019-04-01_2019-09-30_cons_Four.txt
+REPCOHOME    2019-04-01  2019-06-30  quarter      std    Un-Audited 2019-08-14     39  by-filing/REPCOHOME_2019-04-01_2019-06-30_std_One.txt
+REPCOHOME    2019-04-01  2019-06-30  quarter      cons   Un-Audited 2019-08-14     39  by-filing/REPCOHOME_2019-04-01_2019-06-30_cons_One.txt
+REPCOHOME    2019-01-01  2019-03-31  quarter      std    Audited    2019-05-30     41  by-filing/REPCOHOME_2019-01-01_2019-03-31_std_One.txt
+REPCOHOME    2018-04-01  2019-03-31  full year    std    Audited    2019-05-30     41  by-filing/REPCOHOME_2018-04-01_2019-03-31_std_Four.txt
+REPCOHOME    2019-01-01  2019-03-31  quarter      cons   Audited    2019-07-08     41  by-filing/REPCOHOME_2019-01-01_2019-03-31_cons_One.txt
+REPCOHOME    2018-04-01  2019-03-31  full year    cons   Audited    2019-07-08     41  by-filing/REPCOHOME_2018-04-01_2019-03-31_cons_Four.txt
+REPCOHOME    2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-27     41  by-filing/REPCOHOME_2018-10-01_2018-12-31_std_One.txt
+REPCOHOME    2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-27     40  by-filing/REPCOHOME_2018-04-01_2018-12-31_std_Four.txt
+REPCOHOME    2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-11-22     41  by-filing/REPCOHOME_2018-07-01_2018-09-30_std_One.txt
+REPCOHOME    2018-04-01  2018-09-30  half year    std    Un-Audited 2018-11-22     40  by-filing/REPCOHOME_2018-04-01_2018-09-30_std_Four.txt
+REPCOHOME    2018-04-01  2018-06-30  quarter      std    Un-Audited 2018-08-23     39  by-filing/REPCOHOME_2018-04-01_2018-06-30_std_One.txt
+REPCOHOME    2018-01-01  2018-03-31  quarter      std    Audited    2018-05-29     34  by-filing/REPCOHOME_2018-01-01_2018-03-31_std_One.txt
+REPCOHOME    2018-01-01  2018-03-31  quarter      cons   Audited    2018-05-29     36  by-filing/REPCOHOME_2018-01-01_2018-03-31_cons_One.txt
+RELCAPITAL   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-11-15     71  by-filing/RELCAPITAL_2024-07-01_2024-09-30_std_One.txt
+RELCAPITAL   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-11-15    135  by-filing/RELCAPITAL_2024-04-01_2024-09-30_std_Four.txt
+RELCAPITAL   2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-11-15     73  by-filing/RELCAPITAL_2024-07-01_2024-09-30_cons_One.txt
+RELCAPITAL   2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-11-15    138  by-filing/RELCAPITAL_2024-04-01_2024-09-30_cons_Four.txt
+RELCAPITAL   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-09     51  by-filing/RELCAPITAL_2024-04-01_2024-06-30_std_One.txt
+RELCAPITAL   2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-09     68  by-filing/RELCAPITAL_2024-04-01_2024-06-30_cons_One.txt
+RELCAPITAL   2024-01-01  2024-03-31  quarter      std    Audited    2024-05-31    104  by-filing/RELCAPITAL_2024-01-01_2024-03-31_std_One.txt
+RELCAPITAL   2023-04-01  2024-03-31  full year    std    Audited    2024-05-31    147  by-filing/RELCAPITAL_2023-04-01_2024-03-31_std_Four.txt
+RELCAPITAL   2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-31    109  by-filing/RELCAPITAL_2024-01-01_2024-03-31_cons_One.txt
+RELCAPITAL   2023-04-01  2024-03-31  full year    cons   Audited    2024-05-31    150  by-filing/RELCAPITAL_2023-04-01_2024-03-31_cons_Four.txt
+RELCAPITAL   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-15     51  by-filing/RELCAPITAL_2023-10-01_2023-12-31_std_One.txt
+RELCAPITAL   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-15     45  by-filing/RELCAPITAL_2023-04-01_2023-12-31_std_Four.txt
+RELCAPITAL   2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-02-15     55  by-filing/RELCAPITAL_2023-10-01_2023-12-31_cons_One.txt
+RELCAPITAL   2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-02-15     49  by-filing/RELCAPITAL_2023-04-01_2023-12-31_cons_Four.txt
+RELCAPITAL   2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-09    100  by-filing/RELCAPITAL_2023-07-01_2023-09-30_cons_One.txt
+RELCAPITAL   2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-09    152  by-filing/RELCAPITAL_2023-04-01_2023-09-30_cons_Four.txt
+RELCAPITAL   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-09    101  by-filing/RELCAPITAL_2023-07-01_2023-09-30_std_One.txt
+RELCAPITAL   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-09    146  by-filing/RELCAPITAL_2023-04-01_2023-09-30_std_Four.txt
+RELCAPITAL   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-30     66  by-filing/RELCAPITAL_2023-04-01_2023-06-30_std_One.txt
+RELCAPITAL   2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-07-30     72  by-filing/RELCAPITAL_2023-04-01_2023-06-30_cons_One.txt
+RELCAPITAL   2023-01-01  2023-03-31  quarter      std    Audited    2023-05-29     74  by-filing/RELCAPITAL_2023-01-01_2023-03-31_std_One.txt
+RELCAPITAL   2022-04-01  2023-03-31  full year    std    Audited    2023-05-29    138  by-filing/RELCAPITAL_2022-04-01_2023-03-31_std_Four.txt
+RELCAPITAL   2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-29     78  by-filing/RELCAPITAL_2023-01-01_2023-03-31_cons_One.txt
+RELCAPITAL   2022-04-01  2023-03-31  full year    cons   Audited    2023-05-29    141  by-filing/RELCAPITAL_2022-04-01_2023-03-31_cons_Four.txt
+RELCAPITAL   2023-01-01  2023-03-31  quarter      std    Audited    2023-05-30     74  by-filing/RELCAPITAL_2023-01-01_2023-03-31_std_One.txt
+RELCAPITAL   2022-04-01  2023-03-31  full year    std    Audited    2023-05-30    138  by-filing/RELCAPITAL_2022-04-01_2023-03-31_std_Four.txt
+RELCAPITAL   2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-30     78  by-filing/RELCAPITAL_2023-01-01_2023-03-31_cons_One.txt
+RELCAPITAL   2022-04-01  2023-03-31  full year    cons   Audited    2023-05-30    141  by-filing/RELCAPITAL_2022-04-01_2023-03-31_cons_Four.txt
+RELCAPITAL   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-10     55  by-filing/RELCAPITAL_2022-10-01_2022-12-31_std_One.txt
+RELCAPITAL   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-10     51  by-filing/RELCAPITAL_2022-04-01_2022-12-31_std_Four.txt
+RELCAPITAL   2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-10     65  by-filing/RELCAPITAL_2022-10-01_2022-12-31_cons_One.txt
+RELCAPITAL   2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-10     59  by-filing/RELCAPITAL_2022-04-01_2022-12-31_cons_Four.txt
+RELCAPITAL   2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-11     92  by-filing/RELCAPITAL_2022-07-01_2022-09-30_std_One.txt
+RELCAPITAL   2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-11    141  by-filing/RELCAPITAL_2022-04-01_2022-09-30_std_Four.txt
+RELCAPITAL   2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-11    110  by-filing/RELCAPITAL_2022-07-01_2022-09-30_cons_One.txt
+RELCAPITAL   2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-11    151  by-filing/RELCAPITAL_2022-04-01_2022-09-30_cons_Four.txt
+RELCAPITAL   2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-08-09     51  by-filing/RELCAPITAL_2022-04-01_2022-06-30_std_One.txt
+RELCAPITAL   2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-08-09     64  by-filing/RELCAPITAL_2022-04-01_2022-06-30_cons_One.txt
+RELCAPITAL   2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-11     88  by-filing/RELCAPITAL_2022-01-01_2022-03-31_cons_One.txt
+RELCAPITAL   2021-04-01  2022-03-31  full year    cons   Audited    2022-05-11    148  by-filing/RELCAPITAL_2021-04-01_2022-03-31_cons_Four.txt
+RELCAPITAL   2022-01-01  2022-03-31  quarter      std    Audited    2022-05-11     73  by-filing/RELCAPITAL_2022-01-01_2022-03-31_std_One.txt
+RELCAPITAL   2021-04-01  2022-03-31  full year    std    Audited    2022-05-11    139  by-filing/RELCAPITAL_2021-04-01_2022-03-31_std_Four.txt
+RELCAPITAL   2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-04     50  by-filing/RELCAPITAL_2021-10-01_2021-12-31_cons_One.txt
+RELCAPITAL   2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-04     44  by-filing/RELCAPITAL_2021-04-01_2021-12-31_cons_Four.txt
+RELCAPITAL   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-04     38  by-filing/RELCAPITAL_2021-10-01_2021-12-31_std_One.txt
+RELCAPITAL   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-04     38  by-filing/RELCAPITAL_2021-04-01_2021-12-31_std_Four.txt
+RELCAPITAL   2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-11-12     88  by-filing/RELCAPITAL_2021-07-01_2021-09-30_cons_One.txt
+RELCAPITAL   2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-11-12    148  by-filing/RELCAPITAL_2021-04-01_2021-09-30_cons_Four.txt
+RELCAPITAL   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-12     72  by-filing/RELCAPITAL_2021-07-01_2021-09-30_std_One.txt
+RELCAPITAL   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-12    139  by-filing/RELCAPITAL_2021-04-01_2021-09-30_std_Four.txt
+RELCAPITAL   2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-06     68  by-filing/RELCAPITAL_2021-04-01_2021-06-30_cons_One.txt
+RELCAPITAL   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-06     53  by-filing/RELCAPITAL_2021-04-01_2021-06-30_std_One.txt
+RELCAPITAL   2021-01-01  2021-03-31  quarter      cons   Audited    2021-05-08    178  by-filing/RELCAPITAL_2021-01-01_2021-03-31_cons_One.txt
+RELCAPITAL   2020-04-01  2021-03-31  full year    cons   Audited    2021-05-08     58  by-filing/RELCAPITAL_2020-04-01_2021-03-31_cons_Four.txt
+RELCAPITAL   2021-01-01  2021-03-31  quarter      std    Audited    2021-05-08    164  by-filing/RELCAPITAL_2021-01-01_2021-03-31_std_One.txt
+RELCAPITAL   2020-04-01  2021-03-31  full year    std    Audited    2021-05-08     49  by-filing/RELCAPITAL_2020-04-01_2021-03-31_std_Four.txt
+RELCAPITAL   2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-02-01     68  by-filing/RELCAPITAL_2020-10-01_2020-12-31_cons_One.txt
+RELCAPITAL   2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-02-01     59  by-filing/RELCAPITAL_2020-04-01_2020-12-31_cons_Four.txt
+RELCAPITAL   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-02-01     53  by-filing/RELCAPITAL_2020-10-01_2020-12-31_std_One.txt
+RELCAPITAL   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-02-01     50  by-filing/RELCAPITAL_2020-04-01_2020-12-31_std_Four.txt
+RELCAPITAL   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-06    138  by-filing/RELCAPITAL_2020-07-01_2020-09-30_cons_One.txt
+RELCAPITAL   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-06     42  by-filing/RELCAPITAL_2020-04-01_2020-09-30_cons_Four.txt
+RELCAPITAL   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-06    125  by-filing/RELCAPITAL_2020-07-01_2020-09-30_std_One.txt
+RELCAPITAL   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-06     36  by-filing/RELCAPITAL_2020-04-01_2020-09-30_std_Four.txt
+RELCAPITAL   2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-18     68  by-filing/RELCAPITAL_2020-04-01_2020-06-30_cons_One.txt
+RELCAPITAL   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-18     53  by-filing/RELCAPITAL_2020-04-01_2020-06-30_std_One.txt
+RELCAPITAL   2020-01-01  2020-03-31  quarter      cons   Audited    2020-05-11     88  by-filing/RELCAPITAL_2020-01-01_2020-03-31_cons_One.txt
+RELCAPITAL   2019-04-01  2020-03-31  full year    cons   Audited    2020-05-11     58  by-filing/RELCAPITAL_2019-04-01_2020-03-31_cons_Four.txt
+RELCAPITAL   2020-01-01  2020-03-31  quarter      std    Audited    2020-05-11     74  by-filing/RELCAPITAL_2020-01-01_2020-03-31_std_One.txt
+RELCAPITAL   2019-04-01  2020-03-31  full year    std    Audited    2020-05-11     49  by-filing/RELCAPITAL_2019-04-01_2020-03-31_std_Four.txt
+RELCAPITAL   2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-24     52  by-filing/RELCAPITAL_2019-10-01_2019-12-31_std_One.txt
+RELCAPITAL   2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-24     48  by-filing/RELCAPITAL_2019-04-01_2019-12-31_std_Four.txt
+RELCAPITAL   2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-24     66  by-filing/RELCAPITAL_2019-10-01_2019-12-31_cons_One.txt
+RELCAPITAL   2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-24     58  by-filing/RELCAPITAL_2019-04-01_2019-12-31_cons_Four.txt
+RELCAPITAL   2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-27     38  by-filing/RELCAPITAL_2018-10-01_2018-12-31_std_One.txt
+RELCAPITAL   2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-27     37  by-filing/RELCAPITAL_2018-04-01_2018-12-31_std_Four.txt
+RELCAPITAL   2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-02-27     54  by-filing/RELCAPITAL_2018-10-01_2018-12-31_cons_One.txt
+RELCAPITAL   2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-02-27     48  by-filing/RELCAPITAL_2018-04-01_2018-12-31_cons_Four.txt
+RELCAPITAL   2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-12-04     38  by-filing/RELCAPITAL_2018-07-01_2018-09-30_std_One.txt
+RELCAPITAL   2018-04-01  2018-09-30  half year    std    Un-Audited 2018-12-04     37  by-filing/RELCAPITAL_2018-04-01_2018-09-30_std_Four.txt
+RELCAPITAL   2018-07-01  2018-09-30  quarter      cons   Un-Audited 2018-12-04     54  by-filing/RELCAPITAL_2018-07-01_2018-09-30_cons_One.txt
+RELCAPITAL   2018-04-01  2018-09-30  half year    cons   Un-Audited 2018-12-04     48  by-filing/RELCAPITAL_2018-04-01_2018-09-30_cons_Four.txt
+PNBHOUSING   2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-01-22     59  by-filing/PNBHOUSING_2024-10-01_2024-12-31_std_One.txt
+PNBHOUSING   2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-01-22     55  by-filing/PNBHOUSING_2024-04-01_2024-12-31_std_Four.txt
+PNBHOUSING   2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-01-22     59  by-filing/PNBHOUSING_2024-10-01_2024-12-31_cons_One.txt
+PNBHOUSING   2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-01-22     55  by-filing/PNBHOUSING_2024-04-01_2024-12-31_cons_Four.txt
+PNBHOUSING   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-25     97  by-filing/PNBHOUSING_2024-07-01_2024-09-30_std_One.txt
+PNBHOUSING   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-25    145  by-filing/PNBHOUSING_2024-04-01_2024-09-30_std_Four.txt
+PNBHOUSING   2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-10-25     95  by-filing/PNBHOUSING_2024-07-01_2024-09-30_cons_One.txt
+PNBHOUSING   2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-10-25    145  by-filing/PNBHOUSING_2024-04-01_2024-09-30_cons_Four.txt
+PNBHOUSING   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-07-26     59  by-filing/PNBHOUSING_2024-04-01_2024-06-30_std_One.txt
+PNBHOUSING   2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-07-26     61  by-filing/PNBHOUSING_2024-04-01_2024-06-30_cons_One.txt
+PNBHOUSING   2024-01-01  2024-03-31  quarter      std    Audited    2024-04-30     97  by-filing/PNBHOUSING_2024-01-01_2024-03-31_std_One.txt
+PNBHOUSING   2023-04-01  2024-03-31  full year    std    Audited    2024-04-30    145  by-filing/PNBHOUSING_2023-04-01_2024-03-31_std_Four.txt
+PNBHOUSING   2024-01-01  2024-03-31  quarter      cons   Audited    2024-04-30     91  by-filing/PNBHOUSING_2024-01-01_2024-03-31_cons_One.txt
+PNBHOUSING   2023-04-01  2024-03-31  full year    cons   Audited    2024-04-30    143  by-filing/PNBHOUSING_2023-04-01_2024-03-31_cons_Four.txt
+PNBHOUSING   2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-01-25     59  by-filing/PNBHOUSING_2023-10-01_2023-12-31_cons_One.txt
+PNBHOUSING   2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-01-25     55  by-filing/PNBHOUSING_2023-04-01_2023-12-31_cons_Four.txt
+PNBHOUSING   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-01-25     59  by-filing/PNBHOUSING_2023-10-01_2023-12-31_std_One.txt
+PNBHOUSING   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-01-25     55  by-filing/PNBHOUSING_2023-04-01_2023-12-31_std_Four.txt
+PNBHOUSING   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-10-24     94  by-filing/PNBHOUSING_2023-07-01_2023-09-30_std_One.txt
+PNBHOUSING   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-10-24    143  by-filing/PNBHOUSING_2023-04-01_2023-09-30_std_Four.txt
+PNBHOUSING   2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-10-24     91  by-filing/PNBHOUSING_2023-07-01_2023-09-30_cons_One.txt
+PNBHOUSING   2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-10-24    143  by-filing/PNBHOUSING_2023-04-01_2023-09-30_cons_Four.txt
+PNBHOUSING   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-25     59  by-filing/PNBHOUSING_2023-04-01_2023-06-30_std_One.txt
+PNBHOUSING   2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-07-25     61  by-filing/PNBHOUSING_2023-04-01_2023-06-30_cons_One.txt
+PNBHOUSING   2023-01-01  2023-03-31  quarter      std    Audited    2023-05-19     91  by-filing/PNBHOUSING_2023-01-01_2023-03-31_std_One.txt
+PNBHOUSING   2022-04-01  2023-03-31  full year    std    Audited    2023-05-19    146  by-filing/PNBHOUSING_2022-04-01_2023-03-31_std_Four.txt
+PNBHOUSING   2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-19     94  by-filing/PNBHOUSING_2023-01-01_2023-03-31_cons_One.txt
+PNBHOUSING   2022-04-01  2023-03-31  full year    cons   Audited    2023-05-19    144  by-filing/PNBHOUSING_2022-04-01_2023-03-31_cons_Four.txt
+PNBHOUSING   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-01-26     55  by-filing/PNBHOUSING_2022-10-01_2022-12-31_std_One.txt
+PNBHOUSING   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-01-26     52  by-filing/PNBHOUSING_2022-04-01_2022-12-31_std_Four.txt
+PNBHOUSING   2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-01-26     55  by-filing/PNBHOUSING_2022-10-01_2022-12-31_cons_One.txt
+PNBHOUSING   2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-01-26     51  by-filing/PNBHOUSING_2022-04-01_2022-12-31_cons_Four.txt
+PNBHOUSING   2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-10-28     97  by-filing/PNBHOUSING_2022-07-01_2022-09-30_std_One.txt
+PNBHOUSING   2022-04-01  2022-09-30  half year    std    Un-Audited 2022-10-28    144  by-filing/PNBHOUSING_2022-04-01_2022-09-30_std_Four.txt
+PNBHOUSING   2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-10-28     97  by-filing/PNBHOUSING_2022-07-01_2022-09-30_cons_One.txt
+PNBHOUSING   2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-10-28    144  by-filing/PNBHOUSING_2022-04-01_2022-09-30_cons_Four.txt
+PNBHOUSING   2022-01-01  2022-03-31  quarter      std    Audited    2022-04-29     75  by-filing/PNBHOUSING_2022-01-01_2022-03-31_std_One.txt
+PNBHOUSING   2021-04-01  2022-03-31  full year    std    Audited    2022-04-29    141  by-filing/PNBHOUSING_2021-04-01_2022-03-31_std_Four.txt
+PNBHOUSING   2022-01-01  2022-03-31  quarter      cons   Audited    2022-04-29     75  by-filing/PNBHOUSING_2022-01-01_2022-03-31_cons_One.txt
+PNBHOUSING   2021-04-01  2022-03-31  full year    cons   Audited    2022-04-29    140  by-filing/PNBHOUSING_2021-04-01_2022-03-31_cons_Four.txt
+PNBHOUSING   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-01-21     52  by-filing/PNBHOUSING_2021-10-01_2021-12-31_std_One.txt
+PNBHOUSING   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-01-21     48  by-filing/PNBHOUSING_2021-04-01_2021-12-31_std_Four.txt
+PNBHOUSING   2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-01-21     54  by-filing/PNBHOUSING_2021-10-01_2021-12-31_cons_One.txt
+PNBHOUSING   2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-01-21     50  by-filing/PNBHOUSING_2021-04-01_2021-12-31_cons_Four.txt
+PNBHOUSING   2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-11-03     77  by-filing/PNBHOUSING_2021-07-01_2021-09-30_cons_One.txt
+PNBHOUSING   2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-11-03    143  by-filing/PNBHOUSING_2021-04-01_2021-09-30_cons_Four.txt
+PNBHOUSING   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-03     75  by-filing/PNBHOUSING_2021-07-01_2021-09-30_std_One.txt
+PNBHOUSING   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-03    141  by-filing/PNBHOUSING_2021-04-01_2021-09-30_std_Four.txt
+PNBHOUSING   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-05     55  by-filing/PNBHOUSING_2021-04-01_2021-06-30_std_One.txt
+PNBHOUSING   2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-05     57  by-filing/PNBHOUSING_2021-04-01_2021-06-30_cons_One.txt
+PNBHOUSING   2021-01-01  2021-03-31  quarter      cons   Audited    2021-04-28    168  by-filing/PNBHOUSING_2021-01-01_2021-03-31_cons_One.txt
+PNBHOUSING   2020-04-01  2021-03-31  full year    cons   Audited    2021-04-28     54  by-filing/PNBHOUSING_2020-04-01_2021-03-31_cons_Four.txt
+PNBHOUSING   2021-01-01  2021-03-31  quarter      std    Audited    2021-04-28    166  by-filing/PNBHOUSING_2021-01-01_2021-03-31_std_One.txt
+PNBHOUSING   2020-04-01  2021-03-31  full year    std    Audited    2021-04-28     52  by-filing/PNBHOUSING_2020-04-01_2021-03-31_std_Four.txt
+PNBHOUSING   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-28     35  by-filing/PNBHOUSING_2020-10-01_2020-12-31_std_One.txt
+PNBHOUSING   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-28     35  by-filing/PNBHOUSING_2020-04-01_2020-12-31_std_Four.txt
+PNBHOUSING   2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-01-28     54  by-filing/PNBHOUSING_2020-10-01_2020-12-31_cons_One.txt
+PNBHOUSING   2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-01-28     50  by-filing/PNBHOUSING_2020-04-01_2020-12-31_cons_Four.txt
+PNBHOUSING   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-20     74  by-filing/PNBHOUSING_2020-07-01_2020-09-30_std_One.txt
+PNBHOUSING   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-20     50  by-filing/PNBHOUSING_2020-04-01_2020-09-30_std_Four.txt
+PNBHOUSING   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-20     73  by-filing/PNBHOUSING_2020-07-01_2020-09-30_cons_One.txt
+PNBHOUSING   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-20     49  by-filing/PNBHOUSING_2020-04-01_2020-09-30_cons_Four.txt
+PNBHOUSING   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-07-28     55  by-filing/PNBHOUSING_2020-04-01_2020-06-30_std_One.txt
+PNBHOUSING   2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-07-28     55  by-filing/PNBHOUSING_2020-04-01_2020-06-30_cons_One.txt
+PNBHOUSING   2020-01-01  2020-03-31  quarter      std    Audited    2020-06-25     74  by-filing/PNBHOUSING_2020-01-01_2020-03-31_std_One.txt
+PNBHOUSING   2019-04-01  2020-03-31  full year    std    Audited    2020-06-25     51  by-filing/PNBHOUSING_2019-04-01_2020-03-31_std_Four.txt
+PNBHOUSING   2020-01-01  2020-03-31  quarter      cons   Audited    2020-06-25     72  by-filing/PNBHOUSING_2020-01-01_2020-03-31_cons_One.txt
+PNBHOUSING   2019-04-01  2020-03-31  full year    cons   Audited    2020-06-25     48  by-filing/PNBHOUSING_2019-04-01_2020-03-31_cons_Four.txt
+PNBHOUSING   2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-03-06     52  by-filing/PNBHOUSING_2019-10-01_2019-12-31_std_One.txt
+PNBHOUSING   2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-03-06     48  by-filing/PNBHOUSING_2019-04-01_2019-12-31_std_Four.txt
+PNBHOUSING   2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-03-06     54  by-filing/PNBHOUSING_2019-10-01_2019-12-31_cons_One.txt
+PNBHOUSING   2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-03-06     50  by-filing/PNBHOUSING_2019-04-01_2019-12-31_cons_Four.txt
+PNBHOUSING   2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-01-28     40  by-filing/PNBHOUSING_2018-10-01_2018-12-31_cons_One.txt
+PNBHOUSING   2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-01-28     39  by-filing/PNBHOUSING_2018-04-01_2018-12-31_cons_Four.txt
+PNBHOUSING   2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-01-28     38  by-filing/PNBHOUSING_2018-10-01_2018-12-31_std_One.txt
+PNBHOUSING   2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-01-28     37  by-filing/PNBHOUSING_2018-04-01_2018-12-31_std_Four.txt
+PNBHOUSING   2018-07-01  2018-09-30  quarter      cons   Un-Audited 2018-11-23     43  by-filing/PNBHOUSING_2018-07-01_2018-09-30_cons_One.txt
+PNBHOUSING   2018-04-01  2018-09-30  half year    cons   Un-Audited 2018-11-23     42  by-filing/PNBHOUSING_2018-04-01_2018-09-30_cons_Four.txt
+PNBHOUSING   2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-12-21     41  by-filing/PNBHOUSING_2018-07-01_2018-09-30_std_One.txt
+PNBHOUSING   2018-04-01  2018-09-30  half year    std    Un-Audited 2018-12-21     40  by-filing/PNBHOUSING_2018-04-01_2018-09-30_std_Four.txt
+MUTHOOTFIN   2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-13     60  by-filing/MUTHOOTFIN_2024-10-01_2024-12-31_std_One.txt
+MUTHOOTFIN   2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-13     56  by-filing/MUTHOOTFIN_2024-04-01_2024-12-31_std_Four.txt
+MUTHOOTFIN   2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-02-13     61  by-filing/MUTHOOTFIN_2024-10-01_2024-12-31_cons_One.txt
+MUTHOOTFIN   2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-02-13     57  by-filing/MUTHOOTFIN_2024-04-01_2024-12-31_cons_Four.txt
+MUTHOOTFIN   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-11-15     89  by-filing/MUTHOOTFIN_2024-07-01_2024-09-30_std_One.txt
+MUTHOOTFIN   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-11-15    144  by-filing/MUTHOOTFIN_2024-04-01_2024-09-30_std_Four.txt
+MUTHOOTFIN   2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-11-15     97  by-filing/MUTHOOTFIN_2024-07-01_2024-09-30_cons_One.txt
+MUTHOOTFIN   2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-11-15    145  by-filing/MUTHOOTFIN_2024-04-01_2024-09-30_cons_Four.txt
+MUTHOOTFIN   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-14     60  by-filing/MUTHOOTFIN_2024-04-01_2024-06-30_std_One.txt
+MUTHOOTFIN   2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-14     59  by-filing/MUTHOOTFIN_2024-04-01_2024-06-30_cons_One.txt
+MUTHOOTFIN   2024-01-01  2024-03-31  quarter      std    Audited    2024-05-31     94  by-filing/MUTHOOTFIN_2024-01-01_2024-03-31_std_One.txt
+MUTHOOTFIN   2023-04-01  2024-03-31  full year    std    Audited    2024-05-31    144  by-filing/MUTHOOTFIN_2023-04-01_2024-03-31_std_Four.txt
+MUTHOOTFIN   2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-31    100  by-filing/MUTHOOTFIN_2024-01-01_2024-03-31_cons_One.txt
+MUTHOOTFIN   2023-04-01  2024-03-31  full year    cons   Audited    2024-05-31    148  by-filing/MUTHOOTFIN_2023-04-01_2024-03-31_cons_Four.txt
+MUTHOOTFIN   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-15     58  by-filing/MUTHOOTFIN_2023-10-01_2023-12-31_std_One.txt
+MUTHOOTFIN   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-15     54  by-filing/MUTHOOTFIN_2023-04-01_2023-12-31_std_Four.txt
+MUTHOOTFIN   2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-02-15     59  by-filing/MUTHOOTFIN_2023-10-01_2023-12-31_cons_One.txt
+MUTHOOTFIN   2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-02-15     55  by-filing/MUTHOOTFIN_2023-04-01_2023-12-31_cons_Four.txt
+MUTHOOTFIN   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-09     86  by-filing/MUTHOOTFIN_2023-07-01_2023-09-30_std_One.txt
+MUTHOOTFIN   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-09    143  by-filing/MUTHOOTFIN_2023-04-01_2023-09-30_std_Four.txt
+MUTHOOTFIN   2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-09     94  by-filing/MUTHOOTFIN_2023-07-01_2023-09-30_cons_One.txt
+MUTHOOTFIN   2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-09    145  by-filing/MUTHOOTFIN_2023-04-01_2023-09-30_cons_Four.txt
+MUTHOOTFIN   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-08-11     58  by-filing/MUTHOOTFIN_2023-04-01_2023-06-30_std_One.txt
+MUTHOOTFIN   2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-08-11     60  by-filing/MUTHOOTFIN_2023-04-01_2023-06-30_cons_One.txt
+MUTHOOTFIN   2023-01-01  2023-03-31  quarter      std    Audited    2023-05-19     93  by-filing/MUTHOOTFIN_2023-01-01_2023-03-31_std_One.txt
+MUTHOOTFIN   2022-04-01  2023-03-31  full year    std    Audited    2023-05-19    144  by-filing/MUTHOOTFIN_2022-04-01_2023-03-31_std_Four.txt
+MUTHOOTFIN   2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-19     95  by-filing/MUTHOOTFIN_2023-01-01_2023-03-31_cons_One.txt
+MUTHOOTFIN   2022-04-01  2023-03-31  full year    cons   Audited    2023-05-19    146  by-filing/MUTHOOTFIN_2022-04-01_2023-03-31_cons_Four.txt
+MUTHOOTFIN   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-06     58  by-filing/MUTHOOTFIN_2022-10-01_2022-12-31_std_One.txt
+MUTHOOTFIN   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-06     54  by-filing/MUTHOOTFIN_2022-04-01_2022-12-31_std_Four.txt
+MUTHOOTFIN   2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-06     60  by-filing/MUTHOOTFIN_2022-10-01_2022-12-31_cons_One.txt
+MUTHOOTFIN   2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-06     56  by-filing/MUTHOOTFIN_2022-04-01_2022-12-31_cons_Four.txt
+MUTHOOTFIN   2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-10     97  by-filing/MUTHOOTFIN_2022-07-01_2022-09-30_std_One.txt
+MUTHOOTFIN   2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-10    146  by-filing/MUTHOOTFIN_2022-04-01_2022-09-30_std_Four.txt
+MUTHOOTFIN   2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-10     96  by-filing/MUTHOOTFIN_2022-07-01_2022-09-30_cons_One.txt
+MUTHOOTFIN   2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-10    144  by-filing/MUTHOOTFIN_2022-04-01_2022-09-30_cons_Four.txt
+MUTHOOTFIN   2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-08-12     50  by-filing/MUTHOOTFIN_2022-04-01_2022-06-30_cons_One.txt
+MUTHOOTFIN   2022-01-01  2022-03-31  quarter      std    Audited    2022-05-27     38  by-filing/MUTHOOTFIN_2022-01-01_2022-03-31_std_One.txt
+MUTHOOTFIN   2021-04-01  2022-03-31  full year    std    Audited    2022-05-27    128  by-filing/MUTHOOTFIN_2021-04-01_2022-03-31_std_Four.txt
+MUTHOOTFIN   2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-27     37  by-filing/MUTHOOTFIN_2022-01-01_2022-03-31_cons_One.txt
+MUTHOOTFIN   2021-04-01  2022-03-31  full year    cons   Audited    2022-05-27    127  by-filing/MUTHOOTFIN_2021-04-01_2022-03-31_cons_Four.txt
+MUTHOOTFIN   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-12     56  by-filing/MUTHOOTFIN_2021-10-01_2021-12-31_std_One.txt
+MUTHOOTFIN   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-12     52  by-filing/MUTHOOTFIN_2021-04-01_2021-12-31_std_Four.txt
+MUTHOOTFIN   2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-12     58  by-filing/MUTHOOTFIN_2021-10-01_2021-12-31_cons_One.txt
+MUTHOOTFIN   2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-12     54  by-filing/MUTHOOTFIN_2021-04-01_2021-12-31_cons_Four.txt
+MUTHOOTFIN   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-05     76  by-filing/MUTHOOTFIN_2021-07-01_2021-09-30_std_One.txt
+MUTHOOTFIN   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-05    142  by-filing/MUTHOOTFIN_2021-04-01_2021-09-30_std_Four.txt
+MUTHOOTFIN   2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-11-05     72  by-filing/MUTHOOTFIN_2021-07-01_2021-09-30_cons_One.txt
+MUTHOOTFIN   2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-11-05    142  by-filing/MUTHOOTFIN_2021-04-01_2021-09-30_cons_Four.txt
+MUTHOOTFIN   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-06     53  by-filing/MUTHOOTFIN_2021-04-01_2021-06-30_std_One.txt
+MUTHOOTFIN   2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-06     55  by-filing/MUTHOOTFIN_2021-04-01_2021-06-30_cons_One.txt
+MUTHOOTFIN   2021-01-01  2021-03-31  quarter      std    Audited    2021-06-03    163  by-filing/MUTHOOTFIN_2021-01-01_2021-03-31_std_One.txt
+MUTHOOTFIN   2020-04-01  2021-03-31  full year    std    Audited    2021-06-03     50  by-filing/MUTHOOTFIN_2020-04-01_2021-03-31_std_Four.txt
+MUTHOOTFIN   2021-01-01  2021-03-31  quarter      cons   Audited    2021-06-03    165  by-filing/MUTHOOTFIN_2021-01-01_2021-03-31_cons_One.txt
+MUTHOOTFIN   2020-04-01  2021-03-31  full year    cons   Audited    2021-06-03     52  by-filing/MUTHOOTFIN_2020-04-01_2021-03-31_cons_Four.txt
+MUTHOOTFIN   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-02-10     53  by-filing/MUTHOOTFIN_2020-10-01_2020-12-31_std_One.txt
+MUTHOOTFIN   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-02-10     50  by-filing/MUTHOOTFIN_2020-04-01_2020-12-31_std_Four.txt
+MUTHOOTFIN   2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-02-10     55  by-filing/MUTHOOTFIN_2020-10-01_2020-12-31_cons_One.txt
+MUTHOOTFIN   2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-02-10     52  by-filing/MUTHOOTFIN_2020-04-01_2020-12-31_cons_Four.txt
+MUTHOOTFIN   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-20    162  by-filing/MUTHOOTFIN_2020-07-01_2020-09-30_std_One.txt
+MUTHOOTFIN   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-20     48  by-filing/MUTHOOTFIN_2020-04-01_2020-09-30_std_Four.txt
+MUTHOOTFIN   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-20    164  by-filing/MUTHOOTFIN_2020-07-01_2020-09-30_cons_One.txt
+MUTHOOTFIN   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-20     51  by-filing/MUTHOOTFIN_2020-04-01_2020-09-30_cons_Four.txt
+MUTHOOTFIN   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-10-16     53  by-filing/MUTHOOTFIN_2020-04-01_2020-06-30_std_One.txt
+MUTHOOTFIN   2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-10-16     55  by-filing/MUTHOOTFIN_2020-04-01_2020-06-30_cons_One.txt
+MUTHOOTFIN   2020-01-01  2020-03-31  quarter      std    Audited    2020-06-25     66  by-filing/MUTHOOTFIN_2020-01-01_2020-03-31_std_One.txt
+MUTHOOTFIN   2019-04-01  2020-03-31  full year    std    Audited    2020-06-25     50  by-filing/MUTHOOTFIN_2019-04-01_2020-03-31_std_Four.txt
+MUTHOOTFIN   2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-16     70  by-filing/MUTHOOTFIN_2020-01-01_2020-03-31_cons_One.txt
+MUTHOOTFIN   2019-04-01  2020-03-31  full year    cons   Audited    2020-07-16     52  by-filing/MUTHOOTFIN_2019-04-01_2020-03-31_cons_Four.txt
+MUTHOOTFIN   2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-24     53  by-filing/MUTHOOTFIN_2019-10-01_2019-12-31_std_One.txt
+MUTHOOTFIN   2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-24     50  by-filing/MUTHOOTFIN_2019-04-01_2019-12-31_std_Four.txt
+MUTHOOTFIN   2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-24     55  by-filing/MUTHOOTFIN_2019-10-01_2019-12-31_cons_One.txt
+MUTHOOTFIN   2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-24     52  by-filing/MUTHOOTFIN_2019-04-01_2019-12-31_cons_Four.txt
+MUTHOOTFIN   2019-01-01  2019-03-31  quarter      std    Audited    2019-05-13     38  by-filing/MUTHOOTFIN_2019-01-01_2019-03-31_std_One.txt
+MUTHOOTFIN   2018-04-01  2019-03-31  full year    std    Audited    2019-05-13     38  by-filing/MUTHOOTFIN_2018-04-01_2019-03-31_std_Four.txt
+MUTHOOTFIN   2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-11     38  by-filing/MUTHOOTFIN_2018-10-01_2018-12-31_std_One.txt
+MUTHOOTFIN   2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-11     37  by-filing/MUTHOOTFIN_2018-04-01_2018-12-31_std_Four.txt
+MUTHOOTFIN   2018-01-01  2018-03-31  quarter      std    Audited    2018-05-25     40  by-filing/MUTHOOTFIN_2018-01-01_2018-03-31_std_One.txt
+MANAPPURAM   2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-14     39  by-filing/MANAPPURAM_2024-10-01_2024-12-31_std_One.txt
+MANAPPURAM   2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-14     39  by-filing/MANAPPURAM_2024-04-01_2024-12-31_std_Four.txt
+MANAPPURAM   2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-02-14     47  by-filing/MANAPPURAM_2024-10-01_2024-12-31_cons_One.txt
+MANAPPURAM   2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-02-14     45  by-filing/MANAPPURAM_2024-04-01_2024-12-31_cons_Four.txt
+MANAPPURAM   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-11-06     54  by-filing/MANAPPURAM_2024-07-01_2024-09-30_std_One.txt
+MANAPPURAM   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-11-06    129  by-filing/MANAPPURAM_2024-04-01_2024-09-30_std_Four.txt
+MANAPPURAM   2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-11-06     64  by-filing/MANAPPURAM_2024-07-01_2024-09-30_cons_One.txt
+MANAPPURAM   2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-11-06    135  by-filing/MANAPPURAM_2024-04-01_2024-09-30_cons_Four.txt
+MANAPPURAM   2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-13     47  by-filing/MANAPPURAM_2024-04-01_2024-06-30_cons_One.txt
+MANAPPURAM   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-13     39  by-filing/MANAPPURAM_2024-04-01_2024-06-30_std_One.txt
+MANAPPURAM   2024-01-01  2024-03-31  quarter      std    Audited    2024-05-25     83  by-filing/MANAPPURAM_2024-01-01_2024-03-31_std_One.txt
+MANAPPURAM   2023-04-01  2024-03-31  full year    std    Audited    2024-05-25    143  by-filing/MANAPPURAM_2023-04-01_2024-03-31_std_Four.txt
+MANAPPURAM   2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-25     95  by-filing/MANAPPURAM_2024-01-01_2024-03-31_cons_One.txt
+MANAPPURAM   2023-04-01  2024-03-31  full year    cons   Audited    2024-05-25    149  by-filing/MANAPPURAM_2023-04-01_2024-03-31_cons_Four.txt
+MANAPPURAM   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-08     57  by-filing/MANAPPURAM_2023-10-01_2023-12-31_std_One.txt
+MANAPPURAM   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-08     53  by-filing/MANAPPURAM_2023-04-01_2023-12-31_std_Four.txt
+MANAPPURAM   2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-02-08     65  by-filing/MANAPPURAM_2023-10-01_2023-12-31_cons_One.txt
+MANAPPURAM   2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-02-08     59  by-filing/MANAPPURAM_2023-04-01_2023-12-31_cons_Four.txt
+MANAPPURAM   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-14     83  by-filing/MANAPPURAM_2023-07-01_2023-09-30_std_One.txt
+MANAPPURAM   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-14    143  by-filing/MANAPPURAM_2023-04-01_2023-09-30_std_Four.txt
+MANAPPURAM   2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-14     97  by-filing/MANAPPURAM_2023-07-01_2023-09-30_cons_One.txt
+MANAPPURAM   2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-14    149  by-filing/MANAPPURAM_2023-04-01_2023-09-30_cons_Four.txt
+MANAPPURAM   2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-08-11     65  by-filing/MANAPPURAM_2023-04-01_2023-06-30_cons_One.txt
+MANAPPURAM   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-08-11     57  by-filing/MANAPPURAM_2023-04-01_2023-06-30_std_One.txt
+MANAPPURAM   2023-01-01  2023-03-31  quarter      std    Audited    2023-05-12     90  by-filing/MANAPPURAM_2023-01-01_2023-03-31_std_One.txt
+MANAPPURAM   2022-04-01  2023-03-31  full year    std    Audited    2023-05-12    143  by-filing/MANAPPURAM_2022-04-01_2023-03-31_std_Four.txt
+MANAPPURAM   2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-13     95  by-filing/MANAPPURAM_2023-01-01_2023-03-31_cons_One.txt
+MANAPPURAM   2022-04-01  2023-03-31  full year    cons   Audited    2023-05-13    147  by-filing/MANAPPURAM_2022-04-01_2023-03-31_cons_Four.txt
+MANAPPURAM   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-04     53  by-filing/MANAPPURAM_2022-10-01_2022-12-31_std_One.txt
+MANAPPURAM   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-04     49  by-filing/MANAPPURAM_2022-04-01_2022-12-31_std_Four.txt
+MANAPPURAM   2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-04     68  by-filing/MANAPPURAM_2022-10-01_2022-12-31_cons_One.txt
+MANAPPURAM   2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-04     58  by-filing/MANAPPURAM_2022-04-01_2022-12-31_cons_Four.txt
+MANAPPURAM   2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-12     98  by-filing/MANAPPURAM_2022-07-01_2022-09-30_std_One.txt
+MANAPPURAM   2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-12    145  by-filing/MANAPPURAM_2022-04-01_2022-09-30_std_Four.txt
+MANAPPURAM   2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-12    106  by-filing/MANAPPURAM_2022-07-01_2022-09-30_cons_One.txt
+MANAPPURAM   2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-12    151  by-filing/MANAPPURAM_2022-04-01_2022-09-30_cons_Four.txt
+MANAPPURAM   2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-08-05     53  by-filing/MANAPPURAM_2022-04-01_2022-06-30_std_One.txt
+MANAPPURAM   2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-08-05     68  by-filing/MANAPPURAM_2022-04-01_2022-06-30_cons_One.txt
+MANAPPURAM   2022-01-01  2022-03-31  quarter      std    Audited    2022-05-19     71  by-filing/MANAPPURAM_2022-01-01_2022-03-31_std_One.txt
+MANAPPURAM   2021-04-01  2022-03-31  full year    std    Audited    2022-05-19    139  by-filing/MANAPPURAM_2021-04-01_2022-03-31_std_Four.txt
+MANAPPURAM   2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-19     83  by-filing/MANAPPURAM_2022-01-01_2022-03-31_cons_One.txt
+MANAPPURAM   2021-04-01  2022-03-31  full year    cons   Audited    2022-05-19    148  by-filing/MANAPPURAM_2021-04-01_2022-03-31_cons_Four.txt
+MANAPPURAM   2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-15     61  by-filing/MANAPPURAM_2021-10-01_2021-12-31_cons_One.txt
+MANAPPURAM   2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-15     55  by-filing/MANAPPURAM_2021-04-01_2021-12-31_cons_Four.txt
+MANAPPURAM   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-15     53  by-filing/MANAPPURAM_2021-10-01_2021-12-31_std_One.txt
+MANAPPURAM   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-15     49  by-filing/MANAPPURAM_2021-04-01_2021-12-31_std_Four.txt
+MANAPPURAM   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-11-13     74  by-filing/MANAPPURAM_2021-07-01_2021-09-30_std_One.txt
+MANAPPURAM   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-11-13    139  by-filing/MANAPPURAM_2021-04-01_2021-09-30_std_Four.txt
+MANAPPURAM   2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-11-13     89  by-filing/MANAPPURAM_2021-07-01_2021-09-30_cons_One.txt
+MANAPPURAM   2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-11-13    148  by-filing/MANAPPURAM_2021-04-01_2021-09-30_cons_Four.txt
+MANAPPURAM   2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-11     61  by-filing/MANAPPURAM_2021-04-01_2021-06-30_cons_One.txt
+MANAPPURAM   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-11     53  by-filing/MANAPPURAM_2021-04-01_2021-06-30_std_One.txt
+MANAPPURAM   2021-01-01  2021-03-31  quarter      cons   Audited    2021-05-27    134  by-filing/MANAPPURAM_2021-01-01_2021-03-31_cons_One.txt
+MANAPPURAM   2020-04-01  2021-03-31  full year    cons   Audited    2021-05-27     42  by-filing/MANAPPURAM_2020-04-01_2021-03-31_cons_Four.txt
+MANAPPURAM   2021-01-01  2021-03-31  quarter      std    Audited    2021-05-27    163  by-filing/MANAPPURAM_2021-01-01_2021-03-31_std_One.txt
+MANAPPURAM   2020-04-01  2021-03-31  full year    std    Audited    2021-05-27     49  by-filing/MANAPPURAM_2020-04-01_2021-03-31_std_Four.txt
+MANAPPURAM   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-30     53  by-filing/MANAPPURAM_2020-10-01_2020-12-31_std_One.txt
+MANAPPURAM   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-30     49  by-filing/MANAPPURAM_2020-04-01_2020-12-31_std_Four.txt
+MANAPPURAM   2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-01-30     61  by-filing/MANAPPURAM_2020-10-01_2020-12-31_cons_One.txt
+MANAPPURAM   2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-01-30     55  by-filing/MANAPPURAM_2020-04-01_2020-12-31_cons_Four.txt
+MANAPPURAM   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-10    172  by-filing/MANAPPURAM_2020-07-01_2020-09-30_cons_One.txt
+MANAPPURAM   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-10     55  by-filing/MANAPPURAM_2020-04-01_2020-09-30_cons_Four.txt
+MANAPPURAM   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-10    163  by-filing/MANAPPURAM_2020-07-01_2020-09-30_std_One.txt
+MANAPPURAM   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-10     49  by-filing/MANAPPURAM_2020-04-01_2020-09-30_std_Four.txt
+MANAPPURAM   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-18     53  by-filing/MANAPPURAM_2020-04-01_2020-06-30_std_One.txt
+MANAPPURAM   2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-18     68  by-filing/MANAPPURAM_2020-04-01_2020-06-30_cons_One.txt
+MANAPPURAM   2020-01-01  2020-03-31  quarter      cons   Audited    2020-05-20     85  by-filing/MANAPPURAM_2020-01-01_2020-03-31_cons_One.txt
+MANAPPURAM   2019-04-01  2020-03-31  full year    cons   Audited    2020-05-20     58  by-filing/MANAPPURAM_2019-04-01_2020-03-31_cons_Four.txt
+MANAPPURAM   2020-01-01  2020-03-31  quarter      std    Audited    2020-05-18     68  by-filing/MANAPPURAM_2020-01-01_2020-03-31_std_One.txt
+MANAPPURAM   2019-04-01  2020-03-31  full year    std    Audited    2020-05-18     49  by-filing/MANAPPURAM_2019-04-01_2020-03-31_std_Four.txt
+MANAPPURAM   2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-03-17     53  by-filing/MANAPPURAM_2019-10-01_2019-12-31_std_One.txt
+MANAPPURAM   2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-03-17     49  by-filing/MANAPPURAM_2019-04-01_2019-12-31_std_Four.txt
+MANAPPURAM   2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-06     68  by-filing/MANAPPURAM_2019-10-01_2019-12-31_cons_One.txt
+MANAPPURAM   2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-06     58  by-filing/MANAPPURAM_2019-04-01_2019-12-31_cons_Four.txt
+MANAPPURAM   2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-12     38  by-filing/MANAPPURAM_2018-10-01_2018-12-31_std_One.txt
+MANAPPURAM   2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-12     37  by-filing/MANAPPURAM_2018-04-01_2018-12-31_std_Four.txt
+MANAPPURAM   2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-02-12     44  by-filing/MANAPPURAM_2018-10-01_2018-12-31_cons_One.txt
+MANAPPURAM   2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-02-12     42  by-filing/MANAPPURAM_2018-04-01_2018-12-31_cons_Four.txt
+MANAPPURAM   2018-07-01  2018-09-30  quarter      cons   Un-Audited 2018-11-19     51  by-filing/MANAPPURAM_2018-07-01_2018-09-30_cons_One.txt
+MANAPPURAM   2018-04-01  2018-09-30  half year    cons   Un-Audited 2018-11-19     45  by-filing/MANAPPURAM_2018-04-01_2018-09-30_cons_Four.txt
+MANAPPURAM   2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-11-28     36  by-filing/MANAPPURAM_2018-07-01_2018-09-30_std_One.txt
+MANAPPURAM   2018-04-01  2018-09-30  half year    std    Un-Audited 2018-11-28     36  by-filing/MANAPPURAM_2018-04-01_2018-09-30_std_Four.txt
+MANAPPURAM   2018-04-01  2018-06-30  quarter      std    Un-Audited 2018-08-27     36  by-filing/MANAPPURAM_2018-04-01_2018-06-30_std_One.txt
+MANAPPURAM   2018-04-01  2018-06-30  quarter      cons   Un-Audited 2018-08-27     38  by-filing/MANAPPURAM_2018-04-01_2018-06-30_cons_One.txt
+MANAPPURAM   2018-01-01  2018-03-31  quarter      std    Audited    2018-06-21     29  by-filing/MANAPPURAM_2018-01-01_2018-03-31_std_One.txt
+MANAPPURAM   2018-01-01  2018-03-31  quarter      cons   Audited    2018-06-21     31  by-filing/MANAPPURAM_2018-01-01_2018-03-31_cons_One.txt
+LICHSGFIN    2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-01-31     56  by-filing/LICHSGFIN_2024-10-01_2024-12-31_std_One.txt
+LICHSGFIN    2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-01-31     52  by-filing/LICHSGFIN_2024-04-01_2024-12-31_std_Four.txt
+LICHSGFIN    2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-01-31     71  by-filing/LICHSGFIN_2024-10-01_2024-12-31_cons_One.txt
+LICHSGFIN    2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-01-31     61  by-filing/LICHSGFIN_2024-04-01_2024-12-31_cons_Four.txt
+LICHSGFIN    2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-10-28    109  by-filing/LICHSGFIN_2024-07-01_2024-09-30_cons_One.txt
+LICHSGFIN    2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-10-28    151  by-filing/LICHSGFIN_2024-04-01_2024-09-30_cons_Four.txt
+LICHSGFIN    2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-28     93  by-filing/LICHSGFIN_2024-07-01_2024-09-30_std_One.txt
+LICHSGFIN    2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-28    141  by-filing/LICHSGFIN_2024-04-01_2024-09-30_std_Four.txt
+LICHSGFIN    2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-02     56  by-filing/LICHSGFIN_2024-04-01_2024-06-30_std_One.txt
+LICHSGFIN    2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-02     71  by-filing/LICHSGFIN_2024-04-01_2024-06-30_cons_One.txt
+LICHSGFIN    2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-15    109  by-filing/LICHSGFIN_2024-01-01_2024-03-31_cons_One.txt
+LICHSGFIN    2023-04-01  2024-03-31  full year    cons   Audited    2024-05-15    151  by-filing/LICHSGFIN_2023-04-01_2024-03-31_cons_Four.txt
+LICHSGFIN    2024-01-01  2024-03-31  quarter      std    Audited    2024-05-15     94  by-filing/LICHSGFIN_2024-01-01_2024-03-31_std_One.txt
+LICHSGFIN    2023-04-01  2024-03-31  full year    std    Audited    2024-05-15    143  by-filing/LICHSGFIN_2023-04-01_2024-03-31_std_Four.txt
+LICHSGFIN    2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-02     37  by-filing/LICHSGFIN_2023-10-01_2023-12-31_std_One.txt
+LICHSGFIN    2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-02     37  by-filing/LICHSGFIN_2023-04-01_2023-12-31_std_Four.txt
+LICHSGFIN    2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-02-02     71  by-filing/LICHSGFIN_2023-10-01_2023-12-31_cons_One.txt
+LICHSGFIN    2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-02-02     61  by-filing/LICHSGFIN_2023-04-01_2023-12-31_cons_Four.txt
+LICHSGFIN    2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-05     55  by-filing/LICHSGFIN_2023-10-01_2023-12-31_std_One.txt
+LICHSGFIN    2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-05     51  by-filing/LICHSGFIN_2023-04-01_2023-12-31_std_Four.txt
+LICHSGFIN    2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-01    108  by-filing/LICHSGFIN_2023-07-01_2023-09-30_cons_One.txt
+LICHSGFIN    2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-01    149  by-filing/LICHSGFIN_2023-04-01_2023-09-30_cons_Four.txt
+LICHSGFIN    2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-01     94  by-filing/LICHSGFIN_2023-07-01_2023-09-30_std_One.txt
+LICHSGFIN    2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-01    141  by-filing/LICHSGFIN_2023-04-01_2023-09-30_std_Four.txt
+LICHSGFIN    2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-08-03     55  by-filing/LICHSGFIN_2023-04-01_2023-06-30_std_One.txt
+LICHSGFIN    2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-08-03     69  by-filing/LICHSGFIN_2023-04-01_2023-06-30_cons_One.txt
+LICHSGFIN    2023-01-01  2023-03-31  quarter      std    Audited    2023-05-17     94  by-filing/LICHSGFIN_2023-01-01_2023-03-31_std_One.txt
+LICHSGFIN    2022-04-01  2023-03-31  full year    std    Audited    2023-05-17    141  by-filing/LICHSGFIN_2022-04-01_2023-03-31_std_Four.txt
+LICHSGFIN    2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-17    105  by-filing/LICHSGFIN_2023-01-01_2023-03-31_cons_One.txt
+LICHSGFIN    2022-04-01  2023-03-31  full year    cons   Audited    2023-05-17    149  by-filing/LICHSGFIN_2022-04-01_2023-03-31_cons_Four.txt
+LICHSGFIN    2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-06     55  by-filing/LICHSGFIN_2022-10-01_2022-12-31_std_One.txt
+LICHSGFIN    2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-06     51  by-filing/LICHSGFIN_2022-04-01_2022-12-31_std_Four.txt
+LICHSGFIN    2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-07     56  by-filing/LICHSGFIN_2022-10-01_2022-12-31_cons_One.txt
+LICHSGFIN    2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-07     52  by-filing/LICHSGFIN_2022-04-01_2022-12-31_cons_Four.txt
+LICHSGFIN    2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-01     90  by-filing/LICHSGFIN_2022-07-01_2022-09-30_std_One.txt
+LICHSGFIN    2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-01    141  by-filing/LICHSGFIN_2022-04-01_2022-09-30_std_Four.txt
+LICHSGFIN    2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-01    100  by-filing/LICHSGFIN_2022-07-01_2022-09-30_cons_One.txt
+LICHSGFIN    2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-01    147  by-filing/LICHSGFIN_2022-04-01_2022-09-30_cons_Four.txt
+LICHSGFIN    2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-08-05     48  by-filing/LICHSGFIN_2022-04-01_2022-06-30_std_One.txt
+LICHSGFIN    2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-08-05     50  by-filing/LICHSGFIN_2022-04-01_2022-06-30_cons_One.txt
+LICHSGFIN    2022-01-01  2022-03-31  quarter      std    Audited    2022-05-19     82  by-filing/LICHSGFIN_2022-01-01_2022-03-31_std_One.txt
+LICHSGFIN    2021-04-01  2022-03-31  full year    std    Audited    2022-05-19    145  by-filing/LICHSGFIN_2021-04-01_2022-03-31_std_Four.txt
+LICHSGFIN    2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-19     90  by-filing/LICHSGFIN_2022-01-01_2022-03-31_cons_One.txt
+LICHSGFIN    2021-04-01  2022-03-31  full year    cons   Audited    2022-05-19    150  by-filing/LICHSGFIN_2021-04-01_2022-03-31_cons_Four.txt
+LICHSGFIN    2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-01-27     71  by-filing/LICHSGFIN_2021-10-01_2021-12-31_cons_One.txt
+LICHSGFIN    2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-01-27     61  by-filing/LICHSGFIN_2021-04-01_2021-12-31_cons_Four.txt
+LICHSGFIN    2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-01-27     53  by-filing/LICHSGFIN_2021-10-01_2021-12-31_std_One.txt
+LICHSGFIN    2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-01-27     49  by-filing/LICHSGFIN_2021-04-01_2021-12-31_std_Four.txt
+LICHSGFIN    2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-10-22     68  by-filing/LICHSGFIN_2021-07-01_2021-09-30_std_One.txt
+LICHSGFIN    2021-04-01  2021-09-30  half year    std    Un-Audited 2021-10-22    139  by-filing/LICHSGFIN_2021-04-01_2021-09-30_std_Four.txt
+LICHSGFIN    2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-10-22     86  by-filing/LICHSGFIN_2021-07-01_2021-09-30_cons_One.txt
+LICHSGFIN    2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-10-22    150  by-filing/LICHSGFIN_2021-04-01_2021-09-30_cons_Four.txt
+LICHSGFIN    2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-07-29     55  by-filing/LICHSGFIN_2021-04-01_2021-06-30_cons_One.txt
+LICHSGFIN    2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-29     53  by-filing/LICHSGFIN_2021-04-01_2021-06-30_std_One.txt
+LICHSGFIN    2021-01-01  2021-03-31  quarter      cons   Audited    2021-06-15    169  by-filing/LICHSGFIN_2021-01-01_2021-03-31_cons_One.txt
+LICHSGFIN    2020-04-01  2021-03-31  full year    cons   Audited    2021-06-15     55  by-filing/LICHSGFIN_2020-04-01_2021-03-31_cons_Four.txt
+LICHSGFIN    2021-01-01  2021-03-31  quarter      std    Audited    2021-06-15    164  by-filing/LICHSGFIN_2021-01-01_2021-03-31_std_One.txt
+LICHSGFIN    2020-04-01  2021-03-31  full year    std    Audited    2021-06-15     52  by-filing/LICHSGFIN_2020-04-01_2021-03-31_std_Four.txt
+LICHSGFIN    2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-29     53  by-filing/LICHSGFIN_2020-10-01_2020-12-31_std_One.txt
+LICHSGFIN    2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-29     49  by-filing/LICHSGFIN_2020-04-01_2020-12-31_std_Four.txt
+LICHSGFIN    2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-01-29     58  by-filing/LICHSGFIN_2020-10-01_2020-12-31_cons_One.txt
+LICHSGFIN    2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-01-29     55  by-filing/LICHSGFIN_2020-04-01_2020-12-31_cons_Four.txt
+LICHSGFIN    2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-12-04    164  by-filing/LICHSGFIN_2020-07-01_2020-09-30_std_One.txt
+LICHSGFIN    2020-04-01  2020-09-30  half year    std    Un-Audited 2020-12-04     49  by-filing/LICHSGFIN_2020-04-01_2020-09-30_std_Four.txt
+LICHSGFIN    2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-12-04    168  by-filing/LICHSGFIN_2020-07-01_2020-09-30_cons_One.txt
+LICHSGFIN    2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-12-04     54  by-filing/LICHSGFIN_2020-04-01_2020-09-30_cons_Four.txt
+LICHSGFIN    2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-18     58  by-filing/LICHSGFIN_2020-04-01_2020-06-30_cons_One.txt
+LICHSGFIN    2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-18     53  by-filing/LICHSGFIN_2020-04-01_2020-06-30_std_One.txt
+LICHSGFIN    2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-16     74  by-filing/LICHSGFIN_2020-01-01_2020-03-31_cons_One.txt
+LICHSGFIN    2019-04-01  2020-03-31  full year    cons   Audited    2020-07-16     55  by-filing/LICHSGFIN_2019-04-01_2020-03-31_cons_Four.txt
+LICHSGFIN    2020-01-01  2020-03-31  quarter      std    Audited    2020-07-16     76  by-filing/LICHSGFIN_2020-01-01_2020-03-31_std_One.txt
+LICHSGFIN    2019-04-01  2020-03-31  full year    std    Audited    2020-07-16     52  by-filing/LICHSGFIN_2019-04-01_2020-03-31_std_Four.txt
+LICHSGFIN    2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-06     56  by-filing/LICHSGFIN_2019-10-01_2019-12-31_std_One.txt
+LICHSGFIN    2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-06     52  by-filing/LICHSGFIN_2019-04-01_2019-12-31_std_Four.txt
+LICHSGFIN    2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-06     58  by-filing/LICHSGFIN_2019-10-01_2019-12-31_cons_One.txt
+LICHSGFIN    2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-06     54  by-filing/LICHSGFIN_2019-04-01_2019-12-31_cons_Four.txt
+LICHSGFIN    2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-06     41  by-filing/LICHSGFIN_2018-10-01_2018-12-31_std_One.txt
+LICHSGFIN    2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-06     40  by-filing/LICHSGFIN_2018-04-01_2018-12-31_std_Four.txt
+IIFL         2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-13     57  by-filing/IIFL_2024-10-01_2024-12-31_std_One.txt
+IIFL         2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-13     53  by-filing/IIFL_2024-04-01_2024-12-31_std_Four.txt
+IIFL         2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-02-13     59  by-filing/IIFL_2024-10-01_2024-12-31_cons_One.txt
+IIFL         2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-02-13     55  by-filing/IIFL_2024-04-01_2024-12-31_cons_Four.txt
+IIFL         2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-24     95  by-filing/IIFL_2024-07-01_2024-09-30_std_One.txt
+IIFL         2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-24    143  by-filing/IIFL_2024-04-01_2024-09-30_std_Four.txt
+IIFL         2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-10-24     97  by-filing/IIFL_2024-07-01_2024-09-30_cons_One.txt
+IIFL         2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-10-24    145  by-filing/IIFL_2024-04-01_2024-09-30_cons_Four.txt
+IIFL         2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-07     57  by-filing/IIFL_2024-04-01_2024-06-30_std_One.txt
+IIFL         2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-07     59  by-filing/IIFL_2024-04-01_2024-06-30_cons_One.txt
+IIFL         2024-01-01  2024-03-31  quarter      std    Audited    2024-06-16     95  by-filing/IIFL_2024-01-01_2024-03-31_std_One.txt
+IIFL         2023-04-01  2024-03-31  full year    std    Audited    2024-06-16    144  by-filing/IIFL_2023-04-01_2024-03-31_std_Four.txt
+IIFL         2024-01-01  2024-03-31  quarter      cons   Audited    2024-06-16     98  by-filing/IIFL_2024-01-01_2024-03-31_cons_One.txt
+IIFL         2023-04-01  2024-03-31  full year    cons   Audited    2024-06-16    146  by-filing/IIFL_2023-04-01_2024-03-31_cons_Four.txt
+IIFL         2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-01-18     57  by-filing/IIFL_2023-10-01_2023-12-31_std_One.txt
+IIFL         2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-01-18     53  by-filing/IIFL_2023-04-01_2023-12-31_std_Four.txt
+IIFL         2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-01-18     59  by-filing/IIFL_2023-10-01_2023-12-31_cons_One.txt
+IIFL         2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-01-18     55  by-filing/IIFL_2023-04-01_2023-12-31_cons_Four.txt
+IIFL         2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-10-19     96  by-filing/IIFL_2023-07-01_2023-09-30_std_One.txt
+IIFL         2023-04-01  2023-09-30  half year    std    Un-Audited 2023-10-19    143  by-filing/IIFL_2023-04-01_2023-09-30_std_Four.txt
+IIFL         2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-10-19     97  by-filing/IIFL_2023-07-01_2023-09-30_cons_One.txt
+IIFL         2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-10-19    145  by-filing/IIFL_2023-04-01_2023-09-30_cons_Four.txt
+IIFL         2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-28     57  by-filing/IIFL_2023-04-01_2023-06-30_std_One.txt
+IIFL         2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-07-28     57  by-filing/IIFL_2023-04-01_2023-06-30_cons_One.txt
+IIFL         2023-01-01  2023-03-31  quarter      std    Un-Audited 2023-04-27     92  by-filing/IIFL_2023-01-01_2023-03-31_std_One.txt
+IIFL         2022-04-01  2023-03-31  full year    std    Un-Audited 2023-04-27    140  by-filing/IIFL_2022-04-01_2023-03-31_std_Four.txt
+IIFL         2023-01-01  2023-03-31  quarter      cons   Un-Audited 2023-04-27     98  by-filing/IIFL_2023-01-01_2023-03-31_cons_One.txt
+IIFL         2022-04-01  2023-03-31  full year    cons   Un-Audited 2023-04-27    146  by-filing/IIFL_2022-04-01_2023-03-31_cons_Four.txt
+IIFL         2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-01-31     53  by-filing/IIFL_2022-10-01_2022-12-31_std_One.txt
+IIFL         2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-01-31     49  by-filing/IIFL_2022-04-01_2022-12-31_std_Four.txt
+IIFL         2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-01-31     55  by-filing/IIFL_2022-10-01_2022-12-31_cons_One.txt
+IIFL         2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-01-31     51  by-filing/IIFL_2022-04-01_2022-12-31_cons_Four.txt
+IIFL         2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-10-27     97  by-filing/IIFL_2022-07-01_2022-09-30_cons_One.txt
+IIFL         2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-10-27    144  by-filing/IIFL_2022-04-01_2022-09-30_cons_Four.txt
+IIFL         2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-10-27     94  by-filing/IIFL_2022-07-01_2022-09-30_std_One.txt
+IIFL         2022-04-01  2022-09-30  half year    std    Un-Audited 2022-10-27    142  by-filing/IIFL_2022-04-01_2022-09-30_std_Four.txt
+IIFL         2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-07-28     53  by-filing/IIFL_2022-04-01_2022-06-30_std_One.txt
+IIFL         2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-07-28     55  by-filing/IIFL_2022-04-01_2022-06-30_cons_One.txt
+IIFL         2022-01-01  2022-03-31  quarter      std    Un-Audited 2022-04-29     73  by-filing/IIFL_2022-01-01_2022-03-31_std_One.txt
+IIFL         2021-04-01  2022-03-31  full year    std    Un-Audited 2022-04-29    139  by-filing/IIFL_2021-04-01_2022-03-31_std_Four.txt
+IIFL         2022-01-01  2022-03-31  quarter      cons   Un-Audited 2022-04-29     73  by-filing/IIFL_2022-01-01_2022-03-31_cons_One.txt
+IIFL         2021-04-01  2022-03-31  full year    cons   Un-Audited 2022-04-29    141  by-filing/IIFL_2021-04-01_2022-03-31_cons_Four.txt
+IIFL         2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-01-28     53  by-filing/IIFL_2021-10-01_2021-12-31_std_One.txt
+IIFL         2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-01-28     49  by-filing/IIFL_2021-04-01_2021-12-31_std_Four.txt
+IIFL         2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-01-28     55  by-filing/IIFL_2021-10-01_2021-12-31_cons_One.txt
+IIFL         2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-01-28     51  by-filing/IIFL_2021-04-01_2021-12-31_cons_Four.txt
+IIFL         2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-10-28     75  by-filing/IIFL_2021-07-01_2021-09-30_cons_One.txt
+IIFL         2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-10-28    141  by-filing/IIFL_2021-04-01_2021-09-30_cons_Four.txt
+IIFL         2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-10-28     73  by-filing/IIFL_2021-07-01_2021-09-30_std_One.txt
+IIFL         2021-04-01  2021-09-30  half year    std    Un-Audited 2021-10-28    139  by-filing/IIFL_2021-04-01_2021-09-30_std_Four.txt
+IIFL         2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-28     52  by-filing/IIFL_2021-04-01_2021-06-30_std_One.txt
+IIFL         2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-07-28     54  by-filing/IIFL_2021-04-01_2021-06-30_cons_One.txt
+IIFL         2021-01-01  2021-03-31  quarter      std    Un-Audited 2021-05-06    158  by-filing/IIFL_2021-01-01_2021-03-31_std_One.txt
+IIFL         2020-04-01  2021-03-31  full year    std    Un-Audited 2021-05-06     49  by-filing/IIFL_2020-04-01_2021-03-31_std_Four.txt
+IIFL         2021-01-01  2021-03-31  quarter      cons   Un-Audited 2021-05-06    165  by-filing/IIFL_2021-01-01_2021-03-31_cons_One.txt
+IIFL         2020-04-01  2021-03-31  full year    cons   Un-Audited 2021-05-06     51  by-filing/IIFL_2020-04-01_2021-03-31_cons_Four.txt
+IIFL         2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-01-29     55  by-filing/IIFL_2020-10-01_2020-12-31_cons_One.txt
+IIFL         2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-01-29     51  by-filing/IIFL_2020-04-01_2020-12-31_cons_Four.txt
+IIFL         2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-29     53  by-filing/IIFL_2020-10-01_2020-12-31_std_One.txt
+IIFL         2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-29     49  by-filing/IIFL_2020-04-01_2020-12-31_std_Four.txt
+IIFL         2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-21    162  by-filing/IIFL_2020-07-01_2020-09-30_std_One.txt
+IIFL         2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-21     49  by-filing/IIFL_2020-04-01_2020-09-30_std_Four.txt
+IIFL         2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-21    164  by-filing/IIFL_2020-07-01_2020-09-30_cons_One.txt
+IIFL         2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-21     51  by-filing/IIFL_2020-04-01_2020-09-30_cons_Four.txt
+IIFL         2020-04-01  2020-06-30  quarter      std    Audited    2020-07-29     53  by-filing/IIFL_2020-04-01_2020-06-30_std_One.txt
+IIFL         2020-04-01  2020-06-30  quarter      cons   Audited    2020-07-29     55  by-filing/IIFL_2020-04-01_2020-06-30_cons_One.txt
+IIFL         2020-01-01  2020-03-31  quarter      std    Un-Audited 2020-06-18     73  by-filing/IIFL_2020-01-01_2020-03-31_std_One.txt
+IIFL         2019-04-01  2020-03-31  full year    std    Un-Audited 2020-06-18     50  by-filing/IIFL_2019-04-01_2020-03-31_std_Four.txt
+IIFL         2020-01-01  2020-03-31  quarter      cons   Un-Audited 2020-06-18     76  by-filing/IIFL_2020-01-01_2020-03-31_cons_One.txt
+IIFL         2019-04-01  2020-03-31  full year    cons   Un-Audited 2020-06-18     52  by-filing/IIFL_2019-04-01_2020-03-31_cons_Four.txt
+IIFL         2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-03-16     52  by-filing/IIFL_2019-10-01_2019-12-31_std_One.txt
+IIFL         2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-03-16     48  by-filing/IIFL_2019-04-01_2019-12-31_std_Four.txt
+IIFL         2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-03-16     54  by-filing/IIFL_2019-10-01_2019-12-31_cons_One.txt
+IIFL         2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-03-16     50  by-filing/IIFL_2019-04-01_2019-12-31_cons_Four.txt
+IIFL         2019-01-01  2019-03-31  quarter      std    Un-Audited 2019-05-15     38  by-filing/IIFL_2019-01-01_2019-03-31_std_One.txt
+IIFL         2018-04-01  2019-03-31  full year    std    Un-Audited 2019-05-15     38  by-filing/IIFL_2018-04-01_2019-03-31_std_Four.txt
+IIFL         2019-01-01  2019-03-31  quarter      cons   Un-Audited 2019-05-21     51  by-filing/IIFL_2019-01-01_2019-03-31_cons_One.txt
+IIFL         2018-04-01  2019-03-31  full year    cons   Un-Audited 2019-05-21     46  by-filing/IIFL_2018-04-01_2019-03-31_cons_Four.txt
+IIFL         2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-01     42  by-filing/IIFL_2018-10-01_2018-12-31_std_One.txt
+IIFL         2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-01     40  by-filing/IIFL_2018-04-01_2018-12-31_std_Four.txt
+IIFL         2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-02-01     45  by-filing/IIFL_2018-10-01_2018-12-31_cons_One.txt
+IIFL         2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-02-01     43  by-filing/IIFL_2018-04-01_2018-12-31_cons_Four.txt
+EDELWEISS    2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-02-07     64  by-filing/EDELWEISS_2024-10-01_2024-12-31_cons_One.txt
+EDELWEISS    2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-02-07     59  by-filing/EDELWEISS_2024-04-01_2024-12-31_cons_Four.txt
+EDELWEISS    2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-07     55  by-filing/EDELWEISS_2024-10-01_2024-12-31_std_One.txt
+EDELWEISS    2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-07     52  by-filing/EDELWEISS_2024-04-01_2024-12-31_std_Four.txt
+EDELWEISS    2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-29     92  by-filing/EDELWEISS_2024-07-01_2024-09-30_std_One.txt
+EDELWEISS    2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-29    142  by-filing/EDELWEISS_2024-04-01_2024-09-30_std_Four.txt
+EDELWEISS    2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-10-30    106  by-filing/EDELWEISS_2024-07-01_2024-09-30_cons_One.txt
+EDELWEISS    2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-10-30    153  by-filing/EDELWEISS_2024-04-01_2024-09-30_cons_Four.txt
+EDELWEISS    2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-08-02     55  by-filing/EDELWEISS_2024-04-01_2024-06-30_std_One.txt
+EDELWEISS    2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-08-02     74  by-filing/EDELWEISS_2024-04-01_2024-06-30_cons_One.txt
+EDELWEISS    2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-15    113  by-filing/EDELWEISS_2024-01-01_2024-03-31_cons_One.txt
+EDELWEISS    2023-04-01  2024-03-31  full year    cons   Audited    2024-05-15    155  by-filing/EDELWEISS_2023-04-01_2024-03-31_cons_Four.txt
+EDELWEISS    2024-01-01  2024-03-31  quarter      std    Audited    2024-05-15    106  by-filing/EDELWEISS_2024-01-01_2024-03-31_std_One.txt
+EDELWEISS    2023-04-01  2024-03-31  full year    std    Audited    2024-05-15    148  by-filing/EDELWEISS_2023-04-01_2024-03-31_std_Four.txt
+EDELWEISS    2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-02-12     75  by-filing/EDELWEISS_2023-10-01_2023-12-31_cons_One.txt
+EDELWEISS    2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-02-12     65  by-filing/EDELWEISS_2023-04-01_2023-12-31_cons_Four.txt
+EDELWEISS    2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-02-12     70  by-filing/EDELWEISS_2023-10-01_2023-12-31_std_One.txt
+EDELWEISS    2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-02-12     60  by-filing/EDELWEISS_2023-04-01_2023-12-31_std_Four.txt
+EDELWEISS    2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-10    101  by-filing/EDELWEISS_2023-07-01_2023-09-30_cons_One.txt
+EDELWEISS    2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-10    152  by-filing/EDELWEISS_2023-04-01_2023-09-30_cons_Four.txt
+EDELWEISS    2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-10    108  by-filing/EDELWEISS_2023-07-01_2023-09-30_std_One.txt
+EDELWEISS    2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-10    150  by-filing/EDELWEISS_2023-04-01_2023-09-30_std_Four.txt
+EDELWEISS    2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-08-04     70  by-filing/EDELWEISS_2023-04-01_2023-06-30_std_One.txt
+EDELWEISS    2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-08-04     75  by-filing/EDELWEISS_2023-04-01_2023-06-30_cons_One.txt
+EDELWEISS    2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-26    112  by-filing/EDELWEISS_2023-01-01_2023-03-31_cons_One.txt
+EDELWEISS    2022-04-01  2023-03-31  full year    cons   Audited    2023-05-26    156  by-filing/EDELWEISS_2022-04-01_2023-03-31_cons_Four.txt
+EDELWEISS    2023-01-01  2023-03-31  quarter      std    Audited    2023-05-27    106  by-filing/EDELWEISS_2023-01-01_2023-03-31_std_One.txt
+EDELWEISS    2022-04-01  2023-03-31  full year    std    Audited    2023-05-27    149  by-filing/EDELWEISS_2022-04-01_2023-03-31_std_Four.txt
+EDELWEISS    2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-01     66  by-filing/EDELWEISS_2022-10-01_2022-12-31_std_One.txt
+EDELWEISS    2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-01     59  by-filing/EDELWEISS_2022-04-01_2022-12-31_std_Four.txt
+EDELWEISS    2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-01     71  by-filing/EDELWEISS_2022-10-01_2022-12-31_cons_One.txt
+EDELWEISS    2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-01     61  by-filing/EDELWEISS_2022-04-01_2022-12-31_cons_Four.txt
+EDELWEISS    2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-10    108  by-filing/EDELWEISS_2022-07-01_2022-09-30_std_One.txt
+EDELWEISS    2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-10    150  by-filing/EDELWEISS_2022-04-01_2022-09-30_std_Four.txt
+EDELWEISS    2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-10    112  by-filing/EDELWEISS_2022-07-01_2022-09-30_cons_One.txt
+EDELWEISS    2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-10    155  by-filing/EDELWEISS_2022-04-01_2022-09-30_cons_Four.txt
+EDELWEISS    2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-30     84  by-filing/EDELWEISS_2022-01-01_2022-03-31_cons_One.txt
+EDELWEISS    2021-04-01  2022-03-31  full year    cons   Audited    2022-05-30    149  by-filing/EDELWEISS_2021-04-01_2022-03-31_cons_Four.txt
+EDELWEISS    2022-01-01  2022-03-31  quarter      std    Audited    2022-05-30     88  by-filing/EDELWEISS_2022-01-01_2022-03-31_std_One.txt
+EDELWEISS    2021-04-01  2022-03-31  full year    std    Audited    2022-05-30    149  by-filing/EDELWEISS_2021-04-01_2022-03-31_std_Four.txt
+EDELWEISS    2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-01     68  by-filing/EDELWEISS_2021-10-01_2021-12-31_std_One.txt
+EDELWEISS    2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-01     58  by-filing/EDELWEISS_2021-04-01_2021-12-31_std_Four.txt
+EDELWEISS    2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-01     71  by-filing/EDELWEISS_2021-10-01_2021-12-31_cons_One.txt
+EDELWEISS    2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-01     61  by-filing/EDELWEISS_2021-04-01_2021-12-31_cons_Four.txt
+EDELWEISS    2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-10-29     84  by-filing/EDELWEISS_2021-07-01_2021-09-30_cons_One.txt
+EDELWEISS    2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-10-29    148  by-filing/EDELWEISS_2021-04-01_2021-09-30_cons_Four.txt
+EDELWEISS    2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-10-29     88  by-filing/EDELWEISS_2021-07-01_2021-09-30_std_One.txt
+EDELWEISS    2021-04-01  2021-09-30  half year    std    Un-Audited 2021-10-29    149  by-filing/EDELWEISS_2021-04-01_2021-09-30_std_Four.txt
+EDELWEISS    2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-08-06     64  by-filing/EDELWEISS_2021-04-01_2021-06-30_cons_One.txt
+EDELWEISS    2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-08-06     68  by-filing/EDELWEISS_2021-04-01_2021-06-30_std_One.txt
+EDELWEISS    2021-01-01  2021-03-31  quarter      cons   Audited    2021-06-12    172  by-filing/EDELWEISS_2021-01-01_2021-03-31_cons_One.txt
+EDELWEISS    2020-04-01  2021-03-31  full year    cons   Audited    2021-06-12     59  by-filing/EDELWEISS_2020-04-01_2021-03-31_cons_Four.txt
+EDELWEISS    2021-01-01  2021-03-31  quarter      std    Audited    2021-06-12    172  by-filing/EDELWEISS_2021-01-01_2021-03-31_std_One.txt
+EDELWEISS    2020-04-01  2021-03-31  full year    std    Audited    2021-06-12     57  by-filing/EDELWEISS_2020-04-01_2021-03-31_std_Four.txt
+EDELWEISS    2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-02-13     64  by-filing/EDELWEISS_2020-10-01_2020-12-31_cons_One.txt
+EDELWEISS    2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-02-13     59  by-filing/EDELWEISS_2020-04-01_2020-12-31_cons_Four.txt
+EDELWEISS    2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-02-13     69  by-filing/EDELWEISS_2020-10-01_2020-12-31_std_One.txt
+EDELWEISS    2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-02-13     59  by-filing/EDELWEISS_2020-04-01_2020-12-31_std_Four.txt
+EDELWEISS    2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-06    178  by-filing/EDELWEISS_2020-07-01_2020-09-30_cons_One.txt
+EDELWEISS    2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-06     59  by-filing/EDELWEISS_2020-04-01_2020-09-30_cons_Four.txt
+EDELWEISS    2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-06    178  by-filing/EDELWEISS_2020-07-01_2020-09-30_std_One.txt
+EDELWEISS    2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-06     59  by-filing/EDELWEISS_2020-04-01_2020-09-30_std_Four.txt
+EDELWEISS    2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-30     71  by-filing/EDELWEISS_2020-04-01_2020-06-30_cons_One.txt
+EDELWEISS    2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-30     69  by-filing/EDELWEISS_2020-04-01_2020-06-30_std_One.txt
+EDELWEISS    2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-17     89  by-filing/EDELWEISS_2020-01-01_2020-03-31_cons_One.txt
+EDELWEISS    2019-04-01  2020-03-31  full year    cons   Audited    2020-07-17     60  by-filing/EDELWEISS_2019-04-01_2020-03-31_cons_Four.txt
+EDELWEISS    2020-01-01  2020-03-31  quarter      std    Audited    2020-07-17     89  by-filing/EDELWEISS_2020-01-01_2020-03-31_std_One.txt
+EDELWEISS    2019-04-01  2020-03-31  full year    std    Audited    2020-07-17     60  by-filing/EDELWEISS_2019-04-01_2020-03-31_std_Four.txt
+EDELWEISS    2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-02-24     71  by-filing/EDELWEISS_2019-10-01_2019-12-31_cons_One.txt
+EDELWEISS    2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-02-24     61  by-filing/EDELWEISS_2019-04-01_2019-12-31_cons_Four.txt
+EDELWEISS    2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-24     69  by-filing/EDELWEISS_2019-10-01_2019-12-31_std_One.txt
+EDELWEISS    2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-24     59  by-filing/EDELWEISS_2019-04-01_2019-12-31_std_Four.txt
+EDELWEISS    2019-07-01  2019-09-30  quarter      cons   Un-Audited 2019-11-12     54  by-filing/EDELWEISS_2019-07-01_2019-09-30_cons_One.txt
+EDELWEISS    2019-04-01  2019-09-30  half year    cons   Un-Audited 2019-11-12     48  by-filing/EDELWEISS_2019-04-01_2019-09-30_cons_Four.txt
+EDELWEISS    2019-07-01  2019-09-30  quarter      std    Un-Audited 2019-11-12     52  by-filing/EDELWEISS_2019-07-01_2019-09-30_std_One.txt
+EDELWEISS    2019-04-01  2019-09-30  half year    std    Un-Audited 2019-11-12     46  by-filing/EDELWEISS_2019-04-01_2019-09-30_std_Four.txt
+EDELWEISS    2019-04-01  2019-06-30  quarter      cons   Un-Audited 2019-08-14     44  by-filing/EDELWEISS_2019-04-01_2019-06-30_cons_One.txt
+EDELWEISS    2019-04-01  2019-06-30  quarter      std    Un-Audited 2019-08-14     44  by-filing/EDELWEISS_2019-04-01_2019-06-30_std_One.txt
+EDELWEISS    2019-01-01  2019-03-31  quarter      cons   Audited    2019-06-25     46  by-filing/EDELWEISS_2019-01-01_2019-03-31_cons_One.txt
+EDELWEISS    2018-04-01  2019-03-31  full year    cons   Audited    2019-06-25     45  by-filing/EDELWEISS_2018-04-01_2019-03-31_cons_Four.txt
+EDELWEISS    2019-01-01  2019-03-31  quarter      std    Audited    2019-05-14     42  by-filing/EDELWEISS_2019-01-01_2019-03-31_std_One.txt
+EDELWEISS    2018-04-01  2019-03-31  full year    std    Audited    2019-05-14     41  by-filing/EDELWEISS_2018-04-01_2019-03-31_std_Four.txt
+EDELWEISS    2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-01-31     49  by-filing/EDELWEISS_2018-10-01_2018-12-31_cons_One.txt
+EDELWEISS    2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-01-31     43  by-filing/EDELWEISS_2018-04-01_2018-12-31_cons_Four.txt
+EDELWEISS    2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-01-31     49  by-filing/EDELWEISS_2018-10-01_2018-12-31_std_One.txt
+EDELWEISS    2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-01-31     43  by-filing/EDELWEISS_2018-04-01_2018-12-31_std_Four.txt
+EDELWEISS    2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-10-30     52  by-filing/EDELWEISS_2018-07-01_2018-09-30_std_One.txt
+EDELWEISS    2018-04-01  2018-09-30  half year    std    Un-Audited 2018-10-30     46  by-filing/EDELWEISS_2018-04-01_2018-09-30_std_Four.txt
+EDELWEISS    2018-07-01  2018-09-30  quarter      cons   Un-Audited 2018-10-30     51  by-filing/EDELWEISS_2018-07-01_2018-09-30_cons_One.txt
+EDELWEISS    2018-04-01  2018-09-30  half year    cons   Un-Audited 2018-10-30     45  by-filing/EDELWEISS_2018-04-01_2018-09-30_cons_Four.txt
+EDELWEISS    2018-04-01  2018-06-30  quarter      cons   Un-Audited 2019-01-28     39  by-filing/EDELWEISS_2018-04-01_2018-06-30_cons_One.txt
+EDELWEISS    2018-04-01  2018-06-30  quarter      std    Un-Audited 2019-01-28     41  by-filing/EDELWEISS_2018-04-01_2018-06-30_std_One.txt
+EDELWEISS    2018-01-01  2018-03-31  quarter      cons   Un-Audited 2018-08-06     42  by-filing/EDELWEISS_2018-01-01_2018-03-31_cons_One.txt
+DHFL         2021-01-01  2021-03-31  quarter      cons   Audited    2021-06-06    130  by-filing/DHFL_2021-01-01_2021-03-31_cons_One.txt
+DHFL         2020-04-01  2021-03-31  full year    cons   Audited    2021-06-06     40  by-filing/DHFL_2020-04-01_2021-03-31_cons_Four.txt
+DHFL         2021-01-01  2021-03-31  quarter      std    Audited    2021-06-07    128  by-filing/DHFL_2021-01-01_2021-03-31_std_One.txt
+DHFL         2020-04-01  2021-03-31  full year    std    Audited    2021-06-07     38  by-filing/DHFL_2020-04-01_2021-03-31_std_Four.txt
+DHFL         2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-02-14     56  by-filing/DHFL_2020-10-01_2020-12-31_std_One.txt
+DHFL         2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-02-14     52  by-filing/DHFL_2020-04-01_2020-12-31_std_Four.txt
+DHFL         2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-02-14     56  by-filing/DHFL_2020-10-01_2020-12-31_cons_One.txt
+DHFL         2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-02-14     52  by-filing/DHFL_2020-04-01_2020-12-31_cons_Four.txt
+DHFL         2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-10-05     53  by-filing/DHFL_2020-04-01_2020-06-30_std_One.txt
+DHFL         2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-10-05     53  by-filing/DHFL_2020-04-01_2020-06-30_cons_One.txt
+DHFL         2020-01-01  2020-03-31  quarter      std    Audited    2020-07-06     68  by-filing/DHFL_2020-01-01_2020-03-31_std_One.txt
+DHFL         2019-04-01  2020-03-31  full year    std    Audited    2020-07-06     50  by-filing/DHFL_2019-04-01_2020-03-31_std_Four.txt
+DHFL         2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-06     68  by-filing/DHFL_2020-01-01_2020-03-31_cons_One.txt
+DHFL         2019-04-01  2020-03-31  full year    cons   Audited    2020-07-06     49  by-filing/DHFL_2019-04-01_2020-03-31_cons_Four.txt
+DHFL         2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-02-26     35  by-filing/DHFL_2019-10-01_2019-12-31_std_One.txt
+DHFL         2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-02-26     35  by-filing/DHFL_2019-04-01_2019-12-31_std_Four.txt
+DHFL         2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-03-02     53  by-filing/DHFL_2019-10-01_2019-12-31_cons_One.txt
+DHFL         2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-03-02     49  by-filing/DHFL_2019-04-01_2019-12-31_cons_Four.txt
+DHFL         2019-07-01  2019-09-30  quarter      std    Un-Audited 2020-02-26     35  by-filing/DHFL_2019-07-01_2019-09-30_std_One.txt
+DHFL         2019-04-01  2019-09-30  half year    std    Un-Audited 2020-02-26     35  by-filing/DHFL_2019-04-01_2019-09-30_std_Four.txt
+DHFL         2019-07-01  2019-09-30  quarter      cons   Un-Audited 2020-03-02     70  by-filing/DHFL_2019-07-01_2019-09-30_cons_One.txt
+DHFL         2019-04-01  2019-09-30  half year    cons   Un-Audited 2020-03-02     49  by-filing/DHFL_2019-04-01_2019-09-30_cons_Four.txt
+DHFL         2019-01-01  2019-03-31  quarter      std    Audited    2019-07-23     38  by-filing/DHFL_2019-01-01_2019-03-31_std_One.txt
+DHFL         2018-04-01  2019-03-31  full year    std    Audited    2019-07-23     38  by-filing/DHFL_2018-04-01_2019-03-31_std_Four.txt
+DHFL         2018-04-01  2018-06-30  quarter      std    Un-Audited 2018-08-31     37  by-filing/DHFL_2018-04-01_2018-06-30_std_One.txt
+CHOLAFIN     2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-02-01     46  by-filing/CHOLAFIN_2024-10-01_2024-12-31_std_One.txt
+CHOLAFIN     2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-02-01     44  by-filing/CHOLAFIN_2024-04-01_2024-12-31_std_Four.txt
+CHOLAFIN     2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-02-01     65  by-filing/CHOLAFIN_2024-10-01_2024-12-31_cons_One.txt
+CHOLAFIN     2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-02-01     59  by-filing/CHOLAFIN_2024-04-01_2024-12-31_cons_Four.txt
+CHOLAFIN     2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-26    101  by-filing/CHOLAFIN_2024-07-01_2024-09-30_std_One.txt
+CHOLAFIN     2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-26    149  by-filing/CHOLAFIN_2024-04-01_2024-09-30_std_Four.txt
+CHOLAFIN     2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-10-26    103  by-filing/CHOLAFIN_2024-07-01_2024-09-30_cons_One.txt
+CHOLAFIN     2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-10-26    151  by-filing/CHOLAFIN_2024-04-01_2024-09-30_cons_Four.txt
+CHOLAFIN     2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-07-27     65  by-filing/CHOLAFIN_2024-04-01_2024-06-30_std_One.txt
+CHOLAFIN     2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-07-27     67  by-filing/CHOLAFIN_2024-04-01_2024-06-30_cons_One.txt
+CHOLAFIN     2024-01-01  2024-03-31  quarter      std    Audited    2024-05-01    100  by-filing/CHOLAFIN_2024-01-01_2024-03-31_std_One.txt
+CHOLAFIN     2023-04-01  2024-03-31  full year    std    Audited    2024-05-01    149  by-filing/CHOLAFIN_2023-04-01_2024-03-31_std_Four.txt
+CHOLAFIN     2024-01-01  2024-03-31  quarter      cons   Audited    2024-05-01    101  by-filing/CHOLAFIN_2024-01-01_2024-03-31_cons_One.txt
+CHOLAFIN     2023-04-01  2024-03-31  full year    cons   Audited    2024-05-01    150  by-filing/CHOLAFIN_2023-04-01_2024-03-31_cons_Four.txt
+CHOLAFIN     2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-01-25     68  by-filing/CHOLAFIN_2023-10-01_2023-12-31_std_One.txt
+CHOLAFIN     2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-01-25     60  by-filing/CHOLAFIN_2023-04-01_2023-12-31_std_Four.txt
+CHOLAFIN     2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-01-25     72  by-filing/CHOLAFIN_2023-10-01_2023-12-31_cons_One.txt
+CHOLAFIN     2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-01-25     62  by-filing/CHOLAFIN_2023-04-01_2023-12-31_cons_Four.txt
+CHOLAFIN     2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-11-03    110  by-filing/CHOLAFIN_2023-07-01_2023-09-30_std_One.txt
+CHOLAFIN     2023-04-01  2023-09-30  half year    std    Un-Audited 2023-11-03    152  by-filing/CHOLAFIN_2023-04-01_2023-09-30_std_Four.txt
+CHOLAFIN     2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-11-03    112  by-filing/CHOLAFIN_2023-07-01_2023-09-30_cons_One.txt
+CHOLAFIN     2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-11-03    154  by-filing/CHOLAFIN_2023-04-01_2023-09-30_cons_Four.txt
+CHOLAFIN     2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-08-02     70  by-filing/CHOLAFIN_2023-04-01_2023-06-30_std_One.txt
+CHOLAFIN     2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-08-02     72  by-filing/CHOLAFIN_2023-04-01_2023-06-30_cons_One.txt
+CHOLAFIN     2023-01-01  2023-03-31  quarter      std    Audited    2023-05-04    103  by-filing/CHOLAFIN_2023-01-01_2023-03-31_std_One.txt
+CHOLAFIN     2022-04-01  2023-03-31  full year    std    Audited    2023-05-04    149  by-filing/CHOLAFIN_2022-04-01_2023-03-31_std_Four.txt
+CHOLAFIN     2023-01-01  2023-03-31  quarter      cons   Audited    2023-05-04    108  by-filing/CHOLAFIN_2023-01-01_2023-03-31_cons_One.txt
+CHOLAFIN     2022-04-01  2023-03-31  full year    cons   Audited    2023-05-04    152  by-filing/CHOLAFIN_2022-04-01_2023-03-31_cons_Four.txt
+CHOLAFIN     2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-02-01     65  by-filing/CHOLAFIN_2022-10-01_2022-12-31_std_One.txt
+CHOLAFIN     2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-02-01     55  by-filing/CHOLAFIN_2022-04-01_2022-12-31_std_Four.txt
+CHOLAFIN     2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-02-01     67  by-filing/CHOLAFIN_2022-10-01_2022-12-31_cons_One.txt
+CHOLAFIN     2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-02-01     57  by-filing/CHOLAFIN_2022-04-01_2022-12-31_cons_Four.txt
+CHOLAFIN     2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-11-02    104  by-filing/CHOLAFIN_2022-07-01_2022-09-30_std_One.txt
+CHOLAFIN     2022-04-01  2022-09-30  half year    std    Un-Audited 2022-11-02    148  by-filing/CHOLAFIN_2022-04-01_2022-09-30_std_Four.txt
+CHOLAFIN     2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-11-02    111  by-filing/CHOLAFIN_2022-07-01_2022-09-30_cons_One.txt
+CHOLAFIN     2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-11-02    153  by-filing/CHOLAFIN_2022-04-01_2022-09-30_cons_Four.txt
+CHOLAFIN     2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-07-30     65  by-filing/CHOLAFIN_2022-04-01_2022-06-30_std_One.txt
+CHOLAFIN     2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-07-30     65  by-filing/CHOLAFIN_2022-04-01_2022-06-30_cons_One.txt
+CHOLAFIN     2022-01-01  2022-03-31  quarter      std    Audited    2022-05-06     89  by-filing/CHOLAFIN_2022-01-01_2022-03-31_std_One.txt
+CHOLAFIN     2021-04-01  2022-03-31  full year    std    Audited    2022-05-06    148  by-filing/CHOLAFIN_2021-04-01_2022-03-31_std_Four.txt
+CHOLAFIN     2022-01-01  2022-03-31  quarter      cons   Audited    2022-05-06     91  by-filing/CHOLAFIN_2022-01-01_2022-03-31_cons_One.txt
+CHOLAFIN     2021-04-01  2022-03-31  full year    cons   Audited    2022-05-06    150  by-filing/CHOLAFIN_2021-04-01_2022-03-31_cons_Four.txt
+CHOLAFIN     2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-02-02     65  by-filing/CHOLAFIN_2021-10-01_2021-12-31_std_One.txt
+CHOLAFIN     2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-02-02     55  by-filing/CHOLAFIN_2021-04-01_2021-12-31_std_Four.txt
+CHOLAFIN     2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-02-02     67  by-filing/CHOLAFIN_2021-10-01_2021-12-31_cons_One.txt
+CHOLAFIN     2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-02-02     57  by-filing/CHOLAFIN_2021-04-01_2021-12-31_cons_Four.txt
+CHOLAFIN     2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-10-30     85  by-filing/CHOLAFIN_2021-07-01_2021-09-30_std_One.txt
+CHOLAFIN     2021-04-01  2021-09-30  half year    std    Un-Audited 2021-10-30    145  by-filing/CHOLAFIN_2021-04-01_2021-09-30_std_Four.txt
+CHOLAFIN     2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-10-30     87  by-filing/CHOLAFIN_2021-07-01_2021-09-30_cons_One.txt
+CHOLAFIN     2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-10-30    147  by-filing/CHOLAFIN_2021-04-01_2021-09-30_cons_Four.txt
+CHOLAFIN     2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-31     65  by-filing/CHOLAFIN_2021-04-01_2021-06-30_std_One.txt
+CHOLAFIN     2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-07-31     67  by-filing/CHOLAFIN_2021-04-01_2021-06-30_cons_One.txt
+CHOLAFIN     2021-01-01  2021-03-31  quarter      std    Audited    2021-05-08    175  by-filing/CHOLAFIN_2021-01-01_2021-03-31_std_One.txt
+CHOLAFIN     2020-04-01  2021-03-31  full year    std    Audited    2021-05-08     55  by-filing/CHOLAFIN_2020-04-01_2021-03-31_std_Four.txt
+CHOLAFIN     2021-01-01  2021-03-31  quarter      cons   Audited    2021-05-08    170  by-filing/CHOLAFIN_2021-01-01_2021-03-31_cons_One.txt
+CHOLAFIN     2020-04-01  2021-03-31  full year    cons   Audited    2021-05-08     52  by-filing/CHOLAFIN_2020-04-01_2021-03-31_cons_Four.txt
+CHOLAFIN     2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-30     63  by-filing/CHOLAFIN_2020-10-01_2020-12-31_std_One.txt
+CHOLAFIN     2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-30     53  by-filing/CHOLAFIN_2020-04-01_2020-12-31_std_Four.txt
+CHOLAFIN     2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-01-30     68  by-filing/CHOLAFIN_2020-10-01_2020-12-31_cons_One.txt
+CHOLAFIN     2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-01-30     58  by-filing/CHOLAFIN_2020-04-01_2020-12-31_cons_Four.txt
+CHOLAFIN     2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-02     82  by-filing/CHOLAFIN_2020-07-01_2020-09-30_std_One.txt
+CHOLAFIN     2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-02     52  by-filing/CHOLAFIN_2020-04-01_2020-09-30_std_Four.txt
+CHOLAFIN     2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-02     84  by-filing/CHOLAFIN_2020-07-01_2020-09-30_cons_One.txt
+CHOLAFIN     2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-02     54  by-filing/CHOLAFIN_2020-04-01_2020-09-30_cons_Four.txt
+CHOLAFIN     2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-11-04     62  by-filing/CHOLAFIN_2020-04-01_2020-06-30_std_One.txt
+CHOLAFIN     2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-11-04     69  by-filing/CHOLAFIN_2020-04-01_2020-06-30_cons_One.txt
+CHOLAFIN     2020-01-01  2020-03-31  quarter      std    Audited    2020-06-04     46  by-filing/CHOLAFIN_2020-01-01_2020-03-31_std_One.txt
+CHOLAFIN     2019-04-01  2020-03-31  full year    std    Audited    2020-06-04     42  by-filing/CHOLAFIN_2019-04-01_2020-03-31_std_Four.txt
+CHOLAFIN     2020-01-01  2020-03-31  quarter      cons   Audited    2020-07-16     85  by-filing/CHOLAFIN_2020-01-01_2020-03-31_cons_One.txt
+CHOLAFIN     2019-04-01  2020-03-31  full year    cons   Audited    2020-07-16     55  by-filing/CHOLAFIN_2019-04-01_2020-03-31_cons_Four.txt
+CHOLAFIN     2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-01-27     60  by-filing/CHOLAFIN_2019-10-01_2019-12-31_std_One.txt
+CHOLAFIN     2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-01-27     54  by-filing/CHOLAFIN_2019-04-01_2019-12-31_std_Four.txt
+CHOLAFIN     2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-01-27     61  by-filing/CHOLAFIN_2019-10-01_2019-12-31_cons_One.txt
+CHOLAFIN     2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-01-27     55  by-filing/CHOLAFIN_2019-04-01_2019-12-31_cons_Four.txt
+CHOLAFIN     2019-01-01  2019-03-31  quarter      std    Audited    2019-05-06     49  by-filing/CHOLAFIN_2019-01-01_2019-03-31_std_One.txt
+CHOLAFIN     2018-04-01  2019-03-31  full year    std    Audited    2019-05-06     44  by-filing/CHOLAFIN_2018-04-01_2019-03-31_std_Four.txt
+CHOLAFIN     2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-02-01     47  by-filing/CHOLAFIN_2018-10-01_2018-12-31_std_One.txt
+CHOLAFIN     2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-02-01     41  by-filing/CHOLAFIN_2018-04-01_2018-12-31_std_Four.txt
+CHOLAFIN     2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-11-12     47  by-filing/CHOLAFIN_2018-07-01_2018-09-30_std_One.txt
+CHOLAFIN     2018-04-01  2018-09-30  half year    std    Un-Audited 2018-11-12     41  by-filing/CHOLAFIN_2018-04-01_2018-09-30_std_Four.txt
+CHOLAFIN     2018-01-01  2018-03-31  quarter      std    Audited    2018-07-30     30  by-filing/CHOLAFIN_2018-01-01_2018-03-31_std_One.txt
+CHOLAFIN     2018-01-01  2018-03-31  quarter      cons   Audited    2018-08-10     44  by-filing/CHOLAFIN_2018-01-01_2018-03-31_cons_One.txt
+CANFINHOME   2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-01-18     55  by-filing/CANFINHOME_2024-10-01_2024-12-31_std_One.txt
+CANFINHOME   2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-01-18     52  by-filing/CANFINHOME_2024-04-01_2024-12-31_std_Four.txt
+CANFINHOME   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-23     94  by-filing/CANFINHOME_2024-07-01_2024-09-30_std_One.txt
+CANFINHOME   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-23    142  by-filing/CANFINHOME_2024-04-01_2024-09-30_std_Four.txt
+CANFINHOME   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-07-20     38  by-filing/CANFINHOME_2024-04-01_2024-06-30_std_One.txt
+CANFINHOME   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-11-04     55  by-filing/CANFINHOME_2024-04-01_2024-06-30_std_One.txt
+CANFINHOME   2024-01-01  2024-03-31  quarter      std    Audited    2024-04-30     83  by-filing/CANFINHOME_2024-01-01_2024-03-31_std_One.txt
+CANFINHOME   2023-04-01  2024-03-31  full year    std    Audited    2024-04-30    143  by-filing/CANFINHOME_2023-04-01_2024-03-31_std_Four.txt
+CANFINHOME   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-01-20     57  by-filing/CANFINHOME_2023-10-01_2023-12-31_std_One.txt
+CANFINHOME   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-01-20     54  by-filing/CANFINHOME_2023-04-01_2023-12-31_std_Four.txt
+CANFINHOME   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-10-18     85  by-filing/CANFINHOME_2023-07-01_2023-09-30_std_One.txt
+CANFINHOME   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-10-18    145  by-filing/CANFINHOME_2023-04-01_2023-09-30_std_Four.txt
+CANFINHOME   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-20     58  by-filing/CANFINHOME_2023-04-01_2023-06-30_std_One.txt
+CANFINHOME   2023-01-01  2023-03-31  quarter      std    Audited    2023-04-27     81  by-filing/CANFINHOME_2023-01-01_2023-03-31_std_One.txt
+CANFINHOME   2022-04-01  2023-03-31  full year    std    Audited    2023-04-27    141  by-filing/CANFINHOME_2022-04-01_2023-03-31_std_Four.txt
+CANFINHOME   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-01-20     55  by-filing/CANFINHOME_2022-10-01_2022-12-31_std_One.txt
+CANFINHOME   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-01-20     52  by-filing/CANFINHOME_2022-04-01_2022-12-31_std_Four.txt
+CANFINHOME   2022-01-01  2022-03-31  quarter      std    Audited    2022-04-30     76  by-filing/CANFINHOME_2022-01-01_2022-03-31_std_One.txt
+CANFINHOME   2021-04-01  2022-03-31  full year    std    Audited    2022-04-30    142  by-filing/CANFINHOME_2021-04-01_2022-03-31_std_Four.txt
+CANFINHOME   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-01-25     55  by-filing/CANFINHOME_2021-10-01_2021-12-31_std_One.txt
+CANFINHOME   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-01-25     52  by-filing/CANFINHOME_2021-04-01_2021-12-31_std_Four.txt
+CANFINHOME   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-10-22     71  by-filing/CANFINHOME_2021-07-01_2021-09-30_std_One.txt
+CANFINHOME   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-10-22    142  by-filing/CANFINHOME_2021-04-01_2021-09-30_std_Four.txt
+CANFINHOME   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-23     38  by-filing/CANFINHOME_2021-04-01_2021-06-30_std_One.txt
+CANFINHOME   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-23     55  by-filing/CANFINHOME_2021-04-01_2021-06-30_std_One.txt
+CANFINHOME   2021-01-01  2021-03-31  quarter      std    Audited    2021-05-01    166  by-filing/CANFINHOME_2021-01-01_2021-03-31_std_One.txt
+CANFINHOME   2020-04-01  2021-03-31  full year    std    Audited    2021-05-01     52  by-filing/CANFINHOME_2020-04-01_2021-03-31_std_Four.txt
+CANFINHOME   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-25     55  by-filing/CANFINHOME_2020-10-01_2020-12-31_std_One.txt
+CANFINHOME   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-25     51  by-filing/CANFINHOME_2020-04-01_2020-12-31_std_Four.txt
+CANFINHOME   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-04     69  by-filing/CANFINHOME_2020-07-01_2020-09-30_std_One.txt
+CANFINHOME   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-04     51  by-filing/CANFINHOME_2020-04-01_2020-09-30_std_Four.txt
+CANFINHOME   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-08-25     38  by-filing/CANFINHOME_2020-04-01_2020-06-30_std_One.txt
+CANFINHOME   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-21     56  by-filing/CANFINHOME_2020-04-01_2020-06-30_std_One.txt
+CANFINHOME   2020-01-01  2020-03-31  quarter      std    Audited    2020-06-18     76  by-filing/CANFINHOME_2020-01-01_2020-03-31_std_One.txt
+CANFINHOME   2019-04-01  2020-03-31  full year    std    Audited    2020-06-18     52  by-filing/CANFINHOME_2019-04-01_2020-03-31_std_Four.txt
+CANFINHOME   2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-01-27     55  by-filing/CANFINHOME_2019-10-01_2019-12-31_std_One.txt
+CANFINHOME   2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-01-27     51  by-filing/CANFINHOME_2019-04-01_2019-12-31_std_Four.txt
+BAJFINANCE   2024-10-01  2024-12-31  quarter      std    Un-Audited 2025-01-29     57  by-filing/BAJFINANCE_2024-10-01_2024-12-31_std_One.txt
+BAJFINANCE   2024-04-01  2024-12-31  nine months  std    Un-Audited 2025-01-29     54  by-filing/BAJFINANCE_2024-04-01_2024-12-31_std_Four.txt
+BAJFINANCE   2024-10-01  2024-12-31  quarter      cons   Un-Audited 2025-01-29     59  by-filing/BAJFINANCE_2024-10-01_2024-12-31_cons_One.txt
+BAJFINANCE   2024-04-01  2024-12-31  nine months  cons   Un-Audited 2025-01-29     56  by-filing/BAJFINANCE_2024-04-01_2024-12-31_cons_Four.txt
+BAJFINANCE   2024-07-01  2024-09-30  quarter      std    Un-Audited 2024-10-22     95  by-filing/BAJFINANCE_2024-07-01_2024-09-30_std_One.txt
+BAJFINANCE   2024-04-01  2024-09-30  half year    std    Un-Audited 2024-10-22    143  by-filing/BAJFINANCE_2024-04-01_2024-09-30_std_Four.txt
+BAJFINANCE   2024-07-01  2024-09-30  quarter      cons   Un-Audited 2024-10-22     97  by-filing/BAJFINANCE_2024-07-01_2024-09-30_cons_One.txt
+BAJFINANCE   2024-04-01  2024-09-30  half year    cons   Un-Audited 2024-10-22    146  by-filing/BAJFINANCE_2024-04-01_2024-09-30_cons_Four.txt
+BAJFINANCE   2024-04-01  2024-06-30  quarter      std    Un-Audited 2024-07-23     57  by-filing/BAJFINANCE_2024-04-01_2024-06-30_std_One.txt
+BAJFINANCE   2024-04-01  2024-06-30  quarter      cons   Un-Audited 2024-07-23     59  by-filing/BAJFINANCE_2024-04-01_2024-06-30_cons_One.txt
+BAJFINANCE   2024-01-01  2024-03-31  quarter      std    Audited    2024-04-25     95  by-filing/BAJFINANCE_2024-01-01_2024-03-31_std_One.txt
+BAJFINANCE   2023-04-01  2024-03-31  full year    std    Audited    2024-04-25    144  by-filing/BAJFINANCE_2023-04-01_2024-03-31_std_Four.txt
+BAJFINANCE   2024-01-01  2024-03-31  quarter      cons   Audited    2024-04-25     97  by-filing/BAJFINANCE_2024-01-01_2024-03-31_cons_One.txt
+BAJFINANCE   2023-04-01  2024-03-31  full year    cons   Audited    2024-04-25    146  by-filing/BAJFINANCE_2023-04-01_2024-03-31_cons_Four.txt
+BAJFINANCE   2023-10-01  2023-12-31  quarter      std    Un-Audited 2024-01-29     57  by-filing/BAJFINANCE_2023-10-01_2023-12-31_std_One.txt
+BAJFINANCE   2023-04-01  2023-12-31  nine months  std    Un-Audited 2024-01-29     54  by-filing/BAJFINANCE_2023-04-01_2023-12-31_std_Four.txt
+BAJFINANCE   2023-10-01  2023-12-31  quarter      cons   Un-Audited 2024-01-29     59  by-filing/BAJFINANCE_2023-10-01_2023-12-31_cons_One.txt
+BAJFINANCE   2023-04-01  2023-12-31  nine months  cons   Un-Audited 2024-01-29     56  by-filing/BAJFINANCE_2023-04-01_2023-12-31_cons_Four.txt
+BAJFINANCE   2023-07-01  2023-09-30  quarter      std    Un-Audited 2023-10-17     95  by-filing/BAJFINANCE_2023-07-01_2023-09-30_std_One.txt
+BAJFINANCE   2023-04-01  2023-09-30  half year    std    Un-Audited 2023-10-17    144  by-filing/BAJFINANCE_2023-04-01_2023-09-30_std_Four.txt
+BAJFINANCE   2023-07-01  2023-09-30  quarter      cons   Un-Audited 2023-10-17     97  by-filing/BAJFINANCE_2023-07-01_2023-09-30_cons_One.txt
+BAJFINANCE   2023-04-01  2023-09-30  half year    cons   Un-Audited 2023-10-17    146  by-filing/BAJFINANCE_2023-04-01_2023-09-30_cons_Four.txt
+BAJFINANCE   2023-04-01  2023-06-30  quarter      std    Un-Audited 2023-07-26     57  by-filing/BAJFINANCE_2023-04-01_2023-06-30_std_One.txt
+BAJFINANCE   2023-04-01  2023-06-30  quarter      cons   Un-Audited 2023-07-26     59  by-filing/BAJFINANCE_2023-04-01_2023-06-30_cons_One.txt
+BAJFINANCE   2023-01-01  2023-03-31  quarter      std    Audited    2023-04-26     59  by-filing/BAJFINANCE_2023-01-01_2023-03-31_std_One.txt
+BAJFINANCE   2022-04-01  2023-03-31  full year    std    Audited    2023-04-26    130  by-filing/BAJFINANCE_2022-04-01_2023-03-31_std_Four.txt
+BAJFINANCE   2023-01-01  2023-03-31  quarter      cons   Audited    2023-04-26     62  by-filing/BAJFINANCE_2023-01-01_2023-03-31_cons_One.txt
+BAJFINANCE   2022-04-01  2023-03-31  full year    cons   Audited    2023-04-26    132  by-filing/BAJFINANCE_2022-04-01_2023-03-31_cons_Four.txt
+BAJFINANCE   2022-10-01  2022-12-31  quarter      std    Un-Audited 2023-01-27     53  by-filing/BAJFINANCE_2022-10-01_2022-12-31_std_One.txt
+BAJFINANCE   2022-04-01  2022-12-31  nine months  std    Un-Audited 2023-01-27     50  by-filing/BAJFINANCE_2022-04-01_2022-12-31_std_Four.txt
+BAJFINANCE   2022-10-01  2022-12-31  quarter      cons   Un-Audited 2023-01-27     55  by-filing/BAJFINANCE_2022-10-01_2022-12-31_cons_One.txt
+BAJFINANCE   2022-04-01  2022-12-31  nine months  cons   Un-Audited 2023-01-27     52  by-filing/BAJFINANCE_2022-04-01_2022-12-31_cons_Four.txt
+BAJFINANCE   2022-07-01  2022-09-30  quarter      std    Un-Audited 2022-10-20     94  by-filing/BAJFINANCE_2022-07-01_2022-09-30_std_One.txt
+BAJFINANCE   2022-04-01  2022-09-30  half year    std    Un-Audited 2022-10-20    143  by-filing/BAJFINANCE_2022-04-01_2022-09-30_std_Four.txt
+BAJFINANCE   2022-07-01  2022-09-30  quarter      cons   Un-Audited 2022-10-20     97  by-filing/BAJFINANCE_2022-07-01_2022-09-30_cons_One.txt
+BAJFINANCE   2022-04-01  2022-09-30  half year    cons   Un-Audited 2022-10-20    145  by-filing/BAJFINANCE_2022-04-01_2022-09-30_cons_Four.txt
+BAJFINANCE   2022-04-01  2022-06-30  quarter      std    Un-Audited 2022-07-27     53  by-filing/BAJFINANCE_2022-04-01_2022-06-30_std_One.txt
+BAJFINANCE   2022-04-01  2022-06-30  quarter      cons   Un-Audited 2022-07-27     53  by-filing/BAJFINANCE_2022-04-01_2022-06-30_cons_One.txt
+BAJFINANCE   2022-01-01  2022-03-31  quarter      std    Audited    2022-04-26     73  by-filing/BAJFINANCE_2022-01-01_2022-03-31_std_One.txt
+BAJFINANCE   2021-04-01  2022-03-31  full year    std    Audited    2022-04-26    140  by-filing/BAJFINANCE_2021-04-01_2022-03-31_std_Four.txt
+BAJFINANCE   2022-01-01  2022-03-31  quarter      cons   Audited    2022-04-26     75  by-filing/BAJFINANCE_2022-01-01_2022-03-31_cons_One.txt
+BAJFINANCE   2021-04-01  2022-03-31  full year    cons   Audited    2022-04-26    142  by-filing/BAJFINANCE_2021-04-01_2022-03-31_cons_Four.txt
+BAJFINANCE   2021-10-01  2021-12-31  quarter      std    Un-Audited 2022-01-18     53  by-filing/BAJFINANCE_2021-10-01_2021-12-31_std_One.txt
+BAJFINANCE   2021-04-01  2021-12-31  nine months  std    Un-Audited 2022-01-18     50  by-filing/BAJFINANCE_2021-04-01_2021-12-31_std_Four.txt
+BAJFINANCE   2021-10-01  2021-12-31  quarter      cons   Un-Audited 2022-01-18     55  by-filing/BAJFINANCE_2021-10-01_2021-12-31_cons_One.txt
+BAJFINANCE   2021-04-01  2021-12-31  nine months  cons   Un-Audited 2022-01-18     52  by-filing/BAJFINANCE_2021-04-01_2021-12-31_cons_Four.txt
+BAJFINANCE   2021-07-01  2021-09-30  quarter      std    Un-Audited 2021-10-26     73  by-filing/BAJFINANCE_2021-07-01_2021-09-30_std_One.txt
+BAJFINANCE   2021-04-01  2021-09-30  half year    std    Un-Audited 2021-10-26    140  by-filing/BAJFINANCE_2021-04-01_2021-09-30_std_Four.txt
+BAJFINANCE   2021-07-01  2021-09-30  quarter      cons   Un-Audited 2021-10-26     75  by-filing/BAJFINANCE_2021-07-01_2021-09-30_cons_One.txt
+BAJFINANCE   2021-04-01  2021-09-30  half year    cons   Un-Audited 2021-10-26    142  by-filing/BAJFINANCE_2021-04-01_2021-09-30_cons_Four.txt
+BAJFINANCE   2021-04-01  2021-06-30  quarter      std    Un-Audited 2021-07-21     53  by-filing/BAJFINANCE_2021-04-01_2021-06-30_std_One.txt
+BAJFINANCE   2021-04-01  2021-06-30  quarter      cons   Un-Audited 2021-07-21     53  by-filing/BAJFINANCE_2021-04-01_2021-06-30_cons_One.txt
+BAJFINANCE   2021-01-01  2021-03-31  quarter      std    Audited    2021-04-28    163  by-filing/BAJFINANCE_2021-01-01_2021-03-31_std_One.txt
+BAJFINANCE   2020-04-01  2021-03-31  full year    std    Audited    2021-04-28     50  by-filing/BAJFINANCE_2020-04-01_2021-03-31_std_Four.txt
+BAJFINANCE   2021-01-01  2021-03-31  quarter      cons   Audited    2021-04-28    165  by-filing/BAJFINANCE_2021-01-01_2021-03-31_cons_One.txt
+BAJFINANCE   2020-04-01  2021-03-31  full year    cons   Audited    2021-04-28     52  by-filing/BAJFINANCE_2020-04-01_2021-03-31_cons_Four.txt
+BAJFINANCE   2020-10-01  2020-12-31  quarter      std    Un-Audited 2021-01-20     53  by-filing/BAJFINANCE_2020-10-01_2020-12-31_std_One.txt
+BAJFINANCE   2020-04-01  2020-12-31  nine months  std    Un-Audited 2021-01-20     50  by-filing/BAJFINANCE_2020-04-01_2020-12-31_std_Four.txt
+BAJFINANCE   2020-10-01  2020-12-31  quarter      cons   Un-Audited 2021-01-20     55  by-filing/BAJFINANCE_2020-10-01_2020-12-31_cons_One.txt
+BAJFINANCE   2020-04-01  2020-12-31  nine months  cons   Un-Audited 2021-01-20     52  by-filing/BAJFINANCE_2020-04-01_2020-12-31_cons_Four.txt
+BAJFINANCE   2020-07-01  2020-09-30  quarter      std    Un-Audited 2020-11-02     73  by-filing/BAJFINANCE_2020-07-01_2020-09-30_std_One.txt
+BAJFINANCE   2020-04-01  2020-09-30  half year    std    Un-Audited 2020-11-02     50  by-filing/BAJFINANCE_2020-04-01_2020-09-30_std_Four.txt
+BAJFINANCE   2020-07-01  2020-09-30  quarter      cons   Un-Audited 2020-11-02     75  by-filing/BAJFINANCE_2020-07-01_2020-09-30_cons_One.txt
+BAJFINANCE   2020-04-01  2020-09-30  half year    cons   Un-Audited 2020-11-02     52  by-filing/BAJFINANCE_2020-04-01_2020-09-30_cons_Four.txt
+BAJFINANCE   2020-04-01  2020-06-30  quarter      std    Un-Audited 2020-09-18     53  by-filing/BAJFINANCE_2020-04-01_2020-06-30_std_One.txt
+BAJFINANCE   2020-04-01  2020-06-30  quarter      cons   Un-Audited 2020-09-18     53  by-filing/BAJFINANCE_2020-04-01_2020-06-30_cons_One.txt
+BAJFINANCE   2020-01-01  2020-03-31  quarter      std    Audited    2020-05-29     73  by-filing/BAJFINANCE_2020-01-01_2020-03-31_std_One.txt
+BAJFINANCE   2019-04-01  2020-03-31  full year    std    Audited    2020-05-29     50  by-filing/BAJFINANCE_2019-04-01_2020-03-31_std_Four.txt
+BAJFINANCE   2020-01-01  2020-03-31  quarter      cons   Audited    2020-05-29     75  by-filing/BAJFINANCE_2020-01-01_2020-03-31_cons_One.txt
+BAJFINANCE   2019-04-01  2020-03-31  full year    cons   Audited    2020-05-29     52  by-filing/BAJFINANCE_2019-04-01_2020-03-31_cons_Four.txt
+BAJFINANCE   2019-10-01  2019-12-31  quarter      std    Un-Audited 2020-01-29     56  by-filing/BAJFINANCE_2019-10-01_2019-12-31_std_One.txt
+BAJFINANCE   2019-04-01  2019-12-31  nine months  std    Un-Audited 2020-01-29     53  by-filing/BAJFINANCE_2019-04-01_2019-12-31_std_Four.txt
+BAJFINANCE   2019-10-01  2019-12-31  quarter      cons   Un-Audited 2020-01-29     56  by-filing/BAJFINANCE_2019-10-01_2019-12-31_cons_One.txt
+BAJFINANCE   2019-04-01  2019-12-31  nine months  cons   Un-Audited 2020-01-29     53  by-filing/BAJFINANCE_2019-04-01_2019-12-31_cons_Four.txt
+BAJFINANCE   2018-10-01  2018-12-31  quarter      std    Un-Audited 2019-01-31     38  by-filing/BAJFINANCE_2018-10-01_2018-12-31_std_One.txt
+BAJFINANCE   2018-04-01  2018-12-31  nine months  std    Un-Audited 2019-01-31     37  by-filing/BAJFINANCE_2018-04-01_2018-12-31_std_Four.txt
+BAJFINANCE   2018-10-01  2018-12-31  quarter      cons   Un-Audited 2019-01-31     40  by-filing/BAJFINANCE_2018-10-01_2018-12-31_cons_One.txt
+BAJFINANCE   2018-04-01  2018-12-31  nine months  cons   Un-Audited 2019-01-31     39  by-filing/BAJFINANCE_2018-04-01_2018-12-31_cons_Four.txt
+BAJFINANCE   2018-07-01  2018-09-30  quarter      std    Un-Audited 2018-10-25     38  by-filing/BAJFINANCE_2018-07-01_2018-09-30_std_One.txt
+BAJFINANCE   2018-04-01  2018-09-30  half year    std    Un-Audited 2018-10-25     37  by-filing/BAJFINANCE_2018-04-01_2018-09-30_std_Four.txt
+BAJFINANCE   2018-07-01  2018-09-30  quarter      cons   Un-Audited 2018-10-25     38  by-filing/BAJFINANCE_2018-07-01_2018-09-30_cons_One.txt
+BAJFINANCE   2018-04-01  2018-09-30  half year    cons   Un-Audited 2018-10-25     37  by-filing/BAJFINANCE_2018-04-01_2018-09-30_cons_Four.txt
+BAJFINANCE   2018-01-01  2018-03-31  quarter      std    Audited    2018-06-21     29  by-filing/BAJFINANCE_2018-01-01_2018-03-31_std_One.txt

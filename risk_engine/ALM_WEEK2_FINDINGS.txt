@@ -1,0 +1,227 @@
+================================================================================
+ALM / REFINANCING-RISK SCREEN - WEEK TWO: THE TEST, AND ITS RESULT
+================================================================================
+Date:    2026-10-12
+Outcome: THE HYPOTHESIS IS FALSIFIED ON THE AVAILABLE DATA. Two of the
+         pre-registered falsification conditions fired. Do not build the
+         100-institution panel.
+
+Pre-registration: OUTCOME_DEFINITION.txt, written before these results were
+inspected. The primary outcome, the baselines and the falsification conditions
+in it were not edited afterwards.
+
+Reproduce: python3 alm_panel.py ; python3 alm_cohort.py ;
+           python3 alm_result.py ; python3 alm_baseline.py
+
+
+--------------------------------------------------------------------------------
+1. THE POINT-IN-TIME CORRECTION THAT CHANGED THE DESIGN
+--------------------------------------------------------------------------------
+NSE's annual-report index carries a dissemination timestamp. Where
+`broadcast_dttm` is "-", the filename embeds it (AR_15799_DHFL_2018_2019_
+05092019164529 -> 05-09-2019 16:45:29), so a publication date is recoverable
+for every report.
+
+Checking those timestamps against the event dates removed reports that week
+one would have used:
+
+  DHFL          FY2018-19 report published 2019-09-05  -> AFTER the
+                4 June 2019 default. Unusable.
+  IL&FS Trans   FY2017-18 report published 2018-09-24  -> AFTER the
+                4 Sept 2018 group CP default. Unusable.
+  Rel Home Fin  FY2018-19 report published 2019-09-07  -> AFTER the
+                1 Sept 2019 default. Unusable.
+
+What survives is ONE usable report per failed institution in the 6-18 month
+window. That is the real sample size, and it was not knowable without the
+timestamps.
+
+  DHFL                 FY2017-18   published 2018-07-19   10.5 months before
+  Reliance Home Fin    FY2017-18   published 2018-09-20   11.3 months before
+  SREI Infrastructure  FY2019-20   published 2020-08-28   13.2 months before
+  Reliance Capital     FY2019-20   published 2020-06-01   17.9 months before
+
+(Week one estimated SREI at "roughly 13 months". The exact figure is 13.2.)
+
+
+--------------------------------------------------------------------------------
+2. IL&FS CANNOT BE TESTED AT ALL
+--------------------------------------------------------------------------------
+IL&FS Transportation Networks FY2016-17 (published 2017-09-04, 12.0 months
+before the group default) contains NO maturity ladder. It discusses liquidity
+risk in prose only.
+
+The reason is structural, not a retrieval failure: ITNL is an infrastructure
+developer, not a registered NBFC or HFC, so neither the RBI nor the NHB ALM
+disclosure applies to it. The entity that actually defaulted on commercial
+paper, IL&FS Financial Services, was never listed and files no annual report
+to an exchange.
+
+So of the three PRIMARY default cases, one is permanently outside the reach of
+this data source. The usable PRIMARY sample is n=2.
+
+
+--------------------------------------------------------------------------------
+3. AUTOMATED EXTRACTION DOES NOT GENERALISE
+--------------------------------------------------------------------------------
+The week-one parser read 2 of 5 pre-event filings. It reported "NO TABLE" for
+three filings whose tables are plainly present on the page. Causes:
+
+  DHFL              bucket headers capitalised as "Over 1 Year", defeating a
+                    case-sensitive match
+  Rel Home Finance  table transposed - buckets are ROWS, items are COLUMNS,
+                    with prior-year figures interleaved in brackets
+  Reliance Capital  two fiscal years interleaved as alternating lines within
+                    each row, row labels wrapped across lines
+  GIC Housing       non-standard font encoding; pdftotext returns mojibake
+                    and all digits are lost
+
+Across twelve filings that were read successfully there were at least five
+distinct layouts and four different bucket schemas (RBI's 10-bucket NBFC
+ladder; NHB's 10-bucket HFC ladder; Can Fin's 11-bucket variant; Bajaj's
+8-bucket behavioural snapshot in the MD&A rather than the notes).
+
+The figures in this analysis were therefore transcribed by hand from the
+printed tables, with the source note and the units recorded per row in
+alm_result.py. That is tractable for twelve filings. It is not tractable for
+a hundred institutions over ten years without per-filer templates, and the
+week-one claim that assembly was obstructed "not merely by tedium" is
+confirmed in the stronger direction: it is obstructed by both.
+
+
+--------------------------------------------------------------------------------
+4. THE RESULT
+--------------------------------------------------------------------------------
+Measure: cover = (inflows <= 1 year) / (outflows <= 1 year), from the filed
+ladder. Lower is riskier. Compared only WITHIN cohort, because HFCs file on
+the NHB schedule and other NBFCs on the RBI schedule.
+
+COHORT A - housing finance companies, reports published mid-2018
+  Repco Home Finance        0.222   -24.0%   survivor
+  Can Fin Homes             0.326   -22.2%   survivor
+  DHFL                      0.628    -8.3%   DEFAULTED 10.5 months later
+  LIC Housing Finance       0.649    -8.0%   survivor
+  PNB Housing Finance       0.797    -6.0%   survivor
+  Reliance Home Finance     0.974    -0.5%   DEFAULTED 11.3 months later
+  Indiabulls Housing        1.212    +4.4%   survivor (funding run 2019)
+
+  AUC 0.400. Below chance. The two firms that defaulted rank 3rd and 6th of
+  seven on riskiness. The two worst-looking firms in the cohort, Repco and
+  Can Fin, are small conservative lenders that were never in difficulty.
+  DHFL's ladder is indistinguishable from LIC Housing's: cover 0.628 against
+  0.649, gap/assets -8.3% against -8.0%. LIC Housing is rated AAA today.
+
+COHORT B - other NBFCs, reports published mid-2020
+  SREI Infrastructure       0.143   -11.7%   board superseded 13.2 months later
+  Cholamandalam             0.758    -7.1%   survivor
+  M&M Financial             1.515   +13.6%   survivor
+  Bajaj Finance             1.545   +16.3%   survivor
+  Reliance Capital          2.614   +37.0%   board superseded 17.9 months later
+
+  AUC 0.500. Exactly chance. The cohort's best-looking firm and its
+  worst-looking firm are the two that failed.
+
+Pre-registered baselines (alm_baseline.py), for completeness: the share of
+borrowings maturing within one year (B4) scores AUC 0.000 in cohort A, and the
+outflow/assets leverage proxy (B3) 0.100. Every measure, the ladder-based one
+included, is at or below chance in this sample. Nothing here beats anything.
+
+
+--------------------------------------------------------------------------------
+5. WHY IT FAILS - THREE MECHANISMS, EVIDENCED FROM THE FILINGS
+--------------------------------------------------------------------------------
+These do not depend on the sample size. They are read directly off the pages.
+
+A. THE GAP IS THE BUSINESS MODEL, NOT THE PATHOLOGY.
+   All seven housing finance companies show a negative one-year gap. Borrowing
+   short against twenty-year mortgages is what an HFC is. A measure on which
+   every healthy firm in the industry also scores badly cannot separate
+   within the industry. What killed DHFL was the loss of its ability to ROLL
+   the gap after the IL&FS default froze the NBFC funding market - not the
+   existence of the gap, which it had carried profitably for years and which
+   LIC Housing carries today.
+   Bajaj's own report notes that RBI permits a negative cumulative one-year
+   mismatch of up to 15%. Four of the seven cohort-A firms exceed that, and
+   none of those four failed.
+
+B. THE DISCLOSURE IS DISCRETIONARY, AND BOTH FAILED FIRMS USED THE
+   DISCRETION IN THE DIRECTION THAT FLATTERS THE GAP.
+   Reliance Capital, FY2019-20, note (a): "All quoted investments have been
+   included in 1 day to 30/31 days bucket considering its liquidity." Note
+   (c): Rs 5,103 crore of debentures had ALREADY been recalled by the trustee
+   and were "due and payable forthwith" at the balance-sheet date, with a
+   further Rs 11,157 crore recalled shortly after - and "the management has
+   presented the maturity pattern based on the original scheduled maturity
+   payment dates."
+   So the firm reported the BEST one-year cover in its cohort, 2.61, while
+   already in default, by placing its holdings of subsidiaries in the
+   one-month bucket and its accelerated debt at its original maturity.
+   Reliance Home Finance, FY2017-18, note (b): asset timings rest on "best
+   estimate of the Assets-Liability Committee / Management with regard to the
+   timing of various cash flows and estimate of foreclosure of the loans
+   expected in next one year" - pulling loan inflows forward. Its reported
+   cover was 0.974, near-perfectly balanced, twelve months before default.
+   This is the pre-registered falsification condition (2), confirmed with
+   quotations rather than inferred.
+
+C. THE FILING ENTITY IS OFTEN NOT THE ENTITY AT RISK.
+   SREI Infrastructure Finance's standalone ladder reports ZERO advances and
+   ZERO deposits: the lending book sat in SREI Equipment Finance. Its measured
+   -11.7% describes a holding shell. Reliance Capital is a Core Investment
+   Company - likewise a holding entity. Of the four testable failures, two are
+   not the operating lender.
+
+
+--------------------------------------------------------------------------------
+6. A DESIGN FACT WORTH MORE THAN THE RESULT
+--------------------------------------------------------------------------------
+With 2 failures against 3 survivors, exhaustive enumeration of all 10 possible
+label assignments gives a smallest attainable p-value of 0.100. Cohort B could
+not have produced a conventionally significant result even with PERFECT
+separation. Cohort A, at 2 against 5, bottoms out at 0.048 - significance
+would have required the two defaulters to occupy exactly the two riskiest
+ranks of seven.
+
+This was knowable before any PDF was downloaded, from the event count alone.
+Any future version of this study must either expand the event count
+substantially (which section 2 shows is bounded by which entities file at all)
+or abandon per-event significance testing and argue from mechanism instead.
+
+
+--------------------------------------------------------------------------------
+7. WHAT THE WEEK-ONE DOCUMENT GOT WRONG
+--------------------------------------------------------------------------------
+- It reported SREI's gap as "-41,505" alongside Bajaj's "+21,128" as though
+  both were crore. SREI's table is in Rs lakh; the gap is Rs 415 crore, not
+  Rs 41,505 crore. The ratio to assets, -11.7%, was computed within the table
+  and is unaffected, but the side-by-side comparison of absolute figures was
+  wrong by a factor of 100.
+- It presented SREI-versus-Bajaj as "pointing in the expected direction".
+  With five more survivors in each cohort, the direction disappears.
+- It treated the annual report as available at the fiscal year-end. Three of
+  the reports it would have used were published after their events.
+
+
+--------------------------------------------------------------------------------
+8. DECISION
+--------------------------------------------------------------------------------
+STOP. The stop condition in OUTCOME_DEFINITION.txt section 6 required
+recoverable pre-event observations for at least 3 PRIMARY cases on a common
+basis. Only 2 PRIMARY cases are recoverable at all, they disagree with each
+other, and the basis is not common - it is chosen by the filer, and the
+failures chose the flattering one.
+
+Spending the next six weeks extracting a hundred institutions would produce a
+larger version of a measure that is at or below chance and whose inputs the
+subject firms control. The ALM pivot is closed.
+
+What this exercise is worth keeping for: it is a clean, pre-registered,
+point-in-time-disciplined negative result with a mechanism explanation and
+direct quotation from the filings. That is a more defensible contribution than
+the positive result it was looking for, and it cost two days rather than two
+months. The three mechanisms in section 5 - business-model confounding,
+reporting discretion under stress, and entity-versus-group mismatch - are the
+reusable finding, and the second of them is the same failure mode that
+defeated the fundamental index on Yes Bank and the US model on Silicon Valley
+Bank: accounts disclose what the filer is willing to admit.
+================================================================================

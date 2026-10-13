@@ -1,0 +1,19 @@
+company,event,event_date,last_fy,fdi_at_last_fy,peer_pctile,lead_months,first_alert_fy,alert_lead_months
+Indian Overseas Bank,regulatory,2015-10-01,2015,88.9,89.0,3.1,2012.0,39.0
+Dhanlaxmi Bank Ltd,regulatory,2015-11-01,2015,96.4,96.0,4.1,2012.0,40.0
+United Bank of India,regulatory,2017-01-01,2016,75.4,75.0,6.1,2013.0,42.1
+UCO Bank,regulatory,2017-05-01,2016,89.9,90.0,10.0,2012.0,58.0
+Dena Bank,regulatory,2017-05-01,2016,89.7,90.0,10.0,2016.0,10.0
+IDBI Bank Ltd,regulatory,2017-05-05,2016,75.5,76.0,10.2,,
+Central Bank of India,regulatory,2017-06-01,2016,69.0,69.0,11.0,2012.0,59.0
+Bank of Maharashtra,regulatory,2017-06-01,2016,70.0,70.0,11.0,2012.0,59.0
+Oriental Bank of Commerce,regulatory,2017-10-01,2017,84.0,84.0,3.1,2017.0,3.1
+Bank of India,regulatory,2017-12-01,2017,82.6,83.0,5.1,2016.0,17.0
+Corporation Bank,regulatory,2017-12-01,2017,76.6,77.0,5.1,2014.0,41.1
+Allahabad Bank,regulatory,2018-01-02,2017,72.5,72.0,6.1,2015.0,30.1
+Religare Enterprises Ltd,default,2019-01-31,2018,89.5,89.0,7.1,2013.0,67.0
+Reliance Home Finance Ltd,default,2019-09-01,2019,80.6,81.0,2.1,2019.0,2.1
+Lakshmi Vilas Bank Ltd,regulatory,2019-09-27,2019,93.2,93.0,2.9,2013.0,74.9
+Yes Bank Ltd,moratorium,2020-03-05,2019,65.9,66.0,8.2,2019.0,8.2
+SREI Infrastructure Finance Ltd,resolution,2021-10-04,2021,97.3,97.0,3.2,2021.0,3.2
+Reliance Capital Ltd,resolution,2021-11-29,2021,92.8,93.0,5.0,2018.0,41.0

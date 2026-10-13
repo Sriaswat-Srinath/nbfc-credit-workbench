@@ -1,0 +1,292 @@
+================================================================================
+NBFC CREDIT WORKBENCH - HOW TO USE IT
+================================================================================
+For: a credit analyst covering Indian non-bank lenders.
+Companion documents: ARCHITECTURE.txt (what it is and why),
+                     LOW_LEVEL_DESIGN.txt (how it is built),
+                     PRODUCT.txt (what is built, what is not, and the limits).
+
+
+================================================================================
+1. STARTING IT
+================================================================================
+    python3 -m http.server 8777 --directory credit_workbench
+
+Then open  http://localhost:8777/workbench.html
+
+The data file loads as a sibling script, so opening the HTML directly from
+the filesystem (file://) will NOT work - the page will sit on "Loading
+workbench data".
+
+A published copy opens from its own link with no server. Everything works
+there except the links to the generated text files, which are relative paths;
+use "Show plain text" or "Copy as text" instead.
+
+
+================================================================================
+2. THE ONE CONTROL THAT CHANGES EVERYTHING
+================================================================================
+The blue bar at the top reads EVIDENCE AS IT STOOD ON, with a date box, a
+slider, and four presets.
+
+Move it and the entire page rebuilds as the file read on that date. Findings
+dated later are not hidden, they are not computed. The recorded outcome for an
+issuer is withheld until the date passes it, so you cannot accidentally read
+the answer before the question.
+
+This is what the tool is for. A dashboard tells you what is true now. This
+tells you what was knowable then - which is the only way to judge whether a
+monitoring process was adequate, as opposed to whether a failure looks obvious
+in hindsight.
+
+Two ways to use it:
+
+  LIVE MONITORING   leave it at today. The rail is your reading queue.
+  PROCESS REVIEW    set it to the date you made a decision, and read the file
+                    as it stood. Then move it forward and watch what arrived.
+
+
+================================================================================
+3. THE ISSUER RAIL IS A QUEUE, NOT A RANKING
+================================================================================
+The left column lists all 16 issuers sorted by how many high-severity findings
+sit unexamined in their file. The dots are the severity mix; the number is the
+count of substantive findings.
+
+READ IT AS: "where should I spend this afternoon".
+NEVER AS:   "which of these is riskiest".
+
+The number is a count of things to look at. Repco Home Finance - a small,
+conservative lender that was never in difficulty - carries 14 findings over
+its full history. Bajaj Finance carries 4. The gap between them is mostly how
+much each one filed, not how sound each one is.
+
+
+================================================================================
+4. THE SIX TABS, AND WHEN EACH IS THE RIGHT ONE
+================================================================================
+
+FINDINGS            Start here. Grouped high / medium / low, newest first
+                    within each group. Every card has the same five parts:
+
+                      WHAT      what changed, with the figures
+                      WHY       the mechanism, stated as a hypothesis
+                      AGAINST   the innocent explanation, where one exists
+                      NEXT      what you do about it
+                      EVIDENCE  the source file, its timestamp, and a link
+
+                    Read AGAINST before you act on WHAT. It is there because
+                    most findings have a boring explanation, and the tool
+                    cannot tell which.
+
+CAPITAL & LEVERAGE  Annual balance-sheet history: equity/assets, leverage,
+                    borrowings/assets, ROA, gross NPA. Each row is dated by
+                    when the ANNUAL REPORT was published, not by the fiscal
+                    year end - three to six months earlier, and the difference
+                    that invalidated three of five cases in the research.
+                    Rows marked "est" had no report matched and carry a
+                    conservative date; treat their lead times as optimistic.
+                    Equity and total assets sit beside the ratio so you can
+                    check it rather than trust it.
+
+REPORTED FIGURES    Quarterly income, PBT, PAT and impairment exactly as
+                    filed, standalone and consolidated kept separate. The
+                    FILING LAG bar is the thing to look at: the tick marks the
+                    SEBI limit and the red portion is the overrun.
+
+FILED STATEMENT     Any single filing rendered as the profit and loss account
+                    it represents, with the original XBRL tag beside every
+                    line. Use it to verify a number before you rely on it.
+                    Underneath, six relationships that hold by definition of a
+                    P&L are recomputed and reported as holds / BREAKS / not
+                    checked.
+
+DISCLOSURE TIMELINE Every exchange announcement, newest first, with rating
+                    actions and clarification requests marked and links to the
+                    original PDFs. Use it when you need the sequence.
+
+INVESTIGATION BRIEF The prose summary, for pasting into a credit memo. It
+                    states what changed, why it may matter, what contradicts
+                    it, the questions for the analyst, and - at the end - what
+                    it cannot tell you. It does not conclude. That is
+                    deliberate.
+
+
+================================================================================
+5. A WORKED INVESTIGATION
+================================================================================
+Question: what could an analyst have known about Reliance Capital before the
+RBI superseded its board on 29 November 2021?
+
+STEP 1  Set the date to 2019-05-31 (a preset). The rail now reads:
+
+            RHFL           7 high
+            RELCAPITAL     6 high
+            PNB HOUSING    3 high
+            DHFL           2 high
+
+        Reliance Home Finance and Reliance Capital are first and second. Both
+        failed. PNB Housing is third and survived - the queue is not a
+        prediction.
+
+STEP 2  Open RELCAPITAL. The outcome banner says a recorded outcome exists
+        AFTER this date and is withheld. Good: you are reading blind.
+
+STEP 3  Findings tab. The earliest high-severity items are rating actions
+        from 29 March, 19 April and 26 April 2019 - 976, 955 and 948 days
+        before the intervention. Read the WHAT text: the company's own
+        filings call the agencies' actions "completely unjustified and
+        inappropriate". A borrower publicly disputing two rating agencies
+        within a week is the thing to notice.
+
+STEP 4  The 26 April finding is a DISCLOSURE BURST - four rating filings in
+        the 30 days from 29 March. No surviving issuer in this universe
+        exceeds two.
+
+STEP 5  Capital & leverage tab. Equity/assets fell from 18.6% (FY2017) to
+        1.2% (FY2018), knowable 2018-09-20. Reserves went from Rs 15,081
+        crore to Rs 760 crore on a Rs 4,556 crore loss. Leverage for the
+        later years reads "n/m" because equity is negative and the ratio
+        inverts - read borrowings and the obligations falling due instead.
+
+STEP 6  Move the date to 2019-10-11. A new high finding appears: the issuer
+        has told the exchange its debt servicing "will be delayed", naming
+        five ISINs. That is 25.6 months before the intervention, and it is
+        the issuer's own admission, not an opinion or a ratio.
+
+STEP 7  Move to 2020-12-09. The disclosures ESCALATE: having said payment
+        would be delayed, the company now states it was not made.
+
+STEP 8  Investigation brief tab. Copy it into your memo. Then read the last
+        paragraph, which tells you what the brief cannot establish.
+
+At 2021-06-30, five months before the event, the rail reads RELCAPITAL 17
+high, RHFL 15, DHFL 12 - the three that failed, in order, above everything
+else. That is a demonstration, not evidence: three cases, chosen knowing how
+they ended, in a universe of sixteen.
+
+
+================================================================================
+6. HOW TO READ EACH KIND OF FINDING
+================================================================================
+
+MISSED FILING DEADLINE      The strongest signal in this corpus, and the only
+                            one that does not depend on the reported figures
+                            being true. What matters is not lateness but how
+                            late against the issuer's OWN habit. DHFL filed
+                            its audited FY2019 result 114 days after period
+                            end against a 60-day limit; RHFL 136 days against
+                            its own ~50-day norm. Most low-severity ones are a
+                            few days over and routine - 57 of 124 in the first
+                            build were noise.
+
+DISCLOSED PAYMENT FAILURE   The issuer telling the exchange it did not pay, or
+                            would be late. Read the quoted sentence, not the
+                            filing's title: the titles are identical whether a
+                            company paid or did not.
+
+FIGURES DO NOT RECONCILE    A year-to-date figure that does not equal the sum
+                            of its quarters. Means something was restated
+                            after it was first published. Often innocent - a
+                            merger restating comparatives, as with Shriram -
+                            but you should know which.
+
+CAPITAL EROSION             Equity/assets falling 25% or turning negative. The
+                            only detector with zero false positives across 49
+                            issuer-years of healthy issuers, but it caught
+                            only one event in eight and caught it late.
+
+MATERIAL DETERIORATION      A swing into loss, or credit costs up 50%+ year on
+                            year. A fall in profit is deliberately NOT
+                            reported; only an actual loss is.
+
+RATING ACTION /             A third party, or the exchange, getting worried.
+EXCHANGE CLARIFICATION      Useful for dating when a concern became public.
+                            Only notices whose text matches distress language
+                            are promoted; routine ones stay on the timeline.
+
+AUDITOR OPINION             Anything other than unmodified. The most direct
+                            evidence that the figures should not be taken at
+                            face value.
+
+NO CONSOLIDATED ACCOUNTS    The issuer files standalone only. For a subsidiary
+                            inside a group this is the SREI problem: the
+                            listed entity's accounts need not describe the
+                            business carrying the risk. For a lender with no
+                            subsidiaries it means nothing.
+
+EVIDENCE GAP / STALE /      NOT about the issuer. These describe the limits of
+INCONSISTENT SCALE          what can be known, and are listed separately for
+                            that reason.
+
+
+================================================================================
+7. THE MISTAKES THIS TOOL MAKES EASY, AND HOW TO AVOID THEM
+================================================================================
+
+READING THE COUNT AS RISK
+    It is a reading queue. Repco at 14 is not riskier than Bajaj at 4.
+
+READING ZERO FINDINGS AS SAFETY
+    SREI Infrastructure has no payment findings because 51 of its 57
+    disclosure attachments are scanned images that cannot be read. There is an
+    explicit coverage finding saying so. Silence from a document nobody can
+    read is not evidence of calm. Always check the Limits of the evidence
+    section before concluding an issuer is quiet.
+
+TRUSTING A FIGURE WITHOUT OPENING IT
+    Use the Filed statement tab. Every line carries its XBRL tag and the
+    source link.
+
+READING A LEAD TIME OFF AN ESTIMATED DATE
+    19 of 176 annual rows have a publication date that was estimated, not
+    matched to a report. They are marked "est" and their lead times are
+    optimistic.
+
+TREATING A CONFIRMATION AS A WARNING
+    DHFL's SEBI default form is dated four days AFTER its default. It
+    confirms, it does not predict. Check the finding's date against the event.
+
+ASSUMING THE GROUP IS THE ISSUER
+    Reliance Home Finance was a subsidiary of Reliance Capital. A finding on
+    one is not a finding on the other. The tool records two such pairs by
+    hand; it has no general entity resolution, which is its largest
+    structural gap.
+
+
+================================================================================
+8. WHAT IT WILL NOT DO
+================================================================================
+- It will not tell you whether the reported figures are true. Reliance Capital
+  reported the best one-year liquidity cover in its peer group while Rs 5,103
+  crore of its debentures had already been recalled.
+- It has no rating level or history. NSE's rating endpoint returns nothing;
+  only rating ANNOUNCEMENTS are available, as free text.
+- It covers no unlisted entity. IL&FS Financial Services, which defaulted on
+  the commercial paper, filed nothing to any exchange.
+- Structured quarterly results exist only from about 2019. DHFL has 14
+  readable filings against 73 result filings listed.
+- It gives no score, and that is deliberate: on this data a nine-component
+  weighted index did not beat plain equity/assets.
+- Sixteen issuers. India has over 9,000 registered NBFCs.
+
+
+================================================================================
+9. KEEPING IT CURRENT
+================================================================================
+    python3 ingest.py                      new filings and announcements
+    python3 attachments.py                 new payment-disclosure PDFs
+    python3 annual.py                      annual layer
+    python3 build.py                       rebuild the workbench data
+    python3 check_pit.py                   MUST report 0 violations
+    python3 export_statements.py           regenerate the readable statements
+
+Then wrap the JSON for the page:
+
+    python3 -c "import json;d=json.load(open('workbench_data.json'));\
+open('workbench_data.js','w').write('window.WB='+json.dumps(d,\
+separators=(',',':'),default=str)+';')"
+
+Every step is resumable and skips what it already has. To add an issuer,
+append to ISSUERS in universe.py and run ingest for that symbol, then build.
+================================================================================

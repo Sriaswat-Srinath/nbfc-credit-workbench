@@ -1,0 +1,1062 @@
+<title>NBFC Credit Workbench</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+:root{
+  --paper:#f7f8fa; --card:#ffffff; --ink:#16202b; --ink-2:#4a5664; --ink-3:#77838f;
+  --rule:#d8dde4; --rule-2:#e9edf2; --accent:#1f5f8b; --accent-soft:#e8f0f6;
+  --high:#a4282c; --high-soft:#fbeced; --med:#9a6612; --med-soft:#fbf3e4;
+  --low:#5a6572; --low-soft:#eef1f4; --ok:#1d6b4f;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+  --rail:286px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e141b; --card:#151d26; --ink:#e6ebf1; --ink-2:#a8b4c0; --ink-3:#7b8795;
+    --rule:#283442; --rule-2:#1f2935; --accent:#6fa8cf; --accent-soft:#172835;
+    --high:#e4777a; --high-soft:#2a1719; --med:#d6a254; --med-soft:#272015;
+    --low:#8e9aa7; --low-soft:#1b242e; --ok:#5fb894;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e141b; --card:#151d26; --ink:#e6ebf1; --ink-2:#a8b4c0; --ink-3:#7b8795;
+  --rule:#283442; --rule-2:#1f2935; --accent:#6fa8cf; --accent-soft:#172835;
+  --high:#e4777a; --high-soft:#2a1719; --med:#d6a254; --med-soft:#272015;
+  --low:#8e9aa7; --low-soft:#1b242e; --ok:#5fb894;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3{text-wrap:balance;margin:0}
+a{color:var(--accent)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- masthead ---------- */
+header{border-bottom:1px solid var(--rule);background:var(--card)}
+.mast{display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;
+  padding:14px 22px 12px}
+.mast h1{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.mast .sub{color:var(--ink-3);font-size:12.5px}
+.mast .spacer{flex:1}
+button.ghost{background:none;border:1px solid var(--rule);color:var(--ink-2);
+  border-radius:5px;padding:5px 10px;font:inherit;font-size:12px;cursor:pointer}
+button.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- replay bar: the product's thesis, so it gets the emphasis ---- */
+.replay{background:var(--accent-soft);border-bottom:1px solid var(--rule);
+  padding:11px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.replay .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--accent);font-weight:600;white-space:nowrap}
+.replay input[type=date]{font:inherit;font-family:var(--mono);font-size:13px;
+  padding:4px 7px;border:1px solid var(--rule);border-radius:5px;
+  background:var(--card);color:var(--ink)}
+.replay input[type=range]{flex:1;min-width:200px;accent-color:var(--accent)}
+.replay .note{font-size:12px;color:var(--ink-2);max-width:40ch}
+.chipset{display:flex;gap:5px;flex-wrap:wrap}
+.chipset button{font:inherit;font-size:11.5px;padding:3px 8px;cursor:pointer;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);
+  border-radius:20px}
+.chipset button:hover,.chipset button[aria-pressed=true]{
+  border-color:var(--accent);color:var(--accent)}
+
+/* ---------- layout ---------- */
+.wrap{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);
+  align-items:start;gap:0}
+@media (max-width:860px){.wrap{grid-template-columns:1fr}}
+
+/* ---------- issuer rail ---------- */
+.rail{border-right:1px solid var(--rule);background:var(--card);
+  position:sticky;top:0;max-height:100vh;overflow-y:auto}
+.rail .railhead{padding:12px 16px 8px;border-bottom:1px solid var(--rule-2);
+  font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);
+  display:flex;justify-content:space-between;align-items:center}
+.irow{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--rule-2);
+  background:none;font:inherit;cursor:pointer;padding:9px 16px;color:inherit}
+.irow:hover{background:var(--low-soft)}
+.irow[aria-current=true]{background:var(--accent-soft);
+  box-shadow:inset 3px 0 0 var(--accent)}
+.irow .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.irow .sym{font-weight:600;font-size:13px;letter-spacing:.01em}
+.irow .nm{color:var(--ink-3);font-size:11.5px;margin-top:1px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cnt{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);white-space:nowrap}
+.dots{display:inline-flex;gap:2px;vertical-align:middle;margin-right:5px}
+.dot{width:6px;height:6px;border-radius:50%}
+.d-high{background:var(--high)} .d-med{background:var(--med)} .d-low{background:var(--low)}
+.tag{font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid var(--rule);border-radius:3px;padding:1px 4px;color:var(--ink-3)}
+
+/* ---------- main ---------- */
+main{padding:20px 24px 60px;min-width:0}
+.ihead h2{font-size:22px;font-weight:600;letter-spacing:-.015em}
+.ihead .meta{color:var(--ink-2);font-size:13px;margin-top:4px}
+.banner{margin:14px 0;padding:10px 13px;border-radius:6px;font-size:13px;
+  border:1px solid var(--rule);background:var(--low-soft)}
+.banner.event{border-color:var(--high);background:var(--high-soft);color:var(--high)}
+.banner b{font-weight:600}
+
+.cover{display:flex;flex-wrap:wrap;gap:0;margin:16px 0 4px;
+  border:1px solid var(--rule);border-radius:7px;overflow:hidden;background:var(--card)}
+.cover > div{padding:9px 14px;border-right:1px solid var(--rule-2);flex:1;min-width:132px}
+.cover > div:last-child{border-right:0}
+.cover .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.cover .v{font-family:var(--mono);font-size:15px;margin-top:2px}
+
+nav.tabs{display:flex;gap:2px;margin:20px 0 0;border-bottom:1px solid var(--rule);
+  overflow-x:auto}
+nav.tabs button{font:inherit;font-size:13px;padding:8px 13px;border:0;
+  background:none;color:var(--ink-2);cursor:pointer;border-bottom:2px solid transparent;
+  white-space:nowrap}
+nav.tabs button[aria-selected=true]{color:var(--accent);font-weight:600;
+  border-bottom-color:var(--accent)}
+
+/* ---------- findings ---------- */
+.sevhead{margin:22px 0 9px;font-size:11px;text-transform:uppercase;
+  letter-spacing:.09em;font-weight:600;display:flex;align-items:center;gap:8px}
+.sevhead.high{color:var(--high)} .sevhead.medium{color:var(--med)}
+.sevhead.low{color:var(--low)}
+.sevhead::after{content:"";flex:1;height:1px;background:var(--rule)}
+.f{background:var(--card);border:1px solid var(--rule);border-left-width:3px;
+  border-radius:6px;padding:12px 15px;margin-bottom:9px}
+.f.high{border-left-color:var(--high)} .f.medium{border-left-color:var(--med)}
+.f.low{border-left-color:var(--low)}
+.f .fh{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.f .when{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.f .kind{font-weight:600;font-size:13.5px}
+.f dl{margin:0;display:grid;grid-template-columns:76px minmax(0,1fr);gap:3px 12px}
+.f dt{font-size:10px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--ink-3);padding-top:3px}
+.f dd{margin:0;font-size:13px}
+.f dd.why,.f dd.against{color:var(--ink-2)}
+.ev{margin-top:9px;padding-top:8px;border-top:1px dashed var(--rule);
+  font-size:11.5px;font-family:var(--mono);color:var(--ink-3);word-break:break-all}
+.ev a{display:inline-block;margin-right:12px}
+.ev .srcname{font-family:var(--sans);font-style:italic}
+
+.quote{margin:9px 0 0;padding:8px 13px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);border-radius:0 5px 5px 0;font-size:12.5px;
+  font-family:var(--serif);line-height:1.5;color:var(--ink)}
+
+/* ---------- lag chart ---------- */
+.lagwrap{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:560px}
+th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--ink-3);font-weight:600;padding:6px 9px;border-bottom:1px solid var(--rule);
+  position:sticky;top:0;background:var(--paper)}
+td{padding:5px 9px;border-bottom:1px solid var(--rule-2);
+  font-variant-numeric:tabular-nums}
+td.n{font-family:var(--mono);text-align:right;white-space:nowrap}
+.bar{position:relative;height:13px;background:var(--rule-2);border-radius:2px;
+  min-width:120px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);
+  border-radius:2px 0 0 2px}
+.bar i.over{background:var(--high)}
+.bar u{position:absolute;top:-2px;bottom:-2px;width:1px;background:var(--ink-2)}
+.loss{color:var(--high)}
+
+/* ---------- statement viewer ---------- */
+.stmtbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 4px}
+.stmtbar select{font:inherit;font-size:12.5px;padding:5px 8px;border-radius:5px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink);
+  max-width:100%}
+.stmtmeta{font-size:11.5px;color:var(--ink-3);font-family:var(--mono)}
+.stmt{background:var(--card);border:1px solid var(--rule);border-radius:7px;
+  padding:4px 0;margin-top:10px;overflow-x:auto}
+table.pl{border-collapse:collapse;width:100%;min-width:430px;font-size:13px}
+table.pl td{padding:3px 18px;border:0}
+table.pl td.v{text-align:right;font-family:var(--mono);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+table.pl tr.sec td{padding:14px 18px 4px;font-size:10px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.09em;color:var(--accent)}
+table.pl tr.tot td{font-weight:600;border-top:1px solid var(--rule)}
+table.pl tr:hover td{background:var(--low-soft)}
+table.pl td.xtag{font-family:var(--mono);font-size:10px;color:var(--ink-3);
+  text-align:right;white-space:nowrap;padding-left:0;text-transform:none;
+  letter-spacing:0;border:0;max-width:30ch;overflow:hidden;
+  text-overflow:ellipsis}
+.checks{margin-top:12px;font-size:12.5px}
+.checks li{list-style:none;padding:4px 0;display:flex;gap:9px;align-items:baseline}
+.ck{font-family:var(--mono);font-size:10px;padding:1px 5px;border-radius:3px;
+  white-space:nowrap}
+.ck.ok{background:var(--low-soft);color:var(--ok);border:1px solid var(--ok)}
+.ck.bad{background:var(--high-soft);color:var(--high);border:1px solid var(--high)}
+.ck.na{background:var(--low-soft);color:var(--ink-3);border:1px solid var(--rule)}
+
+.srcbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  margin:10px 0 2px;padding:9px 12px;border:1px solid var(--rule);
+  border-radius:6px;background:var(--card)}
+.srcbar .lab{font-size:10px;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--ink-3);margin-right:2px}
+.srcbtn{font:inherit;font-size:12px;padding:4px 10px;border-radius:5px;
+  border:1px solid var(--rule);background:var(--paper);color:var(--accent);
+  cursor:pointer;text-decoration:none;display:inline-block}
+.srcbtn:hover{border-color:var(--accent)}
+.srcbtn[disabled]{color:var(--ink-3);cursor:default;border-style:dashed}
+.srcnote{font-size:11.5px;color:var(--ink-3);flex-basis:100%;margin-top:2px}
+pre.plain{background:var(--card);border:1px solid var(--rule);border-radius:6px;
+  padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:11.5px;
+  line-height:1.45;white-space:pre;margin:10px 0 0;color:var(--ink)}
+
+table td.nm{color:var(--med);font-style:italic}
+
+/* ---------- timeline ---------- */
+.tl{border-left:2px solid var(--rule);margin:10px 0 0 7px;padding-left:0}
+.tl li{list-style:none;position:relative;padding:7px 0 7px 18px;font-size:12.5px}
+.tl li::before{content:"";position:absolute;left:-5px;top:13px;width:8px;height:8px;
+  border-radius:50%;background:var(--rule);border:2px solid var(--paper)}
+.tl li.hot::before{background:var(--high)}
+.tl .ts{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-right:7px}
+.tl .cat{font-size:10px;text-transform:uppercase;letter-spacing:.06em;
+  border:1px solid var(--rule);border-radius:3px;padding:1px 5px;color:var(--ink-2);
+  margin-right:7px;white-space:nowrap}
+.tl .bodytxt{color:var(--ink-2)}
+
+/* ---------- brief ---------- */
+.brief{background:var(--card);border:1px solid var(--rule);border-radius:7px;
+  padding:22px 26px;max-width:72ch;font-family:var(--serif);font-size:15.5px;
+  line-height:1.62}
+.brief h3{font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--accent);margin:20px 0 7px;font-weight:600}
+.brief h3:first-child{margin-top:0}
+.brief p{margin:0 0 11px}
+.brief ol{margin:0;padding-left:20px}
+.brief li{margin-bottom:11px}
+.brief .q{font-family:var(--sans);font-size:13px;color:var(--ink-2)}
+.brief em{font-style:italic}
+.caveat{font-family:var(--sans);font-size:12.5px;color:var(--ink-2);
+  border-top:1px solid var(--rule);margin-top:20px;padding-top:12px}
+
+.empty{color:var(--ink-3);font-size:13px;padding:22px 0;font-style:italic}
+footer{border-top:1px solid var(--rule);margin-top:34px;padding:16px 24px;
+  color:var(--ink-3);font-size:11.5px;max-width:88ch}
+#boot{padding:40px 24px;font-size:14px}
+</style>
+
+<div id="boot">Loading workbench data&hellip; if this message persists, the data
+file <code>workbench_data.js</code> did not load.</div>
+
+<div id="app" hidden>
+<header>
+  <div class="mast">
+    <h1>NBFC Credit Workbench</h1>
+    <span class="sub" id="masthead-sub"></span>
+    <span class="spacer"></span>
+    <button class="ghost" id="themebtn">Theme</button>
+  </div>
+</header>
+
+<div class="replay">
+  <span class="lbl">Evidence as it stood on</span>
+  <input type="date" id="asof">
+  <input type="range" id="asofrange" min="0" max="100" value="100">
+  <div class="chipset" id="presets"></div>
+  <span class="note">Findings dated after this are not hidden &mdash; they are
+    not computed. Nothing below can be contaminated by hindsight.</span>
+</div>
+
+<div class="wrap">
+  <aside class="rail">
+    <div class="railhead"><span>Issuers</span><span id="railcount"></span></div>
+    <div id="rail"></div>
+  </aside>
+  <main>
+    <div class="ihead">
+      <h2 id="iname"></h2>
+      <div class="meta" id="imeta"></div>
+    </div>
+    <div id="ibanner"></div>
+    <div class="cover" id="icover"></div>
+    <nav class="tabs" id="tabs"></nav>
+    <div id="panel"></div>
+  </main>
+</div>
+
+<footer>
+  Built on NSE primary filings: the corporate-announcements stream, the
+  financial-results index, and the XBRL instance behind each result filing.
+  Every figure shown is traceable to the filing that produced it and the
+  timestamp at which that filing was disseminated. There is no composite risk
+  score in this tool by design &mdash; on this data a nine-component index did
+  not beat equity/assets, so the tool ranks evidence and leaves the judgement
+  to the analyst.
+</footer>
+</div>
+
+<script src="workbench_data.js"></script>
+<script>
+(function(){
+  "use strict";
+  var D = window.WB;
+  if(!D || !D.issuers){ return; }
+  document.getElementById("boot").hidden = true;
+  document.getElementById("app").hidden = false;
+
+  var KIND = {
+    filing_overdue:"Missed filing deadline",
+    additivity_break:"Figures do not reconcile across filings",
+    basis_withdrawn:"Consolidated reporting withdrawn",
+    basis_unavailable:"No consolidated accounts are filed",
+    audit_opinion:"Auditor did not give a clean opinion",
+    deterioration:"Material deterioration",
+    capital_erosion:"Capital erosion",
+    payment_disclosure:"Disclosed payment failure or delay",
+    unit_anomaly:"Figures on an inconsistent scale",
+    rating_action:"Rating action",
+    exchange_clarification:"Exchange sought clarification",
+    price_flag:"Exchange flagged a price move",
+    disclosure_burst:"Cluster of external scrutiny",
+    coverage_gap:"Evidence gap",
+    stale_evidence:"Evidence is stale"
+  };
+  var EVIDENCE_KINDS = {coverage_gap:1, stale_evidence:1};
+  var SEVS = ["high","medium","low"];
+  var TABS = [["findings","Findings"],["capital","Capital & leverage"],
+              ["figures","Reported figures"],["statement","Filed statement"],
+              ["timeline","Disclosure timeline"],["brief","Investigation brief"]];
+
+  // ---- date range across the whole corpus
+  var allDates = [];
+  D.issuers.forEach(function(i){
+    i.findings.forEach(function(f){ allDates.push(f.knowable_on.slice(0,10)); });
+    i.quarters.forEach(function(q){ allDates.push(q.disseminated.slice(0,10)); });
+  });
+  allDates.sort();
+  var MIN = allDates[0] || "2015-01-01";
+  var MAX = allDates[allDates.length-1] || "2026-01-01";
+
+  var state = { sym: null, asof: MAX, tab: "findings" };
+
+  function esc(s){ return String(s==null?"":s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;"); }
+  function iss(sym){ return D.issuers.filter(function(i){return i.symbol===sym;})[0]; }
+  function dnum(a,b){ return Math.round((new Date(b)-new Date(a))/864e5); }
+  function cr(v){
+    if(v==null) return "\u2013";
+    var x = v/1e7;
+    return (Math.abs(x)>=1000 ? Math.round(x).toLocaleString("en-IN")
+                              : x.toFixed(1));
+  }
+  function visible(i){
+    return i.findings.filter(function(f){
+      return f.knowable_on.slice(0,10) <= state.asof; });
+  }
+  function substantive(fs){
+    return fs.filter(function(f){ return !EVIDENCE_KINDS[f.kind]; }); }
+
+  // ---------------- rail
+  function drawRail(){
+    var rows = D.issuers.map(function(i){
+      var v = substantive(visible(i));
+      var c = {high:0,medium:0,low:0};
+      v.forEach(function(f){ c[f.severity]++; });
+      return {i:i, n:v.length, c:c};
+    }).sort(function(a,b){
+      return (b.c.high-a.c.high) || (b.n-a.n)
+          || a.i.symbol.localeCompare(b.i.symbol);
+    });
+    document.getElementById("railcount").textContent = rows.length;
+    document.getElementById("rail").innerHTML = rows.map(function(r){
+      var dots = SEVS.map(function(s){
+        return r.c[s] ? '<span class="dot d-'+(s==="medium"?"med":s)+'" '+
+          'title="'+r.c[s]+' '+s+'"></span>' : ""; }).join("");
+      return '<button class="irow" data-sym="'+r.i.symbol+'" '+
+        'aria-current="'+(r.i.symbol===state.sym)+'">'+
+        '<span class="top"><span class="sym">'+esc(r.i.symbol)+'</span>'+
+        '<span class="cnt"><span class="dots">'+dots+'</span>'+r.n+'</span></span>'+
+        '<div class="nm">'+esc(r.i.name)+'</div>'+
+        '<span class="tag">'+esc(r.i.lender_type)+'</span>'+
+        '</button>';
+    }).join("");
+    Array.prototype.forEach.call(
+      document.querySelectorAll(".irow"), function(b){
+        b.onclick = function(){ state.sym = b.dataset.sym; draw(); };
+      });
+  }
+
+  // ---------------- findings
+  function evHtml(e){
+    if(!e) return "";
+    var links = [];
+    if(e.retrospective_url && e.retrospective_filed_on &&
+       e.retrospective_filed_on.slice(0,10) <= state.asof)
+      links.push('<a href="'+esc(e.retrospective_url)+
+        '" target="_blank" rel="noopener">the filing, when it arrived</a>');
+    ["url","attachment"].forEach(function(k){
+      if(e[k] && /^https?:/.test(e[k]))
+        links.push('<a href="'+esc(e[k])+'" target="_blank" rel="noopener">'+
+          (k==="url"?"XBRL instance":"attachment")+"</a>");
+    });
+    if(e.cumulative_filing && e.cumulative_filing.url)
+      links.push('<a href="'+esc(e.cumulative_filing.url)+
+        '" target="_blank" rel="noopener">cumulative filing</a>');
+    var extra = [];
+    if(e.file) extra.push(esc(e.file));
+    if(e.disseminated) extra.push("disseminated "+esc(e.disseminated).slice(0,16).replace("T"," "));
+    if(e.basis) extra.push(esc(e.basis));
+    if(e.audited) extra.push(esc(e.audited));
+    if(e.promoted_because_text_matched)
+      extra.push('matched \u201c'+esc(e.promoted_because_text_matched)+'\u201d');
+    if(e.classification) extra.push("classified "+esc(e.classification));
+    if(e.isins && e.isins.length)
+      extra.push("ISIN "+esc(e.isins.slice(0,4).join(", "))+
+        (e.isins.length>4 ? " and "+(e.isins.length-4)+" more" : ""));
+    if(e.retrospective_filings_in_run)
+      extra.push("later: "+e.retrospective_filings_in_run+
+        " further such filings over "+e.retrospective_run_days+" days");
+    if(e.trailing_quarters_crore)
+      extra.push("trailing quarters (Rs cr): "+
+        e.trailing_quarters_crore.join(", "));
+    if(e.same_quarter_prior_year_crore!=null)
+      extra.push("same quarter prior year: Rs "+
+        e.same_quarter_prior_year_crore+" cr");
+    if(e.quarter_filings)
+      extra.push(e.quarter_filings.map(function(q){
+        return q.period+" = Rs "+q.value_crore+" cr"; }).join("  |  "));
+    if(e.missing) extra.push("missing: "+e.missing.slice(0,10).join(", "));
+    var quote = e.quoted_context
+      ? '<div class="quote">\u201c'+esc(e.quoted_context)+'\u201d</div>' : "";
+    return quote + '<div class="ev"><span class="srcname">'+esc(e.source||"")+
+      '</span>'+(extra.length?" &middot; "+extra.join(" &middot; "):"")+
+      (links.length?"<br>"+links.join(""):"")+'</div>';
+  }
+
+  // A missed-deadline finding reads differently depending on where the slider
+  // sits: on the deadline itself nothing has been filed yet, and what the
+  // issuer eventually filed is not knowable. The retrospective_* evidence
+  // keys are only rendered once the as-of date has passed them.
+  function overdueTail(f){
+    var e = f.evidence || {};
+    if(f.kind !== "filing_overdue" || !e.retrospective_filed_on) return "";
+    var filed = e.retrospective_filed_on.slice(0,10);
+    if(filed <= state.asof)
+      return " It was eventually filed on " + esc(filed) + ", " +
+        e.retrospective_lag_days + " days after period end (" +
+        e.retrospective_days_past_limit + " past the limit).";
+    var n = dnum(e.deadline.slice(0,10), state.asof);
+    return " As at " + esc(state.asof) + ", " + n +
+      (n === 1 ? " further day has" : " further days have") +
+      " passed with nothing filed.";
+  }
+
+  function fHtml(f){
+    var rows = '<dt>What</dt><dd>'+esc(f.what_changed)+overdueTail(f)+'</dd>'+
+      '<dt>Why</dt><dd class="why">'+esc(f.why_it_matters)+'</dd>';
+    if(f.counterevidence)
+      rows += '<dt>Against</dt><dd class="against">'+esc(f.counterevidence)+'</dd>';
+    rows += '<dt>Next</dt><dd>'+esc(f.investigate)+'</dd>';
+    return '<div class="f '+f.severity+'">'+
+      '<div class="fh"><span class="when">'+esc(f.knowable_on.slice(0,10))+
+      '</span><span class="kind">'+esc(KIND[f.kind]||f.kind)+'</span></div>'+
+      '<dl>'+rows+'</dl>'+evHtml(f.evidence)+'</div>';
+  }
+
+  function panelFindings(i){
+    var v = visible(i), sub = substantive(v),
+        lim = v.filter(function(f){ return EVIDENCE_KINDS[f.kind]; });
+    var h = "";
+    if(!sub.length)
+      h += '<p class="empty">No substantive findings were knowable on '+
+        esc(state.asof)+'.</p>';
+    SEVS.forEach(function(s){
+      var fs = sub.filter(function(f){ return f.severity===s; })
+                  .sort(function(a,b){
+                    return b.knowable_on.localeCompare(a.knowable_on); });
+      if(!fs.length) return;
+      h += '<div class="sevhead '+s+'">'+s+' &middot; '+fs.length+'</div>'+
+           fs.map(fHtml).join("");
+    });
+    if(lim.length)
+      h += '<div class="sevhead low">Limits of the evidence &middot; '+
+        lim.length+'</div>'+lim.map(fHtml).join("");
+    return h;
+  }
+
+  // ---------------- figures
+  function panelFigures(i){
+    var qs = i.quarters.filter(function(q){
+      return q.disseminated.slice(0,10) <= state.asof; });
+    if(!qs.length) return '<p class="empty">No machine-readable results were '+
+      'available on '+esc(state.asof)+'.</p>';
+    var maxlag = Math.max(150, Math.max.apply(null,
+      qs.map(function(q){ return q.lag_days; })));
+    var byBasis = {};
+    qs.forEach(function(q){ (byBasis[q.basis]=byBasis[q.basis]||[]).push(q); });
+    var h = '<p style="font-size:12.5px;color:var(--ink-2);margin:14px 0 0;max-width:72ch">'+
+      'Figures exactly as filed, in Rs crore, never restated and never mixed '+
+      'across basis. The lag column is the gap between the end of the '+
+      'reporting period and the moment the filing reached the exchange; the '+
+      'tick marks the SEBI LODR limit of 45 days, or 60 for an audited annual '+
+      'result.</p>';
+    Object.keys(byBasis).sort().forEach(function(basis){
+      var rows = byBasis[basis].slice().sort(function(a,b){
+        return b.end.localeCompare(a.end); });
+      h += '<div class="sevhead low">'+esc(basis)+'</div><div class="lagwrap"><table>'+
+        '<thead><tr><th>Quarter ended</th><th>Disseminated</th>'+
+        '<th>Filing lag</th><th style="text-align:right">Total income</th>'+
+        '<th style="text-align:right">PAT</th>'+
+        '<th style="text-align:right">Impairment</th><th>Audit</th></tr></thead><tbody>';
+      rows.forEach(function(q){
+        var isFY = q.end.slice(5)==="03-31", lim = isFY?60:45;
+        var pct = Math.min(100, 100*q.lag_days/maxlag);
+        var okpct = Math.min(pct, 100*lim/maxlag);
+        var bar = '<div class="bar" title="'+q.lag_days+' days, limit '+lim+'">'+
+          '<i style="width:'+okpct+'%"></i>'+
+          (q.lag_days>lim ? '<i class="over" style="left:'+okpct+
+             '%;width:'+(pct-okpct)+'%"></i>' : "")+
+          '<u style="left:'+(100*lim/maxlag)+'%"></u></div>';
+        h += '<tr><td class="n">'+esc(q.end)+'</td>'+
+          '<td class="n">'+esc(q.disseminated.slice(0,10))+'</td>'+
+          '<td>'+bar+'<span class="num" style="font-size:11px;color:var(--ink-3)"> '+
+          q.lag_days+'d</span></td>'+
+          '<td class="n">'+cr(q.income)+'</td>'+
+          '<td class="n'+(q.pat!=null&&q.pat<0?" loss":"")+'">'+cr(q.pat)+'</td>'+
+          '<td class="n">'+cr(q.impair)+'</td>'+
+          '<td style="font-size:11px;color:var(--ink-3)">'+
+          esc((q.audited||"").replace("Un-Audited","unaudited")
+              .replace("Audited","audited"))+'</td></tr>';
+      });
+      h += "</tbody></table></div>";
+    });
+    return h;
+  }
+
+  // ---------------- capital & leverage
+  function panelCapital(i){
+    var rows = (i.annual||[]).filter(function(a){
+      return a.knowable_on.slice(0,10) <= state.asof; });
+    if(!rows.length) return '<p class="empty">No annual balance sheet was '+
+      'published for this issuer on or before '+esc(state.asof)+
+      '. For a delisted issuer this is expected; the quarterly profit and '+
+      'loss account on the Reported figures tab is all that exists here.</p>';
+
+    // Only render a column the issuer actually reports. A column of identical
+    // placeholders reads as a broken table rather than as missing data, and
+    // the omission is stated underneath instead.
+    var OPT = [
+      ["equity_cr",             "Equity",              function(v){ return Math.round(v).toLocaleString("en-IN"); }],
+      ["leverage_x",            "Leverage",            function(v){ return v.toFixed(1)+"x"; }],
+      ["borrowings_assets_pct", "Borrowings / assets", function(v){ return v.toFixed(1)+"%"; }],
+      ["roa_pct",               "ROA",                 function(v){ return v.toFixed(2)+"%"; }],
+      ["gnpa_pct",              "Gross NPA",           function(v){ return v.toFixed(2)+"%"; }]
+    ];
+    var cols = OPT.filter(function(c){
+      if(c[0] === "leverage_x")
+        return rows.some(function(r){
+          return r.leverage_x != null || r.leverage_note; });
+      return rows.some(function(r){ return r[c[0]] != null; }); });
+    var dropped = OPT.filter(function(c){ return cols.indexOf(c) < 0; })
+                     .map(function(c){ return c[1]; });
+
+    var vals = rows.map(function(r){ return r.equity_assets_pct; });
+    var lo = Math.min.apply(null, vals.concat([0])),
+        hi = Math.max.apply(null, vals);
+    var span = (hi - lo) || 1;
+    var zero = 100*(0 - lo)/span;
+
+    var h = '<p style="font-size:12.5px;color:var(--ink-2);margin:14px 0 0;'+
+      'max-width:72ch">Annual accounts, each dated by the dissemination '+
+      'timestamp of the annual report that carried it \u2014 never by the '+
+      'fiscal year end, which is three to six months earlier and is the '+
+      'difference that invalidated three of five cases in the research '+
+      'behind this tool. Equity over assets is shown on its own because in '+
+      'that testing it outperformed a nine-component weighted index. Equity '+
+      'and total assets are shown beside the ratio so it can be checked '+
+      'rather than taken on trust.</p>';
+    h += '<div class="lagwrap"><table><thead><tr>'+
+      '<th>FY ended</th><th>Knowable on</th><th>Equity / assets</th>'+
+      cols.map(function(c){
+        return '<th style="text-align:right">'+esc(c[1])+'</th>'; }).join("")+
+      '<th style="text-align:right">Total assets</th></tr></thead><tbody>';
+    rows.slice().reverse().forEach(function(r){
+      var w = Math.max(2, 100*(r.equity_assets_pct - lo)/span);
+      var negv = r.equity_assets_pct < 0;
+      h += '<tr><td class="n">'+esc(r.fy_ending)+'</td>'+
+        '<td class="n">'+esc(r.knowable_on.slice(0,10))+
+        (r.knowable_estimated?' <span title="no annual report matched; '+
+          'conservative estimate" style="color:var(--med)">est</span>':"")+'</td>'+
+        '<td><div class="bar" title="'+r.equity_assets_pct+'%">'+
+        '<i class="'+(negv?"over":"")+'" style="left:'+
+        (negv?w:zero)+'%;width:'+Math.abs(w-zero)+'%"></i>'+
+        '<u style="left:'+zero+'%"></u></div>'+
+        '<span class="num'+(negv?" loss":"")+'" style="font-size:11.5px"> '+
+        r.equity_assets_pct.toFixed(1)+'%</span></td>'+
+        cols.map(function(c){
+          var v = r[c[0]];
+          var neg = typeof v === "number" && v < 0;
+          if(v == null && c[0] === "leverage_x" && r.leverage_note)
+            return '<td class="n nm" title="'+esc(r.leverage_note)+'">n/m</td>';
+          return '<td class="n'+(neg?" loss":"")+'">'+
+            (v == null ? "\u2013" : esc(c[2](v)))+'</td>'; }).join("")+
+        '<td class="n">'+Math.round(r.total_assets_cr).toLocaleString("en-IN")+
+        '</td></tr>';
+    });
+    h += '</tbody></table></div>';
+    h += '<p style="font-size:11.5px;color:var(--ink-3);margin-top:10px;'+
+      'max-width:78ch">Rs crore. Source: archived annual accounts, joined to '+
+      'NSE\u2019s annual-report index for the publication date. Rows marked '+
+      '<span style="color:var(--med)">est</span> had no report matched and '+
+      'carry a conservative date six months after the year end.';
+    if(rows.some(function(r){ return r.leverage_note; }))
+      h += '<p style="font-size:12px;color:var(--med);margin-top:8px;'+
+        'max-width:78ch"><b>Leverage is shown as n/m where equity is '+
+        'negative or zero.</b> Assets divided by a negative equity is not a '+
+        'leverage measure and it inverts: this issuer\u2019s equity fell from '+
+        '-Rs 949 crore to -Rs 19,820 crore while the ratio would have moved '+
+        'from -88.5x to -3.2x, reading as an improvement. Use total '+
+        'borrowings and the obligations falling due instead.</p>';
+    if(dropped.length)
+      h += ' <b>Not reported by this issuer, so omitted rather than shown '+
+        'empty: '+esc(dropped.join(", "))+'.</b> Asset-quality figures in '+
+        'particular are absent for nine of the fifteen issuers with annual '+
+        'data \u2014 a holding company such as a CIC books no loans of its '+
+        'own, and the archive does not carry the field for every filer. '+
+        'Treat the gap as unknown, not as zero.';
+    h += '</p>';
+    return h;
+  }
+
+  // ---------------- filed statement (XBRL, normalised)
+  var SEC_ORDER = ["Income","Expenses","Profit before tax","Tax","Result",
+                   "Comprehensive income","Capital and per share",
+                   "Debt-listed disclosures","Cash flow","Other"];
+  var TOTAL_TAGS = {Income:1,Revenue:1,Expenses:1,ProfitBeforeTax:1,
+                    TaxExpense:1,ProfitLossForPeriod:1,
+                    ProfitLossForThePeriod:1,
+                    ComprehensiveIncomeForThePeriod:1,
+                    ProfitBeforeExceptionalItemsAndTax:1,
+                    RevenueFromOperations:1};
+  var stmtPick = {};   // symbol -> chosen index, so the choice survives a redraw
+  var LEX = D.lex || [];
+  function L(i){ return LEX[i] !== undefined ? LEX[i] : ""; }
+
+  function fmtLine(kind, v){
+    if(kind === "money")
+      return (v/1e7).toLocaleString("en-IN",{minimumFractionDigits:2,
+                                             maximumFractionDigits:2});
+    return v.toLocaleString("en-IN",{minimumFractionDigits:2,
+                                     maximumFractionDigits:2});
+  }
+
+  // The generated text file for a statement. export_statements.py names them
+  // <SYM>_<start>_<end>_<std|cons>_<column>.txt, so the link can be built
+  // without shipping an index.
+  function stubFor(i, s){
+    var b = (s.basis || "").indexOf("Cons") === 0 ? "cons" : "std";
+    return (i.symbol + "_" + s.start + "_" + s.end + "_" + b + "_" +
+            s.column + ".txt").replace(/[^A-Za-z0-9_.-]/g, "");
+  }
+
+  // The same statement as monospace text, built from the data already loaded
+  // so it needs no file and no download.
+  function plainText(i, s){
+    var pad = function(x, n){ x = String(x);
+      return x.length >= n ? x.slice(0, n) : x + " ".repeat(n - x.length); };
+    // figures are right-aligned so the decimal points form a column
+    var padL = function(x, n){ x = String(x);
+      return x.length >= n ? x : " ".repeat(n - x.length) + x; };
+    var num = function(v, kind){
+      var x = kind === "money" ? v/1e7 : v;
+      return x.toLocaleString("en-IN", {minimumFractionDigits:2,
+                                        maximumFractionDigits:2}); };
+    var out = [];
+    out.push(i.name + "  (" + i.symbol + ")");
+    out.push(s.start + " to " + s.end);
+    out.push("basis " + s.basis + "   " + (s.audited||"") +
+             "   disseminated by NSE " + (s.disseminated||"?"));
+    out.push("source " + (s.url||""));
+    out.push("");
+    out.push(pad("LINE ITEM", 58) + padL("Rs CRORE", 16) + "  XBRL TAG");
+    out.push("-".repeat(120));
+    SEC_ORDER.forEach(function(sec){
+      var rows = s.lines.filter(function(l){ return L(l[1]) === sec; });
+      if(!rows.length) return;
+      out.push("");
+      out.push(sec.toUpperCase());
+      rows.forEach(function(l){
+        var kind = L(l[2]);
+        var unit = kind === "money" ? "" : "  [" + kind + "]";
+        out.push("  " + pad(L(l[0]), 56) + padL(num(l[3], kind), 16) +
+                 "  " + L(l[4]) + unit);
+      });
+    });
+    out.push("");
+    out.push("DOES THE STATEMENT ADD UP");
+    s.checks.forEach(function(c){
+      var st = c[4];
+      out.push("  [" + (st===1?"holds      ":st===0?"BREAKS     ":"not checked") +
+               "] " + L(c[0]));
+      if(st===0)
+        out.push("                stated " + (c[1]/1e7).toFixed(2) +
+                 " cr, recomputed " + (c[2]/1e7).toFixed(2) + " cr");
+      else if(st===null && c[5] && c[5].length)
+        out.push("                " + c[5].map(L).join(", ") + " not filed");
+    });
+    out.push("");
+    out.push("Rs crore except lines marked [per_share] or [ratio].");
+    return out.join("\n");
+  }
+
+  var plainOpen = {};
+
+  function panelStatement(i){
+    var ss = (i.statements||[]).filter(function(s){
+      return s.disseminated && s.disseminated <= state.asof; });
+    if(!ss.length) return '<p class="empty">No machine-readable filing had '+
+      'been disseminated by '+esc(state.asof)+'.</p>';
+    ss.sort(function(a,b){
+      return b.disseminated.localeCompare(a.disseminated) ||
+             b.end.localeCompare(a.end) || a.column.localeCompare(b.column); });
+
+    var pick = Math.min(stmtPick[i.symbol]||0, ss.length-1);
+    var s = ss[pick];
+
+    var opts = ss.map(function(x,n){
+      var span = Math.round((new Date(x.end) - new Date(x.start))/864e5);
+      var kind = span<=100 ? "quarter" : span<=190 ? "half year"
+               : span<=285 ? "nine months" : "full year";
+      return '<option value="'+n+'"'+(n===pick?" selected":"")+'>'+
+        esc(x.start+" to "+x.end)+"  \u00b7  "+esc(kind)+"  \u00b7  "+
+        esc(x.basis)+"  \u00b7  "+esc(x.audited||"")+
+        "  \u00b7  filed "+esc(x.disseminated)+'</option>'; }).join("");
+
+    var h = '<p style="font-size:12.5px;color:var(--ink-2);margin:14px 0 0;'+
+      'max-width:74ch">The filing rendered as the statement it represents, '+
+      'read straight from the XBRL instance \u2014 not re-keyed, not '+
+      'adjusted. Line order is the order in the instance, which is the order '+
+      'of the published results table. The original tag sits beside every '+
+      'line so any figure can be checked against the source.</p>';
+    h += '<div class="stmtbar"><label for="stmtsel" class="stmtmeta">'+
+      'FILING</label><select id="stmtsel">'+opts+'</select>'+
+      '<span class="stmtmeta">'+ss.length+' available</span></div>';
+
+    var stub = stubFor(i, s);
+    h += '<div class="srcbar">'+
+      '<span class="lab">Source</span>'+
+      (s.url ? '<a class="srcbtn" href="'+esc(s.url)+'" target="_blank" '+
+        'rel="noopener">Original XBRL on NSE</a>' : "")+
+      '<a class="srcbtn" href="statements/by-filing/'+esc(stub)+
+        '" target="_blank" rel="noopener">Readable text file</a>'+
+      '<a class="srcbtn" href="statements/'+esc(i.symbol)+
+        '.txt" target="_blank" rel="noopener">All '+esc(i.symbol)+
+        ' filings</a>'+
+      '<a class="srcbtn" href="statements/INDEX.txt" target="_blank" '+
+        'rel="noopener">Index of every filing</a>'+
+      '<button class="srcbtn" id="plainbtn">'+
+        (plainOpen[i.symbol] ? "Hide plain text" : "Show plain text")+'</button>'+
+      '<button class="srcbtn" id="copybtn">Copy as text</button>'+
+      '<span class="srcnote">The original XBRL opens as unformatted markup \u2014 '+
+      'that is the raw source, not a rendering fault. The text links resolve '+
+      'when this page is served alongside the <code>statements/</code> folder '+
+      '(<code>python3 -m http.server 8777 --directory credit_workbench</code>); '+
+      'on a hosted copy use <b>Show plain text</b> or <b>Copy as text</b>, '+
+      'which build the same output from the data already on this page.</span>'+
+      '</div>';
+    h += '<div class="stmtmeta" style="margin-bottom:2px">'+esc(s.file)+
+      (s.board_approved?'  \u00b7  board approved '+esc(s.board_approved):"")+
+      (s.rounding?'  \u00b7  filer states rounding in '+esc(s.rounding)+
+        ' (values below are converted from absolute rupees)':"")+
+      '</div>';
+    if(s.period_source && s.period_source !== "tagged")
+      h += '<div class="banner" style="margin:8px 0">Reporting period taken '+
+        'from the '+esc(s.period_source)+'.</div>';
+
+    h += '<div class="stmt"><table class="pl"><tbody>';
+    var cur = null;
+    SEC_ORDER.forEach(function(sec){
+      var rows = s.lines.filter(function(l){ return L(l[1])===sec; });
+      if(!rows.length) return;
+      h += '<tr class="sec"><td colspan="3">'+esc(sec)+'</td></tr>';
+      rows.forEach(function(l){
+        var tag = L(l[4]);
+        var isTot = TOTAL_TAGS[tag];
+        var neg = l[3] < 0;
+        h += '<tr'+(isTot?' class="tot"':'')+'>'+
+          '<td>'+esc(L(l[0]))+'</td>'+
+          '<td class="v'+(neg?" loss":"")+'">'+fmtLine(L(l[2]), l[3])+'</td>'+
+          '<td class="xtag" title="'+esc(tag)+'">'+esc(tag)+'</td></tr>';
+      });
+    });
+    h += '</tbody></table></div>';
+    h += '<p class="stmtmeta" style="margin-top:7px">Rs crore, except '+
+      'per-share amounts and ratios which are as filed.</p>';
+
+    // --- self-consistency
+    h += '<div class="sevhead low">Does the statement add up</div><ul class="checks">';
+    if(!s.checks.length)
+      h += '<li><span class="ck na">none</span><span>no subtotal in this '+
+        'filing could be recomputed from the lines it contains</span></li>';
+    s.checks.forEach(function(c){
+      var st = c[4];
+      var cls = st===1 ? "ok" : st===0 ? "bad" : "na";
+      var lbl = st===1 ? "holds" : st===0 ? "BREAKS" : "not checked";
+      var txt = esc(L(c[0]));
+      if(st===0)
+        txt += ' \u2014 stated '+(c[1]/1e7).toFixed(2)+' cr, recomputed '+
+          (c[2]/1e7).toFixed(2)+' cr, a difference of '+
+          (c[3]/1e7).toFixed(2)+' cr';
+      else if(st===null && c[5] && c[5].length)
+        txt += ' \u2014 '+esc(c[5].map(L).join(", "))+' was not filed, so the '+
+          'relationship cannot be tested';
+      h += '<li><span class="ck '+cls+'">'+lbl+'</span><span>'+txt+'</span></li>';
+    });
+    h += '</ul>';
+    h += '<p class="stmtmeta" style="margin-top:8px;max-width:76ch;'+
+      'font-family:var(--sans);font-size:12px;color:var(--ink-2)">'+
+      'Six relationships are tested, the ones that hold by definition of a '+
+      'profit and loss account. Across all 1,164 statement columns in this '+
+      'corpus they produce 5,767 passes, 6 unevaluated and no failures. '+
+      'Decomposition is deliberately NOT checked: total expenses against the '+
+      'lines beneath it was tried and abandoned, because the three taxonomies '+
+      'in use name those lines differently and the rule failed on 7.6% to 36% '+
+      'of filings when the filings were fine.</p>';
+    if(plainOpen[i.symbol])
+      h += '<pre class="plain">'+esc(plainText(i, s))+'</pre>';
+    return h;
+  }
+
+  // ---------------- timeline
+  var HOT = {"Credit Rating":1,"News Verification":1};
+  function panelTimeline(i){
+    var tl = i.timeline.filter(function(a){
+      return a.ts.slice(0,10) <= state.asof; })
+      .sort(function(a,b){ return b.ts.localeCompare(a.ts); }).slice(0,300);
+    if(!tl.length) return '<p class="empty">No announcements on or before '+
+      esc(state.asof)+'.</p>';
+    return '<p style="font-size:12.5px;color:var(--ink-2);margin:14px 0 0;max-width:72ch">'+
+      'Most recent first, '+tl.length+' shown. Rating actions and exchange '+
+      'clarification requests are marked.</p><ul class="tl">'+
+      tl.map(function(a){
+        return '<li'+(HOT[a.cat]?' class="hot"':"")+'>'+
+          '<span class="ts">'+esc(a.ts.slice(0,16).replace("T"," "))+'</span>'+
+          '<span class="cat">'+esc(a.cat)+'</span>'+
+          '<span class="bodytxt">'+esc(a.text)+'</span>'+
+          (a.att?' <a href="'+esc(a.att)+'" target="_blank" rel="noopener">[source]</a>':"")+
+          '</li>'; }).join("")+'</ul>';
+  }
+
+  // ---------------- brief
+  function panelBrief(i){
+    var v = visible(i), sub = substantive(v),
+        lim = v.filter(function(f){ return EVIDENCE_KINDS[f.kind]; });
+    var qs = i.quarters.filter(function(q){
+      return q.disseminated.slice(0,10) <= state.asof; });
+    var bases = {}; qs.forEach(function(q){ bases[q.basis]=1; });
+    var first = qs.length ? qs.map(function(q){return q.disseminated;})
+      .sort()[0].slice(0,10) : null;
+    var years = first ? Math.max(.25, dnum(first,state.asof)/365.25) : null;
+    var hi = sub.filter(function(f){return f.severity==="high";});
+    var h = '<div class="brief">';
+    h += '<h3>Position</h3><p>'+esc(i.name)+' is a '+esc(i.lender_type)+
+      (i.group?' in the '+esc(i.group)+' group':"")+'. As at '+
+      esc(state.asof)+' this file rests on <em>'+qs.length+
+      '</em> machine-readable result filings'+
+      (first?' from '+esc(first):"")+' and <em>'+
+      i.timeline.filter(function(a){return a.ts.slice(0,10)<=state.asof;}).length+
+      '</em> exchange announcements, on '+
+      esc(Object.keys(bases).sort().join(" and ")||"no")+' basis.'+
+      (years?' The alert rate is '+(sub.length/years).toFixed(1)+
+        ' substantive findings per year of coverage.':"")+'</p>';
+    h += '<h3>What changed</h3>';
+    if(!sub.length){
+      h += '<p>Nothing of substance was knowable on this date.</p>';
+    } else {
+      h += '<ol>'+sub.slice()
+        .sort(function(a,b){ return b.knowable_on.localeCompare(a.knowable_on); })
+        .slice(0,8).map(function(f){
+          return '<li>'+esc(f.what_changed)+' <span class="q">('+
+            esc(f.knowable_on.slice(0,10))+', '+esc(KIND[f.kind]||f.kind)+
+            ')</span></li>'; }).join("")+'</ol>';
+      if(sub.length>8) h += '<p class="q">'+(sub.length-8)+
+        ' further findings are listed on the Findings tab.</p>';
+    }
+    if(hi.length){
+      h += '<h3>Why it may matter</h3><p>'+esc(hi[0].why_it_matters)+'</p>';
+      if(hi[0].counterevidence)
+        h += '<p><em>Against this:</em> '+esc(hi[0].counterevidence)+'</p>';
+    }
+    // One question per DISTINCT line of enquiry, not one per finding. Each
+    // detector carries a fixed `investigate` text, so mapping it over the top
+    // findings printed the same sentence five times when five findings shared
+    // a kind. Identical questions are collapsed and the count of findings
+    // behind each is shown instead.
+    var qseen = {}, qlist = [];
+    sub.forEach(function(f){
+      var q = f.investigate;
+      if(!q) return;
+      if(!qseen[q]){ qseen[q] = {q:q, n:0, first:f.knowable_on,
+                                 kinds:{}}; qlist.push(qseen[q]); }
+      qseen[q].n++;
+      qseen[q].kinds[KIND[f.kind]||f.kind] = 1;
+      if(f.knowable_on < qseen[q].first) qseen[q].first = f.knowable_on;
+    });
+    qlist.sort(function(a,b){ return b.n - a.n; });
+    h += '<h3>Questions for the analyst</h3><ol>'+
+      (qlist.length ? qlist.slice(0,6).map(function(x){
+        var tag = Object.keys(x.kinds).join(", ");
+        return '<li class="q">'+esc(x.q)+
+          ' <em>('+esc(tag)+(x.n>1 ? ', '+x.n+' findings from '+
+            esc(x.first.slice(0,10)) : '')+')</em></li>'; }).join("")
+        : '<li class="q">None arising from this file on this date.</li>')+
+      '</ol>';
+    if(lim.length)
+      h += '<h3>Limits of the evidence</h3><ol>'+lim.map(function(f){
+        return '<li class="q">'+esc(f.what_changed)+'</li>'; }).join("")+'</ol>';
+    h += '<div class="caveat"><b>This brief does not conclude.</b> It cannot '+
+      'tell you whether the reported figures are accurate &mdash; every '+
+      'finding above derives from what the issuer chose to disclose, and the '+
+      'research behind this tool found a failed lender reporting the healthiest '+
+      'one-year liquidity position in its peer group while already in default '+
+      'on recalled debentures. It covers no unlisted group entity, which is '+
+      'where lending risk is often held, and it does not include rating-agency '+
+      'liquidity commentary, which may carry the same conclusion earlier.'+
+      '</div></div>';
+    return h;
+  }
+
+  // ---------------- draw
+  function draw(){
+    if(!state.sym){
+      // open on whatever the rail ranks first, so the page shows the issuer
+      // with the most to look at rather than an arbitrary one
+      var best = D.issuers.map(function(i){
+        var v = substantive(visible(i));
+        return {s:i.symbol, h:v.filter(function(f){return f.severity==="high";}).length,
+                n:v.length};
+      }).sort(function(a,b){ return (b.h-a.h)||(b.n-a.n)||a.s.localeCompare(b.s); })[0];
+      state.sym = best.s;
+    }
+    var i = iss(state.sym);
+    drawRail();
+    document.getElementById("iname").textContent = i.name;
+    var bits = [i.lender_type];
+    if(i.group) bits.push(i.group+" group");
+    bits.push(i.symbol);
+    document.getElementById("imeta").textContent = bits.join("  \u00b7  ");
+
+    var shown = i.outcome_date && i.outcome_date <= state.asof;
+    document.getElementById("ibanner").innerHTML = shown
+      ? '<div class="banner event"><b>Outcome on record:</b> '+esc(i.outcome)+
+        ' ('+esc(i.outcome_date)+'). This label is held outside the detection '+
+        'logic and is shown only because the as-of date is on or after it.</div>'
+      : (i.outcome_date
+        ? '<div class="banner">This issuer has a recorded outcome after '+
+          esc(state.asof)+'. It is withheld so the view stays point-in-time '+
+          'honest.</div>'
+        : "");
+
+    var v = visible(i), sub = substantive(v);
+    var c = {high:0,medium:0,low:0}; sub.forEach(function(f){ c[f.severity]++; });
+    var qs = i.quarters.filter(function(q){
+      return q.disseminated.slice(0,10)<=state.asof; });
+    var lastq = qs.slice().sort(function(a,b){
+      return b.disseminated.localeCompare(a.disseminated); })[0];
+    document.getElementById("icover").innerHTML = [
+      ["High findings", c.high], ["Medium", c.medium], ["Low", c.low],
+      ["Result filings readable", qs.length],
+      ["Last filing seen", lastq?lastq.disseminated.slice(0,10):"\u2013"]
+    ].map(function(p){
+      return '<div><div class="k">'+p[0]+'</div><div class="v">'+p[1]+
+        '</div></div>'; }).join("");
+
+    document.getElementById("tabs").innerHTML = TABS.map(function(t){
+      return '<button data-tab="'+t[0]+'" aria-selected="'+
+        (state.tab===t[0])+'">'+t[1]+'</button>'; }).join("");
+    Array.prototype.forEach.call(document.querySelectorAll("#tabs button"),
+      function(b){ b.onclick = function(){ state.tab=b.dataset.tab; draw(); }; });
+
+    var panelEl = document.getElementById("panel");
+    panelEl.innerHTML =
+      state.tab==="findings" ? panelFindings(i) :
+      state.tab==="capital"  ? panelCapital(i)  :
+      state.tab==="figures"  ? panelFigures(i)  :
+      state.tab==="statement"? panelStatement(i) :
+      state.tab==="timeline" ? panelTimeline(i) : panelBrief(i);
+
+    var sel = document.getElementById("stmtsel");
+    if(sel) sel.onchange = function(){
+      stmtPick[state.sym] = parseInt(sel.value, 10) || 0; draw(); };
+
+    var pb = document.getElementById("plainbtn");
+    if(pb) pb.onclick = function(){
+      plainOpen[state.sym] = !plainOpen[state.sym]; draw(); };
+
+    var cb = document.getElementById("copybtn");
+    if(cb) cb.onclick = function(){
+      var ss = (i.statements||[]).filter(function(x){
+        return x.disseminated && x.disseminated <= state.asof; });
+      ss.sort(function(a,b){
+        return b.disseminated.localeCompare(a.disseminated) ||
+               b.end.localeCompare(a.end) || a.column.localeCompare(b.column); });
+      var s = ss[Math.min(stmtPick[i.symbol]||0, ss.length-1)];
+      var txt = plainText(i, s);
+      var done = function(ok){
+        cb.textContent = ok ? "Copied" : "Press Ctrl+C";
+        setTimeout(function(){ cb.textContent = "Copy as text"; }, 1800); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){ done(true); },
+                                                function(){ done(false); });
+      } else {
+        // clipboard API is unavailable in some sandboxed frames; fall back to
+        // selecting the text so the reader can copy it themselves
+        plainOpen[state.sym] = true; draw();
+        var pre = document.querySelector("pre.plain");
+        if(pre){ var r = document.createRange(); r.selectNodeContents(pre);
+          var sl = getSelection(); sl.removeAllRanges(); sl.addRange(r); }
+        done(false);
+      }
+    };
+  }
+
+  // ---------------- replay controls
+  var dayMin = new Date(MIN), span = dnum(MIN, MAX);
+  var asofEl = document.getElementById("asof"),
+      rangeEl = document.getElementById("asofrange");
+  asofEl.min = MIN; asofEl.max = MAX; asofEl.value = state.asof;
+  rangeEl.max = String(span); rangeEl.value = String(span);
+  function setAsof(d, syncRange){
+    state.asof = d; asofEl.value = d;
+    if(syncRange) rangeEl.value = String(dnum(MIN, d));
+    draw();
+  }
+  asofEl.onchange = function(){
+    if(asofEl.value) setAsof(asofEl.value, true); };
+  rangeEl.oninput = function(){
+    var d = new Date(dayMin.getTime() + rangeEl.value*864e5);
+    setAsof(d.toISOString().slice(0,10), false);
+  };
+
+  // presets are the moments that make the replay worth having
+  var PRESETS = [
+    ["Today", MAX],
+    ["31 May 2019", "2019-05-31"],
+    ["31 Aug 2019", "2019-08-31"],
+    ["30 Jun 2021", "2021-06-30"]
+  ].filter(function(p){ return p[1]>=MIN && p[1]<=MAX; });
+  document.getElementById("presets").innerHTML = PRESETS.map(function(p){
+    return '<button data-d="'+p[1]+'">'+p[0]+'</button>'; }).join("");
+  Array.prototype.forEach.call(document.querySelectorAll("#presets button"),
+    function(b){ b.onclick = function(){ setAsof(b.dataset.d, true); }; });
+
+  document.getElementById("masthead-sub").textContent =
+    D.issuers.length + " issuers \u00b7 filings to " + MAX +
+    " \u00b7 built " + (D.generated||"").slice(0,10);
+
+  // theme
+  var tb = document.getElementById("themebtn");
+  tb.onclick = function(){
+    var cur = document.documentElement.getAttribute("data-theme");
+    var want = cur === "dark" ? "light" : cur === "light" ? "dark"
+      : (matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", want);
+    try{ localStorage.setItem("wb-theme", want); }catch(e){}
+  };
+  try{
+    var saved = localStorage.getItem("wb-theme");
+    if(saved) document.documentElement.setAttribute("data-theme", saved);
+  }catch(e){}
+
+  draw();
+})();
+</script>

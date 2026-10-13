@@ -1,0 +1,220 @@
+[
+ {
+  "symbol": "SREINFRA",
+  "name": "SREI Infrastructure Finance",
+  "status": "failed 2021-10",
+  "reports": 10,
+  "parsed": true,
+  "detail": {
+   "year": 2020,
+   "basis": "standalone",
+   "as_at": "31st March, 2020",
+   "rows": {
+    "Deposits": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Advances": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Investments": [
+     0.0,
+     1.0,
+     1425.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     5496.0,
+     0.0,
+     34956.0,
+     0.0,
+     313424.0,
+     355301.0
+    ],
+    "Borrowings": [
+     0.0,
+     2.0,
+     3.0,
+     2990.0,
+     0.0,
+     85.0,
+     24753.0,
+     8436.0,
+     7517.0,
+     4645.0,
+     0.0,
+     0.0,
+     0.0,
+     48426.0
+    ],
+    "Foreign Currency Assets": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Foreign Currency Liabilities": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_rows": 6
+  }
+ },
+ {
+  "symbol": "RELCAPITAL",
+  "name": "Reliance Capital",
+  "status": "failed 2021-11",
+  "reports": 8,
+  "parsed": true,
+  "detail": {
+   "year": 2018,
+   "basis": "standalone",
+   "as_at": null,
+   "rows": {
+    "Borrowings": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     5.0,
+     138.0,
+     238.0,
+     234.0,
+     615.0
+    ],
+    "Investments": [
+     1.0,
+     443.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     78.0,
+     0.0,
+     19.0,
+     587.0,
+     21.0,
+     108.0
+    ]
+   },
+   "n_rows": 2
+  }
+ },
+ {
+  "symbol": "RHFL",
+  "name": "Reliance Home Finance",
+  "status": "failed 2019-09",
+  "reports": 3,
+  "parsed": true,
+  "detail": {
+   "year": 2021,
+   "basis": "standalone",
+   "as_at": null,
+   "rows": {
+    "Borrowings": [
+     3051.25,
+     44.0,
+     0.0,
+     220.0,
+     0.0,
+     23.0,
+     145.45,
+     908.5,
+     775.0,
+     2271.38,
+     7438.58
+    ],
+    "Investments": [
+     0.0,
+     0.0,
+     0.04,
+     0.04,
+     997.99,
+     0.12,
+     0.26,
+     1.15,
+     1.34,
+     6.5,
+     1007.44
+    ]
+   },
+   "n_rows": 2
+  }
+ },
+ {
+  "symbol": "IBULHSGFIN",
+  "name": "Indiabulls Housing Finance",
+  "status": "survived, severe stress 2019",
+  "reports": 0,
+  "parsed": false
+ },
+ {
+  "symbol": "BAJFINANCE",
+  "name": "Bajaj Finance",
+  "status": "survivor",
+  "reports": 2,
+  "parsed": false,
+  "detail": null
+ },
+ {
+  "symbol": "MUTHOOTFIN",
+  "name": "Muthoot Finance",
+  "status": "survivor",
+  "reports": 2,
+  "parsed": false,
+  "detail": null
+ },
+ {
+  "symbol": "LICHSGFIN",
+  "name": "LIC Housing Finance",
+  "status": "survivor",
+  "reports": 2,
+  "parsed": false,
+  "detail": null
+ },
+ {
+  "symbol": "CHOLAFIN",
+  "name": "Cholamandalam Investment",
+  "status": "survivor",
+  "reports": 3,
+  "parsed": false,
+  "detail": null
+ }
+]

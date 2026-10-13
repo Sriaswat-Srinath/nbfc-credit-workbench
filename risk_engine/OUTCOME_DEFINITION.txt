@@ -1,0 +1,108 @@
+================================================================================
+PRE-REGISTRATION: OUTCOME DEFINITION AND BASELINES
+ALM / refinancing-risk screen for Indian NBFCs
+================================================================================
+Written:  2026-10-12
+Status:   Fixed BEFORE the pre-event extraction was inspected. The point of
+          writing this first is that it cannot be edited to fit whatever the
+          numbers turn out to say.
+
+--------------------------------------------------------------------------------
+1. PRIMARY OUTCOME
+--------------------------------------------------------------------------------
+A publicly documented failure to pay a debt obligation on its due date,
+occurring within 12 months of the OBSERVATION DATE.
+
+Observation date = the publication timestamp of the annual report, not the
+fiscal year-end. These differ by 3-6 months and the difference is the whole
+question.
+
+Qualifying evidence, in order of preference:
+  (a) exchange disclosure of a missed interest or principal payment
+  (b) rating action to D / RD with default cited
+  (c) debenture-trustee notice of default
+  (d) regulator-documented payment failure
+
+Not qualifying as PRIMARY: share-price decline, auditor emphasis of matter,
+promoter pledge invocation, management change, or press speculation.
+
+--------------------------------------------------------------------------------
+2. SECONDARY OUTCOMES - LABELLED SEPARATELY, NEVER POOLED
+--------------------------------------------------------------------------------
+S1  Rating downgrade of two or more notches within 12 months
+S2  Rating watch / outlook to negative with liquidity cited
+S3  Documented refinancing difficulty: failed issue, CP rollover failure,
+    or disclosed reliance on emergency credit lines
+S4  Regulatory intervention: board superseded, moratorium, business
+    restriction
+S5  Formal resolution: IBC / NCLT admission or RBI-directed resolution
+
+Week one pooled these. That was wrong and is the reason CLAIM 4 in the
+feasibility note was marked "conflates event types". S4 and S5 can arrive
+years after the economics have already failed, which inflates apparent lead
+time; S1 and S2 are a rating agency's opinion, so predicting them is partly
+predicting an analyst, not an institution.
+
+--------------------------------------------------------------------------------
+3. EVENT DATES USED, AND WHICH OUTCOME CLASS EACH IS
+--------------------------------------------------------------------------------
+  DHFL              2019-06-04   PRIMARY   missed NCD interest payment
+  IL&FS group       2018-09-04   PRIMARY   CP default (via ITNL filings)
+  Reliance Home Fin 2019-09-01   PRIMARY   payment default, rating D
+  SREI Infra        2021-10-04   S4        RBI superseded board
+  Reliance Capital  2021-11-29   S4        RBI superseded board
+
+Only three of the five are PRIMARY events. SREI and Reliance Capital enter
+the analysis as S4 and must be reported separately. The headline count is
+therefore n=3, not n=5.
+
+--------------------------------------------------------------------------------
+4. CENSORING
+--------------------------------------------------------------------------------
+A survivor observation counts as a clean negative only if the institution
+survived 12 months past the observation date with no PRIMARY event. An
+institution still trading at the end of the sample with less than 12 months
+elapsed is censored and dropped, not counted as a negative.
+
+--------------------------------------------------------------------------------
+5. BASELINES, FIXED NOW
+--------------------------------------------------------------------------------
+The ALM measure must beat ALL of these on incremental information, not merely
+be associated with distress:
+
+  B1  equity / total assets                (beat the FDI on US held-out data)
+  B2  the existing Fundamental Distress Index
+  B3  total leverage (assets / equity)
+  B4  share of borrowings maturing <= 1 year, from the balance sheet alone
+      -- NOT from the maturity ladder. This is the baseline that matters:
+         if a single line already available in the accounts does the job,
+         parsing the ten-bucket table adds nothing.
+  B5  rating level at the observation date, where recoverable
+
+ALM measure as specified: cumulative inflow minus cumulative outflow through
+the 1-year bucket, divided by total assets, computed within basis
+(contractual compared only with contractual).
+
+--------------------------------------------------------------------------------
+6. STOP CONDITION
+--------------------------------------------------------------------------------
+Do not expand to a 100-institution panel unless BOTH hold:
+  (i)  a pre-event observation with a verified publication timestamp earlier
+       than the event is recoverable for at least 3 PRIMARY cases, and
+  (ii) matched contemporaneous survivor observations are recoverable on the
+       same bucket schema and the same basis.
+
+If the comparison can only be made across different bases or different bucket
+schemas, the measure is not yet computable and the panel should not be built.
+
+--------------------------------------------------------------------------------
+7. WHAT WOULD FALSIFY THE HYPOTHESIS
+--------------------------------------------------------------------------------
+- B4 separates failures from survivors as well as the ladder-based gap.
+- Failed firms disclosed the BEHAVIOURAL basis pre-event while survivors
+  disclosed contractual, making the gap a reporting-choice artefact rather
+  than a risk measure.
+- The pre-event gap for failures sits inside the survivor range.
+- Pre-event tables are standalone shells (the SREI problem) for most failures,
+  so the measured entity is not the entity that failed.
+================================================================================

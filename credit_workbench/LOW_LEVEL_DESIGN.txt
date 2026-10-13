@@ -1,0 +1,834 @@
+================================================================================
+NBFC CREDIT WORKBENCH - LOW LEVEL DESIGN
+================================================================================
+Version:  prototype, 2026-10-13
+Scope:    implementation detail only. For the product rationale and the
+          analyst workflow see ARCHITECTURE.txt Part One, and PRODUCT.txt.
+
+Totals:   4,253 lines (3,191 Python across 11 modules, 1,062 HTML/CSS/JS)
+          661 XBRL instances, 25,919 announcements
+          2,450 announcement attachments fetched, 2,120 classified
+          1,164 statement columns normalized
+          253 findings, 6.75 MB exported
+
+
+================================================================================
+1. MODULE GRAPH AND CALL ORDER
+================================================================================
+
+  universe.py          pure data, no imports from the package
+  announcements.py     loads + cleans the announcement stream
+      |
+      +--> ingest.py        writes cache/, imports ISSUERS
+      +--> attachments.py   fetches announcement PDFs, classifies them
+      +--> facts.py         cache/<SYM>/xbrl/*.xml + results.json
+      +--> annual.py        ../risk_engine/panel.csv + annual_reports.json
+      +--> normalize.py     one XBRL instance -> a readable statement
+               |
+               v
+          detect.py         imports facts, annual, attachments, announcements
+               |
+               +--> brief.py           findings_for, quarter_series
+               +--> build.py           + annual_series, normalize
+               +--> export_statements.py  normalize -> statements/*.txt
+                        |
+                        v
+                   workbench_data.json --(wrapped)--> workbench_data.js
+                                                            |
+                                                       workbench.html
+
+  check_pit.py  imports findings_for + ISSUERS. Test only; nothing depends
+                on it, and it must pass before any publish.
+
+  WHY announcements.py EXISTS. detect needs the announcement stream, and so
+  does attachments - which detect in turn imports. Leaving the loader in
+  detect produced a circular import the moment the payment detector was added,
+  so clean() and load_announcements() were lifted into their own module.
+
+  No cycles. Every module is runnable standalone with `python3 <module>.py`
+  and prints a self-check.
+
+  Cold build order:
+      ingest.py        ~25 min, 661 XBRL + 25,919 announcements
+      attachments.py   ~40 min, 2,450 PDFs behind payment announcements
+      annual.py        -> annual.json
+      build.py         -> workbench_data.json
+      check_pit.py     must report 0 violations
+      export_statements.py  optional, -> statements/*.txt
+
+  RECLASSIFY=1 python3 attachments.py re-runs the classifier over the cached
+  PDFs without refetching. Needed whenever the classification rules change;
+  the background fetch that populated the cache ran with an earlier ruleset
+  and its verdicts were stale until this was re-run.
+  (facts/detect/brief are libraries called by build; running them directly
+   only prints diagnostics.)
+
+
+================================================================================
+2. universe.py
+================================================================================
+ISSUERS : list of 7-tuples
+    (symbol, name, lender_type, group, outcome, outcome_date, outcome_class)
+
+    lender_type    "HFC" | "NBFC" | "CIC"
+    outcome_class  "default" | "intervention" | "stress" | "none"
+    outcome_date   ISO date or None
+
+BY_SYMBOL : dict symbol -> dict of the same fields.
+
+RELATED : list of (parent_symbol, related_symbol_or_None, note)
+    Hand-curated. Two entries: Reliance Capital/RHFL, and SREI Infrastructure
+    with None because SREI Equipment Finance was never listed.
+
+CONTRACT: the outcome* fields are read ONLY by build.py (for export) and by
+the UI banner. detect.py never imports them. This is what makes the findings
+blind to who failed, and it is the property check_pit.py cannot verify - it
+is maintained by not writing the import.
+
+
+================================================================================
+3. ingest.py
+================================================================================
+Constants
+    CACHE      <pkg>/cache
+    UA         desktop Chrome user-agent string (required; NSE 403s without)
+    BASE       https://www.nseindia.com/api
+    MAX_XBRL   90   per issuer
+
+curl(url, timeout=60) -> bytes
+    subprocess.run(["curl","-sL","--max-time",str(timeout-10),"-A",UA,
+                    "-H","Referer: https://www.nseindia.com/", url])
+    3 attempts, 3 s apart, returns b"" on exhaustion.
+    WHY curl AND NOT urllib: urllib hangs indefinitely on these endpoints;
+    curl returns immediately. Diagnosed during the FDIC work and repeated here.
+
+cached_json(path, url, force=False) -> parsed | None
+    Returns the parsed cache if the file exists and is >3 bytes. Otherwise
+    fetches, parses to validate, writes the RAW BYTES (not the re-serialised
+    object), returns parsed. Writing raw preserves the evidence exactly.
+
+main(only=None)
+    For each issuer:
+      1. GET /corporate-announcements?index=equities&symbol=<SYM>
+         -> cache/<SYM>/announcements.json
+      2. GET /corporates-financial-results?index=equities&symbol=<SYM>
+             &period=Quarterly
+         -> cache/<SYM>/results.json
+      3. For each of the first MAX_XBRL result rows whose `xbrl` field ends
+         .xml: fetch, verify it starts b"<?xml", write to
+         cache/<SYM>/xbrl/<basename>. Skip if already >500 bytes on disk.
+         0.3 s sleep between fetches.
+    Writes cache/ingest_summary.json.
+
+RESUMABILITY: every step is skip-if-present, so a killed run costs only the
+in-flight file. The ingest was interrupted three times during development and
+resumed cleanly each time.
+
+
+================================================================================
+4. facts.py  -  XBRL to fact table
+================================================================================
+FACT regex
+    <in-bse-fin:(\w+)\s+contextRef="(One|Two|...|Six)([A-Za-z0-9]*)"[^>]*>
+    ([^<]*)</in-bse-fin:\1>
+
+    Flat regex rather than an XML tree: the instances have no nesting that
+    matters and the tree costs parse time for nothing.
+
+    Group 2 is the COLUMN prefix - one instance carries several columns of the
+    published results table. Group 3 is the suffix: "D" (duration), "I"
+    (instant), or dimensional junk, which is discarded.
+
+METRICS : dict of 23 XBRL tag -> analyst-facing label
+    InterestEarned -> "Interest income", ProfitLossForPeriod -> "Profit after
+    tax", ImpairmentOnFinancialInstruments -> "Impairment / credit cost", etc.
+
+META : dict of 9 tag -> short key
+    NatureOfReportStandaloneConsolidated      -> basis
+    WhetherResultsAreAuditedOrUnaudited       -> audited
+    DateOfBoardMeetingWhenFinancialResults...  -> board_approved
+    Declaration...AuditQualification          -> audit_opinion
+    LevelOfRoundingUsedInFinancialStatements  -> rounding
+
+parse_instance(path) -> list of column records
+    {column, period_start, period_end, metrics: {label: float}, meta: {}}
+
+    *** THE CRITICAL DETAIL ***
+    The xbrli:context period dates are WRONG and must not be used. In a Bajaj
+    Q3 instance every context - including the nine-month column - is stamped
+    2024-10-01 to 2024-12-31. The true period comes from the tagged facts
+    DateOfStartOfReportingPeriod / DateOfEndOfReportingPeriod belonging to
+    each column prefix. Reading the context dates silently merges quarterly
+    and cumulative figures, which would corrupt every detector downstream.
+
+    Columns with no metrics are dropped. A column with no period_end is
+    dropped.
+
+_ts(s) -> datetime | None
+    Accepts "%d-%b-%Y %H:%M:%S" and "%d-%b-%Y %H:%M".
+
+load_symbol(sym) -> list of filing records, oldest first by dissemination
+    {symbol, file, xbrl_url, disseminated, filing_date_raw, basis, audited,
+     board_approved, audit_opinion, rounding, relating_to,
+     index_from, index_to, columns[]}
+
+    basis resolution: the results-index `consolidated` field OR the XBRL
+    NatureOfReport tag; either saying Consolidated wins. They disagree
+    occasionally and the index is not authoritative on its own.
+
+UNITS: values are ABSOLUTE RUPEES, not the scale named in `rounding`. Bajaj
+tags "Crores" and files 132773300000.00 for Rs 13,277 crore. `rounding` is a
+presentation hint for the published PDF and is NOT a multiplier. A minority
+of filers break this, which detect.py handles (section 6.3).
+
+
+================================================================================
+5. annual.py  -  dated annual balance sheet
+================================================================================
+PANEL   ../risk_engine/panel.csv   (6,224 rows, institution-years, 2006-2023)
+ALIAS   {"SAMMAANCAP": "IBULHSGFIN"}   panel.csv predates the rename
+
+pub_ts(fname, broadcast) -> datetime | None
+    Prefers the API's broadcast_dttm. When that is "-" (common), falls back to
+    the 14-digit timestamp embedded in the FILENAME:
+        AR_15799_DHFL_2018_2019_05092019164529_... -> 05-09-2019 16:45:29
+    This fallback is what made publication dates recoverable for the delisted
+    issuers at all.
+
+report_dates(sym) -> {fiscal_from_year: (iso_timestamp, source_url)}
+    Caches cache/<SYM>/annual_reports.json.
+
+series(sym) -> list of annual records, oldest first
+    Joins panel.csv rows (nse == ALIAS.get(sym, sym)) to report_dates.
+
+    KEY MAPPING: the annual report for the FY ENDING 2018 is indexed by NSE
+    under fromYr 2017. So the lookup key is str(int(fy) - 1).
+
+    Derived fields:
+        equity_cr             = equity_capital + reserves
+        equity_assets_pct     = 100 * equity_cr / total_assets
+        leverage_x            = total_assets / equity_cr
+        borrowings_assets_pct = 100 * borrowings / total_assets
+        roa_pct               = 100 * net_profit / total_assets
+        gnpa_pct              = gnpa_last  (verbatim)
+
+    Dating:
+        matched   -> knowable_on = report publication timestamp,
+                     knowable_estimated = False, source_report = url
+        unmatched -> knowable_on = "<fy>-09-30T00:00:00",
+                     knowable_estimated = True, source_report = None
+
+    NEVER the fiscal year end. 19 of 176 observations are estimated and the
+    flag reaches the UI, which prints "est" beside the date.
+
+    Rows with no total_assets or no equity components are SKIPPED, not
+    defaulted to zero.
+
+COVERAGE: 15 of 16 issuers. DHFL is absent from panel.csv entirely - delisted
+before the archive snapshot - so it has no Capital & leverage view.
+gnpa_pct is populated for only 6 of the 15 (629 of 6,223 rows panel-wide).
+
+
+================================================================================
+5B. announcements.py  -  the exchange disclosure stream
+================================================================================
+load_announcements(sym) -> list, oldest first
+    {ts, category, text, attachment, disseminated}
+    `ts` from an_dt; rows without a parseable timestamp are dropped.
+
+clean(s)
+    NSE's own feed carries U+FFFD where apostrophes were lost upstream. A run
+    between two word characters becomes U+2019; anything else is dropped.
+    Presentation only - the cached bytes are never altered.
+
+Exists as a separate module solely to break the detect <-> attachments import
+cycle. No logic beyond loading and cleaning.
+
+
+================================================================================
+5C. attachments.py  -  reading the document, not the title
+================================================================================
+THE PROBLEM IT SOLVES
+    Between 15 Oct and 30 Dec 2019 Reliance Capital filed 23 announcements
+    under one identical title - "Disclosure regarding payment of interest /
+    principal on Non-Convertible Debentures". The detector matched distress
+    language against the announcement SUMMARY and classified all 23 as
+    timeline-only. Inside the attachments: "the debt servicing of the Company
+    ... will be delayed."
+
+    Corpus-wide there are 2,168 such announcements; the summary text promotes
+    14. This is the only detector input that comes from a document rather than
+    a tagged field.
+
+PAYDISC      title filter deciding which attachments are worth fetching.
+             Deliberately broad - a false positive costs one fetch.
+
+CLASSIFICATION, in order. First match wins; negative before positive, so a
+letter that says "we did not pay X, having paid Y" classifies as a failure.
+
+  default_form  DEFAULT_FORM matches SEBI circular CIR/CFD/CMD/93/2017's
+                numbered template - "Date of default", "Current default
+                amount", "Gross principal amount on which the default above
+                has occurred". A company files this form ONLY when there is a
+                default to report, so recognising the FORM beats any phrase.
+                DHFL's filing of 8 June 2019 never writes a sentence saying it
+                missed a payment; it fills in the template, and keyword
+                matching alone scored it "unclear".
+  not_paid      has not been paid / unable to pay / failed to pay / defaulted
+  delayed       will be delayed / delay in servicing / beyond the due date
+  paid          duly paid / made timely payment / paid on due date
+  unclear       a real answer, not a failure. Reg 57(2) and 57(5) filings are
+                trustee compliance undertakings and quarterly NCD summaries;
+                they genuinely state no payment outcome.
+
+ASSERTION GUARDS - asserted(flat, m)
+    A phrase can appear without asserting anything. Three false positives on
+    issuers that never missed a payment forced these:
+
+      IIFL 2010       "no grounds on which the Company could be found UNABLE
+                      TO PAY its debts" - a solvency declaration in a buyback
+                      document, read as insolvency.
+      Manappuram 2018 "Details of any letter or comments regarding payment/
+                      NON-PAYMENT OF INTEREST" - a form-field label.
+                      Also item 3 of the debenture trustee's numbered
+                      certificate, usually answered "Nil".
+      Sammaan 2026    "DELAY IN PAYMENT" as a column heading.
+
+    NEGATED_BEFORE  negation within the preceding 90 characters
+    LABEL_LIKE      "payment/non-payment", "details of any", "(if any)",
+                    "for a period of more than three months", ...
+    NUMBERED_ITEM   a list marker in the 8 characters before the match
+
+    Reliance Capital's 154 true positives survived all three unchanged, which
+    is the test that matters: a guard that kills false alarms by also killing
+    real ones is worthless.
+
+ZIP ATTACHMENTS
+    73 of DHFL's 214 attachments are ZIP archives served under a PDF-looking
+    URL, which pdftotext read as zero characters without complaining. The
+    archive is opened and its largest PDF used. Same trap as the annual
+    reports.
+
+READABILITY
+    96 of 471 early attachments yield under 200 characters - scanned images
+    with no text layer. SREI Infrastructure is 51 of 57, so its "all unclear"
+    is unreadability, not neutrality. check_coverage reports this; silence
+    from a document nobody can read is not evidence of calm.
+
+OUTPUT   cache/<SYM>/payment_disclosures.json
+         {ts, url, file, status, phrase, context, isins, chars, title}
+
+
+================================================================================
+6. detect.py  -  the finding engine
+================================================================================
+
+6.1 CONSTANTS (all visible at module top, deliberately not hidden in a model)
+    LIMIT_Q, LIMIT_FY = 45, 60      SEBI LODR Reg 33
+    RELAXED = {"2020-03-31": 122,   SEBI COVID circulars 19 Mar / 24 Jun 2020
+               "2020-06-30": 77}
+    MATERIAL_REL = 0.25             25% relative move
+    ROUND_TOL    = 0.01             1% additivity tolerance
+    MIN_DIFF     = 5e7              Rs 5 crore absolute floor
+    MIN_LEVEL    = 5e8              Rs 50 crore level floor
+
+    Both floors are required. A purely relative test reported a Rs 0.3 crore
+    "restatement" three times in the first build.
+
+6.2 THE FINDING RECORD
+    F(sym, kind, sev, knowable, what, why, evidence, investigate,
+      counter=None, metric=None, value=None) -> dict with keys:
+
+      symbol kind severity knowable_on what_changed why_it_matters
+      evidence investigate counterevidence metric value
+
+    severity in {"high","medium","low"};  SEV_RANK maps to 0/1/2.
+    knowable_on is the axis everything turns on - see section 8.
+
+    EVIDENCE KEY CONVENTION
+      plain keys           facts available at knowable_on
+      retrospective_*      facts that arrived later; rendered by the UI only
+                           once the as-of date passes them, and exempted by
+                           check_pit.py
+
+6.3 scale_anomalies(filings) -> (set of (file, column), overall_median)
+    Builds pts = [(disseminated, file, column, abs(Total income))] for QUARTER
+    columns only (span <= 100 days).
+    For each point i: near = pts[max(0,i-6) : i]            TRAILING ONLY
+                      requires len(near) >= 4
+                      ratio = v / median(near)
+                      flag if any(|ratio/fac - 1| < 0.45) for
+                          fac in (1e-7,1e-5,1e-2,1e2,1e5,1e7)
+
+    Three corrections were needed to get here, each from a false positive:
+      (i)   a GLOBAL median called 17 Reliance Capital filings mis-tagged when
+            the company had genuinely collapsed to shell scale;
+      (ii)  pooling year-to-date columns inflated the median and let a LIC
+            Housing filing a hundred times too small pass;
+      (iii) a forward-looking window decided usability from later filings -
+            a look-ahead leak, fixed to trailing-only.
+
+    Flagged columns are EXCLUDED from every numeric detector and reported as
+    unit_anomaly. Never rescaled - a guessed multiplier is imputation.
+
+6.4 quarter_series(filings, basis, exclude=None) -> list, oldest first
+    Deduplicates by (period_start, period_end), KEEPING THE EARLIEST
+    dissemination, because that is when the figure became knowable. The later
+    filing of the same period is what the additivity check compares against.
+    span_kind by day count: <=100 "Q", <=190 "H", <=285 "9M", else "FY".
+
+6.5 THE DETECTORS
+
+  check_filing_timeliness(sym, filings, basis, today, exclude)
+      -> filing_overdue
+      limit = RELAXED.get(period_end, LIMIT_FY if period ends 03-31 else LIMIT_Q)
+      fires when lag > limit
+      knowable_on = period_end + limit days   (the DEADLINE, not the filing)
+      severity: over >= 30 high, >= 10 medium, else low
+      trailing median of the last 6 lags included as context when >= 3 exist
+
+  check_additivity(sym, filings, basis, exclude) -> additivity_break
+      For each non-Q column, walk the quarters inside it by chaining
+      start == previous end + 1 day. Skip if any quarter is missing.
+      metrics tested: Total income, Profit before tax, Profit after tax
+      fires when |ytd - sum| > max(|ytd| * ROUND_TOL, MIN_DIFF)
+                 and |ytd| >= MIN_LEVEL
+      severity high if |diff| > 5% of ytd else medium
+
+  check_scale(sym, filings) -> unit_anomaly          (see 6.3)
+
+  check_basis_availability(sym, filings) -> basis_withdrawn | basis_unavailable
+      basis_withdrawn   consolidated present in year N-1, absent in year N.
+                        Correct, but it NEVER FIRES: across all sixteen
+                        issuers nobody withdraws consolidated reporting once
+                        they start. The pattern is always ".CCCCC". Kept
+                        because a 16-issuer corpus is not evidence that it
+                        cannot happen.
+      basis_unavailable consolidated accounts NEVER filed. This is the case
+                        that occurs and matters more - Reliance Home Finance
+                        is standalone-only from 2018 to 2025, which is the
+                        SREI problem exactly: a subsidiary inside a lending
+                        group whose own accounts need not describe the
+                        risk-carrying business.
+                        Also fires on Can Fin Homes, a healthy survivor, which
+                        genuinely has no subsidiaries - so standalone IS the
+                        group. Medium severity and an explicit
+                        counterexplanation, because it is a statement about
+                        coverage, not an accusation.
+
+  check_audit_flags(sym, filings) -> audit_opinion
+      audit_opinion field non-empty, not "not applicable"/"na"/"-", and not
+      containing "unmodified"/"unqualified".
+
+  check_earnings(sym, filings, basis, exclude) -> deterioration   (two branches)
+      floor_for(i) = max(MIN_DIFF, 0.02 * trailing 4-quarter Total income)
+          A Rs 5 crore move matters for Repco and is noise for Bajaj.
+
+      (a) profit REVERSAL only: v < 0 <= median(last 4) and
+          |v - base| >= floor_for(i).  Severity high.
+          A decline in profit is NOT reported - the first build produced 13
+          "deteriorations" for Bajaj Finance, which grew throughout.
+
+      (b) credit cost YEAR ON YEAR: compare quarter ending YYYY-MM-DD with
+          (YYYY-1)-MM-DD. Fires on >= +50% and (v - pv) >= floor_for(i).
+          Year-on-year rather than trailing median because NBFC provisioning
+          is strongly seasonal and a trailing comparison mostly detects Q4.
+          Severity high at >= 150%, else medium.
+
+  check_capital(sym) -> capital_erosion
+      Consecutive annual_series pairs. Fires when equity_assets_pct turns
+      negative, or falls >= 25% relative.
+      knowable_on = the annual report's publication timestamp.
+      Featured alone because equity/assets beat the nine-component index on
+      held-out data in the research phase.
+
+      LEVERAGE IS WITHHELD WHERE EQUITY <= 0. assets/equity is not a leverage
+      measure when equity is negative - it inverts. Reliance Capital's equity
+      fell from -Rs 949 crore (FY2019) to -Rs 19,820 crore (FY2022) while the
+      printed ratio moved from -88.5x to -3.2x, reading as a twenty-fold
+      improvement while the balance sheet was destroyed. annual.series sets
+      leverage_x to None and records leverage_note; the UI renders "n/m" with
+      the reason and shows Equity beside Total assets so equity/assets can be
+      checked rather than taken on trust. 10 of 176 annual rows are affected.
+
+  check_announcements(sym, anns)
+      -> rating_action | exchange_clarification | price_flag | disclosure_burst
+      WATCH = {"Credit Rating", "News Verification", "Price movement"}
+      An announcement becomes a FINDING only if DISTRESS_RE matches its text:
+          default|downgrad\w*|rating watch|credit watch|negative outlook|
+          withdrawn|suspend\w*|non-payment|missed payment|delay in payment|
+          D rating|moratorium|resolution plan|insolvency|NCLT|fraud|forensic|
+          qualified opinion|going concern|auditor resign...
+      Without this gate the first build emitted 133 findings for DHFL, one per
+      routine rating announcement. The matched phrase is stored as
+      evidence.promoted_because_text_matched so the promotion is auditable.
+
+      disclosure_burst: >= 4 matched items within 30 days AND >= 2 distinct
+      categories. DATED AT THE LAST ITEM in the window, not the first - the
+      window scans forward, so stamping it with the first item made the
+      finding visible before the evidence existed.
+
+  check_payments(sym) -> payment_disclosure
+      Reads cache/<SYM>/payment_disclosures.json (section 5C).
+      Consecutive adverse disclosures within 45 days are collapsed into a RUN
+      - a company in difficulty files one per ISIN, often several a week, and
+      one finding per letter would bury everything else.
+
+      TWO POINT-IN-TIME ERRORS, both caught by check_pit:
+        - the finding used the run's WORST status, dating a "did not pay" to a
+          day whose letter said "will be delayed";
+        - it cited the run's total length, naming 154 filings that had not
+          happened yet.
+      The finding now describes only the first letter, in its own words.
+      Everything about how the run continued lives under retrospective_.
+
+      ESCALATION is its own finding, dated when it happened: Reliance Capital
+      said on 2019-10-11 that payment would be delayed, and on 2020-12-09 that
+      it was not made.
+
+      Corpus result: 9 findings on 3 issuers, all of which failed. Zero on any
+      survivor. Earliest lead times - Reliance Capital 25.6 months before the
+      RBI intervention, RHFL 3.9 months before its default. For DHFL the
+      channel is CONFIRMATORY, not predictive: its SEBI default form is dated
+      4 days AFTER the event, and its advance signal remains the missed filing
+      deadline. Different issuers fail through different channels, which is
+      the argument for a suite rather than one trigger.
+
+  check_coverage(sym, filings, anns, today) -> coverage_gap | stale_evidence
+      Expected quarter ends generated from (3,31),(6,30),(9,30),(12,31)
+      between the first and last observed. Missing ones reported.
+      stale_evidence when today - last dissemination > 150 days.
+      Both are statements about the EVIDENCE and are stamped `today`, so the
+      UI lists them under their own heading and check_pit.py exempts them.
+
+6.6 clean(s)
+    NSE's own feed contains U+FFFD where apostrophes were lost upstream.
+    A run between two word characters becomes U+2019; anything else is
+    dropped. Presentation only - cached bytes are never altered.
+
+6.7 DEDUPLICATION  (findings_for)
+    signature = (kind, knowable_on[:10], _strip_basis(what_changed)[:90])
+    _BASIS_RE    \s*\((Standalone|Consolidated)\)
+    _BASIS_WORD  \b(standalone|consolidated)\s+(results|figures|accounts|basis)\b
+
+    The second pattern was missing at first, and filing_overdue writes the
+    basis INLINE - "the 45-day deadline for standalone results" - so every
+    missed deadline survived as two near-identical cards, one per basis. That
+    also duplicated the follow-up question in the brief. Adding it took
+    Edelweiss from 19 findings to 17, LIC Housing 10 to 8, Manappuram 12 to 8,
+    and filing_overdue corpus-wide from 124 to 71.
+
+    (a) exchange files one event twice (its query, the issuer's reply)
+        -> collapsed by the 90-character signature.
+    (b) identical finding under both bases -> MERGED, and the survivor gets
+        " The same figure was filed on both the standalone and consolidated
+        basis." appended, plus evidence.also_filed_on_basis. LIC Housing
+        produced 18 findings where 9 were warranted.
+
+    Then sorted by (SEV_RANK, knowable_on).
+
+6.8 findings_for(sym, today=None) -> (findings, filings, announcements)
+    bad_scale = scale_anomalies(filings)[0]
+    runs the basis-independent checks once, then
+    check_filing_timeliness / check_additivity / check_earnings once per
+    basis present, each receiving bad_scale as `exclude`.
+
+
+================================================================================
+6B. normalize.py  -  XBRL to a readable statement
+================================================================================
+facts.py extracts 23 curated metrics for the detectors. normalize.py renders
+the WHOLE instance as the profit and loss account it represents, so an evidence
+link lands on a statement rather than on raw XML.
+
+WHY IT WORKS
+  Document order is statement order. NSE lists facts in the order of the
+  published results table, so preserving file order reproduces the statement
+  without the presentation linkbase, which NSE does not ship.
+
+LABELLING
+  LABELS      ~90 curated tag -> label pairs
+  label_for   falls back to splitting the CamelCase, with an ACRONYM map
+  291 distinct tags occur across the corpus; the long tail is auto-labelled.
+
+SECTIONS
+  SECTION_OF  explicit tag -> section for every curated tag
+  FALLBACK    ordered substring patterns for the rest
+  The first version matched purely by substring and bounced:
+  "OtherComprehensiveIncomeNetOfTaxes" contains "Income" so it landed under
+  Income, and the tax line of discontinued operations jumped back into Tax
+  mid-block. Explicit assignment fixed it.
+
+PERIOD RESOLUTION, in order of preference
+  1. tagged DateOfStartOfReportingPeriod / DateOfEndOfReportingPeriod
+  2. the declared xbrli:context for that column
+  3. fromDate/toDate from the results index, passed in as fallback_period
+  Nine pre-Ind-AS instances reference contextRef="OneD" without ever declaring
+  that context - malformed XBRL - and are readable only via (3). The chosen
+  source is reported as period_source and surfaced in the UI when it is not
+  the tagged one.
+
+SELF-CONSISTENCY
+  STRUCTURAL   six relationships that hold by definition of a P&L
+  SECTION_RULES  deliberately EMPTY - see below
+  Three states per rule: holds / breaks / not evaluated.
+  A rule with any absent addend is NOT EVALUATED, naming what was not filed.
+  Cholamandalam and Reliance Home Finance omit ProfitLossForPeriod and tag the
+  figure only as ProfitLossForPeriodFromContinuingOperations; scoring that as
+  a broken statement would be the rule's fault.
+  Tolerance: 0.5% of the stated figure or Rs 10 lakh, whichever is larger.
+
+  Corpus result: 1,164 statement columns, 5,773 rule evaluations,
+                 5,767 holds, 6 not evaluated, 0 breaks.
+
+WHY DECOMPOSITION IS NOT CHECKED
+  Two rules were tried and abandoned. Hardcoding the NBFC Ind AS expense
+  components gave a 7.6% failure rate - DHFL files under the generic Ind AS
+  taxonomy whose expense lines are named differently, so its components summed
+  to Rs 169 crore against a stated Rs 1,827 crore. Summing whatever the
+  renderer placed in the section instead gave 35.9%, because the three
+  taxonomies decompose income and expenses differently. Both were the rule
+  being wrong, not the filings. A check wrong a third of the time teaches the
+  reader to ignore all of them, so the decomposition is left unchecked and
+  said to be unchecked.
+
+EXPORT
+  build.statements_for(sym) renders every cached instance.
+  Strings are INTERNED into data.lex: ~90 labels, 9 sections and ~290 tags
+  repeat across 1,164 columns, and spelling them out gave a 15.21 MB export
+  against 6.76 MB interned (521 lexicon entries).
+      line  = [labelIdx, sectionIdx, kindIdx, value, tagIdx]
+      check = [ruleIdx, stated, recomputed, difference, state, [missingIdx]]
+              state 1 holds / 0 breaks / null not evaluated
+  Values rounded to 2 decimals of rupees.
+
+UI
+  Tab "Filed statement". A select lists every filing disseminated on or before
+  the as-of date, labelled period / span / basis / audited / filing date.
+  The chosen index is held in stmtPick[symbol] so it survives a redraw.
+  Rows carry label, value in Rs crore, and the original tag; totals are
+  emboldened via TOTAL_TAGS. The tag column uses class .xtag, NOT .tag - the
+  issuer rail's .tag badge sets text-transform:uppercase and was rendering
+  InterestEarned as INTERESTEARNED.
+
+
+================================================================================
+7. brief.py
+================================================================================
+build(sym, as_of=None) -> dict
+    visible   = findings with knowable_on[:10] <= as_of
+    split into `findings` (substantive) and `evidence_limits`
+        EVIDENCE_KINDS = {"coverage_gap", "stale_evidence"}
+    seen_filings / seen_anns filtered the same way
+    latest_reported: most recent quarter per basis, metrics converted to crore
+    coverage.alerts_per_year = substantive / years since first filing
+        - the tool's own noise rate, shown so the analyst can judge it
+
+render_text(b) -> str
+    Plain-text brief. Sections: position, related entities, findings by
+    severity (WHAT / WHY / AGAINST / NEXT / EVIDENCE), limits of the evidence,
+    and a fixed "what this brief cannot tell you" footer.
+
+KIND_LABEL maps detector names to analyst-facing phrases.
+
+
+================================================================================
+8. POINT-IN-TIME MECHANICS
+================================================================================
+Every finding is computed once over the whole corpus and carries knowable_on.
+The browser filters:
+
+    visible(issuer) = findings where knowable_on[:10] <= as_of
+
+String comparison on ISO dates - no parsing, no re-query, instant.
+
+THREE PROPERTIES THIS MUST HOLD, AND HOW EACH IS ENFORCED
+
+  (1) No detector may use data published after the date it stamps.
+      Enforced by check_pit.py (section 9). Two leaks were found this way:
+      disclosure_burst's forward window, and scale_anomalies' bidirectional
+      window. Both fixed.
+
+  (2) The outcome label must not leak into detection.
+      Enforced by not importing it: detect.py has no reference to
+      universe.outcome*. The UI withholds the outcome banner while
+      as_of < outcome_date.
+
+  (3) Findings whose basis is partly retrospective must separate the two
+      halves. filing_overdue does this with the retrospective_* convention:
+      the deadline passing is knowable on the deadline; what was eventually
+      filed, and how late, is not. The UI renders the second half only once
+      as_of passes it, so the same card reads
+          "as at 2019-05-31, 1 further day has passed with nothing filed"
+      before, and
+          "it was eventually filed on 2019-07-23, 114 days after period end"
+      after.
+
+
+================================================================================
+9. check_pit.py  -  the test that makes the claim verifiable
+================================================================================
+ISO regex extracts every YYYY-MM-DD from every evidence payload, recursing
+through dicts and lists and remembering the key each date sat under.
+
+Fails if any extracted date > finding.knowable_on[:10].
+
+EXEMPT_KINDS  = {"coverage_gap", "stale_evidence"}   stamped `today` by design
+EXEMPT_KEYS   = {"missing","quarters_expected","quarters_present",
+                 "issuer_median_income_crore","window_end"}
+EXEMPT_PREFIX = "retrospective_"
+
+Current state:
+    findings scanned        : 253
+    evidence dates checked  : 522
+    violations              : 0
+
+THE THREE LEAKS IT HAS CAUGHT, each found by writing the test rather than by
+reading the code:
+    disclosure_burst    scanned 30 days FORWARD, stamped with the window's
+                        first item
+    scale_anomalies     compared each filing against +/-4 neighbours, so
+                        usability depended on filings published later
+    check_payments      asserted the run's worst status on the first letter's
+                        date, and cited 154 filings that had not happened
+
+Exit status 1 on any violation. Run after every change to detect.py.
+
+
+================================================================================
+10. build.py AND THE EXPORT SCHEMA
+================================================================================
+workbench_data.json
+{
+  "generated": iso,
+  "related":   [{parent, related, note}],
+  "issuers":   [ {
+      "symbol","name","lender_type","group",
+      "outcome","outcome_date","outcome_class",
+      "findings":  [ finding ],                 full record, section 6.2
+      "quarters":  [ {end, basis, disseminated, lag_days, audited,
+                      pat, income, impair, file, url} ],
+      "annual":    [ {fy_ending, knowable_on, knowable_estimated,
+                      source_report, total_assets_cr, equity_cr,
+                      equity_assets_pct, leverage_x, leverage_note,
+                      borrowings_assets_pct, roa_pct, gnpa_pct,
+                      revenue_cr} ],
+                   leverage_x is null and leverage_note set where equity <= 0
+      "timeline":  [ {ts, cat, text, att} ],
+      "latest_reported": {Standalone: {...}, Consolidated: {...}},
+      "announcement_total": int,
+      "filings_total": int
+  } ]
+}
+
+quarters: deduplicated by (period_end, basis) keeping the EARLIEST
+dissemination; quarter columns only (span <= 100 days).
+timeline: filtered to TIMELINE_CATS (7 categories); announcements outside
+them are cached but not exported.
+Monetary values in the export are absolute rupees except annual.*_cr, which
+are crore, and the UI's cr() divides by 1e7 at render time.
+
+Wrapper:  workbench_data.js  =  "window.WB=" + json + ";"
+Size:     3.95 MB.
+
+
+================================================================================
+11. FRONT END  (workbench.html, 1,062 lines, no framework, no build step)
+================================================================================
+State      { sym, asof, tab }   three fields; one draw() re-renders everything.
+Render     innerHTML from template strings; all interpolated text via esc().
+           Element refs are invalidated on every draw - the panel is rebuilt
+           wholesale, which is why automation must re-query after a click.
+
+Date range MIN/MAX computed from every finding and quarter at load.
+Replay     <input type=date> and <input type=range> kept in sync; the range is
+           days since MIN. Four preset chips.
+
+Theme      CSS custom properties on bare :root (complete light palette),
+           redefined under @media (prefers-color-scheme: dark) guarded as
+           :root:not([data-theme="light"]), and again under
+           :root[data-theme="dark"] so the toggle wins both ways.
+           Persisted in localStorage inside try/catch.
+
+Panels     panelFindings  severity groups, newest first within group
+                          a quoted passage from a source document renders in
+                          its own .quote block, not as a metadata chip
+           panelCapital   annual table; OMITS any optional column no visible
+                          row populates, and names the omission underneath
+                          (Gross NPA is absent for 9 of 15 issuers)
+           panelFigures   quarterly table per basis with the lag bar
+           panelStatement one filing rendered as its P&L, section by section,
+                          with the original XBRL tag beside every line and the
+                          six self-consistency checks beneath. A Source bar
+                          links the NSE instance and the generated text files,
+                          and two buttons - Show plain text, Copy as text -
+                          build the same output from data already loaded, so
+                          they work on a hosted copy where the relative text
+                          links cannot resolve. No download button: the
+                          artifact sandbox makes page-initiated downloads
+                          silently inert, so one would appear to work and do
+                          nothing.
+           panelTimeline  most recent 300, rating/clarification marked
+           panelBrief     prose brief, serif, assembled client-side.
+                          Questions are deduplicated by TEXT, not by detector,
+                          so two missed deadlines in different windows still
+                          produce two questions while five findings of one
+                          kind produce one. Each carries the detector name and
+                          the count behind it.
+
+Marks      Two bespoke, hand-drawn with divs, no chart library:
+           - filing-lag bar: width proportional to lag, a <u> tick at the
+             statutory limit, the over-limit portion in --high
+           - equity/assets diverging bar: zero rule at the computed zero
+             position, negative values drawn leftward in --high
+
+Tables     wrapped in .lagwrap {overflow-x:auto}; tabular-nums throughout.
+           panelCapital omits any optional column no visible row populates and
+           names the omission - Gross NPA is absent for 9 of 15 issuers, and a
+           column of placeholders reads as a broken table.
+
+CSS COLLISIONS, both found on review and both the same mistake - a global
+           class reused in a new context:
+             .cover div      caught the nested .k/.v label divs, giving them
+                             stray padding and borders. Now .cover > div.
+             .tag            the issuer rail's badge sets
+                             text-transform:uppercase and was rendering
+                             InterestEarned as INTERESTEARNED in the statement
+                             viewer, defeating the point of printing the tag
+                             verbatim. The statement column is .xtag.
+
+CHARSET    The published artifact gets a charset from the Artifact wrapper,
+           but a locally served file does not, so every non-ASCII character
+           inside <script> is written as a \\uXXXX escape. Raw UTF-8 there
+           renders as mojibake under python -m http.server. The standalone
+           dashboards in ../risk_engine instead carry <meta charset="utf-8">.
+
+
+================================================================================
+12. COMMANDS
+================================================================================
+    python3 ingest.py                 # all issuers, resumable, ~25 min cold
+    python3 ingest.py BAJFINANCE      # one issuer
+    python3 attachments.py            # ~40 min, 2,450 announcement PDFs
+    RECLASSIFY=1 python3 attachments.py   # re-run the classifier, no refetch
+    python3 facts.py [SYM]            # parse check
+    python3 normalize.py [SYM|path]   # render one filing as a statement
+    python3 annual.py                 # -> annual.json
+    python3 detect.py [SYM]           # finding counts
+    python3 check_pit.py              # MUST print 0 violations
+    python3 brief.py DHFL 2019-05-31  # text brief at a past date
+    python3 build.py                  # -> workbench_data.json
+    python3 export_statements.py      # -> statements/*.txt, 1,164 columns
+
+    python3 -c "import json;d=json.load(open('workbench_data.json'));\
+open('workbench_data.js','w').write('window.WB='+json.dumps(d,\
+separators=(',',':'),default=str)+';')"
+
+    python3 -m http.server 8777 --directory credit_workbench
+    # http://localhost:8777/workbench.html
+    # file:// does NOT work - the data loads as a sibling script
+
+Adding an issuer: append to ISSUERS, run ingest.py <SYM>, then build.py.
+The only per-issuer hard-coding outside ISSUERS is the RELATED pairs and the
+panel.csv ALIAS map.
+================================================================================

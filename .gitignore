@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------- caches
+# Everything fetched from NSE or FDIC is reproducible with the ingest
+# scripts and is far too large to version. `python3 ingest.py` and
+# `python3 attachments.py` rebuild it.
+credit_workbench/cache/
+credit_workbench/statements/by-filing/
+risk_engine/alm/
+risk_engine/fdic/
+risk_engine/bhavcopy/
+
+# --------------------------------------------------- large derived data
+*.csv.gz
+risk_engine/fdic_panel.csv
+risk_engine/prices_daily.csv
+risk_engine/merton.csv
+risk_engine/panel.csv
+risk_engine/scored.csv
+risk_engine/dashboard_standalone.html
+
+# the source dataset this project was given, not ours to redistribute
+Detailed-Financials-Data-Of-4456-NSE-And-BSE-Company-*/
+List-Of-All-Companies.csv
+
+# ------------------------------------------------------------- the usual
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+.claude/

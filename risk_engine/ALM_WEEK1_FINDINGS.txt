@@ -1,0 +1,197 @@
+================================================================================
+ALM / REFINANCING-RISK SCREEN - WEEK ONE DATA FEASIBILITY TEST
+================================================================================
+
+  *** SUPERSEDED IN PART. See ALM_WEEK2_FINDINGS.txt. ***
+  Two errors in this document were found when the test was actually run:
+   1. Section 4 compares SREI's figures (Rs LAKH) with Bajaj's (Rs CRORE) as
+      though both were crore. SREI's one-year gap is Rs 415 crore, not
+      Rs 41,505 crore. The -11.7% ratio is computed within the table and is
+      unaffected.
+   2. The design assumed annual reports are available at fiscal year-end.
+      They are not. Three of the reports this document would have used were
+      published AFTER the events they were meant to predict.
+  The verdict below (AMBER-GREEN, proceed to a small panel) was followed, and
+  the small panel falsified the hypothesis. The current decision is STOP.
+Date:    2026-10-12
+Purpose: Go / no-go on whether an ALM maturity-mismatch screen for Indian NBFCs
+         can be built from public data. NOT a model, NOT a result.
+
+VERDICT: AMBER-GREEN. Proceed to a small panel, but three of the four
+         assumptions behind the original pitch were wrong or unproven.
+
+
+--------------------------------------------------------------------------------
+1. WHAT WAS CLAIMED, AND WHAT THE TEST FOUND
+--------------------------------------------------------------------------------
+
+CLAIM 1  "There is no Texas Ratio for ALM mismatch."
+STATUS   WRONG. Withdrawn before testing. RBI's NBFC ALM framework specifies
+         maturity ladders and cumulative gap measurement; ICRA's published
+         rating methodology explicitly uses near-term cumulative mismatches.
+         The opportunity is a public, longitudinal, cross-institutional
+         implementation of a measure that already exists privately - a much
+         narrower claim that must be demonstrated, not assumed.
+
+CLAIM 2  "The data is disclosed but unused."
+STATUS   PARTLY TRUE, and harder than implied. The table exists. Assembling it
+         into a comparable panel is obstructed by schema and basis differences
+         (see section 3), not merely by tedium.
+
+CLAIM 3  "Nobody has assembled it, which is the moat."
+STATUS   UNPROVEN. Not tested here, and not testable from the data. Tedium is
+         not a moat if a rating agency already does it internally.
+
+CLAIM 4  "Failures are frequent enough to validate."
+STATUS   UNPROVEN and conflates event types. Rating downgrades, CP market
+         exit, missed payments and resolution are different outcomes and must
+         be labelled separately rather than pooled into one distress flag.
+
+
+--------------------------------------------------------------------------------
+2. DATA FEASIBILITY - THE THREE QUESTIONS
+--------------------------------------------------------------------------------
+
+Q1. Can annual reports be located, with a verifiable publication date?
+    YES.
+    NSE publishes a per-symbol annual-report index:
+        https://www.nseindia.com/api/annual-reports?index=equities&symbol=<SYM>
+    Returns up to 17 reports per company, back beyond 2018, each carrying
+    `broadcast_dttm` - the actual dissemination timestamp.
+      Bajaj Finance FY2019 report  broadcast 29-JUN-2019 19:13:52
+      Bajaj Finance FY2020 report  broadcast 29-JUN-2020 21:14:28
+    This is the point-in-time anchor the design requires. Screener.in also
+    links annual reports but keeps only recent years for active companies,
+    so it cannot supply a matched-period control group. Use NSE.
+
+    Gotcha: some NSE "PDF" URLs are ZIP archives with a .pdf extension and
+    must be unzipped before parsing. Silent failure otherwise - pdftotext
+    returns zero characters.
+
+Q2. Does the RBI maturity table appear, in parseable form?
+    YES, for the cases tested.
+      SREI Infrastructure FY2020   10 buckets, contractual, 6 rows
+      Bajaj Finance      FY2019     8 buckets, behavioural, 6 rows
+      Reliance Capital   FY2018     partial (2 rows parsed)
+      Reliance Home Fin  FY2021     partial (2 rows parsed)
+    Rows follow the RBI schedule: deposits, advances, investments, borrowings,
+    foreign-currency assets and liabilities.
+
+Q3. Is the format consistent enough for a panel?
+    NO, not without normalisation. See section 3.
+
+
+--------------------------------------------------------------------------------
+3. THE OBSTACLES, NAMED
+--------------------------------------------------------------------------------
+
+A. BUCKET SCHEMAS DIFFER
+   SREI uses the 10-bucket RBI ladder (1-7d, 8-14d, 15-30d, ...).
+   Bajaj uses 8 buckets, starting "Up to 1 month".
+   Reconcilable - Bajaj's first bucket is the sum of SREI's first three - but
+   every filer must be mapped onto a common ladder before comparison.
+
+B. BASIS DIFFERS, AND THIS IS NOT COSMETIC
+   Bajaj's table is footnoted "Amounts disclosed as per the behavouralised
+   pattern." SREI's is contractual. RBI permits both. A behavioural pattern
+   assumes deposits roll and loans prepay at historical rates; a contractual
+   one does not. The two answer different questions and a cross-sectional
+   comparison that ignores the distinction is invalid.
+   -> The basis footnote must be captured as a field, and comparisons made
+      within basis, or the behavioural ones adjusted.
+
+C. STANDALONE VERSUS CONSOLIDATED
+   SREI Infrastructure's FY2020 standalone table shows ZERO advances: the
+   lending book had been transferred to SREI Equipment Finance. The listed
+   entity's own table therefore understates group risk badly.
+   -> Record which basis was found. Prefer consolidated. Where the operating
+      company is a subsidiary, the parent's table is not a substitute.
+
+D. PARTIAL PARSES
+   Reliance Capital and Reliance Home Finance yielded only 2 of 6 rows. Cause
+   not yet diagnosed - likely table layout or line wrapping in those filings.
+   Any panel build needs a per-extraction completeness flag, and rows that
+   fail should be left missing rather than inferred.
+
+
+--------------------------------------------------------------------------------
+4. THE ONE SIGNAL OBSERVATION, WITH ITS CAVEATS
+--------------------------------------------------------------------------------
+
+Cumulative gap to one year, as filed:
+
+  institution                       inflow<=1y   outflow<=1y        gap   gap/assets
+  Bajaj Finance FY2019 (survivor)       52,762        31,634    +21,128      +19.6%
+  SREI Infra FY2020 (failed 10/2021)     6,921        48,426    -41,505      -11.7%
+
+SREI: 100% of borrowings fell due within one year against 2% of investments,
+disclosed in a document broadcast 13.2 months before the RBI superseded its
+board (exact publication date 2020-08-28, verified in week two).
+
+  NOTE: the two rows above are NOT in the same units. SREI's table is in Rs
+  lakh and Bajaj's in Rs crore. Corrected, SREI's gap is Rs 415 crore. With
+  five more survivors added to each cohort in week two, the apparent direction
+  disappears entirely: cohort AUC 0.400 and 0.500.
+
+THIS IS NOT EVIDENCE. It is two institutions, in different fiscal years, on
+different bucket schemas, on different bases (behavioural vs contractual), one
+of which is a near-empty standalone shell. It establishes that the measure
+computes and points in the expected direction. Nothing more.
+
+The retrospective-explanation trap is live here: knowing SREI failed, a large
+mismatch is easy to find. The question that matters is whether the mismatch
+separates future failures from ordinary variation ACROSS a population, before
+the event, at an alert rate someone can work through.
+
+
+--------------------------------------------------------------------------------
+5. WHAT WOULD HAVE TO HAPPEN NEXT, IN ORDER
+--------------------------------------------------------------------------------
+
+STEP 1  Define the target before extracting anything further.
+        Primary outcome: publicly documented debt-payment default within 12
+        months. Secondary, labelled separately: rating downgrade or watch,
+        refinancing difficulty, regulatory intervention, resolution.
+
+STEP 2  Build the extraction with provenance per observation:
+        fiscal period | broadcast_dttm | source URL | page | basis
+        (contractual/behavioural) | standalone/consolidated | bucket schema |
+        completeness flag. An observation without a broadcast timestamp
+        earlier than the event cannot support any claim of advance warning.
+
+STEP 3  Normalise bucket schemas onto a common ladder; compare within basis.
+
+STEP 4  Baselines, pre-registered, before looking at results:
+        existing FDI | equity/assets | leverage | short-term borrowings share |
+        a naive maturity gap | rating level where available.
+        The test is INCREMENTAL information, not association with distress.
+
+STEP 5  Evaluate operationally: recall at a fixed alert rate, false alerts per
+        institution-year, median warning time, performance in market-wide
+        stress, and a genuinely later holdout. Report intervals; n will be
+        small.
+
+STEP 6  Do not tune on SREI, DHFL and IL&FS and then present those same three
+        as validation. If they shape the metric, the holdout must be other
+        institutions or later events.
+
+
+--------------------------------------------------------------------------------
+6. KNOWN REMAINING UNKNOWNS
+--------------------------------------------------------------------------------
+- DHFL and IL&FS were not retrieved in this test. RESOLVED in week two:
+  DHFL's reports are served by NSE's annual-report API despite delisting, and
+  its FY2017-18 ladder was recovered and tested. IL&FS is NOT resolvable -
+  IL&FS Transportation files no maturity ladder because it is not a registered
+  NBFC or HFC, and IL&FS Financial Services, the entity that defaulted, was
+  never listed.
+- Whether disclosed maturity buckets were accurate for firms heading into
+  distress is unknown and material. The same "accounts only show what they
+  admit" problem that defeated the index on Yes Bank applies here, and a
+  firm under funding stress has an incentive to present the behavioural view.
+- Whether any of this beats simply reading the rating agency's liquidity
+  commentary is untested, and is the real commercial question.
+
+================================================================================
+Reproduce: python3 alm_feasibility.py   (writes alm_feasibility.json)
+================================================================================

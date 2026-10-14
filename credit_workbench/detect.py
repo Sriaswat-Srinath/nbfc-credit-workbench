@@ -32,7 +32,11 @@ from annual import series as annual_series
 from announcements import clean, load_announcements
 from universe import BY_SYMBOL
 from attachments import load as attach_load
+from claims import open_claims
 from facts import load_symbol
+from maturity import calendar as repayment_calendar, delays as disclosed_delays
+from ratings import (DEFAULT_GRADE, LONG, SPECULATIVE_FROM, current as
+                     rating_current, levels as rating_levels)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "cache")
@@ -723,6 +727,175 @@ def check_payments(sym):
     return out
 
 
+# ----------------------------------------------------------------- ratings
+# The rating LEVEL, which the announcement stream does not carry. All three
+# detectors below read a single letter and assert nothing that depends on
+# comparing letters: see the note in ratings.py on why cross-letter notch
+# arithmetic is not sound on this corpus.
+def check_ratings(sym):
+    out = []
+    seen = set()
+    for o in rating_levels(sym):
+        n = o["weakest_notch"]
+        base = {"source": "rating agency letter via NSE announcement",
+                "agency": o["agency"],
+                "announced": o["ts"],
+                "weakest_long_term_rating": o["weakest"],
+                "strongest_in_same_letter": o["strongest"],
+                "symbols_in_letter": o["symbols_in_letter"],
+                "unambiguous": o["sole_symbol"],
+                "outlook": o["outlook"],
+                "read_from": o["read_from"],
+                "attachment": o["url"]}
+
+        if n in DEFAULT_GRADE and ("default", o["agency"]) not in seen:
+            seen.add(("default", o["agency"]))
+            out.append(F(
+                sym, "rating_default_grade", "high", o["ts"],
+                f"{o['agency']} has {o['weakest']} outstanding on this "
+                f"issuer - the default grade of the long-term scale. It is "
+                f"the first time this agency's file shows it.",
+                "A rating of C or D is the agency stating that the issuer has "
+                "defaulted or is expected to. It is confirmation rather than "
+                "warning: by the time it is published the event it describes "
+                "has usually happened, and its value is to date the event "
+                "precisely and to mark every instrument the agency covers.",
+                base,
+                "Read the letter for the instruments covered and the date the "
+                "agency gives for the default, which may precede this letter.",
+                "An agency may rate one small facility at D while the senior "
+                "debt performs; check which instruments the letter names.",
+                "rating_notch", n))
+
+        elif n >= SPECULATIVE_FROM and ("spec", o["agency"]) not in seen:
+            seen.add(("spec", o["agency"]))
+            out.append(F(
+                sym, "rating_speculative", "high", o["ts"],
+                f"{o['agency']} now rates this issuer {o['weakest']}, below "
+                f"investment grade. Investment grade stops at BBB-.",
+                "The investment-grade boundary is written into mandates, bank "
+                "risk weights and repo eligibility, so crossing it withdraws "
+                "a class of funding rather than merely repricing it. For a "
+                "lender that refinances continually this is a funding event, "
+                "not an opinion.",
+                base,
+                "Establish which instruments fell below the line and what "
+                "share of the funding book they represent, then look for the "
+                "next scheduled refinancing.",
+                "A newly rated small instrument can be assigned a low grade "
+                "without any change to the issuer; check whether this is a "
+                "new assignment or a revision.",
+                "rating_notch", n))
+
+        if o["watch"] == "negative" and ("watch", o["agency"]) not in seen:
+            seen.add(("watch", o["agency"]))
+            out.append(F(
+                sym, "rating_watch_negative", "medium", o["ts"],
+                f"{o['agency']} has placed this issuer on rating watch with "
+                f"negative implications, at {o['weakest']}.",
+                "A negative watch is the agency saying it expects to act "
+                "within months and has identified the reason. It is the "
+                "earliest dated signal in the rating file, and it names the "
+                "concern in the accompanying commentary.",
+                base,
+                "Read the watch rationale. It usually names the specific "
+                "exposure or refinancing the agency is waiting on.",
+                "Watches are also placed for pending mergers and group "
+                "restructurings that resolve upward.",
+                "rating_notch", n))
+    return out
+
+
+# ------------------------------------------------------- management claims
+def check_claims(sym, today):
+    """A quantified promise whose deadline has passed.
+
+    Stamped with the DUE date, not the date the claim was made: the claim is
+    not a finding when it is made - companies are entitled to plans - it
+    becomes one when the date it named arrives. That also keeps it
+    point-in-time, since the finding's date is the deadline and the evidence
+    is the earlier statement.
+    """
+    out = []
+    for c in open_claims(sym, today.isoformat()):
+        if not c["subject"]:
+            continue
+        hi = c["amount_high"] or c["amount_low"]
+        amt = (f"Rs {c['amount_low']/1e7:,.0f}-{hi/1e7:,.0f} crore"
+               if c["amount_high"] else f"Rs {c['amount_low']/1e7:,.0f} crore")
+        label = c["subject"].replace("_", " ")
+        out.append(F(
+            sym, "claim_matured", "medium", c["due"] + "T00:00:00",
+            f"A {label} of {amt}, stated on {c['made_on'][:10]} as expected "
+            f"within {c['horizon']}, fell due on {c['due']}. The workbench "
+            f"records the promise and its deadline; it does not assert "
+            f"whether it was met.",
+            "An issuer under funding pressure announces disposals and capital "
+            "raises continually, and the market reads each statement once. "
+            "The informative case is the commitment whose deadline passed "
+            "without a follow-up disclosure - Reliance Capital told the "
+            "market in March 2019 it expected Rs 10,000-12,000 crore from "
+            "asset sales within three to four months. Promised against "
+            "delivered is a record almost nobody keeps.",
+            {"source": "NSE corporate-announcements, " + str(c.get("category")),
+             "stated_on": c["made_on"],
+             "claim": c["claim"],
+             "subject": c["subject"],
+             "amount_low_crore": round(c["amount_low"] / 1e7, 1),
+             "amount_high_crore": (round(c["amount_high"] / 1e7, 1)
+                                   if c["amount_high"] else None),
+             "horizon_as_stated": c["horizon"],
+             "scheduled_due": c["due"],
+             "attachment": c["url"]},
+            "Search the issuer's disclosures after " + c["due"] + " for the "
+            "completion, and the next balance sheet for the effect. Absence "
+            "of a follow-up is itself worth recording.",
+            "Plans change for legitimate commercial reasons, and a missed "
+            "deadline is not a misstatement. This finding is a question, not "
+            "an allegation.",
+            "claim_" + c["subject"], round(c["amount_low"] / 1e7, 1)))
+    return out
+
+
+# -------------------------------------------------- disclosed payment delay
+def check_schedule(sym):
+    """A delay the issuer itself put in writing, instrument by instrument.
+
+    Where a letter carries both the due date and the actual date of payment
+    for a named ISIN, the delay is arithmetic rather than interpretation. That
+    makes it stronger than the language classifier in attachments.py - but it
+    is available only in the tabular format SEBI prescribed in 2022, which
+    postdates every failure in this universe. The detector is correct and, on
+    this sample, finds nothing; see LOW_LEVEL_DESIGN.txt.
+    """
+    out = []
+    for d in disclosed_delays(sym, min_days=1):
+        sev = "high" if d["days_late"] >= 7 else "medium"
+        out.append(F(
+            sym, "disclosed_payment_delay", sev, d["knowable_on"],
+            f"{d['isin']}: the issuer reported the {d['kind'] or 'payment'} "
+            f"due on {d['due_date']} as paid on {d['actual_date']} - "
+            f"{d['days_late']} days after the date it had named.",
+            "This is the issuer's own arithmetic, on its own form, for a "
+            "named instrument. A delay reported here precedes any rating "
+            "action on it and does not depend on reading the letter's "
+            "language.",
+            {"source": "SEBI tabular NCD payment disclosure",
+             "isin": d["isin"], "due_date": d["due_date"],
+             "actual_date": d["actual_date"],
+             "days_late": d["days_late"],
+             "layout": d["roles_from"],
+             "letter_classified_as": d.get("letter_status"),
+             "attachment": d["url"]},
+            "Check whether the same ISIN recurs in later letters and whether "
+            "the delay lengthens.",
+            "A payment falling on a bank holiday is settled on the next "
+            "working day and is not a credit event; delays of one or two "
+            "days are usually this.",
+            "days_late", d["days_late"]))
+    return out
+
+
 # ------------------------------------------------------------ announcements
 # Categories that belong on the TIMELINE. Appearing here does not make an
 # announcement an alert: DHFL filed 62 rating announcements and 48 exchange
@@ -977,6 +1150,14 @@ def findings_for(sym, today=None):
     out += check_scale(sym, filings)
     out += check_capital(sym)
     out += check_payments(sym)
+    out += check_ratings(sym)
+    # check_claims is deliberately NOT called. The extractor cannot reliably
+    # separate a promise from a reported figure in these documents - press
+    # release headline blocks carry no sentence punctuation, so "TOTAL ASSETS
+    # OF RS. 37,565 CRORE" pairs with a distant "EXPECTED" - and an unmeasured
+    # detector has no place in the alert list. The claims it does find are
+    # exported as a browsable record for the analyst to judge instead.
+    out += check_schedule(sym)
     for basis in ("Standalone", "Consolidated"):
         if any(f["basis"] == basis for f in filings):
             out += check_filing_timeliness(sym, filings, basis, today,

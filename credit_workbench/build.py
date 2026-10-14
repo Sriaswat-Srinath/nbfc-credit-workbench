@@ -7,13 +7,17 @@ knowable, which is the same operation the analysis performs.
 """
 import json
 import os
+import re
 import datetime as dt
 
 from annual import series as annual_series
 from brief import build as build_brief
 from normalize import normalize
+from claims import open_claims
 from detect import findings_for, load_announcements
 from facts import load_symbol
+from maturity import calendar as repayment_calendar
+from ratings import current as rating_current, levels as rating_levels
 from universe import ISSUERS, RELATED
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -146,6 +150,33 @@ def main():
                       else None}
               for a in anns if a["category"] in TIMELINE_CATS]
 
+        # The rating level and its history - previously absent entirely: the
+        # workbench knew a rating action had happened and not what it moved to.
+        robs = [{"ts": o["ts"], "agency": o["agency"],
+                 "weakest": o["weakest"], "strongest": o["strongest"],
+                 "sole": o["sole_symbol"], "outlook": o["outlook"],
+                 "watch": o["watch"], "url": o["url"],
+                 "down": o["says_downgrade"], "up": o["says_upgrade"]}
+                for o in rating_levels(sym)]
+        rnow = {a: {"symbol": o["weakest"], "ts": o["ts"], "url": o["url"],
+                    "outlook": o["outlook"], "watch": o["watch"]}
+                for a, o in rating_current(sym).items()}
+
+        # The disclosed repayment calendar, compactly: one row per instrument
+        # payment the issuer intimated to the exchange, carrying the date the
+        # intimation became public so the as-of control can filter it.
+        cal = [[c["due"], c["isin"], _i(c["kind"] or ""),
+                _r(c["amount"]), c["knowable_on"][:10]]
+               for c in repayment_calendar(sym)]
+
+        # Quantified promises with a deadline. Exported as a record, not as
+        # findings: see the note in detect.findings_for.
+        cl = [{"due": c["due"], "made_on": c["made_on"][:10],
+               "subject": c["subject"], "claim": c["claim"][:300],
+               "low": _r(c["amount_low"]), "high": _r(c["amount_high"]),
+               "horizon": c["horizon"], "url": c["url"]}
+              for c in open_claims(sym)]
+
         b = build_brief(sym)
         out["issuers"].append({
             "symbol": sym, "name": name, "lender_type": ltype,
@@ -157,18 +188,38 @@ def main():
             "latest_reported": b["latest_reported"],
             "annual": annual_series(sym),
             "statements": statements_for(sym),
+            "ratings": robs,
+            "rating_now": rnow,
+            "calendar": cal,
+            "claims": cl,
             "announcement_total": len(anns),
             "filings_total": len(filings),
         })
         print(f"  {sym:12s} {len(findings):3d} findings  {len(series):3d} "
               f"quarter-rows  {len(tl):5d} timeline  "
-              f"{len(out['issuers'][-1]['statements']):4d} statements",
-              flush=True)
+              f"{len(out['issuers'][-1]['statements']):4d} statements  "
+              f"{len(robs):3d} ratings  {len(cal):5d} calendar", flush=True)
 
     p = os.path.join(HERE, "workbench_data.json")
     with open(p, "w") as fh:
         json.dump(out, fh, separators=(",", ":"), default=str)
+    # The UI loads the payload as a plain script tag, and a browser will
+    # happily serve yesterday's copy from cache - which during a demo looks
+    # exactly like the build having failed. Stamp the build time into the src
+    # so each rebuild is a new URL.
+    js = os.path.join(HERE, "workbench_data.js")
+    with open(js, "w") as fh:
+        fh.write("window.WB=")
+        fh.write(open(p).read())
+        fh.write(";\n")
+    stamp = out["generated"].replace(":", "").replace("-", "")
+    hp = os.path.join(HERE, "workbench.html")
+    html = open(hp).read()
+    html = re.sub(r'src="workbench_data\.js(?:\?v=[^"]*)?"',
+                  'src="workbench_data.js?v=' + stamp + '"', html)
+    open(hp, "w").write(html)
     print(f"\n{os.path.getsize(p)/1e6:.2f} MB -> {p}")
+    print(f"{os.path.getsize(js)/1e6:.2f} MB -> {js}  (stamped v={stamp})")
 
 
 if __name__ == "__main__":

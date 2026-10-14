@@ -283,7 +283,7 @@ file <code>workbench_data.js</code> did not load.</div>
 </footer>
 </div>
 
-<script src="workbench_data.js"></script>
+<script src="workbench_data.js?v=20261014T082850"></script>
 <script>
 (function(){
   "use strict";
@@ -303,6 +303,10 @@ file <code>workbench_data.js</code> did not load.</div>
     payment_disclosure:"Disclosed payment failure or delay",
     unit_anomaly:"Figures on an inconsistent scale",
     rating_action:"Rating action",
+    rating_speculative:"Rating fell below investment grade",
+    rating_default_grade:"Rating at the default grade",
+    rating_watch_negative:"Rating watch, negative",
+    disclosed_payment_delay:"Issuer reported a payment late",
     exchange_clarification:"Exchange sought clarification",
     price_flag:"Exchange flagged a price move",
     disclosure_burst:"Cluster of external scrutiny",
@@ -311,7 +315,8 @@ file <code>workbench_data.js</code> did not load.</div>
   };
   var EVIDENCE_KINDS = {coverage_gap:1, stale_evidence:1};
   var SEVS = ["high","medium","low"];
-  var TABS = [["findings","Findings"],["capital","Capital & leverage"],
+  var TABS = [["findings","Findings"],["rating","Rating history"],
+              ["maturity","Debt maturity"],["capital","Capital & leverage"],
               ["figures","Reported figures"],["statement","Filed statement"],
               ["timeline","Disclosure timeline"],["brief","Investigation brief"]];
 
@@ -818,6 +823,127 @@ file <code>workbench_data.js</code> did not load.</div>
 
   // ---------------- timeline
   var HOT = {"Credit Rating":1,"News Verification":1};
+  // ---------------- rating level and history
+  // The gap this closes: the workbench recorded that a rating action had
+  // happened and never what the rating moved to, so a downgrade deep in
+  // speculative grade read like any other announcement.
+  var IG = {AAA:1,"AA+":1,AA:1,"AA-":1,"A+":1,A:1,"A-":1,"BBB+":1,BBB:1,"BBB-":1};
+  function gradeClass(s){
+    if(s==="D"||s==="C"||s==="C+"||s==="C-") return "sev-high";
+    return IG[s] ? "" : "sev-high";
+  }
+  function panelRating(i){
+    var obs = (i.ratings||[]).filter(function(o){
+      return o.ts.slice(0,10) <= state.asof; });
+    if(!obs.length) return '<p class="empty">No rating letter had been '+
+      'published for this issuer on or before '+esc(state.asof)+'. '+
+      'Rating levels are read from the agency letter attached to the '+
+      'announcement; the announcement summary carries the level in only '+
+      '93 of 533 cases.</p>';
+    var now = {};
+    obs.forEach(function(o){ now[o.agency] = o; });
+    var ags = Object.keys(now).sort();
+    var head = '<div class="cover" style="margin:16px 0 6px">'+
+      ags.map(function(a){
+        var o = now[a];
+        return '<div><div class="k">'+esc(a)+'</div>'+
+          '<div class="v '+gradeClass(o.weakest)+'">'+esc(o.weakest)+
+          (o.watch==="negative"?' <span style="font-size:10px">WATCH NEG</span>':"")+
+          '</div>'+
+          '<div style="font-size:10.5px;color:var(--ink-3)">as at '+
+          esc(o.ts.slice(0,10))+(o.outlook?", "+esc(o.outlook):"")+'</div></div>';
+      }).join("")+'</div>'+
+      '<p style="font-size:12.5px;color:var(--ink-2);margin:10px 0 0;max-width:74ch">'+
+      'The weakest long-term rating each agency had outstanding, as known on '+
+      esc(state.asof)+'. Investment grade stops at BBB-. Each row below is '+
+      'one letter; where a letter covers several instruments at different '+
+      'ratings the range is shown, and such a row must not be differenced '+
+      'against its neighbour - 103 of 341 letters are like this, which is '+
+      'why no finding here rests on a notch difference between letters.</p>';
+    var rows = obs.slice().sort(function(a,b){
+      return b.ts.localeCompare(a.ts); }).map(function(o){
+      return '<tr><td>'+esc(o.ts.slice(0,10))+'</td>'+
+        '<td>'+esc(o.agency)+'</td>'+
+        '<td class="'+gradeClass(o.weakest)+'" style="font-family:var(--mono)">'+
+        esc(o.weakest)+(o.sole?"":" \u2026 "+esc(o.strongest))+'</td>'+
+        '<td>'+esc(o.outlook||"\u2013")+'</td>'+
+        '<td>'+(o.watch?esc(o.watch):"\u2013")+'</td>'+
+        '<td>'+(o.down?"says downgrade":o.up?"says upgrade":"\u2013")+'</td>'+
+        '<td>'+(o.url?'<a href="'+esc(o.url)+'" target="_blank" rel="noopener">letter</a>':"\u2013")+'</td></tr>';
+    }).join("");
+    return head+'<div style="overflow-x:auto"><table><thead><tr>'+
+      '<th>Told exchange</th><th>Agency</th><th>Long-term rating</th>'+
+      '<th>Outlook</th><th>Watch</th><th>Letter says</th><th>Source</th>'+
+      '</tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+
+  // ---------------- disclosed repayment calendar
+  function panelMaturity(i){
+    var cal = (i.calendar||[]).filter(function(c){ return c[4] <= state.asof; });
+    var cl = (i.claims||[]).filter(function(c){ return c.due <= state.asof; });
+    var fwd = cal.filter(function(c){ return c[0] > state.asof; });
+    var past = cal.filter(function(c){ return c[0] <= state.asof; });
+    var out = '<p style="font-size:12.5px;color:var(--ink-2);margin:14px 0 0;max-width:74ch">'+
+      'What the issuer itself told the exchange was falling due, instrument '+
+      'by instrument, under SEBI LODR Regulations 57, 60(2) and 50(1). '+
+      'Only letters published on or before '+esc(state.asof)+' are used, so '+
+      'this is the calendar as it stood on that date. ISINs are '+
+      'checksum-validated: a scanned letter whose OCR corrupted the '+
+      'identifier is dropped rather than repaired.</p>';
+    if(!cal.length) return out+'<p class="empty">No instrument-level payment '+
+      'schedule had been disclosed by '+esc(state.asof)+'. Coverage comes '+
+      'from the payment letters already cached, which is thin for issuers '+
+      'with few such disclosures.</p>';
+    out += '<div class="cover" style="margin:16px 0 6px">'+
+      '<div><div class="k">Payments disclosed</div><div class="v">'+cal.length+'</div></div>'+
+      '<div><div class="k">Still ahead</div><div class="v">'+fwd.length+'</div></div>'+
+      '<div><div class="k">Already due</div><div class="v">'+past.length+'</div></div>'+
+      '<div><div class="k">Distinct instruments</div><div class="v">'+
+      Object.keys(cal.reduce(function(m,c){ m[c[1]]=1; return m; },{})).length+
+      '</div></div></div>';
+    var show = fwd.length ? fwd.slice(0,120) : past.slice(-120).reverse();
+    out += '<h3 style="font-size:12px;text-transform:uppercase;letter-spacing:.07em;'+
+      'color:var(--ink-3);margin:18px 0 6px">'+
+      (fwd.length ? 'Next '+show.length+' payments disclosed as falling due'
+                  : 'Most recent '+show.length+' payments disclosed')+'</h3>';
+    out += '<div style="overflow-x:auto"><table><thead><tr><th>Due</th>'+
+      '<th>Instrument (ISIN)</th><th>Of</th><th>Amount (Rs cr)</th>'+
+      '<th>Disclosed on</th></tr></thead><tbody>'+
+      show.map(function(c){
+        return '<tr><td style="font-family:var(--mono)">'+esc(c[0])+'</td>'+
+          '<td style="font-family:var(--mono)">'+esc(c[1])+'</td>'+
+          '<td>'+esc(LEX[c[2]]||"\u2013")+'</td>'+
+          '<td style="text-align:right;font-family:var(--mono)">'+
+          (c[3]==null?"\u2013":cr(c[3]))+'</td>'+
+          '<td>'+esc(c[4])+'</td></tr>'; }).join("")+
+      '</tbody></table></div>';
+    if(cl.length){
+      out += '<h3 style="font-size:12px;text-transform:uppercase;letter-spacing:.07em;'+
+        'color:var(--ink-3);margin:24px 0 6px">Quantified promises whose '+
+        'deadline has passed</h3>'+
+        '<p style="font-size:12.5px;color:var(--ink-2);margin:0 0 8px;max-width:74ch">'+
+        'A record, not a finding. These are extracted from press releases and '+
+        'investor presentations, and the extraction is not reliable enough to '+
+        'raise an alert on - a headline block carrying "TOTAL ASSETS OF RS '+
+        '37,565 CRORE" can pair with a distant "EXPECTED". Read each one '+
+        'against its source before relying on it. Nothing here asserts the '+
+        'promise was missed.</p>'+
+        '<div style="overflow-x:auto"><table><thead><tr><th>Fell due</th>'+
+        '<th>Stated on</th><th>Subject</th><th>Amount (Rs cr)</th>'+
+        '<th>As stated</th><th>Source</th></tr></thead><tbody>'+
+        cl.slice(0,40).map(function(c){
+          return '<tr><td style="font-family:var(--mono)">'+esc(c.due)+'</td>'+
+            '<td>'+esc(c.made_on)+'</td>'+
+            '<td>'+esc((c.subject||"\u2013").replace(/_/g," "))+'</td>'+
+            '<td style="text-align:right;font-family:var(--mono)">'+cr(c.low)+
+            (c.high?"\u2013"+cr(c.high):"")+'</td>'+
+            '<td style="max-width:40ch">'+esc(c.claim.slice(0,150))+'</td>'+
+            '<td>'+(c.url?'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">doc</a>':"\u2013")+
+            '</td></tr>'; }).join("")+'</tbody></table></div>';
+    }
+    return out;
+  }
+
   function panelTimeline(i){
     var tl = i.timeline.filter(function(a){
       return a.ts.slice(0,10) <= state.asof; })
@@ -969,6 +1095,8 @@ file <code>workbench_data.js</code> did not load.</div>
     var panelEl = document.getElementById("panel");
     panelEl.innerHTML =
       state.tab==="findings" ? panelFindings(i) :
+      state.tab==="rating"   ? panelRating(i)   :
+      state.tab==="maturity" ? panelMaturity(i) :
       state.tab==="capital"  ? panelCapital(i)  :
       state.tab==="figures"  ? panelFigures(i)  :
       state.tab==="statement"? panelStatement(i) :

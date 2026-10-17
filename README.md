@@ -73,6 +73,7 @@ NPA exists for only 6 of 15 issuers.
 
 | File | For |
 |---|---|
+| `credit_workbench/CONCEPTS.md` | start here: every concept explained, from the finance background to the detectors |
 | `credit_workbench/USING_THE_WORKBENCH.txt` | how to use it, with a worked investigation |
 | `credit_workbench/ARCHITECTURE.txt` | what it is, the workflow, and the design constraints |
 | `credit_workbench/LOW_LEVEL_DESIGN.txt` | implementation detail, every detector and threshold |
